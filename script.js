@@ -634,23 +634,3 @@ document.head.appendChild(buttonRippleStyle);
 
 // Initialiser le bouton de retour en haut
 document.addEventListener('DOMContentLoaded', addBackToTopButton); 
-
-
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            e.preventDefault();
-            const offsetTop = target.offsetTop - 80; // Ajuster selon la hauteur de ta navbar
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-
-
-

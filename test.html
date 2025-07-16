@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Porokhane Digital Consulting - Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --vert-islam: #0f9d58;
+      --bleu-theologie: #2563eb;
+      --blanc: #ffffff;
+      --gris-foncé: #1e293b;
+      --jaune: #facc15;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--blanc);
+      color: var(--gris-foncé);
+    }
+
+    .accueil-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      color: var(--blanc);
+    }
+
+    .accueil-section h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(to right, var(--vert-islam), var(--bleu-theologie));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .accueil-section p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      color: #f1f5f9;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .accueil-buttons {
+      display: flex;
+      gap: 1rem;
+      animation: fadeInUp 1.4s ease forwards;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-services {
+      background-color: var(--vert-islam);
+      color: var(--blanc);
+    }
+
+    .btn-services:hover {
+      background-color: #0b874a;
+    }
+
+    .btn-devis {
+      background-color: var(--bleu-theologie);
+      color: var(--blanc);
+    }
+
+    .btn-devis:hover {
+      background-color: #1e4ed8;
+    }
+
+    .btn-contact {
+      background-color: var(--jaune);
+      color: var(--gris-foncé);
+    }
+
+    .btn-contact:hover {
+      background-color: #eab308;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .accueil-section h1 {
+        font-size: 2.2rem;
+      }
+
+      .accueil-section p {
+        font-size: 1rem;
+      }
+
+      .accueil-buttons {
+        flex-direction: column;
+      }
+    }
+
+
+
+
+    :root {
+    --vert-islam: #0f9d58;
+    --bleu-theologie: #2563eb;
+    --blanc: #ffffff;
+    --gris-foncé: #1e293b;
+    --jaune: #facc15;
+    --overlay-dark: rgba(0,0,0,0.6);
+  }
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--blanc);
+    color: var(--gris-foncé);
+  }
+
+  /* Section services */
+  .services-section {
+    position: relative;
+    padding: 80px 20px 60px;
+    background: linear-gradient(var(--overlay-dark), var(--overlay-dark)),
+      url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    color: var(--blanc);
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Bouton voir tous en haut */
+  .btn-tous-services {
+    background: linear-gradient(90deg, var(--vert-islam), var(--bleu-theologie));
+    color: var(--blanc);
+    border: none;
+    border-radius: 30px;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    align-self: flex-end;
+    max-width: 200px;
+    margin-bottom: 40px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  .btn-tous-services:hover {
+    background: linear-gradient(90deg, #0b874a, #1e4ed8);
+    transform: translateY(-3px);
+  }
+
+  /* Titre */
+  .services-section h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to right, var(--vert-islam), var(--bleu-theologie));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 50px;
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  /* Conteneur des cartes */
+  .services-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1.3s ease forwards;
+  }
+
+  /* Carte service */
+  .service-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px 25px 40px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  }
+
+  /* Service title */
+  .service-card h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--blanc);
+  }
+
+  /* Liste des points */
+  .service-list {
+    text-align: left;
+    list-style: none;
+    color: #dce6f2cc;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .service-list li {
+    margin-bottom: 8px;
+  }
+
+  /* Bouton savoir plus */
+  .btn-savoir-plus {
+    align-self: center;
+    background: var(--vert-islam);
+    border: none;
+    color: var(--blanc);
+    padding: 0.7rem 1.6rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 140px;
+  }
+  .btn-savoir-plus:hover {
+    background: #0b874a;
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .services-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .btn-tous-services {
+      align-self: center;
+      margin-bottom: 30px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <section class="accueil-section">
+    <h1>Transformez votre avenir digital</h1>
+    <p>Porokhane Digital vous accompagne avec des solutions innovantes et sur mesure pour propulser votre entreprise.</p>
+    <div class="accueil-buttons">
+      <button class="btn btn-services" onclick="location.href='#services'">Découvrir nos services</button>
+      <button class="btn btn-devis" onclick="location.href='#devis'">Demander un devis</button>
+      <button class="btn btn-contact" onclick="location.href='#contact'">Nous contacter</button>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="services-section" id="services">
+    <button class="btn-tous-services" onclick="location.href='#allservices'">Voir tous les services</button>
+    <h2>Nos Services</h2>
+  
+    <div class="services-container">
+  
+      <article class="service-card" tabindex="0">
+        <h3>Formations pédagogiques</h3>
+        <ul class="service-list">
+          <li>Robotique</li>
+          <li>Impression 3D</li>
+          <li>Cybersécurité</li>
+        </ul>
+        <button class="btn-savoir-plus" onclick="alert('Plus d\'infos sur Formations pédagogiques')">En savoir plus</button>
+      </article>
+  
+      <article class="service-card" tabindex="0">
+        <h3>Marketing digital</h3>
+        <ul class="service-list">
+          <li>Audit Express</li>
+          <li>Création & refonte de site</li>
+          <li>Stratégie digitale</li>
+          <li>Référencement naturel / payant</li>
+          <li>Réseaux sociaux</li>
+        </ul>
+        <button class="btn-savoir-plus" onclick="alert('Plus d\'infos sur Marketing digital')">En savoir plus</button>
+      </article>
+  
+      <article class="service-card" tabindex="0">
+        <h3>Nos accompagnements</h3>
+        <ul class="service-list">
+          <li>Automatisation</li>
+          <li>Base de données</li>
+          <li>Intelligence artificielle (IA)</li>
+        </ul>
+        <button class="btn-savoir-plus" onclick="alert('Plus d\'infos sur Nos accompagnements')">En savoir plus</button>
+      </article>
+  
+    </div>
+  </section>
+</body>
+</html>
