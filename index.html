@@ -699,7 +699,7 @@
     /* Témoignages */
     .temoignages-section { 
       background: linear-gradient(rgba(31, 164, 122, 0.05), rgba(31, 164, 122, 0.05)), 
-                  url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+                  url('temoignage.png') no-repeat center center/cover;
     }
     
     .carousel { 
@@ -1402,6 +1402,70 @@
 .realisation-meta i {
   font-size: 0.8rem;
 }
+
+.services-section, .hero, .services-section {
+  background-size: cover !important;
+  background-position: center !important;
+  width: 100vw !important;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+}
+
+/* Correction prioritaire du bouton vert au survol dans les services */
+.service-card:hover .btn.btn-secondary {
+  background: var(--vert) !important;
+  color: var(--blanc) !important;
+  border: 2px solid var(--vert) !important;
+}
+
+.chatbot-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: linear-gradient(90deg, var(--vert), var(--bleu));
+  color: var(--blanc);
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  box-shadow: 0 4px 24px rgba(31,164,122,0.18);
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: background 0.3s, transform 0.2s;
+  animation: chatbot-bounce 1.5s infinite alternate;
+}
+.chatbot-btn:hover {
+  background: linear-gradient(90deg, var(--bleu), var(--vert));
+  transform: scale(1.08);
+}
+@keyframes chatbot-bounce {
+  0% { box-shadow: 0 4px 24px rgba(31,164,122,0.18); transform: scale(1); }
+  100% { box-shadow: 0 8px 32px rgba(37,99,235,0.18); transform: scale(1.08); }
+}
+.chatbot-btn .fa-comments {
+  font-size: 2.2rem;
+  animation: chatbot-icon-wave 2.5s infinite;
+}
+@keyframes chatbot-icon-wave {
+  0%, 100% { color: var(--blanc); transform: scale(1); }
+  50% { color: var(--vert); transform: scale(1.18) rotate(-8deg); }
+}
+  </style>
+  <style>
+    .temoignage-highlight {
+      color: #e67e22;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+    }
   </style>
 </head>
 <body>
@@ -1410,45 +1474,47 @@
     <div class="container nav-container">
       <div class="nav-logo"><h2></i> Porokhane Digital</h2></div>
       <ul class="nav-menu">
-        <li><a href="#accueil" class="nav-link">Qui sommes nous</a></li>
+        
+        <li><a href="a-propos.html" class="nav-link">À propos</a></li>
         <!-- Formations -->
         <li class="nav-item">
-          <a href="#formations" class="nav-link">
+          <a href="formations.html" class="nav-link">
             Formations
             <i class="fas fa-chevron-down"></i>
           </a>
           <ul class="submenu">
-            <li><a href="#robotique" class="submenu-link"><i class="fas fa-robot"></i> Robotique</a></li>
-            <li><a href="#impression3d" class="submenu-link"><i class="fas fa-print"></i> Impression 3D</a></li>
-            <li><a href="#cybersecurite" class="submenu-link"><i class="fas fa-shield-alt"></i> Cybersécurité</a></li>
+            <li><a href="formations.html#robotique" class="submenu-link"><i class="fas fa-robot"></i> Robotique</a></li>
+            <li><a href="formations.html#impression3d" class="submenu-link"><i class="fas fa-print"></i> Impression 3D</a></li>
+            <li><a href="formations.html#cybersecurite" class="submenu-link"><i class="fas fa-shield-alt"></i> Cybersécurité</a></li>
           </ul>
         </li>
         
         <!-- Marketing -->
         <li class="nav-item">
-          <a href="#marketing" class="nav-link">
+          <a href="marketing.html" class="nav-link">
             Marketing
             <i class="fas fa-chevron-down"></i>
           </a>
           <ul class="submenu">
-            <li><a href="#audit" class="submenu-link"><i class="fas fa-search"></i> Audit Express</a></li>
-            <li><a href="#creation-site" class="submenu-link"><i class="fas fa-laptop-code"></i> Création/Réfonte de site</a></li>
-            <li><a href="#strategie" class="submenu-link"><i class="fas fa-chess"></i> Stratégie digitale</a></li>
-            <li><a href="#seo" class="submenu-link"><i class="fas fa-search-plus"></i> Référencement naturel</a></li>
+            <li><a href="marketing.html#audit" class="submenu-link"><i class="fas fa-search"></i> Audit Express</a></li>
+            <li><a href="marketing.html#creation-site" class="submenu-link"><i class="fas fa-laptop-code"></i> Création/Réfonte de site</a></li>
+            <li><a href="marketing.html#strategie" class="submenu-link"><i class="fas fa-chess"></i> Stratégie digitale</a></li>
+            <li><a href="marketing.html#seo" class="submenu-link"><i class="fas fa-search-plus"></i> Référencement naturel</a></li>
             <li><a href="#reseaux-sociaux" class="submenu-link"><i class="fas fa-hashtag"></i> Réseaux sociaux</a></li>
           </ul>
         </li>
         
         <!-- Accompagnement -->
         <li class="nav-item">
-          <a href="#accompagnement" class="nav-link">
+          <a href="accompagnement.html" class="nav-link">
             Accompagnement
             <i class="fas fa-chevron-down"></i>
           </a>
           <ul class="submenu">
-            <li><a href="#automatisation" class="submenu-link"><i class="fas fa-cogs"></i> Automatisation</a></li>
-            <li><a href="#bdd" class="submenu-link"><i class="fas fa-database"></i> Bases de données</a></li>
-            <li><a href="#ia" class="submenu-link"><i class="fas fa-brain"></i> Intelligence Artificielle</a></li>
+            <li><a href="accompagnement.html#automatisation" class="submenu-link"><i class="fas fa-cogs"></i> Automatisation</a></li>
+            <li><a href="accompagnement.html#bdd" class="submenu-link"><i class="fas fa-database"></i> Bases de données</a></li>
+            <li><a href="accompagnement.html#erp" class="submenu-link"><i class="fas fa-network-wired"></i> ERP</a></li>
+            <li><a href="accompagnement.html#ia" class="submenu-link"><i class="fas fa-brain"></i> Intelligence Artificielle</a></li>
           </ul>
         </li>
         <li><a href="#blog" class="nav-link">Actualités</a></li>
@@ -1470,8 +1536,8 @@
         <h1 class="hero-title">Transformez Votre Entreprise avec le Numérique</h1>
         <p class="hero-subtitle">Porokhane Digital Consulting vous accompagne dans votre transformation digitale avec des solutions innovantes et sur mesure pour booster votre activité.</p>
         <div class="hero-buttons">
-          <a href="#services" class="btn btn-primary"><i class="fas fa-rocket"></i> Nos services</a>
-          <a href="contact.html" class="btn btn-secondary"><i class="fas fa-phone"></i>Nous Contacter</a>
+          
+          <a href="contact.html" class="btn btn-secondary"><i class="fas fa-phone"></i>Contactez-nous pour un diagnostic gratuit</a>
          <!-- <a href="#realisations" class="btn btn-primary"><i class="fas fa-briefcase"></i> Nos réalisations</a> -->
         </div>
       </div>
@@ -1480,6 +1546,219 @@
       </div>
     </div>
   </section>
+
+
+  <!-- Section À propos - Version optimisée -->
+<section id="apropos" class="services-section">
+  <!-- Animation éléments flottants -->
+  <div class="floating-elements">
+    <div class="floating-circle"></div>
+    <div class="floating-triangle"></div>
+  </div>
+
+  <div class="container">
+    <div class="hero-container">
+      <!-- Colonne image -->
+      <div class="hero-img">
+        <div class="parallax-wrapper">
+          <img src="equipe_porokhane.png" alt="Équipe Porokhane Digital">
+        </div>
+      </div>
+      
+      <!-- Colonne texte -->
+      <div class="hero-content">
+        <h2 class="hero-title1">
+          <span class="title-underline"></span>
+          Notre ADN Digital
+        </h2>
+        
+        <p class="hero-subtitle1">
+          Porokhane Digital Consulting réinvente  l'accompagnement technologique avec une approche humaine.
+        </p>
+        
+        <div class="content-blocks">
+          <!-- Item Mission -->
+          <div class="mission-block">
+            <h3>
+              <i class="fas fa-bullseye"></i>
+              Notre Mission
+            </h3>
+            <p>
+              Accélérer la transformation digitale des entreprises africaines <br> grâce à des solutions innovantes et éthiques.
+            </p>
+          </div>
+          
+          <!-- Item Valeurs -->
+          <div class="values-block">
+            <h3>
+              <i class="fas fa-star"></i>
+              Nos Valeurs
+            </h3>
+            <ul>
+              <li><i class="fas fa-check"></i><span>Innovation responsable</span></li>
+              <li><i class="fas fa-check"></i><span>Excellence opérationnelle</span></li>
+              <li><i class="fas fa-check"></i><span>Impact social positif</span></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="hero-buttons">
+          <a href="a-propos.html" class="btn btn-primary">
+            <i class="fas fa-handshake"></i>
+             En savoir plus
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Amélioration section À propos sur index */
+  #apropos.services-section {
+    background: linear-gradient(rgba(248, 250, 252, 0.92), rgba(248, 250, 252, 0.92)),
+      url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=90') no-repeat center center/cover;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+  }
+  #apropos .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .hero-img, .hero-content {
+    flex: 1 1 350px;
+    min-width: 300px;
+    max-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  .hero-title1 {
+    color: var(--vert);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 1.5rem;
+    position: relative;
+    font-weight: 800;
+  }
+  .hero-subtitle1 {
+    color: var(--gris-texte);
+    margin-bottom: 2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 500;
+  }
+  .content-blocks {
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .mission-block, .values-block {
+    background: rgba(255,255,255,0.97);
+    padding: 1.5rem;
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto 1.5rem auto;
+    overflow: visible;
+  }
+  .mission-block {
+    border-left: 4px solid var(--vert);
+  }
+  .values-block {
+    border-left: 4px solid var(--bleu);
+  }
+  .mission-block h3, .values-block h3 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .mission-block h3 { color: var(--bleu); }
+  .values-block h3 { color: var(--vert); }
+  .mission-block i { color: var(--vert); }
+  .values-block i { color: var(--bleu); }
+  .mission-block p, .values-block ul {
+    color: var(--gris-texte);
+    line-height: 1.6;
+    font-size: 1.08rem;
+  }
+  .values-block ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .values-block li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .values-block li i {
+    color: var(--vert);
+    margin-top: 3px;
+  }
+  @media (max-width: 900px) {
+    .hero-container { flex-direction: column; }
+    .hero-img, .hero-content { padding: 0; }
+  }
+</style>
+
+<script>
+  // Effet parallax
+  document.addEventListener('DOMContentLoaded', function() {
+    const parallaxInit = function() {
+      if (window.innerWidth > 768) {
+        const parallax = document.querySelector('.parallax-wrapper');
+        
+        document.addEventListener('mousemove', function(e) {
+          const x = (window.innerWidth - e.pageX) / 100;
+          const y = (window.innerHeight - e.pageY) / 100;
+          if (parallax) {
+            parallax.style.transform = `rotateY(${x/5}deg) rotateX(${y/5}deg)`;
+          }
+        });
+      }
+    };
+
+    // Animation bouton
+    const btn = document.querySelector('.btn-primary');
+    if (btn) {
+      btn.addEventListener('mouseenter', function() {
+        this.querySelector('i').style.transform = 'rotate(10deg)';
+      });
+      btn.addEventListener('mouseleave', function() {
+        this.querySelector('i').style.transform = 'rotate(0)';
+      });
+    }
+
+    // Initialisation
+    parallaxInit();
+    
+    // Réinitialisation au redimensionnement
+    window.addEventListener('resize', parallaxInit);
+  });
+</script>
   
   <!-- Services -->
   <section id="services" class="services-section">
@@ -1509,8 +1788,15 @@
         <div class="service-card">
           <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Accompagnement">
           <h3>Accompagnement pour les PME</h3>
-          <p>Automatisation, Bases de données et Intelligence Artificielle pour votre entreprise.</p>
+          <p>Automatisation, Bases de données, ERP et Intelligence Artificielle pour votre entreprise.</p>
           <a href="#accompagnement" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails...</a>
+        </div>
+        <!-- ERP -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="ERP">
+          <h3>ERP (Gestion d'entreprise)</h3>
+          <p>Mise en place de solutions ERP sur-mesure pour piloter efficacement vos processus métiers : gestion commerciale, stock, RH, finance, etc.</p>
+          <a href="#erp" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails...</a>
         </div>
   
         <!-- Service supplémentaire 1 -->
@@ -1521,13 +1807,7 @@
           <a href="#" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails...</a>
         </div>
   
-        <!-- Service supplémentaire 2 -->
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Applications Mobiles">
-          <h3>Logiciels pour Écoles</h3>
-  <p>Solutions web sur mesure pour la gestion des élèves, des notes, de l'assiduité et des bulletins.</p>
-  <a href="#" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails...</a>
-        </div>
+        
   
         <!-- Service supplémentaire 3 -->
         <div class="service-card">
@@ -1554,12 +1834,12 @@
         <!-- Article 1 -->
         <div class="blog-card">
           <div class="blog-card-img">
-            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Formation Robotique">
+            <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=600&q=80" alt="Sécurité WordPress - cadenas sur écran">
           </div>
           <div class="blog-card-content">
-            <div class="blog-meta"><i class="far fa-calendar-alt"></i> 15 juin 2024 • <i class="far fa-folder"></i> Formations</div>
-            <h3>Initiation à la Robotique pour Débutants</h3>
-            <p>Tout ce que vous devez savoir pour commencer votre parcours en robotique avec nos formations spécialisées.</p>
+            <div class="blog-meta"><i class="far fa-calendar-alt"></i> 15 juin 2024 • <i class="far fa-folder"></i> Cybersécurité</div>
+            <h3>Sécuriser son site WordPress</h3>
+            <p>Protégez votre site WordPress contre les piratages avec 10 conseils simples et efficaces, accessibles à tous.</p>
             <a href="#" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
           </div>
         </div>
@@ -1567,12 +1847,12 @@
         <!-- Article 2 -->
         <div class="blog-card">
           <div class="blog-card-img">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Marketing Digital">
+            <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" alt="Google SEO 2024 - algorithme et visibilité">
           </div>
           <div class="blog-card-content">
-            <div class="blog-meta"><i class="far fa-calendar-alt"></i> 10 juin 2024 • <i class="far fa-folder"></i> Marketing</div>
-            <h3>Stratégies Digitales pour PME en 2024</h3>
-            <p>Comment développer une présence en ligne efficace avec un budget limité grâce à nos solutions marketing.</p>
+            <div class="blog-meta"><i class="far fa-calendar-alt"></i> 10 juin 2024 • <i class="far fa-folder"></i> SEO</div>
+            <h3>Algorithme Google SEO 2024 : 10 astuces pour être visible</h3>
+            <p>Découvrez les nouvelles règles Google pour 2024 et 10 astuces pour rendre votre site visible et performant.</p>
             <a href="#" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
           </div>
         </div>
@@ -1580,65 +1860,18 @@
         <!-- Article 3 -->
         <div class="blog-card">
           <div class="blog-card-img">
-            <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Accompagnement IA">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="SEO outils mots-clés - ordinateur avec graphique et loupe">
           </div>
           <div class="blog-card-content">
-            <div class="blog-meta"><i class="far fa-calendar-alt"></i> 5 juin 2024 • <i class="far fa-folder"></i> Accompagnement</div>
-            <h3>Intégrer l'IA dans votre Entreprise</h3>
-            <p>Notre guide complet pour adopter l'intelligence artificielle dans vos processus métiers.</p>
+            <div class="blog-meta"><i class="far fa-calendar-alt"></i> 5 juin 2024 • <i class="far fa-folder"></i> SEO</div>
+            <h3>SEO : 14 outils gratuits pour trouver des mots-clés pertinents</h3>
+            <p>Voici 14 outils gratuits pour trouver les meilleurs mots-clés et booster votre référencement sur Google.</p>
             <a href="#" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
           </div>
         </div>
-
-
-        <div class="blog-card">
-          <div class="blog-card-img">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Veille Technologique">
-
-          </div>
-          <div class="blog-card-content">
-            <div class="blog-meta">
-              <i class="far fa-calendar-alt"></i> 10 juillet 2024 • 
-              <i class="far fa-folder"></i> Innovation
-            </div>
-            <h3>Pourquoi faire de la veille technologique ?</h3>
-            <p>Découvrez comment anticiper les évolutions du numérique et rester compétitif dans un monde en constante mutation.</p>
-            <a href="#" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
-          </div>
-        </div>
-        
-
-        <div class="blog-card">
-          <div class="blog-card-img">
-            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cybersécurité">
-          </div>
-          <div class="blog-card-content">
-            <div class="blog-meta">
-              <i class="far fa-calendar-alt"></i> 20 juillet 2024 • 
-              <i class="far fa-folder"></i> Cybersécurité
-            </div>
-            <h3>Les bonnes pratiques en cybersécurité</h3>
-            <p>Protégez vos données sensibles grâce à des stratégies simples mais efficaces adaptées aux PME et grandes entreprises.</p>
-            <a href="#" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
-          </div>
-        </div>
-
-        
-        <div class="blog-card">
-          <div class="blog-card-img">
-            <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Transformation Digitale">
-          </div>
-          <div class="blog-card-content">
-            <div class="blog-meta">
-              <i class="far fa-calendar-alt"></i> 1 août 2024 • 
-              <i class="far fa-folder"></i> Digitalisation
-            </div>
-            <h3>Réussir sa transformation digitale</h3>
-            <p>Apprenez comment moderniser vos outils et processus pour optimiser vos performances dans un monde numérique.</p>
-            <a href="#" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
-          </div>
-        </div>
-        
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="blog.html" class="btn btn-primary">Voir tous les blogs</a>
       </div>
     </div>
   </section>
@@ -1682,33 +1915,25 @@
     <div class="container">
       <div class="section-header">
         <h2>Ils Nous Font Confiance</h2>
-        <p>Découvrez ce que nos clients disent de notre travail</p>
+        <p class="temoignage-highlight">Découvrez ce que nos clients disent de notre travail</p>
       </div>
       <div class="carousel" id="carousel">
         <button class="carousel-arrow" id="prev" title="Témoignage précédent"><i class="fas fa-chevron-left"></i></button>
         <div class="carousel-track">
           <div class="carousel-item active">
             <div class="carousel-content">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="carousel-photo" alt="Mamadou Diallo">
-              <p>« Porokhane Digital a complètement transformé notre présence en ligne. Leur équipe a développé une solution e-commerce moderne et performante qui a boosté nos ventes de 150% en seulement 6 mois. Leur professionnalisme et leur réactivité sont exceptionnels. »</p>
-              <div class="carousel-author">Mamadou Diallo</div>
-              <div class="carousel-position">Directeur, TechSen</div>
+              <img src="porokhane.jpg" class="carousel-photo" alt="Abdoulaye Ndiaye">
+              <p>"Grâce à Porokhane Digital, nous avons digitalisé toute notre chaîne logistique. Leur solution sur-mesure a permis à Medical Distribution d'améliorer la traçabilité et la rapidité de nos livraisons. Un partenaire fiable et innovant !"</p>
+              <div class="carousel-author">Abdoulaye Ndiaye</div>
+              <div class="carousel-position">Directeur Général, Medical Distribution</div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="carousel-content">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="carousel-photo" alt="Fatou Sall">
-              <p>« Excellente collaboration avec Porokhane Digital. Ils ont su comprendre nos besoins spécifiques et proposer des solutions adaptées à notre secteur d'activité. Leur application mobile a considérablement amélioré l'engagement de nos clients. »</p>
-              <div class="carousel-author">Fatou Sall</div>
-              <div class="carousel-position">PDG, InnovTech</div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-content">
-              <img src="https://randomuser.me/api/portraits/men/45.jpg" class="carousel-photo" alt="Ousmane Ba">
-              <p>« Le résultat dépasse largement nos attentes ! Porokhane Digital a non seulement livré un site web magnifique, mais a aussi formé notre équipe pour que nous puissions le gérer en toute autonomie. Un partenaire digital de confiance. »</p>
-              <div class="carousel-author">Ousmane Ba</div>
-              <div class="carousel-position">Directeur Marketing, DigitalCorp</div>
+              <img src="porokhane1.jpg" class="carousel-photo" alt="Aminata Sarr">
+              <p>"MoTransfert a bénéficié d'une refonte complète de son application mobile grâce à l'équipe Porokhane. Résultat : +40% d'utilisateurs actifs et une expérience client nettement améliorée. Merci pour votre professionnalisme !"</p>
+              <div class="carousel-author">Aminata Sarr</div>
+              <div class="carousel-position">Responsable Produit, MoTransfert</div>
             </div>
           </div>
         </div>
@@ -1724,82 +1949,80 @@
   <div class="container">
     <div class="section-header">
       <h2>Nos Réalisations</h2>
-      <p>Découvrez nos projets récents et nos succès clients</p>
+      <p>Découvrez quelques projets concrets réalisés pour nos clients, avec un design pensé pour l'utilisateur final.</p>
     </div>
-    
-    <div class="realisations-grid">
+    <div class="realisations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
       <!-- Projet 1 -->
-      <div class="realisation-card">
-        <div class="realisation-img">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Site e-commerce">
-          <div class="realisation-overlay">
-            <div class="realisation-content">
-              <h3>Plateforme e-commerce</h3>
-              <p>Site de vente en ligne avec paiement sécurisé</p>
-              <a href="#" class="btn btn-secondary"><i class="fas fa-eye"></i> Voir le projet</a>
-            </div>
-          </div>
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column;">
+        <div class="realisation-img" style="height: 200px; overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=600&q=80" alt="Collaboration équipe médicale sénégalaise" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <div class="realisation-info">
-          <h3>Boutique ModaStyle</h3>
-          <div class="realisation-meta">
-            <span><i class="fas fa-tag"></i> E-commerce</span>
-            <span><i class="fas fa-calendar-alt"></i> 2024</span>
-          </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="color: var(--vert); margin-bottom: 0.7rem;">Refonte du site Medical Distribution</h3>
+          <p style="color: var(--gris-texte); flex: 1;">Modernisation complète du site web pour une expérience utilisateur optimale, responsive et adaptée au secteur médical.</p>
+          <a href="#" class="btn btn-secondary" style="margin-top: 1.2rem;"><i class="fas fa-eye"></i> Voir le projet</a>
         </div>
       </div>
-      
       <!-- Projet 2 -->
-      <div class="realisation-card">
-        <div class="realisation-img">
-          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Application mobile">
-          <div class="realisation-overlay">
-            <div class="realisation-content">
-              <h3>Application Mobile</h3>
-              <p>Solution de livraison en temps réel</p>
-              <a href="#" class="btn btn-secondary"><i class="fas fa-eye"></i> Voir le projet</a>
-            </div>
-          </div>
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column;">
+        <div class="realisation-img" style="height: 200px; overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=crop&w=600&q=80" alt="Collaboration marketing digital équipe sénégalaise" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <div class="realisation-info">
-          <h3>FastDeliver</h3>
-          <div class="realisation-meta">
-            <span><i class="fas fa-tag"></i> Mobile</span>
-            <span><i class="fas fa-calendar-alt"></i> 2023</span>
-          </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="color: var(--bleu); margin-bottom: 0.7rem;">Accompagnement Marketing Digital de Medical Distribution</h3>
+          <p style="color: var(--gris-texte); flex: 1;">Rédaction, visuels et vidéos pour valoriser les produits et services de Medical Distribution sur le web et les réseaux sociaux.</p>
+          <a href="#" class="btn btn-secondary" style="margin-top: 1.2rem;"><i class="fas fa-eye"></i> Voir le contenu</a>
         </div>
       </div>
-      
       <!-- Projet 3 -->
-      <div class="realisation-card">
-        <div class="realisation-img">
-          <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Site corporate">
-          <div class="realisation-overlay">
-            <div class="realisation-content">
-              <h3>Site Corporate</h3>
-              <p>Présentation d'entreprise moderne</p>
-              <a href="#" class="btn btn-secondary"><i class="fas fa-eye"></i> Voir le projet</a>
-            </div>
-          </div>
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(37,99,235,0.08); overflow: hidden; display: flex; flex-direction: column;">
+        <div class="realisation-img" style="height: 200px; overflow: hidden;">
+          <img src="temoignage.png" alt="Témoignage client Porokhane">
         </div>
-        <div class="realisation-info">
-          <h3>FinanceGroup</h3>
-          <div class="realisation-meta">
-            <span><i class="fas fa-tag"></i> Corporate</span>
-            <span><i class="fas fa-calendar-alt"></i> 2024</span>
-          </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="color: var(--vert); margin-bottom: 0.7rem;">Accompagnement Marketing Digital de MoTransfert</h3>
+          <p style="color: var(--gris-texte); flex: 1;">Conception de supports digitaux, articles et vidéos pour renforcer la notoriété et l'engagement autour de MoTransfert.</p>
+          <a href="#" class="btn btn-secondary" style="margin-top: 1.2rem;"><i class="fas fa-eye"></i> Voir le contenu</a>
         </div>
       </div>
     </div>
-    
-    <!--<div class="text-center" style="margin-top: 3rem;">
-      <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Voir toutes nos réalisations</a>
-    </div> -->
   </div>
 </section>
+
+
+<!-- Section Certifications -->
+<section id="certifications" class="certifications-section" style="background: linear-gradient(rgba(248,250,252,0.97),rgba(248,250,252,0.97)); padding: 80px 0;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Nos Certifications</h2>
+      <p>Des compétences reconnues pour garantir la qualité de vos projets digitaux</p>
+    </div>
+    <div class="certif-grid" style="display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center;">
+      <!-- SEO -->
+      <div class="certif-card" style="background: #fff; border-radius: 20px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); padding: 2.5rem 2rem; text-align: center; max-width: 340px; flex: 1 1 280px;">
+        <div style="font-size: 2.5rem; color: var(--bleu); margin-bottom: 1rem;"><i class="fas fa-search"></i></div>
+        <h3 style="color: var(--bleu); font-size: 1.3rem; margin-bottom: 1rem;">Certification SEO</h3>
+        <p style="color: var(--gris-texte);">Maîtrise des techniques de référencement naturel pour positionner durablement votre site sur Google.</p>
+      </div>
+      <!-- Marketing Digital -->
+      <div class="certif-card" style="background: #fff; border-radius: 20px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); padding: 2.5rem 2rem; text-align: center; max-width: 340px; flex: 1 1 280px;">
+        <div style="font-size: 2.5rem; color: var(--vert); margin-bottom: 1rem;"><i class="fas fa-bullhorn"></i></div>
+        <h3 style="color: var(--vert); font-size: 1.3rem; margin-bottom: 1rem;">Certification Marketing Digital</h3>
+        <p style="color: var(--gris-texte);">Stratégies avancées pour booster votre visibilité, générer des leads et fidéliser vos clients en ligne.</p>
+      </div>
+      <!-- IA -->
+      <div class="certif-card" style="background: #fff; border-radius: 20px; box-shadow: 0 4px 24px rgba(37,99,235,0.08); padding: 2.5rem 2rem; text-align: center; max-width: 340px; flex: 1 1 280px;">
+        <div style="font-size: 2.5rem; color: #8e44ad; margin-bottom: 1rem;"><i class="fas fa-robot"></i></div>
+        <h3 style="color: #8e44ad; font-size: 1.3rem; margin-bottom: 1rem;">Certification Intelligence Artificielle</h3>
+        <p style="color: var(--gris-texte);">Utilisation de l'IA pour automatiser, analyser et optimiser vos processus métiers et vos campagnes digitales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
   
   <!-- FAQ -->
-  <section id="faq" class="faq-section">
+  <!--<section id="faq" class="faq-section">
     <div class="container">
       <div class="section-header">
         <h2>Foire Aux Questions</h2>
@@ -1858,6 +2081,7 @@
       </div>
     </div>
   </section>
+   -->
   
   <!-- Contact & Newsletter 
   <section id="contact" class="contact-section">
@@ -1943,35 +2167,38 @@
         <div class="footer-section">
           <h4>Nos Services</h4>
           <ul>
-            <li><a href="#services"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
-            <li><a href="#services"><i class="fas fa-chevron-right"></i> Applications Mobiles</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
             <li><a href="#services"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
-            <li><a href="#services"><i class="fas fa-chevron-right"></i> Solutions Cloud</a></li>
-            <li><a href="#services"><i class="fas fa-chevron-right"></i> Cybersécurité</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h4>Navigation</h4>
+          <h4>Informations</h4>
           <ul>
             <li><a href="#accueil"><i class="fas fa-chevron-right"></i> Accueil</a></li>
             <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-            <li><a href="#blog"><i class="fas fa-chevron-right"></i> Blog</a></li>
+            
             <li><a href="#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
             <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="#blog"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+            <li><a href="#devis"><i class="fas fa-chevron-right"></i> Devis</a></li>
+            <li><a href="#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h4>Légal</h4>
+          <h4>Contact</h4>
           <ul>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Mentions légales</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Politique de confidentialité</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Conditions générales</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Politique cookies</a></li>
+            <li><a href="tel:+221771234567"><i class="fas fa-phone"></i> +221 77 123 45 67</a></li>
+            <li><a href="mailto:contact@porokhane.com"><i class="fas fa-envelope"></i> contact@porokhane.com</a></li>
+            <li><a href="https://goo.gl/maps/xyz" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Porokhane Digital Consulting. Tous droits réservés.</p>
+        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
       </div>
     </div>
   </footer>
@@ -2098,5 +2325,317 @@
       });
     });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.mission-block, .values-block').forEach(function(block) {
+        block.style.width = '100%';
+        block.style.maxWidth = '100%';
+        block.style.boxSizing = 'border-box';
+        block.style.margin = '0 auto 1.5rem auto';
+      });
+      document.querySelectorAll('.content-blocks, .hero-content').forEach(function(parent) {
+        parent.style.overflowX = 'hidden';
+        parent.style.width = '100vw';
+        parent.style.maxWidth = '100vw';
+      });
+    });
+  </script>
+
+  <!-- Chatbot Flottant -->
+  <style>
+    .chatbot-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      border: none;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      box-shadow: 0 4px 24px rgba(31,164,122,0.18);
+      font-size: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 9999;
+      transition: background 0.3s, transform 0.2s;
+      animation: chatbot-bounce 1.5s infinite alternate;
+    }
+    .chatbot-btn:hover {
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+      transform: scale(1.08);
+    }
+    @keyframes chatbot-bounce {
+      0% { box-shadow: 0 4px 24px rgba(31,164,122,0.18); transform: scale(1); }
+      100% { box-shadow: 0 8px 32px rgba(37,99,235,0.18); transform: scale(1.08); }
+    }
+    .chatbot-btn .fa-comments {
+      font-size: 2.2rem;
+      animation: chatbot-icon-wave 2.5s infinite;
+    }
+    @keyframes chatbot-icon-wave {
+      0%, 100% { color: var(--blanc); transform: scale(1); }
+      50% { color: var(--vert); transform: scale(1.18) rotate(-8deg); }
+    }
+    .chatbot-window {
+      position: fixed;
+      bottom: 110px;
+      right: 32px;
+      width: 340px;
+      max-width: 95vw;
+      background: var(--blanc);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+      border: 1.5px solid var(--vert);
+      z-index: 9999;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      animation: fadeInUp 0.4s;
+    }
+    .chatbot-header {
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      padding: 1rem 1.2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .chatbot-close {
+      background: none;
+      border: none;
+      color: var(--blanc);
+      font-size: 1.3rem;
+      cursor: pointer;
+      margin-left: 1rem;
+      transition: color 0.2s;
+    }
+    .chatbot-close:hover {
+      color: #e67e22;
+    }
+    .chatbot-body {
+      padding: 1.2rem;
+      background: var(--gris);
+      min-height: 180px;
+      max-height: 320px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .chatbot-message {
+      background: var(--blanc);
+      border-radius: 14px 14px 14px 4px;
+      padding: 0.8rem 1rem;
+      color: var(--gris-titre);
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(31,164,122,0.07);
+      align-self: flex-start;
+      max-width: 85%;
+    }
+    .chatbot-message.user {
+      background: var(--vert);
+      color: var(--blanc);
+      align-self: flex-end;
+      border-radius: 14px 14px 4px 14px;
+    }
+    .chatbot-suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .chatbot-suggestion {
+      background: var(--bleu-clair);
+      color: var(--bleu);
+      border: none;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .chatbot-suggestion:hover {
+      background: var(--bleu);
+      color: var(--blanc);
+    }
+    .chatbot-footer {
+      padding: 0.8rem 1.2rem;
+      background: var(--blanc);
+      border-top: 1px solid var(--gris-fonce);
+      display: flex;
+      gap: 0.5rem;
+    }
+    .chatbot-input {
+      flex: 1;
+      border: 1px solid var(--gris-fonce);
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .chatbot-input:focus {
+      border-color: var(--vert);
+    }
+    .chatbot-send {
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .chatbot-send:hover {
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+    }
+  </style>
+
+  <!-- Bouton flottant -->
+  <button class="chatbot-btn" id="chatbotBtn" aria-label="Ouvrir le chat" title="Discuter avec nous">
+    <i class="fas fa-comments"></i>
+  </button>
+
+  <!-- Fenêtre du chatbot -->
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <span>🤖 Porokhane Chatbot</span>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">&times;</button>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+      <div class="chatbot-message">Bonjour 👋 ! Je suis le chatbot Porokhane. Posez-moi vos questions ou choisissez une suggestion ci-dessous :</div>
+      <div class="chatbot-message" style="background: var(--bleu-clair); color: var(--bleu); font-size: 0.98rem;">
+        Vous pouvez aussi envoyer ici un message à notre équipe, nous vous répondrons rapidement !
+      </div>
+      <div class="chatbot-suggestions" id="chatbotSuggestions">
+        <button class="chatbot-suggestion">Quels services proposez-vous ?</button>
+        <button class="chatbot-suggestion">Comment demander un devis ?</button>
+        <button class="chatbot-suggestion">Quels sont vos délais de livraison ?</button>
+        <button class="chatbot-suggestion">Proposez-vous des formations ?</button>
+        <button class="chatbot-suggestion">Comment vous contacter ?</button>
+      </div>
+    </div>
+    <form class="chatbot-footer" id="chatbotForm" autocomplete="off">
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Écrivez votre question..." />
+      <button type="submit" class="chatbot-send" aria-label="Envoyer"><i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <script>
+  // Réponses automatiques (FAQ)
+  const chatbotFAQ = {
+    'services': "Nous proposons : formations (robotique, impression 3D, cybersécurité), marketing digital, accompagnement (automatisation, IA, bases de données), développement web et plus encore !",
+    'devis': "Pour demander un devis, cliquez sur 'Demander un devis' dans le menu ou rendez-vous sur la page devis. Nous vous répondrons rapidement !",
+    'délais': "Nos délais varient selon le projet, mais nous nous engageons à livrer dans les temps convenus, avec un suivi régulier.",
+    'formations': "Oui, nous proposons des formations en robotique, impression 3D, cybersécurité et plus. Consultez la page Formations pour plus d'infos !",
+    'contacter': "Vous pouvez nous contacter via la page Contact, par téléphone ou par email. Nous sommes à votre écoute !",
+    'salutation': "Bonjour et bienvenue chez Porokhane Digital Consulting ! 👋\n\nJe peux répondre à vos questions sur :\n• Nos services\n• Comment demander un devis\n• Nos délais de livraison\n• Nos formations\n• Comment nous contacter\n\nCliquez sur une suggestion ou posez votre question !"
+  };
+
+  const chatbotBtn = document.getElementById('chatbotBtn');
+  const chatbotWindow = document.getElementById('chatbotWindow');
+  const chatbotClose = document.getElementById('chatbotClose');
+  const chatbotBody = document.getElementById('chatbotBody');
+  const chatbotForm = document.getElementById('chatbotForm');
+  const chatbotInput = document.getElementById('chatbotInput');
+  const chatbotSuggestions = document.getElementById('chatbotSuggestions');
+
+  chatbotBtn.onclick = () => {
+    chatbotWindow.style.display = 'flex';
+    setTimeout(() => chatbotInput.focus(), 300);
+  };
+  chatbotClose.onclick = () => {
+    chatbotWindow.style.display = 'none';
+  };
+
+  // Suggestions cliquables
+  chatbotSuggestions.onclick = function(e) {
+    if (e.target.classList.contains('chatbot-suggestion')) {
+      const question = e.target.textContent;
+      addUserMessage(question);
+      respondToUser(question);
+    }
+  };
+
+  // Envoi du formulaire
+  chatbotForm.onsubmit = function(e) {
+    e.preventDefault();
+    const question = chatbotInput.value.trim();
+    if (question) {
+      addUserMessage(question);
+      respondToUser(question);
+      chatbotInput.value = '';
+    }
+  };
+
+  function addUserMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message user';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function addBotMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function respondToUser(question) {
+    let response = "Je suis désolé, je n'ai pas compris votre question. Essayez une des suggestions ci-dessus ou contactez-nous directement.";
+    const q = question.toLowerCase();
+    if (q.includes('service')) response = chatbotFAQ['services'];
+    else if (q.includes('devis')) response = chatbotFAQ['devis'];
+    else if (q.includes('délai') || q.includes('delai')) response = chatbotFAQ['délais'];
+    else if (q.includes('formation')) response = chatbotFAQ['formations'];
+    else if (q.includes('contact')) response = chatbotFAQ['contacter'];
+    else if (q.includes('salut') || q.includes('bonjour') || q.includes('bonsoir') || q.includes('hello')) response = chatbotFAQ['salutation'];
+    setTimeout(() => addBotMessage(response), 600);
+  }
+  </script>
+
+  <!-- Ajout avatar au chatbot -->
+  <style>
+    .chatbot-message.bot {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+    .chatbot-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(31,164,122,0.07);
+      border: 2px solid var(--vert);
+      flex-shrink: 0;
+    }
+  </style>
+  <script>
+  // Ajout d'un avatar au message du bot
+  const botAvatarUrl = 'https://randomuser.me/api/portraits/men/77.jpg'; // Remplacer par une photo sénégalaise si besoin
+  function addBotMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message bot';
+    msg.innerHTML = `<img src="${botAvatarUrl}" class="chatbot-avatar" alt="Conseiller Porokhane"/>` + `<span>${text}</span>`;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+  </script>
+
+  
 </body>
 </html>

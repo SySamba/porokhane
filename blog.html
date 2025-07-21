@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5 bonnes pratiques cybersécurité - Porokhane Digital</title>
+  <title>Blog | Porokhane Digital Consulting</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
@@ -11,7 +11,6 @@
       --vert: #1fa47a;
       --bleu: #2563eb;
       --blanc: #fff;
-      --noir: #0f172a;
       --gris: #f8fafc;
       --gris-fonce: #e2e8f0;
       --gris-texte: #64748b;
@@ -20,31 +19,75 @@
       --rayon: 16px;
       --rayon-grand: 24px;
     }
-
-    * {
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--gris); color: var(--gris-titre); line-height: 1.7; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    /* Navigation */
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-logo h2 {
+      color: var(--vert);
+      font-size: 1.5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      align-items: center;
+      gap: 1.5rem;
     }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--gris);
+    .nav-item {
+      position: relative;
+    }
+    .nav-link {
       color: var(--gris-titre);
-      line-height: 1.6;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s;
+      display: inline-block;
     }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px;
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--vert);
+      transition: width 0.3s;
     }
-
+    .nav-link:hover {
+      color: var(--vert);
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    /* Sous-menus */
     .submenu {
       position: absolute;
       top: 100%;
       left: 50%;
-      transform: translateX(-50%) translateY(10px);
+      transform: translateX(-50%) translateY(-10px);
       background: var(--blanc);
       border-radius: var(--rayon);
       box-shadow: var(--ombre);
@@ -56,13 +99,11 @@
       border: 1px solid var(--gris-fonce);
       padding: 0.5rem 0;
     }
-    
     .nav-item:hover .submenu {
       opacity: 1;
       visibility: visible;
       transform: translateX(-50%) translateY(0);
     }
-    
     .submenu-link {
       display: block;
       padding: 0.7rem 1.5rem;
@@ -71,655 +112,121 @@
       transition: all 0.2s;
       font-weight: 500;
     }
-    
     .submenu-link:hover {
       background: var(--gris-clair);
       color: var(--vert);
       padding-left: 1.7rem;
     }
-    
-    
-    /* Devis */
-    .devis-section { 
-      background: linear-gradient(rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), 
-                  url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-    }
-    
-    .devis-form { 
-      background: var(--blanc); 
-      border-radius: var(--rayon-grand); 
-      padding: 2.5rem; 
-      box-shadow: var(--ombre); 
-      max-width: 600px; 
-      margin: 0 auto; 
-      border-top: 4px solid var(--vert);
-    }
-
-    /* Bouton Devis Spécial */
     .nav-devis {
       position: relative;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       padding: 0.7rem 1.5rem;
       background: linear-gradient(90deg, var(--vert), var(--bleu));
       color: white;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 700;
+      font-size: 1rem;
       overflow: hidden;
       z-index: 1;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.4s;
       box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
       border: none;
       cursor: pointer;
+      white-space: nowrap;
     }
-    
-    .nav-devis::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, var(--bleu), var(--vert));
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-    
     .nav-devis:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
     }
-    
-    .nav-devis:hover::before {
-      opacity: 1;
-    }
-    
-    /* Animation "Pulse" au survol */
-    .nav-devis:hover .devis-icon {
-      animation: pulse 1s infinite;
-    }
-    
-    /* Effet de vague */
-    .nav-devis::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-      transform: scale(0);
-      opacity: 0;
-      transition: transform 0.6s, opacity 0.4s;
-    }
-    
-    .nav-devis:hover::after {
-      transform: scale(2);
-      opacity: 1;
-    }
-    
-    /* Icône animée */
     .devis-icon {
       margin-left: 0.5rem;
       transition: transform 0.3s;
-      display: inline-block;
     }
-    
     .nav-devis:hover .devis-icon {
-      transform: translateX(3px);
+      transform: translateX(5px);
+      animation: pulse 1s infinite;
     }
-    
-    /* Animation */
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.2); }
       100% { transform: scale(1); }
     }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-devis {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-      }
-    }
-    
-    .navbar {
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--gris-fonce);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .nav-logo h2 {
-      color: var(--vert);
-      font-size: 1.5rem;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .nav-menu {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      align-items: center;
-      gap: 1.5rem;
-    }
-    
-    .nav-link {
-      color: var(--noir);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 0.5rem 0;
-      position: relative;
-      transition: color 0.3s;
-      display: inline-block;
-    }
-    
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--vert);
-      transition: width 0.3s;
-    }
-    .devis-form h3 { 
-      color: var(--bleu); 
-      margin-bottom: 1.5rem; 
-      text-align: center;
-      font-size: 1.5rem;
-    }
-    
-    .devis-form input, 
-    .devis-form textarea, 
-    .devis-form select { 
-      width: 100%; 
-      padding: 1rem; 
-      border-radius: 10px; 
-      border: 1px solid var(--gris-fonce); 
-      background: var(--gris); 
-      color: var(--gris-titre); 
-      font-size: 1rem; 
-      margin-bottom: 1rem; 
-      transition: all 0.3s; 
-    }
-
-    /* Header */
-    .blog-header {
-      text-align: center;
-      margin: 60px 0 40px;
-    }
-
-    .blog-header .meta {
-      color: var(--bleu);
-      margin-bottom: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .blog-header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-      color: var(--vert);
-    }
-
-    .blog-header .author {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .author-img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    /* Content */
-    .blog-content {
-      background: var(--blanc);
-      border-radius: var(--rayon-grand);
-      padding: 3rem;
-      box-shadow: var(--ombre);
-      margin-bottom: 4rem;
-    }
-
-    .blog-hero {
-      width: 100%;
-      height: 400px;
-      border-radius: var(--rayon);
-      overflow: hidden;
-      margin-bottom: 3rem;
-    }
-
-    .blog-hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .blog-content h2 {
-      color: var(--vert);
-      margin: 2.5rem 0 1.5rem;
-      font-size: 1.8rem;
-    }
-
-    .blog-content h3 {
-      color: var(--bleu);
-      margin: 2rem 0 1rem;
-      font-size: 1.4rem;
-    }
-
-    .blog-content p {
-      margin-bottom: 1.5rem;
-      color: var(--gris-texte);
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    .blog-content ul, 
-    .blog-content ol {
-      margin: 1.5rem 0;
-      padding-left: 2rem;
-      color: var(--gris-texte);
-    }
-
-    .blog-content li {
-      margin-bottom: 0.8rem;
-    }
-
-    .highlight-box {
-      background: var(--gris);
-      border-left: 4px solid var(--vert);
-      padding: 1.5rem;
-      border-radius: 0 var(--rayon) var(--rayon) 0;
-      margin: 2rem 0;
-    }
-
-    /* Share */
-    .share-section {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 3rem 0;
-    }
-
-    .share-btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--blanc);
-      transition: transform 0.3s;
-    }
-
-    .share-btn:hover {
-      transform: translateY(-3px);
-    }
-
-    /* Related */
-    .related-posts {
-      margin: 5rem 0;
-    }
-
-    .related-posts h2 {
-      text-align: center;
-      color: var(--vert);
-      margin-bottom: 3rem;
-    }
-
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .related-card {
-      background: var(--blanc);
-      border-radius: var(--rayon);
-      overflow: hidden;
-      box-shadow: var(--ombre);
-      transition: transform 0.3s;
-    }
-
-    .related-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .related-img {
-      height: 180px;
-      overflow: hidden;
-    }
-
-    .related-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
-
-    .related-card:hover .related-img img {
-      transform: scale(1.05);
-    }
-
-    .related-content {
-      padding: 1.5rem;
-    }
-
-    .related-content h3 {
-      color: var(--vert);
-      margin-bottom: 0.5rem;
-    }
-
-    .related-meta {
-      color: var(--bleu);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .blog-header h1 {
-        font-size: 2rem;
-      }
-      
-      .blog-content {
-        padding: 2rem;
-      }
-      
-      .blog-hero {
-        height: 300px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .blog-header .meta {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      
-      .blog-header h1 {
-        font-size: 1.8rem;
-      }
-      
-      .blog-hero {
-        height: 250px;
-      }
-    }
-
-    .newsletter { 
-      margin-top: 3rem; 
-      background: var(--blanc); 
-      border-radius: var(--rayon); 
-      padding: 1.5rem; 
-      box-shadow: var(--ombre); 
-      display: flex; 
-      gap: 0.5rem; 
-      align-items: center; 
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      border-top: 4px solid var(--vert);
-    }
-    
-    .newsletter input[type="email"] { 
-      flex: 1; 
-      padding: 1rem; 
-      border-radius: 8px; 
-      border: 1px solid var(--gris-fonce); 
-      font-size: 1rem; 
-      transition: all 0.3s;
-    }
-    .container { 
-      max-width: 1200px; 
-      margin: 0 auto; 
-      padding: 0 20px; 
-    }
-    
-    .newsletter input[type="email"]:focus {
-      border-color: var(--vert);
-      outline: none;
-      box-shadow: 0 0 0 3px var(--vert-clair);
-    }
-    
-    .newsletter button { 
-      padding: 1rem 2rem; 
-      border-radius: 8px; 
-      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
-      color: var(--blanc); 
-      border: none; 
-      font-weight: 600; 
-      cursor: pointer; 
-      transition: all 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .newsletter button:hover { 
-      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
-    }
-    
-    /* Footer */
-    .footer { 
-      background: linear-gradient(135deg, var(--vert), var(--bleu)); 
-      color: var(--blanc); 
-      padding: 80px 0 30px; 
-      position: relative;
-    }
-    
-    .footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100px;
-      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231fa47a" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%231fa47a" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%231fa47a"/></svg>');
-      background-size: cover;
-      transform: rotate(180deg);
-    }
-    
-    .footer-content { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-      gap: 3rem; 
-      margin-bottom: 3rem; 
-      position: relative;
-      z-index: 1;
-    }
-    
-    .footer-section h3, 
-    .footer-section h4 { 
-      color: var(--blanc); 
-      margin-bottom: 1.5rem; 
-      font-size: 1.3rem; 
-      font-weight: 700; 
-      position: relative;
-      display: inline-block;
-    }
-    
-    .footer-section h3::after,
-    .footer-section h4::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: rgba(255,255,255,0.3);
-      border-radius: 2px;
-    }
-    
-    .footer-section p { 
-      color: rgba(255,255,255,0.8); 
-      line-height: 1.6; 
-      margin-bottom: 1.5rem; 
-    }
-    
-    .footer-section ul { 
-      list-style: none; 
-    }
-    
-    .footer-section ul li { 
-      margin-bottom: 0.8rem; 
-    }
-    
-    .footer-section ul li a { 
-      color: rgba(255,255,255,0.8); 
-      text-decoration: none; 
-      transition: all 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .footer-section ul li a:hover { 
-      color: var(--blanc); 
-      transform: translateX(5px);
-    }
-    
-    .footer-section ul li a i {
-      font-size: 0.8rem;
-    }
-    
-    .social-links { 
-      display: flex; 
-      gap: 1rem; 
-      margin-top: 1.5rem; 
-    }
-    
-    .social-links a { 
-      width: 40px; 
-      height: 40px; 
-      background: rgba(255,255,255,0.15); 
-      border-radius: 50%; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      color: var(--blanc); 
-      text-decoration: none; 
-      transition: all 0.3s; 
-    }
-    
-    .social-links a:hover { 
-      background: var(--blanc); 
-      color: var(--vert); 
-      transform: translateY(-3px) scale(1.1); 
-    }
-    
-    .footer-bottom { 
-      border-top: 1px solid rgba(255,255,255,0.15); 
-      padding-top: 2rem; 
-      text-align: center; 
-      color: rgba(255,255,255,0.7); 
-      font-size: 0.9rem;
-      position: relative;
-      z-index: 1;
-    }
-    
-    /* Animations */
-    @keyframes float { 
-      0%, 100% { transform: translateY(0px); } 
-      50% { transform: translateY(-15px); } 
-    }
-    
-    /* Utilitaires */
-    .visually-hidden { 
-      position: absolute; 
-      width: 1px; 
-      height: 1px; 
-      padding: 0; 
-      margin: -1px; 
-      overflow: hidden; 
-      clip: rect(0,0,0,0); 
-      border: 0; 
-    }
-    
-    
+    /* Hero Banner */
+    .blog-hero { background: linear-gradient(rgba(31,164,122,0.85),rgba(37,99,235,0.85)), url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; color: var(--blanc); min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; }
+    .blog-hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 1.2rem; letter-spacing: 1px; text-shadow: 0 4px 24px rgba(0,0,0,0.18); }
+    .blog-hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto; color: #e6fff6; }
+    /* Blog Grid */
+    .blog-section { background: var(--gris); padding: 80px 0; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+    .blog-card { background: var(--blanc); border-radius: var(--rayon-grand); box-shadow: var(--ombre); overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 0.3s, transform 0.3s; }
+    .blog-card:hover { box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15); transform: translateY(-8px) scale(1.03); }
+    .blog-card-img { height: 200px; overflow: hidden; }
+    .blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .blog-card:hover .blog-card-img img { transform: scale(1.08); }
+    .blog-card-content { padding: 1.8rem; flex: 1; display: flex; flex-direction: column; }
+    .blog-card h3 { color: var(--vert); font-size: 1.3rem; margin-bottom: 0.7rem; font-weight: 700; transition: color 0.3s; }
+    .blog-card p { color: var(--gris-texte); flex: 1; margin-bottom: 1rem; }
+    .blog-meta { color: var(--bleu); font-size: 0.95rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem; }
+    .blog-meta i { font-size: 0.9rem; }
+    .blog-card .btn { align-self: flex-start; margin-top: auto; padding: 8px 20px; font-size: 0.95rem; border-radius: 30px; background: linear-gradient(90deg, var(--vert), var(--bleu)); color: var(--blanc); border: none; font-weight: 600; cursor: pointer; transition: all 0.3s; text-decoration: none; }
+    .blog-card .btn:hover { background: linear-gradient(90deg, var(--bleu), var(--vert)); transform: translateY(-2px); }
+    /* Footer (identique autres pages) */
+    .footer { background: linear-gradient(135deg, var(--vert), var(--bleu)); color: var(--blanc); padding: 80px 0 30px; position: relative; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem; position: relative; z-index: 1; }
+    .footer-section h3, .footer-section h4 { color: var(--blanc); margin-bottom: 1.5rem; font-size: 1.3rem; font-weight: 700; position: relative; display: inline-block; }
+    .footer-section h3::after, .footer-section h4::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 50px; height: 3px; background: rgba(255,255,255,0.3); border-radius: 2px; }
+    .footer-section p { color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 1.5rem; }
+    .footer-section ul { list-style: none; }
+    .footer-section ul li { margin-bottom: 0.8rem; }
+    .footer-section ul li a { color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; }
+    .footer-section ul li a:hover { color: var(--blanc); transform: translateX(5px); }
+    .footer-section ul li a i { font-size: 0.8rem; }
+    .social-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
+    .social-links a { width: 40px; height: 40px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--blanc); text-decoration: none; transition: all 0.3s; }
+    .social-links a:hover { background: var(--blanc); color: var(--vert); transform: translateY(-3px) scale(1.1); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.7); font-size: 0.9rem; position: relative; z-index: 1; }
+    @media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr; } .footer-content { grid-template-columns: 1fr; gap: 2rem; } }
+    @media (max-width: 600px) { .blog-hero h1 { font-size: 2rem; } .container { padding: 0 8px; } }
   </style>
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <div class="nav-logo"><h2></i> Porokhane Digital</h2></div>
+      <div class="nav-logo"><h2>Porokhane Digital</h2></div>
       <ul class="nav-menu">
-        <li><a href="#accueil" class="nav-link">Qui sommes nous</a></li>
-        <!-- Formations -->
+        <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="a-propos.html" class="nav-link">À propos</a></li>
         <li class="nav-item">
-          <a href="#formations" class="nav-link">
-            Formations
-            <i class="fas fa-chevron-down"></i>
-          </a>
+          <a href="formations.html" class="nav-link">Formations <i class="fas fa-chevron-down"></i></a>
           <ul class="submenu">
-            <li><a href="#robotique" class="submenu-link"><i class="fas fa-robot"></i> Robotique</a></li>
-            <li><a href="#impression3d" class="submenu-link"><i class="fas fa-print"></i> Impression 3D</a></li>
-            <li><a href="#cybersecurite" class="submenu-link"><i class="fas fa-shield-alt"></i> Cybersécurité</a></li>
+            <li><a href="formations.html#robotique" class="submenu-link"><i class="fas fa-robot"></i> Robotique</a></li>
+            <li><a href="formations.html#impression3d" class="submenu-link"><i class="fas fa-print"></i> Impression 3D</a></li>
+            <li><a href="formations.html#cybersecurite" class="submenu-link"><i class="fas fa-shield-alt"></i> Cybersécurité</a></li>
           </ul>
         </li>
-        
-        <!-- Marketing -->
         <li class="nav-item">
-          <a href="#marketing" class="nav-link">
-            Marketing
-            <i class="fas fa-chevron-down"></i>
-          </a>
+          <a href="marketing.html" class="nav-link">Marketing <i class="fas fa-chevron-down"></i></a>
           <ul class="submenu">
-            <li><a href="#audit" class="submenu-link"><i class="fas fa-search"></i> Audit Express</a></li>
-            <li><a href="#creation-site" class="submenu-link"><i class="fas fa-laptop-code"></i> Création/Réfonte de site</a></li>
-            <li><a href="#strategie" class="submenu-link"><i class="fas fa-chess"></i> Stratégie digitale</a></li>
-            <li><a href="#seo" class="submenu-link"><i class="fas fa-search-plus"></i> Référencement naturel</a></li>
-            <li><a href="#reseaux-sociaux" class="submenu-link"><i class="fas fa-hashtag"></i> Réseaux sociaux</a></li>
+            <li><a href="marketing.html#audit" class="submenu-link"><i class="fas fa-search"></i> Audit Express</a></li>
+            <li><a href="marketing.html#creation-site" class="submenu-link"><i class="fas fa-laptop-code"></i> Création/Réfonte de site</a></li>
+            <li><a href="marketing.html#strategie" class="submenu-link"><i class="fas fa-chess"></i> Stratégie digitale</a></li>
+            <li><a href="marketing.html#seo" class="submenu-link"><i class="fas fa-search-plus"></i> Référencement naturel</a></li>
+            <li><a href="marketing.html#reseaux-sociaux" class="submenu-link"><i class="fas fa-hashtag"></i> Réseaux sociaux</a></li>
           </ul>
         </li>
-        
-        <!-- Accompagnement -->
         <li class="nav-item">
-          <a href="#accompagnement" class="nav-link">
-            Accompagnement
-            <i class="fas fa-chevron-down"></i>
-          </a>
+          <a href="accompagnement.html" class="nav-link">Accompagnement <i class="fas fa-chevron-down"></i></a>
           <ul class="submenu">
-            <li><a href="#automatisation" class="submenu-link"><i class="fas fa-cogs"></i> Automatisation</a></li>
-            <li><a href="#bdd" class="submenu-link"><i class="fas fa-database"></i> Bases de données</a></li>
-            <li><a href="#ia" class="submenu-link"><i class="fas fa-brain"></i> Intelligence Artificielle</a></li>
+            <li><a href="accompagnement.html#automatisation" class="submenu-link"><i class="fas fa-cogs"></i> Automatisation</a></li>
+            <li><a href="accompagnement.html#bdd" class="submenu-link"><i class="fas fa-database"></i> Bases de données</a></li>
+            <li><a href="accompagnement.html#ia" class="submenu-link"><i class="fas fa-brain"></i> Intelligence Artificielle</a></li>
           </ul>
         </li>
-        <li><a href="#blog" class="nav-link">Actualités</a></li>
-        <!--<li><a href="emplois" class="nav-link">Emplois</a></li>-->
+        <li><a href="blog.html" class="nav-link" style="color: var(--vert);">Actualités</a></li>
         <li>
           <a href="devis.html" class="nav-devis">
             Demander un devis
@@ -729,169 +236,183 @@
       </ul>
     </div>
   </nav>
-  <!-- Blog Header -->
-  <div class="container">
-    <header class="blog-header">
-      <div class="meta">
-        <span><i class="far fa-calendar-alt"></i> 5 juin 2024</span>
-        <span><i class="far fa-folder"></i> Cybersécurité</span>
-        <span><i class="far fa-clock"></i> 5 min de lecture</span>
-      </div>
-      <h1>5 Bonnes Pratiques Essentielles pour Protéger Vos Données en 2024</h1>
-      <div class="author">
-        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Auteur" class="author-img">
-        <div>
-          <p style="font-weight: 600;">Fatou Ndiaye</p>
-          <p style="font-size: 0.9rem; color: var(--gris-texte);">Expert en Cybersécurité</p>
+  <!-- Hero Banner -->
+  <section class="blog-hero">
+    <div class="container">
+      <h1>Le Blog de Porokhane Digital</h1>
+      <p>Retrouvez nos conseils, actualités et analyses sur la transformation digitale, l’innovation et le numérique en Afrique.</p>
+    </div>
+  </section>
+  <!-- Blog Grid -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-grid">
+        <!-- Article 1 -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Transformation digitale">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="fas fa-calendar-alt"></i> 12 juin 2024</div>
+            <h3>Transformation digitale : les clés du succès en Afrique</h3>
+            <p>Découvrez comment les entreprises africaines peuvent réussir leur transformation digitale grâce à l’innovation, la formation et l’accompagnement sur-mesure.</p>
+            <a href="#" class="btn">Lire la suite</a>
+          </div>
+        </div>
+        <!-- Article 2 -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Cybersécurité">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="fas fa-calendar-alt"></i> 2 juin 2024</div>
+            <h3>Cybersécurité : protéger son entreprise à l’ère du numérique</h3>
+            <p>Les bonnes pratiques pour sécuriser ses données, sensibiliser ses équipes et anticiper les menaces cyber en Afrique.</p>
+            <a href="#" class="btn">Lire la suite</a>
+          </div>
+        </div>
+        <!-- Article 3 -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Innovation digitale">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="fas fa-calendar-alt"></i> 25 mai 2024</div>
+            <h3>Innovation digitale : tendances et opportunités pour 2024</h3>
+            <p>Intelligence artificielle, cloud, marketing digital… Tour d’horizon des tendances qui vont façonner le numérique africain cette année.</p>
+            <a href="#" class="btn">Lire la suite</a>
+          </div>
+        </div>
+        <!-- Article 4 -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302b?auto=format&fit=crop&w=600&q=80" alt="Marketing digital">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="fas fa-calendar-alt"></i> 18 mai 2024</div>
+            <h3>Marketing digital : booster sa visibilité en ligne</h3>
+            <p>Stratégies et outils pour améliorer la présence digitale de votre entreprise et attirer de nouveaux clients.</p>
+            <a href="#" class="btn">Lire la suite</a>
+          </div>
+        </div>
+        <!-- Article 5 -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Formation numérique">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="fas fa-calendar-alt"></i> 10 mai 2024</div>
+            <h3>Formation numérique : un levier pour l’employabilité</h3>
+            <p>Pourquoi la formation continue est essentielle pour s’adapter aux évolutions du digital et rester compétitif.</p>
+            <a href="#" class="btn">Lire la suite</a>
+          </div>
+        </div>
+        <!-- Article 6 -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b41?auto=format&fit=crop&w=600&q=80" alt="Cloud computing">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="fas fa-calendar-alt"></i> 2 mai 2024</div>
+            <h3>Cloud computing : avantages pour les PME africaines</h3>
+            <p>Découvrez comment le cloud permet de gagner en flexibilité, sécurité et performance, même pour les petites structures.</p>
+            <a href="#" class="btn">Lire la suite</a>
+          </div>
+        </div>
+        <!-- Article 7 -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="E-commerce Afrique">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="fas fa-calendar-alt"></i> 25 avril 2024</div>
+            <h3>E-commerce : réussir sa boutique en ligne en Afrique</h3>
+            <p>Les étapes clés pour lancer et développer un site e-commerce performant et adapté au marché africain.</p>
+            <a href="#" class="btn">Lire la suite</a>
+          </div>
+        </div>
+        <!-- Article 8 -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="SEO Afrique">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="fas fa-calendar-alt"></i> 15 avril 2024</div>
+            <h3>SEO : optimiser son référencement naturel en Afrique</h3>
+            <p>Conseils pratiques pour améliorer la visibilité de votre site sur Google et attirer un trafic qualifié.</p>
+            <a href="#" class="btn">Lire la suite</a>
+          </div>
+        </div>
+        <!-- Article 9 -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Transformation digitale Afrique">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="fas fa-calendar-alt"></i> 1 avril 2024</div>
+            <h3>Transformation digitale : retours d’expérience d’entrepreneurs africains</h3>
+            <p>Des témoignages inspirants sur les défis et réussites de la digitalisation en Afrique francophone.</p>
+            <a href="#" class="btn">Lire la suite</a>
+          </div>
         </div>
       </div>
-    </header>
-
-    <!-- Blog Content -->
-    <article class="blog-content">
-      <div class="blog-hero">
-        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cybersécurité">
-      </div>
-
-      <p>Dans un monde de plus en plus numérique, la protection des données est devenue une priorité absolue pour les entreprises de toutes tailles. Les cyberattaques sont en constante augmentation, et les méthodes des pirates évoluent rapidement. Voici 5 pratiques essentielles que toute entreprise devrait adopter pour sécuriser ses données sensibles.</p>
-
-      <h2>1. Mise en place de l'authentification multifacteur (MFA)</h2>
-      <p>L'authentification multifacteur ajoute une couche de sécurité cruciale à vos comptes en ligne. Au-delà du simple mot de passe, elle requiert une deuxième forme de vérification :</p>
-      <ul>
-        <li>Code SMS envoyé à votre téléphone</li>
-        <li>Application d'authentification comme Google Authenticator</li>
-        <li>Reconnaissance biométrique (empreinte digitale, reconnaissance faciale)</li>
-      </ul>
-
-      <div class="highlight-box">
-        <p><strong>Conseil pro :</strong> Privilégiez les applications d'authentification aux SMS, plus vulnérables aux attaques de type "SIM swapping".</p>
-      </div>
-
-      <h2>2. Sauvegardes régulières et cryptées</h2>
-      <p>Les ransomwares représentent une menace majeure. Une stratégie de sauvegarde solide comprend :</p>
-      <ul>
-        <li>La règle du 3-2-1 : 3 copies, sur 2 supports différents, dont 1 hors site</li>
-        <li>Cryptage des sauvegardes</li>
-        <li>Tests réguliers de restauration</li>
-      </ul>
-
-      <h2>3. Mises à jour systématiques</h2>
-      <p>Les cybercriminels exploitent les vulnérabilités des logiciels non mis à jour. Automatisez :</p>
-      <ul>
-        <li>Mises à jour des systèmes d'exploitation</li>
-        <li>Correctifs de sécurité</li>
-        <li>Applications et plugins</li>
-      </ul>
-
-      <h2>4. Formation des employés</h2>
-      <p>L'humain reste le maillon faible. Un programme de formation efficace couvre :</p>
-      <ul>
-        <li>Reconnaissance des emails de phishing</li>
-        <li>Bonnes pratiques de création de mots de passe</li>
-        <li>Protection des données en télétravail</li>
-      </ul>
-
-      <h2>5. Audit de sécurité régulier</h2>
-      <p>Un audit complet permet d'identifier les failles avant les pirates :</p>
-      <ul>
-        <li>Tests d'intrusion</li>
-        <li>Analyse des configurations</li>
-        <li>Revue des politiques de sécurité</li>
-      </ul>
-
-      <h3>Conclusion</h3>
-      <p>La cybersécurité n'est pas un projet ponctuel mais un processus continu. En implémentant ces 5 pratiques, vous réduirez considérablement les risques pour votre entreprise. Pour une protection optimale, considérez une approche holistique combinant technologie, processus et formation.</p>
-
-      <div class="share-section">
-        <a href="#" class="share-btn" style="background: #3b5998;"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="share-btn" style="background: #1da1f2;"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="share-btn" style="background: #0077b5;"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="share-btn" style="background: #25d366;"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </article>
-
-    <!-- Related Posts -->
-    <section class="related-posts">
-      <h2>Articles Similaires</h2>
-      <div class="related-grid">
-        <article class="related-card">
-          <div class="related-img">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="SEO">
-          </div>
-          <div class="related-content">
-            <div class="related-meta">12 juin 2024 • Marketing</div>
-            <h3>SEO 2024 : Les Nouvelles Tendances</h3>
-            <a href="#" style="color: var(--vert); text-decoration: none; font-weight: 600;">Lire l'article →</a>
-          </div>
-        </article>
-
-        <article class="related-card">
-          <div class="related-img">
-            <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="IA">
-          </div>
-          <div class="related-content">
-            <div class="related-meta">8 juin 2024 • Technologie</div>
-            <h3>L'IA au Service des PME</h3>
-            <a href="#" style="color: var(--vert); text-decoration: none; font-weight: 600;">Lire l'article →</a>
-          </div>
-        </article>
-      </div>
-    </section>
-  </div>
-</body>
- <!-- Footer -->
- <footer class="footer">
-  <form class="newsletter" id="newsletterForm">
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <form class="newsletter" id="newsletterForm">
       <input type="email" name="newsletterEmail" placeholder="Votre email pour recevoir nos conseils et actualités" required>
       <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
     </form>
-  </br>
-  <div class="container">
-    
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Porokhane Digital</h3>
-        <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <br>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Porokhane Digital</h3>
+          <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Nos Services</h4>
+          <ul>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+            <li><a href="index.html#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+            <li><a href="index.html#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+221771234567"><i class="fas fa-phone"></i> +221 77 123 45 67</a></li>
+            <li><a href="mailto:contact@porokhane.com"><i class="fas fa-envelope"></i> contact@porokhane.com</a></li>
+            <li><a href="https://goo.gl/maps/xyz" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-section">
-        <h4>Nos Services</h4>
-        <ul>
-          <li><a href="#services"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
-          <li><a href="#services"><i class="fas fa-chevron-right"></i> Applications Mobiles</a></li>
-          <li><a href="#services"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
-          <li><a href="#services"><i class="fas fa-chevron-right"></i> Solutions Cloud</a></li>
-          <li><a href="#services"><i class="fas fa-chevron-right"></i> Cybersécurité</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#accueil"><i class="fas fa-chevron-right"></i> Accueil</a></li>
-          <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-          <li><a href="#blog"><i class="fas fa-chevron-right"></i> Blog</a></li>
-          <li><a href="#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
-          <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Légal</h4>
-        <ul>
-          <li><a href="#"><i class="fas fa-chevron-right"></i> Mentions légales</a></li>
-          <li><a href="#"><i class="fas fa-chevron-right"></i> Politique de confidentialité</a></li>
-          <li><a href="#"><i class="fas fa-chevron-right"></i> Conditions générales</a></li>
-          <li><a href="#"><i class="fas fa-chevron-right"></i> Politique cookies</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Porokhane Digital Consulting. Tous droits réservés.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
+</body>
 </html>

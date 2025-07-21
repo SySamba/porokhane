@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing Digital | Porokhane Digital Consulting</title>
+  <meta name="description" content="Services de marketing digital : Audit Express, Création de sites, Stratégie digitale, SEO et Réseaux sociaux.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --vert: #1fa47a;
+      --vert-clair: #d1fae5;
+      --bleu: #2563eb;
+      --bleu-clair: #dbeafe;
+      --blanc: #fff;
+      --noir: #0f172a;
+      --gris: #f8fafc;
+      --gris-fonce: #e2e8f0;
+      --gris-texte: #64748b;
+      --gris-titre: #1e293b;
+      --ombre: 0 4px 24px rgba(0,0,0,0.08);
+      --rayon: 16px;
+      --rayon-grand: 24px;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: var(--blanc); 
+      color: var(--gris-titre); 
+      line-height: 1.6;
+    }
+    
+    .container { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 0 20px; 
+    }
+    
+    /* Navigation */
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--gris-fonce);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo h2 {
+      color: var(--vert);
+      font-size: 1.5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .nav-item {
+      position: relative;
+    }
+    
+    .nav-link {
+      color: var(--noir);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s;
+      display: inline-block;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--vert);
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover {
+      color: var(--vert);
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Sous-menus */
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-10px);
+      background: var(--blanc);
+      border-radius: var(--rayon);
+      box-shadow: var(--ombre);
+      min-width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 100;
+      border: 1px solid var(--gris-fonce);
+      padding: 0.5rem 0;
+    }
+    
+    .nav-item:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    .submenu-link {
+      display: block;
+      padding: 0.7rem 1.5rem;
+      color: var(--noir);
+      text-decoration: none;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+    
+    .submenu-link:hover {
+      background: var(--gris-clair);
+      color: var(--vert);
+      padding-left: 1.7rem;
+    }
+    
+    .nav-devis {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.7rem 1.5rem;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.4s;
+      box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    
+    .nav-devis:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+    }
+    
+    .devis-icon {
+      margin-left: 0.5rem;
+      transition: transform 0.3s;
+    }
+    
+    .nav-devis:hover .devis-icon {
+      transform: translateX(5px);
+      animation: pulse 1s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: translateX(5px) scale(1); }
+      50% { transform: translateX(5px) scale(1.2); }
+      100% { transform: translateX(5px) scale(1); }
+    }
+    
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(rgba(31,164,122,0.85),rgba(37,99,235,0.85)), 
+                  url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: var(--blanc);
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-banner h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      letter-spacing: 1px;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+    
+    .hero-banner p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #e6fff6;
+      animation: fadeInUp 1.2s 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+    
+    /* Sections */
+    .section {
+      padding: 80px 0;
+      position: relative;
+    }
+    
+    .section.alt {
+      background: var(--gris);
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--vert);
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      border-radius: 2px;
+    }
+    
+    .section-header p {
+      font-size: 1.2rem;
+      color: var(--gris-texte);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    /* Cartes services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+    
+    .service-card {
+      background: var(--blanc);
+      border-radius: var(--rayon-grand);
+      box-shadow: var(--ombre);
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-top: 4px solid var(--vert);
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+      border-top: 4px solid var(--bleu);
+    }
+    
+    .service-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-card:nth-child(2) { animation-delay: 0.2s; }
+    .service-card:nth-child(3) { animation-delay: 0.3s; }
+    .service-card:nth-child(4) { animation-delay: 0.4s; }
+    .service-card:nth-child(5) { animation-delay: 0.5s; }
+    
+    .service-image {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    
+    .service-card:hover .service-image img {
+      transform: scale(1.1);
+    }
+    
+    .service-content {
+      padding: 2rem;
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--bleu);
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+    }
+    
+    .service-card:hover .service-icon {
+      color: var(--vert);
+      transform: scale(1.1);
+    }
+    
+    .service-card h3 {
+      color: var(--vert);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    
+    .service-card p {
+      color: var(--gris-texte);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .service-features {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+    
+    .service-features li {
+      color: var(--gris-texte);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .service-features li i {
+      color: var(--vert);
+      font-size: 0.9rem;
+    }
+    
+    .service-btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .service-btn:hover {
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    }
+    
+    /* Footer */
+    .footer { 
+      background: linear-gradient(135deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      padding: 80px 0 30px; 
+      position: relative;
+    }
+    
+    .footer-content { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 3rem; 
+      margin-bottom: 3rem; 
+      position: relative;
+      z-index: 1;
+    }
+    
+    .footer-section h3, 
+    .footer-section h4 { 
+      color: var(--blanc); 
+      margin-bottom: 1.5rem; 
+      font-size: 1.3rem; 
+      font-weight: 700; 
+      position: relative;
+      display: inline-block;
+    }
+    
+    .footer-section h3::after,
+    .footer-section h4::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+    }
+    
+    .footer-section p { 
+      color: rgba(255,255,255,0.8); 
+      line-height: 1.6; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    .footer-section ul { 
+      list-style: none; 
+    }
+    
+    .footer-section ul li { 
+      margin-bottom: 0.8rem; 
+    }
+    
+    .footer-section ul li a { 
+      color: rgba(255,255,255,0.8); 
+      text-decoration: none; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .footer-section ul li a:hover { 
+      color: var(--blanc); 
+      transform: translateX(5px);
+    }
+    
+    .footer-section ul li a i {
+      font-size: 0.8rem;
+    }
+    
+    .social-links { 
+      display: flex; 
+      gap: 1rem; 
+      margin-top: 1.5rem; 
+    }
+    
+    .social-links a { 
+      width: 40px; 
+      height: 40px; 
+      background: rgba(255,255,255,0.15); 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: var(--blanc); 
+      text-decoration: none; 
+      transition: all 0.3s; 
+    }
+    
+    .social-links a:hover { 
+      background: var(--blanc); 
+      color: var(--vert); 
+      transform: translateY(-3px) scale(1.1); 
+    }
+    
+    .footer-bottom { 
+      border-top: 1px solid rgba(255,255,255,0.15); 
+      padding-top: 2rem; 
+      text-align: center; 
+      color: rgba(255,255,255,0.7); 
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from { 
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    
+    .service-card {
+      animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-banner h1 { font-size: 2rem; }
+      .section-header h2 { font-size: 1.8rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .nav-menu { flex-wrap: wrap; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo"><h2>Porokhane Digital</h2></div>
+      <ul class="nav-menu">
+        <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        <li class="nav-item">
+          <a href="formations.html" class="nav-link">Formations <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="formations.html#robotique" class="submenu-link"><i class="fas fa-robot"></i> Robotique</a></li>
+            <li><a href="formations.html#impression3d" class="submenu-link"><i class="fas fa-print"></i> Impression 3D</a></li>
+            <li><a href="formations.html#cybersecurite" class="submenu-link"><i class="fas fa-shield-alt"></i> Cybersécurité</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="marketing.html" class="nav-link">Marketing <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="marketing.html#audit" class="submenu-link"><i class="fas fa-search"></i> Audit Express</a></li>
+            <li><a href="marketing.html#creation-site" class="submenu-link"><i class="fas fa-laptop-code"></i> Création/Réfonte de site</a></li>
+            <li><a href="marketing.html#strategie" class="submenu-link"><i class="fas fa-chess"></i> Stratégie digitale</a></li>
+            <li><a href="marketing.html#seo" class="submenu-link"><i class="fas fa-search-plus"></i> Référencement naturel</a></li>
+            <li><a href="marketing.html#reseaux-sociaux" class="submenu-link"><i class="fas fa-hashtag"></i> Réseaux sociaux</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="accompagnement.html" class="nav-link">Accompagnement <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="accompagnement.html#automatisation" class="submenu-link"><i class="fas fa-cogs"></i> Automatisation</a></li>
+            <li><a href="accompagnement.html#bdd" class="submenu-link"><i class="fas fa-database"></i> Bases de données</a></li>
+            <li><a href="accompagnement.html#ia" class="submenu-link"><i class="fas fa-brain"></i> Intelligence Artificielle</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html" class="nav-link">Actualités</a></li>
+        <li>
+          <a href="devis.html" class="nav-devis">
+            Demander un devis
+            <span class="devis-icon"><i class="fas fa-paper-plane"></i></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <div class="container">
+      <h1>Marketing Digital</h1>
+      <p>Boostez votre présence en ligne avec nos services de marketing digital sur mesure. De l'audit à la stratégie complète.</p>
+    </div>
+  </section>
+
+  <!-- Section Services -->
+  <section class="section alt" id="marketing">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nos Services Marketing</h2>
+        <p>Des solutions complètes pour développer votre présence digitale et atteindre vos objectifs commerciaux</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Audit Express -->
+        <div class="service-card" id="audit">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Audit Express">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>Audit Express</h3>
+            <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Un diagnostic rapide pour des résultats concrets</p>
+            <p>Analysez rapidement votre présence digitale actuelle et identifiez les opportunités d'amélioration pour optimiser vos performances.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Analyse de votre site web</li>
+              <li><i class="fas fa-check"></i> Audit des réseaux sociaux</li>
+              <li><i class="fas fa-check"></i> Benchmark concurrentiel</li>
+              <li><i class="fas fa-check"></i> Rapport détaillé avec recommandations</li>
+            </ul>
+            <a href="contact.html" class="service-btn">Demander un audit</a>
+          </div>
+        </div>
+
+        <!-- Création/Réfonte de site -->
+        <div class="service-card" id="creation-site">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80" alt="Création de site">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Création/Réfonte de site</h3>
+            <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Votre vitrine digitale sur-mesure</p>
+            <p>Conception de sites web modernes, responsives et optimisés pour la conversion. Du design à la mise en ligne.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Design personnalisé et moderne</li>
+              <li><i class="fas fa-check"></i> Site responsive (mobile-first)</li>
+              <li><i class="fas fa-check"></i> Optimisation SEO intégrée</li>
+              <li><i class="fas fa-check"></i> Interface d'administration</li>
+            </ul>
+            <a href="contact.html" class="service-btn">Demander un devis</a>
+          </div>
+        </div>
+
+        <!-- Stratégie digitale -->
+        <div class="service-card" id="strategie">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&q=80" alt="Stratégie digitale">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">
+              <i class="fas fa-chess"></i>
+            </div>
+            <h3>Stratégie digitale</h3>
+            <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Une vision claire pour votre croissance</p>
+            <p>Élaborez une stratégie marketing digitale complète et cohérente pour atteindre vos objectifs business.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Définition des objectifs</li>
+              <li><i class="fas fa-check"></i> Analyse de la concurrence</li>
+              <li><i class="fas fa-check"></i> Plan d'action détaillé</li>
+              <li><i class="fas fa-check"></i> Suivi et optimisation</li>
+            </ul>
+            <a href="contact.html" class="service-btn">Développer ma stratégie</a>
+          </div>
+        </div>
+
+        <!-- SEO -->
+        <div class="service-card" id="seo">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=600&q=80" alt="SEO">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">
+              <i class="fas fa-search-plus"></i>
+            </div>
+            <h3>Référencement naturel</h3>
+            <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Soyez visible là où vos clients vous cherchent</p>
+            <p>Améliorez votre visibilité sur les moteurs de recherche et augmentez votre trafic organique de manière durable.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Audit SEO complet</li>
+              <li><i class="fas fa-check"></i> Optimisation on-page</li>
+              <li><i class="fas fa-check"></i> Création de contenu optimisé</li>
+              <li><i class="fas fa-check"></i> Suivi des performances</li>
+            </ul>
+            <a href="contact.html" class="service-btn">Optimiser mon SEO</a>
+          </div>
+        </div>
+
+        <!-- Réseaux sociaux -->
+        <div class="service-card" id="reseaux-sociaux">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80" alt="Réseaux sociaux">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">
+              <i class="fas fa-hashtag"></i>
+            </div>
+            <h3>Réseaux sociaux</h3>
+            <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Développez votre communauté et votre notoriété</p>
+            <p>Gérez votre présence sur les réseaux sociaux et développez votre communauté avec du contenu engageant.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Gestion des comptes sociaux</li>
+              <li><i class="fas fa-check"></i> Création de contenu</li>
+              <li><i class="fas fa-check"></i> Campagnes publicitaires</li>
+              <li><i class="fas fa-check"></i> Analyse des performances</li>
+            </ul>
+            <a href="contact.html" class="service-btn">Gérer mes réseaux</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <form class="newsletter" id="newsletterForm">
+      <input type="email" name="newsletterEmail" placeholder="Votre email pour recevoir nos conseils et actualités" required>
+      <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
+    </form>
+    <br>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Porokhane Digital</h3>
+          <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Nos Services</h4>
+          <ul>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+            <li><a href="index.html#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+            <li><a href="index.html#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+221771234567"><i class="fas fa-phone"></i> +221 77 123 45 67</a></li>
+            <li><a href="mailto:contact@porokhane.com"><i class="fas fa-envelope"></i> contact@porokhane.com</a></li>
+            <li><a href="https://goo.gl/maps/xyz" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 
+</html> 

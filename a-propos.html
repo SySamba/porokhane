@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos | Porokhane Digital Consulting</title>
+  <meta name="description" content="Découvrez la vision, l'équipe et les valeurs de Porokhane Digital Consulting, agence digitale innovante au Sénégal.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --vert: #1fa47a;
+      --vert-clair: #d1fae5;
+      --bleu: #2563eb;
+      --bleu-clair: #dbeafe;
+      --blanc: #fff;
+      --noir: #0f172a;
+      --gris: #f8fafc;
+      --gris-fonce: #e2e8f0;
+      --gris-texte: #64748b;
+      --gris-titre: #1e293b;
+      --ombre: 0 4px 24px rgba(0,0,0,0.08);
+      --rayon: 16px;
+      --rayon-grand: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--gris);
+      color: var(--noir);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(rgba(31,164,122,0.85),rgba(37,99,235,0.85)), url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: var(--blanc);
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      letter-spacing: 1px;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    .hero-banner p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #e6fff6;
+      animation: fadeInUp 1.2s 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    /* Sections */
+    .section {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section.alt {
+      background: var(--blanc);
+      background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
+    }
+
+    .section.bg {
+      background: linear-gradient(135deg, var(--vert) 0%, var(--bleu) 100%);
+      color: var(--blanc);
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-blend-mode: overlay;
+      position: relative;
+    }
+
+    .section.bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      animation: gradientShift 15s ease infinite;
+      background-size: 200% 200%;
+      background-image: linear-gradient(
+        135deg, 
+        rgba(31,164,122,0.92) 0%, 
+        rgba(37,99,235,0.92) 50%, 
+        rgba(31,164,122,0.92) 100%
+      );
+      z-index: 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--vert);
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      border-radius: 2px;
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      color: var(--gris-texte);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Cartes valeurs */
+    .values-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .value-card {
+      background: var(--blanc);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(31,164,122,0.08);
+      padding: 2.2rem 1.5rem;
+      min-width: 220px;
+      max-width: 320px;
+      flex: 1 1 220px;
+      text-align: center;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-top: 4px solid var(--vert);
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      transform: translateY(40px) rotateX(15deg);
+      opacity: 0;
+    }
+
+    .value-card:hover {
+      transform: translateY(-10px) rotateX(0deg) scale(1.05);
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+      border-top: 4px solid var(--bleu);
+    }
+
+    .value-card i {
+      font-size: 2.2rem;
+      color: var(--bleu);
+      margin-bottom: 1rem;
+      transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      transform: scale(0);
+    }
+
+    .value-card:hover i {
+      transform: scale(1.1) rotate(10deg);
+      color: var(--vert);
+    }
+
+    .value-card:nth-child(odd):hover i {
+      transform: scale(1.1) rotate(-10deg);
+    }
+
+    .value-card h3 {
+      color: var(--vert);
+      font-size: 1.2rem;
+      margin-bottom: 0.7rem;
+      font-weight: 700;
+    }
+
+    .value-card p {
+      color: var(--gris-texte);
+      font-size: 1.05rem;
+    }
+
+    /* Délais d'animation pour les cartes */
+    .value-card:nth-child(1) { animation-delay: 0.1s; }
+    .value-card:nth-child(2) { animation-delay: 0.2s; }
+    .value-card:nth-child(3) { animation-delay: 0.3s; }
+    .value-card:nth-child(4) { animation-delay: 0.4s; }
+    .value-card:nth-child(5) { animation-delay: 0.5s; }
+    .value-card:nth-child(6) { animation-delay: 0.6s; }
+
+    /* Chiffres clés */
+    .kpi-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 2.5rem;
+      justify-content: flex-start;
+      margin-top: 2rem;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--vert) var(--bleu-clair);
+    }
+
+    .kpi-card {
+      background: var(--bleu-clair);
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      min-width: 180px;
+      max-width: 220px;
+      flex: 0 0 200px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(31,164,122,0.07);
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .kpi-card h4 {
+      font-size: 2.2rem;
+      color: var(--bleu);
+      margin-bottom: 0.5rem;
+      font-weight: 800;
+      animation: counterUp 1.5s ease-in-out;
+    }
+
+    .kpi-card p {
+      color: var(--gris-titre);
+      font-size: 1.05rem;
+    }
+
+    /* Equipe */
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .team-card {
+      background: var(--blanc);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(31,164,122,0.08);
+      padding: 2rem 1.2rem 1.2rem 1.2rem;
+      min-width: 200px;
+      max-width: 260px;
+      flex: 1 1 200px;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 8px 32px rgba(37,99,235,0.13);
+    }
+
+    .team-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid var(--vert);
+      transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      filter: grayscale(30%) brightness(95%);
+    }
+
+    .team-card:hover img {
+      transform: scale(1.1);
+      filter: grayscale(0%) brightness(100%);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .team-card h4 {
+      color: var(--bleu);
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      font-weight: 700;
+    }
+
+    .team-card p {
+      color: var(--gris-texte);
+      font-size: 0.98rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .team-card .role {
+      color: var(--vert);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Appel à l'action */
+    .cta-block {
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      border-radius: 18px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 3rem auto 0 auto;
+      max-width: 700px;
+      animation: pulseShadow 2s infinite alternate;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .cta-block h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .cta-block p {
+      font-size: 1.15rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--blanc);
+      color: var(--vert);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0) 45%,
+        rgba(255,255,255,0.8) 50%,
+        rgba(255,255,255,0) 55%
+      );
+      transform: rotate(30deg);
+      animation: shine 3s infinite;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { 
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.7); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes counterUp {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes pulseShadow {
+      from {
+        box-shadow: 0 4px 24px rgba(31,164,122,0.15);
+      }
+      to {
+        box-shadow: 0 8px 32px rgba(37,99,235,0.25);
+      }
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-100%) rotate(30deg); }
+      100% { transform: translateX(100%) rotate(30deg); }
+    }
+
+    @keyframes waveAnimation {
+      0% { background-position-x: 0; }
+      100% { background-position-x: 1000px; }
+    }
+
+    /* Navigation */
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--gris-fonce);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo h2 {
+      color: var(--vert);
+      font-size: 1.5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-link {
+      color: var(--noir);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s;
+      display: inline-block;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--vert);
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover {
+      color: var(--vert);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-devis {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.7rem 1.5rem;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.4s;
+      box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .nav-devis:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+    }
+
+    .devis-icon {
+      margin-left: 0.5rem;
+      transition: transform 0.3s;
+    }
+
+    .nav-devis:hover .devis-icon {
+      transform: translateX(5px);
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: translateX(5px) scale(1); }
+      50% { transform: translateX(5px) scale(1.2); }
+      100% { transform: translateX(5px) scale(1); }
+    }
+
+    /* Sous-menus */
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-10px);
+      background: var(--blanc);
+      border-radius: var(--rayon);
+      box-shadow: var(--ombre);
+      min-width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 100;
+      border: 1px solid var(--gris-fonce);
+      padding: 0.5rem 0;
+    }
+    .nav-item:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    .submenu-link {
+      display: block;
+      padding: 0.7rem 1.5rem;
+      color: var(--noir);
+      text-decoration: none;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+    .submenu-link:hover {
+      background: var(--gris-clair);
+      color: var(--vert);
+      padding-left: 1.7rem;
+    }
+
+    /* Pied de page */
+    .footer { 
+      background: linear-gradient(135deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      padding: 80px 0 30px; 
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231fa47a" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%231fa47a" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%231fa47a"/></svg>');
+      background-size: cover;
+      transform: rotate(180deg);
+    }
+
+    .footer-content { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 3rem; 
+      margin-bottom: 3rem; 
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-section h3, 
+    .footer-section h4 { 
+      color: var(--blanc); 
+      margin-bottom: 1.5rem; 
+      font-size: 1.3rem; 
+      font-weight: 700; 
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-section h3::after,
+    .footer-section h4::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+    }
+
+    .footer-section p { 
+      color: rgba(255,255,255,0.8); 
+      line-height: 1.6; 
+      margin-bottom: 1.5rem; 
+    }
+
+    .footer-section ul { 
+      list-style: none; 
+    }
+
+    .footer-section ul li { 
+      margin-bottom: 0.8rem; 
+    }
+
+    .footer-section ul li a { 
+      color: rgba(255,255,255,0.8); 
+      text-decoration: none; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      position: relative;
+    }
+
+    .footer-section ul li a::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--blanc);
+      transition: width 0.3s ease;
+    }
+
+    .footer-section ul li a:hover { 
+      color: var(--blanc); 
+      transform: translateX(5px);
+    }
+
+    .footer-section ul li a:hover::before {
+      width: 100%;
+    }
+
+    .footer-section ul li a i {
+      font-size: 0.8rem;
+    }
+
+    .social-links { 
+      display: flex; 
+      gap: 1rem; 
+      margin-top: 1.5rem; 
+    }
+
+    .social-links a { 
+      width: 40px; 
+      height: 40px; 
+      background: rgba(255,255,255,0.15); 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: var(--blanc); 
+      text-decoration: none; 
+      transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    }
+
+    .social-links a:hover { 
+      background: var(--blanc); 
+      color: var(--vert); 
+      transform: translateY(-5px) rotate(5deg) scale(1.1); 
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .footer-bottom { 
+      border-top: 1px solid rgba(255,255,255,0.15); 
+      padding-top: 2rem; 
+      text-align: center; 
+      color: rgba(255,255,255,0.7); 
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .newsletter { 
+      margin-top: 3rem; 
+      background: var(--blanc); 
+      border-radius: var(--rayon); 
+      padding: 1.5rem; 
+      box-shadow: var(--ombre); 
+      display: flex; 
+      gap: 0.5rem; 
+      align-items: center; 
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: 4px solid var(--vert);
+    }
+    
+    .newsletter input[type="email"] { 
+      flex: 1; 
+      padding: 1rem; 
+      border-radius: 8px; 
+      border: 1px solid var(--gris-fonce); 
+      font-size: 1rem; 
+      transition: all 0.3s;
+    }
+    
+    .newsletter input[type="email"]:focus {
+      border-color: var(--vert);
+      outline: none;
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    .newsletter button { 
+      padding: 1rem 2rem; 
+      border-radius: 8px; 
+      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      border: none; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .newsletter button:hover { 
+      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .values-grid, .kpi-grid, .team-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-banner h1 { font-size: 2rem; }
+      .section-header h2 { font-size: 1.3rem; }
+      .container { padding: 0 8px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo"><h2>Porokhane Digital</h2></div>
+      <ul class="nav-menu">
+        <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="a-propos.html" class="nav-link" style="color: var(--vert);">À propos</a></li>
+        <li class="nav-item">
+          <a href="formations.html" class="nav-link">Formations <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="formations.html#robotique" class="submenu-link"><i class="fas fa-robot"></i> Robotique</a></li>
+            <li><a href="formations.html#impression3d" class="submenu-link"><i class="fas fa-print"></i> Impression 3D</a></li>
+            <li><a href="formations.html#cybersecurite" class="submenu-link"><i class="fas fa-shield-alt"></i> Cybersécurité</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="marketing.html" class="nav-link">Marketing <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="marketing.html#audit" class="submenu-link"><i class="fas fa-search"></i> Audit Express</a></li>
+            <li><a href="marketing.html#creation-site" class="submenu-link"><i class="fas fa-laptop-code"></i> Création/Réfonte de site</a></li>
+            <li><a href="marketing.html#strategie" class="submenu-link"><i class="fas fa-chess"></i> Stratégie digitale</a></li>
+            <li><a href="marketing.html#seo" class="submenu-link"><i class="fas fa-search-plus"></i> Référencement naturel</a></li>
+            <li><a href="marketing.html#reseaux-sociaux" class="submenu-link"><i class="fas fa-hashtag"></i> Réseaux sociaux</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="accompagnement.html" class="nav-link">Accompagnement <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="accompagnement.html#automatisation" class="submenu-link"><i class="fas fa-cogs"></i> Automatisation</a></li>
+            <li><a href="accompagnement.html#bdd" class="submenu-link"><i class="fas fa-database"></i> Bases de données</a></li>
+            <li><a href="accompagnement.html#ia" class="submenu-link"><i class="fas fa-brain"></i> Intelligence Artificielle</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html" class="nav-link">Actualités</a></li>
+        <li>
+          <a href="devis.html" class="nav-devis">
+            Demander un devis
+            <span class="devis-icon"><i class="fas fa-paper-plane"></i></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <div class="container">
+      <h1>Vers l'excellence digitale en Afrique</h1>
+      <p>Porokhane Digital Consulting propulse les organisations sénégalaises et africaines par l'innovation, la qualité et l'humain. Découvrez notre vision, nos valeurs et notre équipe.</p>
+    </div>
+  </section>
+
+  <section class="section alt" id="croyance-porokhane">
+    <div class="container">
+      <div class="section-header">
+        <h2>Qui nous sommes</h2>
+      </div>
+      <div style="max-width:900px;margin:0 auto;">
+        <p style="font-size:1.13rem;color:var(--gris-texte);margin-bottom:2rem;">
+          Porokhane Digital Consulting est une agence digitale sénégalaise engagée pour l’excellence, l’innovation et l’accompagnement humain. Nous aidons les entreprises et organisations africaines à réussir leur transformation numérique grâce à une équipe pluridisciplinaire, passionnée et experte dans tous les domaines du digital.<br><br>
+          Notre mission est de propulser nos clients vers l’excellence grâce à des solutions sur-mesure, innovantes et responsables. Nous croyons en une approche collaborative, transparente et durable, où chaque projet est un partenariat de confiance.<br><br>
+          Notre équipe réunit des talents locaux et internationaux, experts en développement web, marketing digital, cybersécurité, formation et accompagnement stratégique. Nous mettons l’humain, la qualité et l’éthique au cœur de chaque action.
+        </p>
+        <h3 style="color:var(--vert);margin-bottom:1rem;"><i class="fas fa-seedling"></i> Notre croyance fondatrice</h3>
+        <p style="font-size:1.13rem;color:var(--gris-texte);margin-bottom:2rem;">
+          Chez Porokhane, nous croyons qu’un avenir digital inclusif peut faire émerger une Afrique forte.<br>
+          C’est pourquoi nous levons chaque jour les barrières numériques – de l’apprentissage des jeunes à la productivité des entreprises.
+        </p>
+        <h3 style="color:var(--bleu);margin-bottom:1rem;"><i class="fas fa-bullseye"></i> De la vision à l’action</h3>
+        <ul style="font-size:1.08rem;color:var(--gris-texte);margin-bottom:2rem;list-style: none;padding-left:0;">
+          <li style="margin-bottom:0.7rem;"><i class="fas fa-user-graduate" style="color:var(--vert);margin-right:8px;"></i> Nous formons les jeunes pour qu’ils deviennent les bâtisseurs d’un numérique africain solide.</li>
+          <li style="margin-bottom:0.7rem;"><i class="fas fa-briefcase" style="color:var(--bleu);margin-right:8px;"></i> Nous accompagnons les entreprises pour qu’elles deviennent plus performantes, visibles et autonomes.</li>
+          <li><i class="fas fa-link" style="color:var(--vert);margin-right:8px;"></i> Nous tissons un pont entre ambition, technologie et impact durable.</li>
+        </ul>
+        <h3 style="color:var(--vert);margin-bottom:1rem;"><i class="fas fa-hands-helping"></i> Notre engagement en actions concrètes</h3>
+        <ul style="font-size:1.08rem;color:var(--gris-texte);list-style: none;padding-left:0;">
+          <li style="margin-bottom:0.7rem;"><i class="fas fa-project-diagram" style="color:var(--bleu);margin-right:8px;"></i> Projets numériques réalisés pour des PME</li>
+          <li><i class="fas fa-comments" style="color:var(--vert);margin-right:8px;"></i> Témoignages de stagiaires, clients et partenaires</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Qui sommes-nous -->
+  
+
+  <!-- Vision & Valeurs -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Notre Vision &amp; Nos Valeurs</h2>
+        <p>Devenir la référence africaine en qualité, écoute client, leadership technologique et bien-être des collaborateurs.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <i class="fas fa-star"></i>
+          <h3>Qualité &amp; Excellence</h3>
+          <p>Atteindre un taux de satisfaction client ≥ 95% à toutes les étapes du projet.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-clock"></i>
+          <h3>Respect des délais</h3>
+          <p>Livrer 100% des projets dans les délais contractuels et sans dépassement de périmètre.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Leadership technologique</h3>
+          <p>Intégrer chaque année de nouvelles technologies et méthodologies innovantes.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Apprentissage continu</h3>
+          <p>100% de l'équipe suit ≥ 40h de formation qualifiante par an.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Protection des données</h3>
+          <p>Garantir la conformité RGPD et la sécurité sur tous les projets.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-heart"></i>
+          <h3>Bien-être &amp; culture</h3>
+          <p>Assurer un indice de satisfaction collaborateurs ≥ 90% et des initiatives bien-être régulières.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chiffres clés -->
+  <section class="section bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nos Engagements en Chiffres</h2>
+        <p style="font-size:1.25rem;color:black;font-weight:600;text-shadow:0 2px 12px rgba(0,0,0,0.25), 0 2px 8px rgba(31,164,122,0.08);">Des indicateurs concrets pour piloter la performance et la satisfaction.</p>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <h4>95%</h4>
+          <p>Satisfaction client</p>
+        </div>
+        <div class="kpi-card">
+          <h4>100%</h4>
+          <p>Projets livrés dans les délais</p>
+        </div>
+        <div class="kpi-card">
+          <h4>2+</h4>
+          <p>Nouvelles technologies/an</p>
+        </div>
+        <div class="kpi-card">
+          <h4>40h</h4>
+          <p>Formation/an par collaborateur</p>
+        </div>
+        <div class="kpi-card">
+          <h4>0</h4>
+          <p>Incident RGPD</p>
+        </div>
+        <div class="kpi-card">
+          <h4>90%</h4>
+          <p>Satisfaction collaborateurs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipe -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Notre Équipe</h2>
+        <p>Des talents pluridisciplinaires, passionnés et engagés pour l'excellence digitale.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Directeur Administratif">
+          <h4>M. Dieng</h4>
+          <div class="role">Directeur Administratif</div>
+          <p>Supervise la gestion administrative, financière et la conformité RGPD.</p>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Directrice Technique">
+          <h4>Mme Ndiaye</h4>
+          <div class="role">Directrice Technique</div>
+          <p>Pilote la stratégie, la qualité, l'innovation et le bien-être de l'équipe.</p>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Développeur Web">
+          <h4>M. Sy</h4>
+          <div class="role">Développeur Web</div>
+          <p>Conçoit des plateformes robustes, veille technologique et sécurité.</p>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Community Manager">
+          <h4>Mme Faye</h4>
+          <div class="role">Community Manager</div>
+          <p>Anime les réseaux sociaux, gère les campagnes et l'innovation digitale.</p>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Responsable Formation">
+          <h4>M. Faye</h4>
+          <div class="role">Responsable Formation</div>
+          <p>Développe les programmes, anime les ateliers et accompagne les clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Méthodologie & Outils -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Notre Méthodologie &amp; Outils</h2>
+        <p>Une organisation agile, collaborative et transparente pour garantir la réussite de chaque projet.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <i class="fas fa-sync-alt"></i>
+          <h3>Agilité &amp; Sprints</h3>
+          <p>Réunions hebdo, sprint planning, rétrospectives et checkpoints réguliers.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-users"></i>
+          <h3>Rituels d'équipe</h3>
+          <p>Cafés virtuels, team-building, analyse marché et partage d'idées.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-tools"></i>
+          <h3>Outils collaboratifs</h3>
+          <p>Clockify, Slack, Notion, Google Drive, Zoom/Teams pour une communication fluide.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-book"></i>
+          <h3>Culture de la doc</h3>
+          <p>Tout se documente, pour éviter les bugs et garantir la transparence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appel à l'action -->
+  <div class="cta-block">
+    <h2>Prêt à transformer votre organisation ?</h2>
+    <p>Contactez-nous pour rejoindre l'aventure ou bénéficiez d'un accompagnement sur-mesure.</p>
+    <a href="contact.html" class="btn btn-primary"><i class="fas fa-phone"></i>Contactez-nous pour un diagnostic gratuit</a>
+  </div>
+  <br>
+
+<!-- Pied de page de la page d'accueil -->
+<footer class="footer">
+  <form class="newsletter" id="newsletterForm">
+      <input type="email" name="newsletterEmail" placeholder="Votre email pour recevoir nos conseils et actualités" required>
+      <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
+    </form>
+  <br>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Porokhane Digital</h3>
+        <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Nos Services</h4>
+        <ul>
+          <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
+          <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+          <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+          <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+          <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
+          <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="index.html#accueil"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+          <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+          <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+          <li><a href="index.html#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+          <li><a href="index.html#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+221771234567"><i class="fas fa-phone"></i> +221 77 123 45 67</a></li>
+          <li><a href="mailto:contact@porokhane.com"><i class="fas fa-envelope"></i> contact@porokhane.com</a></li>
+          <li><a href="https://goo.gl/maps/xyz" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    // Animation compteur pour les chiffres clés
+    document.addEventListener('DOMContentLoaded', function() {
+      const counters = document.querySelectorAll('.kpi-card h4');
+      counters.forEach(counter => {
+        const animate = () => {
+          const target = +counter.textContent.replace(/[^\d]/g, '');
+          let count = 0;
+          const increment = target > 100 ? 5 : 1;
+          const update = () => {
+            if(count < target) {
+              count += increment;
+              if(count > target) count = target;
+              counter.textContent = count + (counter.textContent.includes('%') ? '%' : (counter.textContent.includes('h') ? 'h' : ''));
+              requestAnimationFrame(update);
+            } else {
+              counter.textContent = target + (counter.textContent.includes('%') ? '%' : (counter.textContent.includes('h') ? 'h' : ''));
+            }
+          };
+          update();
+        };
+        if(counter.textContent.match(/\d/)) animate();
+      });
+
+      // Animation au scroll
+      function animateOnScroll() {
+        const elements = document.querySelectorAll('.value-card, .team-card, .kpi-card, .cta-block');
+        elements.forEach(el => {
+          const elementPosition = el.getBoundingClientRect().top;
+          const screenPosition = window.innerHeight / 1.2;
+          
+          if(elementPosition < screenPosition) {
+            el.style.animation = `fadeInUp 0.8s forwards`;
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+          }
+        });
+      }
+
+      // Déclenchement initial
+      animateOnScroll();
+
+      // Déclenchement au scroll
+      window.addEventListener('scroll', animateOnScroll);
+
+      // Animation des icônes
+      const valueCards = document.querySelectorAll('.value-card');
+      valueCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          const icon = this.querySelector('i');
+          icon.style.transform = 'scale(1)';
+        });
+      });
+
+      // Animation initiale des icônes
+      setTimeout(() => {
+        valueCards.forEach(card => {
+          const icon = card.querySelector('i');
+          icon.style.transform = 'scale(1)';
+        });
+      }, 1000);
+    });
+
+    // Navigation fluide
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

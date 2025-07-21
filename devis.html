@@ -1410,48 +1410,49 @@
     <div class="container nav-container">
       <div class="nav-logo"><h2></i> Porokhane Digital</h2></div>
       <ul class="nav-menu">
-        <li><a href="#accueil" class="nav-link">Qui sommes nous</a></li>
+        <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="a-propos.html" class="nav-link">À propos</a></li>
         <!-- Formations -->
         <li class="nav-item">
-          <a href="#formations" class="nav-link">
+          <a href="formations.html" class="nav-link">
             Formations
             <i class="fas fa-chevron-down"></i>
           </a>
           <ul class="submenu">
-            <li><a href="#robotique" class="submenu-link"><i class="fas fa-robot"></i> Robotique</a></li>
-            <li><a href="#impression3d" class="submenu-link"><i class="fas fa-print"></i> Impression 3D</a></li>
-            <li><a href="#cybersecurite" class="submenu-link"><i class="fas fa-shield-alt"></i> Cybersécurité</a></li>
+            <li><a href="formations.html#robotique" class="submenu-link"><i class="fas fa-robot"></i> Robotique</a></li>
+            <li><a href="formations.html#impression3d" class="submenu-link"><i class="fas fa-print"></i> Impression 3D</a></li>
+            <li><a href="formations.html#cybersecurite" class="submenu-link"><i class="fas fa-shield-alt"></i> Cybersécurité</a></li>
           </ul>
         </li>
         
         <!-- Marketing -->
         <li class="nav-item">
-          <a href="#marketing" class="nav-link">
+          <a href="marketing.html" class="nav-link">
             Marketing
             <i class="fas fa-chevron-down"></i>
           </a>
           <ul class="submenu">
-            <li><a href="#audit" class="submenu-link"><i class="fas fa-search"></i> Audit Express</a></li>
-            <li><a href="#creation-site" class="submenu-link"><i class="fas fa-laptop-code"></i> Création/Réfonte de site</a></li>
-            <li><a href="#strategie" class="submenu-link"><i class="fas fa-chess"></i> Stratégie digitale</a></li>
-            <li><a href="#seo" class="submenu-link"><i class="fas fa-search-plus"></i> Référencement naturel</a></li>
+            <li><a href="marketing.html#audit" class="submenu-link"><i class="fas fa-search"></i> Audit Express</a></li>
+            <li><a href="marketing.html#creation-site" class="submenu-link"><i class="fas fa-laptop-code"></i> Création/Réfonte de site</a></li>
+            <li><a href="marketing.html#strategie" class="submenu-link"><i class="fas fa-chess"></i> Stratégie digitale</a></li>
+            <li><a href="marketing.html#seo" class="submenu-link"><i class="fas fa-search-plus"></i> Référencement naturel</a></li>
             <li><a href="#reseaux-sociaux" class="submenu-link"><i class="fas fa-hashtag"></i> Réseaux sociaux</a></li>
           </ul>
         </li>
         
         <!-- Accompagnement -->
         <li class="nav-item">
-          <a href="#accompagnement" class="nav-link">
+          <a href="accompagnement.html" class="nav-link">
             Accompagnement
             <i class="fas fa-chevron-down"></i>
           </a>
           <ul class="submenu">
-            <li><a href="#automatisation" class="submenu-link"><i class="fas fa-cogs"></i> Automatisation</a></li>
-            <li><a href="#bdd" class="submenu-link"><i class="fas fa-database"></i> Bases de données</a></li>
-            <li><a href="#ia" class="submenu-link"><i class="fas fa-brain"></i> Intelligence Artificielle</a></li>
+            <li><a href="accompagnement.html#automatisation" class="submenu-link"><i class="fas fa-cogs"></i> Automatisation</a></li>
+            <li><a href="accompagnement.html#bdd" class="submenu-link"><i class="fas fa-database"></i> Bases de données</a></li>
+            <li><a href="accompagnement.html#ia" class="submenu-link"><i class="fas fa-brain"></i> Intelligence Artificielle</a></li>
           </ul>
         </li>
-        <li><a href="#blog" class="nav-link">Actualités</a></li>
+        <li><a href="blog.html" class="nav-link">Actualités</a></li>
         <li>
           <a href="#devis" class="nav-devis">
             Demander un devis
@@ -1470,19 +1471,26 @@
       </div>
       <form class="devis-form" id="devisForm">
         <h3><i class="fas fa-file-signature"></i> Formulaire de devis</h3>
+        <div style="margin-bottom:1rem;">
+          <label style="font-weight:600;display:block;margin-bottom:0.5rem;">Vous êtes :</label>
+          <select name="type_structure" required style="width:100%;padding:1rem;border-radius:10px;border:1px solid var(--gris-fonce);background:var(--gris);color:var(--gris-titre);font-size:1rem;">
+            <option value="">-- Sélectionnez --</option>
+            <option value="entreprise">Entreprise</option>
+            <option value="etablissement">Établissement</option>
+          </select>
+        </div>
         <input type="text" name="nom" placeholder="Votre nom complet" required>
         <input type="email" name="email" placeholder="Votre adresse email" required>
         <input type="tel" name="telephone" placeholder="Votre numéro de téléphone">
         <label for="service-select" class="visually-hidden">Service concerné</label>
         <select name="service" id="service-select" required>
           <option value="">-- Sélectionnez un service --</option>
-          <option>Développement Web</option>
-          <option>Applications Mobiles</option>
+          <option>Formations Pédagogiques</option>
           <option>Marketing Digital</option>
-          <option>Solutions Cloud</option>
-          <option>Cybersécurité</option>
-          <option>Formation & Accompagnement</option>
-          <option>Plusieurs services</option>
+          <option>Accompagnement PME</option>
+          <option>ERP (Gestion d'entreprise)</option>
+          <option>Développement Web</option>
+          <option>Sécurité IT</option>
         </select>
         <textarea name="besoin" rows="5" placeholder="Décrivez en détail votre projet ou besoin" required></textarea>
         <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Envoyer la demande</button>
@@ -1562,12 +1570,11 @@
         <input type="email" name="newsletterEmail" placeholder="Votre email pour recevoir nos conseils et actualités" required>
         <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
       </form>
-    </br>
+    <br>
     <div class="container">
-      
       <div class="footer-content">
         <div class="footer-section">
-          <h3> Porokhane Digital</h3>
+          <h3>Porokhane Digital</h3>
           <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
           <div class="social-links">
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1579,35 +1586,37 @@
         <div class="footer-section">
           <h4>Nos Services</h4>
           <ul>
-            <li><a href="#services"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
-            <li><a href="#services"><i class="fas fa-chevron-right"></i> Applications Mobiles</a></li>
-            <li><a href="#services"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
-            <li><a href="#services"><i class="fas fa-chevron-right"></i> Solutions Cloud</a></li>
-            <li><a href="#services"><i class="fas fa-chevron-right"></i> Cybersécurité</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h4>Navigation</h4>
+          <h4>Informations</h4>
           <ul>
-            <li><a href="#accueil"><i class="fas fa-chevron-right"></i> Accueil</a></li>
-            <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-            <li><a href="#blog"><i class="fas fa-chevron-right"></i> Blog</a></li>
-            <li><a href="#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
-            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+            <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+            <li><a href="index.html#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+            <li><a href="index.html#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h4>Légal</h4>
+          <h4>Contact</h4>
           <ul>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Mentions légales</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Politique de confidentialité</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Conditions générales</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Politique cookies</a></li>
+            <li><a href="tel:+221771234567"><i class="fas fa-phone"></i> +221 77 123 45 67</a></li>
+            <li><a href="mailto:contact@porokhane.com"><i class="fas fa-envelope"></i> contact@porokhane.com</a></li>
+            <li><a href="https://goo.gl/maps/xyz" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Porokhane Digital Consulting. Tous droits réservés.</p>
+        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
       </div>
     </div>
   </footer>
