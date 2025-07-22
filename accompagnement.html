@@ -508,6 +508,57 @@
       .services-grid { grid-template-columns: 1fr; }
       .nav-menu { flex-wrap: wrap; gap: 1rem; }
     }
+
+    .newsletter { 
+      margin-top: 3rem; 
+      background: var(--blanc); 
+      border-radius: var(--rayon); 
+      padding: 1.5rem; 
+      box-shadow: var(--ombre); 
+      display: flex; 
+      gap: 0.5rem; 
+      align-items: center; 
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: 4px solid var(--vert);
+    }
+    
+    .newsletter input[type="email"] { 
+      flex: 1; 
+      padding: 1rem; 
+      border-radius: 8px; 
+      border: 1px solid var(--gris-fonce); 
+      font-size: 1rem; 
+      transition: all 0.3s;
+    }
+    
+    .newsletter input[type="email"]:focus {
+      border-color: var(--vert);
+      outline: none;
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    .newsletter button { 
+      padding: 1rem 2rem; 
+      border-radius: 8px; 
+      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      border: none; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .newsletter button:hover { 
+      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
+    }
+    
   </style>
 </head>
 <body>
@@ -584,13 +635,8 @@
             <h3>Automatisation</h3>
             <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Libérez le potentiel de votre entreprise</p>
             <p>Automatisez vos processus métier pour gagner en efficacité et réduire les tâches répétitives. Optimisez votre workflow avec des solutions intelligentes.</p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Automatisation des tâches répétitives</li>
-              <li><i class="fas fa-check"></i> Intégration de systèmes</li>
-              <li><i class="fas fa-check"></i> Workflows personnalisés</li>
-              <li><i class="fas fa-check"></i> Monitoring et reporting</li>
-            </ul>
-            <a href="contact.html" class="service-btn">Automatiser mes processus</a>
+            
+            <a href="automatisation.html" class="service-btn">voir plus</a>
           </div>
         </div>
 
@@ -606,13 +652,8 @@
             <h3>Bases de données</h3>
             <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Des données fiables, une gestion optimisée</p>
             <p>Conception, optimisation et maintenance de bases de données performantes. Sécurisez et structurez vos données pour une meilleure gestion.</p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Conception de schémas optimisés</li>
-              <li><i class="fas fa-check"></i> Migration et mise à jour</li>
-              <li><i class="fas fa-check"></i> Sauvegarde et récupération</li>
-              <li><i class="fas fa-check"></i> Sécurisation des données</li>
-            </ul>
-            <a href="contact.html" class="service-btn">Optimiser mes données</a>
+           
+            <a href="base_donnee.html" class="service-btn">voir plus</a>
           </div>
         </div>
 
@@ -628,13 +669,8 @@
             <h3>Intelligence Artificielle</h3>
             <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">L’IA au service de votre performance</p>
             <p>Intégrez l'IA dans vos processus pour des prises de décision plus intelligentes et une automatisation avancée de vos opérations.</p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Chatbots intelligents</li>
-              <li><i class="fas fa-check"></i> Analyse prédictive</li>
-              <li><i class="fas fa-check"></i> Reconnaissance d'images</li>
-              <li><i class="fas fa-check"></i> Traitement du langage naturel</li>
-            </ul>
-            <a href="contact.html" class="service-btn">Intégrer l'IA</a>
+            
+            <a href="intelligence_artificielle.html" class="service-btn">voir plus</a>
           </div>
         </div>
       </div>

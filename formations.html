@@ -508,6 +508,57 @@
       .formations-grid { grid-template-columns: 1fr; }
       .nav-menu { flex-wrap: wrap; gap: 1rem; }
     }
+
+    .newsletter { 
+      margin-top: 3rem; 
+      background: var(--blanc); 
+      border-radius: var(--rayon); 
+      padding: 1.5rem; 
+      box-shadow: var(--ombre); 
+      display: flex; 
+      gap: 0.5rem; 
+      align-items: center; 
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: 4px solid var(--vert);
+    }
+    
+    .newsletter input[type="email"] { 
+      flex: 1; 
+      padding: 1rem; 
+      border-radius: 8px; 
+      border: 1px solid var(--gris-fonce); 
+      font-size: 1rem; 
+      transition: all 0.3s;
+    }
+    
+    .newsletter input[type="email"]:focus {
+      border-color: var(--vert);
+      outline: none;
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    .newsletter button { 
+      padding: 1rem 2rem; 
+      border-radius: 8px; 
+      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      border: none; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .newsletter button:hover { 
+      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
+    }
+    
   </style>
 </head>
 <body>
@@ -584,13 +635,8 @@
             <h3>Robotique</h3>
             <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Pourquoi choisir notre formation en robotique ?</p>
             <p>Maîtrisez les fondamentaux de la robotique et de l'automatisation. Apprenez à concevoir, programmer et déployer des systèmes robotiques intelligents.</p>
-            <ul class="formation-features">
-              <li><i class="fas fa-check"></i> Programmation Arduino & Raspberry Pi</li>
-              <li><i class="fas fa-check"></i> Capteurs et actionneurs</li>
-              <li><i class="fas fa-check"></i> Intelligence artificielle embarquée</li>
-              <li><i class="fas fa-check"></i> Projets pratiques en équipe</li>
-            </ul>
-            <a href="contact.html" class="formation-btn">S'inscrire maintenant</a>
+            
+            <a href="robotique.html" class="formation-btn">voir plus</a>
           </div>
         </div>
 
@@ -606,13 +652,8 @@
             <h3>Impression 3D</h3>
             <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">L'impression 3D, un atout pour l'innovation</p>
             <p>Découvrez l'univers de la fabrication additive. De la conception 3D à l'impression, devenez expert en prototypage rapide et fabrication personnalisée.</p>
-            <ul class="formation-features">
-              <li><i class="fas fa-check"></i> Modélisation 3D (Fusion 360, Blender)</li>
-              <li><i class="fas fa-check"></i> Slicing et optimisation d'impression</li>
-              <li><i class="fas fa-check"></i> Maintenance et calibration</li>
-              <li><i class="fas fa-check"></i> Matériaux et post-traitement</li>
-            </ul>
-            <a href="contact.html" class="formation-btn">S'inscrire maintenant</a>
+            
+            <a href="impression_3D.html" class="formation-btn">voir plus</a>
           </div>
         </div>
 
@@ -628,13 +669,8 @@
             <h3>Cybersécurité</h3>
             <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Sécurisez votre avenir numérique</p>
             <p>Protégez vos systèmes et données contre les menaces numériques. Apprenez les techniques de sécurité offensive et défensive.</p>
-            <ul class="formation-features">
-              <li><i class="fas fa-check"></i> Tests d'intrusion éthiques</li>
-              <li><i class="fas fa-check"></i> Analyse de vulnérabilités</li>
-              <li><i class="fas fa-check"></i> Cryptographie et sécurité réseau</li>
-              <li><i class="fas fa-check"></i> Conformité RGPD et normes</li>
-            </ul>
-            <a href="contact.html" class="formation-btn">S'inscrire maintenant</a>
+           
+            <a href="cybersecurite.html" class="formation-btn">voir plus</a>
           </div>
         </div>
       </div>

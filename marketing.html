@@ -510,6 +510,57 @@
       .services-grid { grid-template-columns: 1fr; }
       .nav-menu { flex-wrap: wrap; gap: 1rem; }
     }
+
+    .newsletter { 
+      margin-top: 3rem; 
+      background: var(--blanc); 
+      border-radius: var(--rayon); 
+      padding: 1.5rem; 
+      box-shadow: var(--ombre); 
+      display: flex; 
+      gap: 0.5rem; 
+      align-items: center; 
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: 4px solid var(--vert);
+    }
+    
+    .newsletter input[type="email"] { 
+      flex: 1; 
+      padding: 1rem; 
+      border-radius: 8px; 
+      border: 1px solid var(--gris-fonce); 
+      font-size: 1rem; 
+      transition: all 0.3s;
+    }
+    
+    .newsletter input[type="email"]:focus {
+      border-color: var(--vert);
+      outline: none;
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    .newsletter button { 
+      padding: 1rem 2rem; 
+      border-radius: 8px; 
+      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      border: none; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .newsletter button:hover { 
+      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
+    }
+    
   </style>
 </head>
 <body>
@@ -586,13 +637,8 @@
             <h3>Audit Express</h3>
             <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Un diagnostic rapide pour des résultats concrets</p>
             <p>Analysez rapidement votre présence digitale actuelle et identifiez les opportunités d'amélioration pour optimiser vos performances.</p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Analyse de votre site web</li>
-              <li><i class="fas fa-check"></i> Audit des réseaux sociaux</li>
-              <li><i class="fas fa-check"></i> Benchmark concurrentiel</li>
-              <li><i class="fas fa-check"></i> Rapport détaillé avec recommandations</li>
-            </ul>
-            <a href="contact.html" class="service-btn">Demander un audit</a>
+            
+            <a href="audit_express.html" class="service-btn">voir plus</a>
           </div>
         </div>
 
@@ -608,13 +654,8 @@
             <h3>Création/Réfonte de site</h3>
             <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Votre vitrine digitale sur-mesure</p>
             <p>Conception de sites web modernes, responsives et optimisés pour la conversion. Du design à la mise en ligne.</p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Design personnalisé et moderne</li>
-              <li><i class="fas fa-check"></i> Site responsive (mobile-first)</li>
-              <li><i class="fas fa-check"></i> Optimisation SEO intégrée</li>
-              <li><i class="fas fa-check"></i> Interface d'administration</li>
-            </ul>
-            <a href="contact.html" class="service-btn">Demander un devis</a>
+            
+            <a href="site.html" class="service-btn">voir plus</a>
           </div>
         </div>
 
@@ -630,13 +671,8 @@
             <h3>Stratégie digitale</h3>
             <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Une vision claire pour votre croissance</p>
             <p>Élaborez une stratégie marketing digitale complète et cohérente pour atteindre vos objectifs business.</p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Définition des objectifs</li>
-              <li><i class="fas fa-check"></i> Analyse de la concurrence</li>
-              <li><i class="fas fa-check"></i> Plan d'action détaillé</li>
-              <li><i class="fas fa-check"></i> Suivi et optimisation</li>
-            </ul>
-            <a href="contact.html" class="service-btn">Développer ma stratégie</a>
+            
+            <a href="strategie_digitale.html" class="service-btn">voir plus</a>
           </div>
         </div>
 
@@ -652,13 +688,8 @@
             <h3>Référencement naturel</h3>
             <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Soyez visible là où vos clients vous cherchent</p>
             <p>Améliorez votre visibilité sur les moteurs de recherche et augmentez votre trafic organique de manière durable.</p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Audit SEO complet</li>
-              <li><i class="fas fa-check"></i> Optimisation on-page</li>
-              <li><i class="fas fa-check"></i> Création de contenu optimisé</li>
-              <li><i class="fas fa-check"></i> Suivi des performances</li>
-            </ul>
-            <a href="contact.html" class="service-btn">Optimiser mon SEO</a>
+            
+            <a href="seo.html" class="service-btn">voir plus</a>
           </div>
         </div>
 
@@ -674,13 +705,8 @@
             <h3>Réseaux sociaux</h3>
             <p style="font-weight:600;color:var(--bleu);margin-bottom:0.5rem;">Développez votre communauté et votre notoriété</p>
             <p>Gérez votre présence sur les réseaux sociaux et développez votre communauté avec du contenu engageant.</p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Gestion des comptes sociaux</li>
-              <li><i class="fas fa-check"></i> Création de contenu</li>
-              <li><i class="fas fa-check"></i> Campagnes publicitaires</li>
-              <li><i class="fas fa-check"></i> Analyse des performances</li>
-            </ul>
-            <a href="contact.html" class="service-btn">Gérer mes réseaux</a>
+            
+            <a href="reseaux_sociaux.html" class="service-btn">voir plus</a>
           </div>
         </div>
       </div>
