@@ -249,28 +249,28 @@
         <li class="nav-item">
           <a href="formations.html" class="nav-link">Formations <i class="fas fa-chevron-down"></i></a>
           <ul class="submenu">
-            <li><a href="robotique.html" class="submenu-link"><i class="fas fa-robot"></i> Robotique</a></li>
-            <li><a href="impression_3D.html" class="submenu-link"><i class="fas fa-print"></i> Impression 3D</a></li>
-            <li><a href="cybersecurite.html" class="submenu-link"><i class="fas fa-shield-alt"></i> Cybersécurité</a></li>
+            <li><a href="robotique.html" class="submenu-link">Robotique</a></li>
+            <li><a href="impression_3D.html" class="submenu-link">Impression 3D</a></li>
+            <li><a href="cybersecurite.html" class="submenu-link">Cybersécurité</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <a href="marketing.html" class="nav-link">Marketing <i class="fas fa-chevron-down"></i></a>
           <ul class="submenu">
-            <li><a href="audit_express.html" class="submenu-link"><i class="fas fa-search"></i> Audit Express</a></li>
-            <li><a href="site.html" class="submenu-link"><i class="fas fa-laptop-code"></i> Création/Réfonte de site</a></li>
-            <li><a href="strategie_digitale.html" class="submenu-link"><i class="fas fa-chess"></i> Stratégie digitale</a></li>
-            <li><a href="seo.html" class="submenu-link"><i class="fas fa-search-plus"></i> Référencement naturel</a></li>
-            <li><a href="seo.html" class="submenu-link"><i class="fas fa-hashtag"></i> Réseaux sociaux</a></li>
+            <li><a href="audit_express.html" class="submenu-link">Audit Express</a></li>
+            <li><a href="site.html" class="submenu-link">Création/Réfonte de site</a></li>
+            <li><a href="strategie_digitale.html" class="submenu-link">Stratégie digitale</a></li>
+            <li><a href="seo.html" class="submenu-link">Référencement naturel</a></li>
+            <li><a href="seo.html" class="submenu-link">Réseaux sociaux</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <a href="accompagnement.html" class="nav-link">Accompagnement <i class="fas fa-chevron-down"></i></a>
           <ul class="submenu">
-            <li><a href="automatisation.html" class="submenu-link"><i class="fas fa-cogs"></i> Automatisation</a></li>
-            <li><a href="base_donnee.html" class="submenu-link"><i class="fas fa-database"></i> Bases de données</a></li>
-            <li><a href="erp.html" class="submenu-link"><i class="fas fa-network-wired"></i> ERP</a></li>
-            <li><a href="intelligence_artificielle.html" class="submenu-link"><i class="fas fa-brain"></i> Intelligence Artificielle</a></li>
+            <li><a href="automatisation.html" class="submenu-link">Automatisation</a></li>
+            <li><a href="base_donnee.html" class="submenu-link">Bases de données</a></li>
+            <li><a href="erp.html" class="submenu-link">ERP</a></li>
+            <li><a href="ia.html" class="submenu-link">Intelligence Artificielle</a></li>
           </ul>
         </li>
         <li><a href="blog.html" class="nav-link">Actualités</a></li>
@@ -442,108 +442,7 @@
   </div>
 
   <script>
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-    // Assurer que les sous-menus restent ouverts quand on les survole
-    document.querySelectorAll('.nav-item').forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        item.querySelector('.submenu')?.style.setProperty('display', 'block', 'important');
-      });
-      item.addEventListener('mouseleave', () => {
-        item.querySelector('.submenu')?.style.setProperty('display', 'none', 'important');
-      });
-    });
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
-        }
-      });
-    });
-    // Newsletter form
-    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
-      this.reset();
-    });
-  </script>
-  <script>
-    // Chatbot FAQ
-    const chatbotFAQ = {
-      'services': "Nous proposons : formations (robotique, impression 3D, cybersécurité), marketing digital, accompagnement (automatisation, IA, bases de données), développement web et plus encore !",
-      'devis': "Pour demander un devis, cliquez sur 'Demander un devis' dans le menu ou rendez-vous sur la page devis. Nous vous répondrons rapidement !",
-      'délais': "Nos délais varient selon le projet, mais nous nous engageons à livrer dans les temps convenus, avec un suivi régulier.",
-      'formations': "Oui, nous proposons des formations en robotique, impression 3D, cybersécurité et plus. Consultez la page Formations pour plus d'infos !",
-      'contacter': "Vous pouvez nous contacter via la page Contact, par téléphone ou par email. Nous sommes à votre écoute !",
-      'salutation': "Bonjour et bienvenue chez Porokhane Digital Consulting ! 👋\n\nJe peux répondre à vos questions sur :\n• Nos services\n• Comment demander un devis\n• Nos délais de livraison\n• Nos formations\n• Comment nous contacter\n\nCliquez sur une suggestion ou posez votre question !"
-    };
-    const chatbotBtn = document.getElementById('chatbotBtn');
-    const chatbotWindow = document.getElementById('chatbotWindow');
-    const chatbotClose = document.getElementById('chatbotClose');
-    const chatbotBody = document.getElementById('chatbotBody');
-    const chatbotForm = document.getElementById('chatbotForm');
-    const chatbotInput = document.getElementById('chatbotInput');
-    const chatbotSuggestions = document.getElementById('chatbotSuggestions');
-    chatbotBtn.onclick = () => {
-      chatbotWindow.style.display = 'flex';
-      setTimeout(() => chatbotInput.focus(), 300);
-    };
-    chatbotClose.onclick = () => {
-      chatbotWindow.style.display = 'none';
-    };
-    chatbotSuggestions.onclick = function(e) {
-      if (e.target.classList.contains('chatbot-suggestion')) {
-        const question = e.target.textContent;
-        addUserMessage(question);
-        respondToUser(question);
-      }
-    };
-    chatbotForm.onsubmit = function(e) {
-      e.preventDefault();
-      const question = chatbotInput.value.trim();
-      if (question) {
-        addUserMessage(question);
-        respondToUser(question);
-        chatbotInput.value = '';
-      }
-    };
-    function addUserMessage(text) {
-      const msg = document.createElement('div');
-      msg.className = 'chatbot-message user';
-      msg.textContent = text;
-      chatbotBody.appendChild(msg);
-      chatbotBody.scrollTop = chatbotBody.scrollHeight;
-    }
-    function addBotMessage(text) {
-      const msg = document.createElement('div');
-      msg.className = 'chatbot-message bot';
-      msg.innerHTML = `<img src="https://randomuser.me/api/portraits/men/77.jpg" class="chatbot-avatar" alt="Conseiller Porokhane"/>` + `<span>${text}</span>`;
-      chatbotBody.appendChild(msg);
-      chatbotBody.scrollTop = chatbotBody.scrollHeight;
-    }
-    function respondToUser(question) {
-      let response = "Je suis désolé, je n'ai pas compris votre question. Essayez une des suggestions ci-dessus ou contactez-nous directement.";
-      const q = question.toLowerCase();
-      if (q.includes('service')) response = chatbotFAQ['services'];
-      else if (q.includes('devis')) response = chatbotFAQ['devis'];
-      else if (q.includes('délai') || q.includes('delai')) response = chatbotFAQ['délais'];
-      else if (q.includes('formation')) response = chatbotFAQ['formations'];
-      else if (q.includes('contact')) response = chatbotFAQ['contacter'];
-      else if (q.includes('salut') || q.includes('bonjour') || q.includes('bonsoir') || q.includes('hello')) response = chatbotFAQ['salutation'];
-      setTimeout(() => addBotMessage(response), 600);
-    }
+    
   </script>
 </body>
 </html>
