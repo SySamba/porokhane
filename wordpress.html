@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sécuriser son site WordPress & Blog</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafc;
+    color: #333;
+    margin: 0; padding: 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 720px;
+    margin: 2rem auto 4rem;
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+  }
+  h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+  h1 {
+    font-size: 2.8rem;
+    color: #0d47a1;
+    border-bottom: 3px solid #0d47a1;
+    padding-bottom: 0.3rem;
+    margin-top: 1.5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    color: #1565c0;
+    border-left: 6px solid #1565c0;
+    padding-left: 10px;
+  }
+  h3 {
+    font-size: 1.3rem;
+    color: #424242;
+  }
+  p {
+    margin-bottom: 1.2rem;
+  }
+  strong {
+    color: #0d47a1;
+  }
+  hr {
+    border: none;
+    border-top: 1.5px solid #eee;
+    margin: 2rem 0;
+  }
+  ul {
+    padding-left: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+  .emoji {
+    font-size: 1.3rem;
+    margin-right: 6px;
+  }
+  .tip {
+    background: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 10px 15px;
+    margin: 0.8rem 0 2rem;
+    border-radius: 6px;
+    font-style: italic;
+    color: #0d47a1;
+  }
+  pre {
+    background: #263238;
+    color: #eceff1;
+    padding: 1rem 1.3rem;
+    border-radius: 8px;
+    font-family: 'Fira Mono', monospace, monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    margin-bottom: 2rem;
+  }
+  code {
+    font-family: 'Fira Mono', monospace, monospace;
+  }
+  blockquote {
+    background: #f1f8e9;
+    border-left: 6px solid #8bc34a;
+    margin: 1.5rem 0;
+    padding: 1rem 1.2rem;
+    font-style: italic;
+    color: #33691e;
+    border-radius: 6px;
+  }
+  .hashtags {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+  .hashtags span {
+    background: #e3f2fd;
+    color: #0d47a1;
+    padding: 6px 12px;
+    margin: 3px 4px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+    cursor: default;
+    font-size: 0.85rem;
+  }
+  .bonus, .summary {
+    background: #fbe9e7;
+    border-left: 6px solid #d84315;
+    padding: 1rem 1.2rem;
+    margin: 2rem 0;
+    border-radius: 6px;
+    color: #bf360c;
+  }
+  /* Section autres articles */
+  .other-articles {
+    margin-top: 4rem;
+  }
+  .other-articles h2 {
+    border-color: #d81b60;
+    color: #d81b60;
+  }
+  .article-item {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s ease;
+    background: #fafafa;
+  }
+  .article-item:hover {
+    box-shadow: 0 8px 20px rgba(216,27,96,0.3);
+  }
+  .article-date {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 0.2rem;
+  }
+  .article-category {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #d81b60;
+    border: 1px solid #d81b60;
+    padding: 2px 8px;
+    border-radius: 14px;
+    margin-bottom: 0.6rem;
+  }
+  .article-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  .article-description {
+    color: #555;
+    margin-bottom: 0.8rem;
+  }
+  .read-more {
+    font-weight: 600;
+    color: #d81b60;
+    font-size: 0.95rem;
+  }
+  .read-more:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    .article-title {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Article principal -->
+  <h1>🔒 Sécuriser son site WordPress</h1>
+  <p><strong>Protégez votre site WordPress contre les piratages</strong> avec 10 conseils simples et efficaces, accessibles à tous.</p>
+  <hr>
+
+  <h2><span class="emoji">🚀</span>10 conseils indispensables pour <strong>sécuriser votre site WordPress</strong> comme un pro</h2>
+  <p><strong>WordPress</strong> est une machine de guerre. Mais comme tout bon outil, il attire aussi les convoitises. Piratage, injections malveillantes, vol de données… il suffit d’une faille pour transformer votre site en cauchemar numérique. Heureusement, sécuriser son site WordPress <strong>n’est ni compliqué ni réservé aux experts</strong>.</p>
+  <p>Aujourd’hui, je partage avec vous <strong>les 10 bonnes pratiques essentielles</strong> pour protéger votre site, vos données, et la tranquillité de votre esprit.</p>
+
+  <hr>
+
+  <h2>1. <span class="emoji">🔄</span>Gardez tout à jour (plugins, thèmes, core WordPress)</h2>
+  <p>C’est la règle d’or. Les mises à jour corrigent souvent <strong>des failles de sécurité</strong>. Un plugin non mis à jour, c’est comme laisser la porte de votre maison grande ouverte en pleine nuit.</p>
+  <div class="tip">👉 <strong>Astuce</strong> : activez les mises à jour automatiques ou utilisez une extension comme <em>ManageWP</em> pour gérer plusieurs sites.</div>
+
+  <hr>
+
+  <h2>2. <span class="emoji">👨‍💻</span>Changez l’URL de connexion par défaut</h2>
+  <p>Par défaut, tout le monde connaît <code>monsite.com/wp-admin</code>. Résultat ? Votre page de connexion est la cible d’attaques par force brute.</p>
+  <div class="tip">👉 <strong>Solution</strong> : utilisez un plugin comme <em>WPS Hide Login</em> pour personnaliser l’URL de connexion.</div>
+
+  <hr>
+
+  <h2>3. <span class="emoji">🔐</span>Mots de passe béton & double authentification</h2>
+  <p>Les mots de passe faibles, c’est fini ! Utilisez un générateur de mots de passe complexes et activez la <strong>double authentification</strong>.</p>
+  <div class="tip">👉 <strong>Plugins recommandés</strong> : <em>Google Authenticator</em>, <em>WP 2FA</em>, <em>Authy</em>.</div>
+
+  <hr>
+
+  <h2>4. <span class="emoji">🧱</span>Limitez les tentatives de connexion</h2>
+  <p>Un hacker peut essayer des milliers de combinaisons s’il n’est pas limité.</p>
+  <div class="tip">👉 Installez <em>Limit Login Attempts Reloaded</em> ou <em>Login LockDown</em> pour bloquer les IP trop insistantes.</div>
+
+  <hr>
+
+  <h2>5. <span class="emoji">🚫</span>Supprimez les plugins et thèmes inutilisés</h2>
+  <p>Chaque extension ou thème inactif est une <strong>porte potentielle</strong> pour une attaque. Même désactivé, un plugin peut être vulnérable.</p>
+  <div class="tip">👉 Supprimez-les complètement.</div>
+
+  <hr>
+
+  <h2>6. <span class="emoji">🧪</span>Analysez votre site régulièrement</h2>
+  <p>Faites des scans réguliers pour détecter d’éventuelles menaces.</p>
+  <div class="tip">👉 <strong>Plugins utiles</strong> : <em>Wordfence</em>, <em>Sucuri Security</em>.</div>
+
+  <hr>
+
+  <h2>7. <span class="emoji">🔐</span>Changez le préfixe des tables de votre base de données</h2>
+  <p>Par défaut, WordPress utilise le préfixe <code>wp_</code>. C’est connu de tous les hackers.</p>
+  <div class="tip">👉 Pendant l’installation (ou via un plugin), changez-le pour quelque chose comme <code>mdbl2025_</code>.</div>
+
+  <hr>
+
+  <h2>8. <span class="emoji">🛡</span>Installez un pare-feu (Firewall)</h2>
+  <p>Un pare-feu protège votre site des attaques en amont, avant qu’elles ne touchent le code.</p>
+  <div class="tip">👉 <strong>Solutions</strong> : <em>Cloudflare</em> (gratuit) ou le pare-feu inclus dans <em>Wordfence Premium</em>.</div>
+
+  <hr>
+
+  <h2>9. <span class="emoji">📦</span>Sauvegardes régulières (oui, <em>régulières</em>)</h2>
+  <p>En cas d’attaque, une <strong>sauvegarde récente</strong> peut sauver votre business.</p>
+  <div class="tip">👉 Plugins recommandés : <em>UpdraftPlus</em>, <em>BlogVault</em>, <em>BackupBuddy</em>.</div>
+
+  <hr>
+
+  <h2>10. <span class="emoji">🔍</span>Cachez la version de WordPress</h2>
+  <p>Certains hackers exploitent des failles propres à une version précise. Ne leur donnez pas cette info.</p>
+  <div class="tip">👉 Supprimez la ligne suivante dans le fichier <code>functions.php</code> de votre thème :</div>
+  <pre><code>remove_action('wp_head', 'wp_generator');</code></pre>
+
+  <hr>
+
+  <div class="bonus">
+    <h3>🎁 Bonus : un plugin tout-en-un pour la sécurité ?</h3>
+    <p>Si vous préférez une solution centralisée :</p>
+    <p>✅ <strong>Wordfence</strong> ou <strong>iThemes Security</strong>. Ils offrent tout : scan, firewall, 2FA, alertes mails, logs…</p>
+  </div>
+
+  <hr>
+
+  <div class="summary">
+    <h3>🧠 En résumé</h3>
+    <p>Sécuriser son site WordPress n’est pas une option, c’est une <strong>responsabilité</strong>. Que vous soyez freelance, entrepreneur, ou blogueur passionné, prenez ces mesures aujourd’hui et dormez (beaucoup) plus tranquille. 😴</p>
+    <blockquote>Un site piraté, c’est du stress, du temps perdu, de l’argent gaspillé. Un site sécurisé, c’est de la crédibilité gagnée.</blockquote>
+  </div>
+
+  <hr>
+
+  <h3>📢 Et vous ? Quelle solution utilisez-vous pour sécuriser votre site WordPress ? Partagez vos astuces en commentaire ! 👇</h3>
+
+  <div class="hashtags">
+    <span>#WordPressSecurity</span>
+    <span>#Cybersécurité</span>
+    <span>#BlogWP</span>
+    <span>#WebTips</span>
+    <span>#ProtégerSonSite</span>
+    <span>#WPFrance</span>
+  </div>
+
+  <!-- Autres articles -->
+  <section class="other-articles">
+    <h2>📚 Autres articles du blog</h2>
+
+    <article class="article-item">
+      <div class="article-date">10 juin 2024 • SEO</div>
+      <div class="article-category">SEO</div>
+      <h3 class="article-title">Algorithme Google SEO 2024 : 10 astuces pour être visible</h3>
+      <p class="article-description">Découvrez les nouvelles règles Google pour 2024 et 10 astuces pour rendre votre site visible et performant.</p>
+      <a href="#" class="read-more" aria-label="Lire l'article Algorithme Google SEO 2024">Lire l'article →</a>
+    </article>
+
+    <article class="article-item">
+      <div class="article-date">5 juin 2024 • SEO</div>
+      <div class="article-category">SEO</div>
+      <h3 class="article-title">SEO : 14 outils gratuits pour trouver des mots-clés pertinents</h3>
+      <p class="article-description">Voici 14 outils gratuits pour trouver les meilleurs mots-clés et booster votre référencement sur Google.</p>
+      <a href="#" class="read-more" aria-label="Lire l'article SEO 14 outils gratuits">Lire l'article →</a>
+    </article>
+  </section>
+</div>
+
+</body>
+</html>

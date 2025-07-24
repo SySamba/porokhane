@@ -10,7 +10,7 @@
   <style>
     :root { --vert: #1fa47a; --vert-clair: #d1fae5; --bleu: #2563eb; --bleu-clair: #dbeafe; --blanc: #fff; --gris-bg: #f6f8fa; --gris-texte: #64748b; --gris-titre: #1e293b; --ombre: 0 4px 24px rgba(0,0,0,0.08); --rayon: 18px; --rayon-grand: 28px; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--gris-bg); font-family: 'Inter', sans-serif; color: var(--gris-titre); line-height: 1.6; min-height: 100vh; background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.92)), url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed; background-size: cover; }
+    body { background: var(--gris-bg); font-family: 'Inter', sans-serif; color: var(--gris-titre); line-height: 1.6; min-height: 100vh; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     .navbar { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 1rem 0; border-bottom: 1px solid var(--gris-fonce); position: sticky; top: 0; z-index: 1000; }
     .nav-container { display: flex; justify-content: space-between; align-items: center; }
@@ -101,7 +101,9 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <div class="nav-logo"><h2></i> Porokhane Digital</h2></div>
+      <a href="index.html" class="nav-logo" style="display:flex;align-items:center;gap:0.7rem;text-decoration:none;">
+        <img src="logo_porokhane_digital.jpg" alt="Logo Porokhane Digital" style="height:64px;width:auto;display:block;border-radius:10px;box-shadow:0 2px 8px rgba(31,164,122,0.10);margin-right:0.5rem;">
+      </a>
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link">Accueil</a></li>
         <li><a href="a-propos.html" class="nav-link">À propos</a></li>
