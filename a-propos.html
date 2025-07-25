@@ -910,32 +910,38 @@
     <div class="container">
       <div class="section-header">
         <h2>Nos Engagements en Chiffres</h2>
-        <p style="font-size:1.25rem;color:black;font-weight:600;text-shadow:0 2px 12px rgba(0,0,0,0.25), 0 2px 8px rgba(31,164,122,0.08);">Des indicateurs concrets pour piloter la performance et la satisfaction.</p>
+        <p style="font-size:1.15rem;color:black;text-decoration:bold;font-weight:500;text-shadow:0 2px 12px rgba(0,0,0,0.18);margin-bottom:2.2rem;">Des indicateurs concrets pour piloter la performance et la satisfaction de nos clients et collaborateurs.</p>
       </div>
       <div class="kpi-grid">
         <div class="kpi-card">
-          <h4>95%</h4>
+          <i class="fas fa-smile-beam" style="font-size:2.1rem;color:var(--vert);margin-bottom:0.5rem;"></i>
+          <h4 style="color:var(--bleu);font-size:2.5rem;">95%</h4>
           <p>Satisfaction client</p>
         </div>
         <div class="kpi-card">
-          <h4>100%</h4>
-          <p>Projets livrés dans les délais</p>
+          <i class="fas fa-clock" style="font-size:2.1rem;color:var(--bleu);margin-bottom:0.5rem;"></i>
+          <h4 style="color:var(--vert);font-size:2.5rem;">100%</h4>
+          <p>Délais tenus</p>
         </div>
         <div class="kpi-card">
-          <h4>2+</h4>
-          <p>Nouvelles technologies/an</p>
+          <i class="fas fa-lightbulb" style="font-size:2.1rem;color:var(--bleu);margin-bottom:0.5rem;"></i>
+          <h4 style="color:var(--bleu);font-size:2.5rem;">2+</h4>
+          <p>Techno/an</p>
         </div>
         <div class="kpi-card">
-          <h4>40h</h4>
-          <p>Formation/an par collaborateur</p>
+          <i class="fas fa-graduation-cap" style="font-size:2.1rem;color:var(--vert);margin-bottom:0.5rem;"></i>
+          <h4 style="color:var(--bleu);font-size:2.5rem;">40h</h4>
+          <p>Formation/an</p>
         </div>
         <div class="kpi-card">
-          <h4>0</h4>
+          <i class="fas fa-shield-alt" style="font-size:2.1rem;color:var(--bleu);margin-bottom:0.5rem;"></i>
+          <h4 style="color:var(--vert);font-size:2.5rem;">0</h4>
           <p>Incident RGPD</p>
         </div>
         <div class="kpi-card">
-          <h4>90%</h4>
-          <p>Satisfaction collaborateurs</p>
+          <i class="fas fa-heart" style="font-size:2.1rem;color:var(--bleu);margin-bottom:0.5rem;"></i>
+          <h4 style="color:var(--vert);font-size:2.5rem;">90%</h4>
+          <p>Satisfaction équipe</p>
         </div>
       </div>
     </div>
@@ -1014,6 +1020,49 @@
       </div>
     </div>
   </section>
+
+  <!-- Section Réalisations -->
+<section class="section" id="realisations">
+  <div class="container">
+    <h2>Nos Réalisations</h2>
+    <div class="realisation-card" style="background:var(--gris);border-radius:18px;box-shadow:0 2px 12px rgba(0,0,0,0.07);padding:2rem 1.5rem;margin:2rem 0;">
+      <h3 style="color:var(--bleu);margin-bottom:0.7rem;">Refonte du site Medical Distribution</h3>
+      <p style="font-size:1.1rem;">Modernisation complète du site web pour une expérience utilisateur optimale, responsive et adaptée au secteur médical.</p>
+      <a href="#detail-md" class="btn-projet" style="display:inline-block;margin-top:1.2rem;padding:0.7rem 1.7rem;background:linear-gradient(90deg,var(--vert),var(--bleu));color:white;border-radius:50px;font-weight:600;text-decoration:none;box-shadow:0 2px 8px rgba(31,164,122,0.10);transition:all 0.3s;">Voir le projet</a>
+      <div id="detail-md" class="projet-detail" style="display:none;margin-top:2rem;background:var(--blanc);border-radius:14px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+        <h4 style="color:var(--vert);margin-bottom:0.7rem;">Détail du projet</h4>
+        <ul style="margin-bottom:1.2rem;">
+          <li><b>Technologie :</b> WordPress (thème sur mesure, plugins adaptés au secteur médical)</li>
+          <li><b>Modernisation UX/UI :</b> Refonte complète du design pour une navigation intuitive et professionnelle</li>
+          <li><b>Responsive :</b> Affichage optimal sur mobile, tablette et desktop</li>
+          <li><b>Contenus adaptés :</b> Mise en avant des services, catalogue produits, blog d’actualités médicales</li>
+          <li><b>SEO :</b> Optimisation technique (balises, rapidité, structure, sitemap, sécurité HTTPS, balisage schema.org)</li>
+          <li><b>Performance :</b> Chargement rapide, images optimisées, cache, CDN</li>
+        </ul>
+        <a href="https://shop.teranganumerique.com/" target="_blank" style="color:var(--bleu);font-weight:600;text-decoration:underline;">Voir le site en ligne</a>
+      </div>
+    </div>
+    <script>
+      // Affichage du détail projet au clic
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.querySelector('.btn-projet');
+        var detail = document.getElementById('detail-md');
+        if(btn && detail) {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            detail.style.display = (detail.style.display === 'none' || detail.style.display === '') ? 'block' : 'none';
+            btn.textContent = (detail.style.display === 'block') ? 'Masquer le détail' : 'Voir le projet';
+          });
+        }
+      });
+    </script>
+    <!-- Appel à l'action -->
+    <div class="cta-devis" style="margin-top:3rem;text-align:center;">
+      <h3 style="color:var(--vert);margin-bottom:1rem;">Vous souhaitez un site aussi moderne et performant ?</h3>
+      <a href="devis.html" class="nav-devis" style="font-size:1.1rem;">Demander un devis</a>
+    </div>
+  </div>
+</section>
 
   <!-- Appel à l'action -->
   <div class="cta-block">
