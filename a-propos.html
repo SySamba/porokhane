@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À propos | Porokhane Digital Consulting</title>
   <meta name="description" content="Découvrez la vision, l'équipe et les valeurs de Porokhane Digital Consulting, agence digitale innovante au Sénégal.">
- 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     :root {
       --vert: #1fa47a;
@@ -1020,49 +1021,7 @@
     </div>
   </section>
 
-  <!-- Section Réalisations -->
-<section class="section" id="realisations">
-  <div class="container">
-    <h2>Nos Réalisations</h2>
-    <div class="realisation-card" style="background:var(--gris);border-radius:18px;box-shadow:0 2px 12px rgba(0,0,0,0.07);padding:2rem 1.5rem;margin:2rem 0;">
-      <h3 style="color:var(--bleu);margin-bottom:0.7rem;">Refonte du site Medical Distribution</h3>
-      <p style="font-size:1.1rem;">Modernisation complète du site web pour une expérience utilisateur optimale, responsive et adaptée au secteur médical.</p>
-      <a href="#detail-md" class="btn-projet" style="display:inline-block;margin-top:1.2rem;padding:0.7rem 1.7rem;background:linear-gradient(90deg,var(--vert),var(--bleu));color:white;border-radius:50px;font-weight:600;text-decoration:none;box-shadow:0 2px 8px rgba(31,164,122,0.10);transition:all 0.3s;">Voir le projet</a>
-      <div id="detail-md" class="projet-detail" style="display:none;margin-top:2rem;background:var(--blanc);border-radius:14px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
-        <h4 style="color:var(--vert);margin-bottom:0.7rem;">Détail du projet</h4>
-        <ul style="margin-bottom:1.2rem;">
-          <li><b>Technologie :</b> WordPress (thème sur mesure, plugins adaptés au secteur médical)</li>
-          <li><b>Modernisation UX/UI :</b> Refonte complète du design pour une navigation intuitive et professionnelle</li>
-          <li><b>Responsive :</b> Affichage optimal sur mobile, tablette et desktop</li>
-          <li><b>Contenus adaptés :</b> Mise en avant des services, catalogue produits, blog d’actualités médicales</li>
-          <li><b>SEO :</b> Optimisation technique (balises, rapidité, structure, sitemap, sécurité HTTPS, balisage schema.org)</li>
-          <li><b>Performance :</b> Chargement rapide, images optimisées, cache, CDN</li>
-        </ul>
-        <a href="https://shop.teranganumerique.com/" target="_blank" style="color:var(--bleu);font-weight:600;text-decoration:underline;">Voir le site en ligne</a>
-      </div>
-    </div>
-    <script>
-      // Affichage du détail projet au clic
-      document.addEventListener('DOMContentLoaded', function() {
-        var btn = document.querySelector('.btn-projet');
-        var detail = document.getElementById('detail-md');
-        if(btn && detail) {
-          btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            detail.style.display = (detail.style.display === 'none' || detail.style.display === '') ? 'block' : 'none';
-            btn.textContent = (detail.style.display === 'block') ? 'Masquer le détail' : 'Voir le projet';
-          });
-        }
-      });
-    </script>
-    <!-- Appel à l'action -->
-    <div class="cta-devis" style="margin-top:3rem;text-align:center;">
-      <h3 style="color:var(--vert);margin-bottom:1rem;">Vous souhaitez un site aussi moderne et performant ?</h3>
-      <a href="devis.html" class="nav-devis" style="font-size:1.1rem;">Demander un devis</a>
-    </div>
-  </div>
-</section>
-
+ 
   <!-- Appel à l'action -->
   <div class="cta-block">
     <h2>Prêt à transformer votre organisation ?</h2>
