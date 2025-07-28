@@ -23,26 +23,26 @@
       --rayon: 16px;
       --rayon-grand: 24px;
     }
-    
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    
-    body { 
-      font-family: 'Inter', sans-serif; 
+
+    body {
+      font-family: 'Inter', sans-serif;
       background: var(--blanc); 
-      color: var(--gris-titre); 
+      color: var(--gris-titre);
       line-height: 1.6;
     }
-    
-    .container { 
+
+    .container {
       max-width: 1200px; 
-      margin: 0 auto; 
-      padding: 0 20px; 
+      margin: 0 auto;
+      padding: 0 20px;
     }
-    
+
     /* Navigation */
     .navbar {
       background: rgba(255,255,255,0.95);
@@ -105,7 +105,39 @@
     }
     
     .nav-link:hover::after {
-      width: 100%;
+      width: 100%; 
+    }
+    
+    /* Menu Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+    
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--vert);
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
     }
     
     .nav-devis {
@@ -231,7 +263,7 @@
       gap: 2rem;
       margin-top: 3rem;
     }
-    
+
     .service-card {
       background: var(--blanc);
       border-radius: var(--rayon-grand);
@@ -252,15 +284,15 @@
       object-fit: cover;
       transition: transform 0.5s ease;
     }
-    
+
     .service-card:hover img {
       transform: scale(1.05);
     }
-    
+
     .service-card-content {
       padding: 2rem;
     }
-    
+
     .service-card h3 {
       color: var(--vert);
       font-size: 1.4rem;
@@ -276,7 +308,7 @@
     
     .btn {
       display: inline-flex;
-      align-items: center;
+      align-items: center; 
       gap: 0.5rem;
       padding: 0.8rem 1.5rem;
       border-radius: 50px;
@@ -285,26 +317,26 @@
       transition: all 0.3s ease;
       border: none;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 1rem; 
     }
     
     .btn-secondary {
-      background: linear-gradient(90deg, var(--vert), var(--bleu));
-      color: var(--blanc);
+      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
       box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
     }
     
     .btn-secondary:hover {
-      background: linear-gradient(90deg, var(--bleu), var(--vert));
+      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
     }
     
     /* Footer */
-    .footer {
-      background: linear-gradient(135deg, var(--vert), var(--bleu));
-      color: var(--blanc);
-      padding: 80px 0 30px;
+    .footer { 
+      background: linear-gradient(135deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      padding: 80px 0 30px; 
       position: relative;
     }
     
@@ -320,20 +352,20 @@
       transform: rotate(180deg);
     }
     
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 3rem;
-      margin-bottom: 3rem;
+    .footer-content { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 3rem; 
+      margin-bottom: 3rem; 
       position: relative;
       z-index: 1;
     }
     
     .footer-section h3, .footer-section h4 {
-      color: var(--blanc);
-      margin-bottom: 1.5rem;
-      font-size: 1.3rem;
-      font-weight: 700;
+      color: var(--blanc); 
+      margin-bottom: 1.5rem; 
+      font-size: 1.3rem; 
+      font-weight: 700; 
       position: relative;
       display: inline-block;
     }
@@ -349,31 +381,31 @@
       border-radius: 2px;
     }
     
-    .footer-section p {
-      color: rgba(255,255,255,0.8);
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
+    .footer-section p { 
+      color: rgba(255,255,255,0.8); 
+      line-height: 1.6; 
+      margin-bottom: 1.5rem; 
     }
     
-    .footer-section ul {
-      list-style: none;
+    .footer-section ul { 
+      list-style: none; 
     }
     
-    .footer-section ul li {
-      margin-bottom: 0.8rem;
+    .footer-section ul li { 
+      margin-bottom: 0.8rem; 
     }
     
-    .footer-section ul li a {
-      color: rgba(255,255,255,0.8);
-      text-decoration: none;
+    .footer-section ul li a { 
+      color: rgba(255,255,255,0.8); 
+      text-decoration: none; 
       transition: all 0.3s;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
     
-    .footer-section ul li a:hover {
-      color: var(--blanc);
+    .footer-section ul li a:hover { 
+      color: var(--blanc); 
       transform: translateX(5px);
     }
     
@@ -381,36 +413,36 @@
       font-size: 0.8rem;
     }
     
-    .social-links {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1.5rem;
+    .social-links { 
+      display: flex; 
+      gap: 1rem; 
+      margin-top: 1.5rem; 
     }
     
-    .social-links a {
-      width: 40px;
-      height: 40px;
-      background: rgba(255,255,255,0.15);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--blanc);
-      text-decoration: none;
-      transition: all 0.3s;
+    .social-links a { 
+      width: 40px; 
+      height: 40px; 
+      background: rgba(255,255,255,0.15); 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: var(--blanc); 
+      text-decoration: none; 
+      transition: all 0.3s; 
     }
     
-    .social-links a:hover {
-      background: var(--blanc);
-      color: var(--vert);
-      transform: translateY(-3px) scale(1.1);
+    .social-links a:hover { 
+      background: var(--blanc); 
+      color: var(--vert); 
+      transform: translateY(-3px) scale(1.1); 
     }
     
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.15);
-      padding-top: 2rem;
-      text-align: center;
-      color: rgba(255,255,255,0.7);
+    .footer-bottom { 
+      border-top: 1px solid rgba(255,255,255,0.15); 
+      padding-top: 2rem; 
+      text-align: center; 
+      color: rgba(255,255,255,0.7); 
       font-size: 0.9rem;
       position: relative;
       z-index: 1;
@@ -468,6 +500,79 @@
     
     /* Responsive */
     @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+      background: var(--blanc);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem 2rem;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        gap: 0;
+        margin: 0;
+        overflow-y: auto;
+      }
+      
+      .nav-menu.active {
+        right: 0;
+      }
+      
+      .nav-menu li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-link {
+      display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gris-fonce);
+        font-size: 1.1rem;
+        width: 100%;
+      }
+      
+      .nav-link::after {
+        display: none;
+      }
+      
+      .nav-devis {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .submenu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        background: var(--gris);
+        border-radius: 8px;
+        margin-top: 0.5rem;
+        box-shadow: none;
+        border: none;
+        padding: 0.5rem 0;
+        width: 100%;
+      }
+      
+      .submenu-link {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+      }
+      
+      .submenu-link:last-child {
+        border-bottom: none;
+      }
+      
       .section-header h2 {
         font-size: 2rem;
       }
@@ -475,8 +580,8 @@
       .services-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
-      }
-      
+    }
+
       .service-card-content {
         padding: 1.5rem;
       }
@@ -488,7 +593,15 @@
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <div class="nav-logo"><h2>Porokhane Digital</h2></div>
-      <ul class="nav-menu">
+      
+      <!-- Menu Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html" class="nav-link">Accueil</a></li>
         <li><a href="a-propos.html" class="nav-link">À propos</a></li>
         <li class="nav-item">
@@ -528,14 +641,14 @@
       </ul>
     </div>
   </nav>
-
+  
   <!-- Services Section -->
   <section class="services-section">
     <div class="container">
       <div class="section-header">
         <h2>Nos Services</h2>
         <p>Des solutions digitales complètes et personnalisées pour propulser votre entreprise</p>
-      </div>
+    </div>
       <div class="services-grid">
         <!-- Formations Pédagogiques -->
         <div class="service-card">
@@ -544,9 +657,9 @@
             <h3>Formations Pédagogiques</h3>
             <p>Robotique, Impression 3D et Cybersécurité. Des formations adaptées à tous les niveaux.</p>
             <a href="formations.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails</a>
+            </div>
           </div>
-        </div>
-
+          
         <!-- Marketing Digital -->
         <div class="service-card">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Marketing Digital">
@@ -554,9 +667,9 @@
             <h3>Marketing Digital</h3>
             <p>Audit Express, Création/Réfonte de site, Stratégie digitale, SEO et Réseaux sociaux.</p>
             <a href="marketing.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails</a>
+            </div>
           </div>
-        </div>
-
+          
         <!-- Accompagnement -->
         <div class="service-card">
           <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Accompagnement">
@@ -564,9 +677,9 @@
             <h3>Accompagnement pour les PME</h3>
             <p>Automatisation, Bases de données, ERP et Intelligence Artificielle pour votre entreprise.</p>
             <a href="accompagnement.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails</a>
+            </div>
           </div>
-        </div>
-
+          
         <!-- ERP -->
         <div class="service-card">
           <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="ERP">
@@ -584,8 +697,8 @@
             <h3>Développement Web</h3>
             <p>Création de sites vitrines et e-commerce sur mesure pour votre activité.</p>
             <a href="site.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails</a>
-          </div>
-        </div>
+            </div>
+            </div>
 
         <!-- Sécurité IT -->
         <div class="service-card">
@@ -594,67 +707,107 @@
             <h3>Sécurité IT</h3>
             <p>Protection de vos données et infrastructures numériques.</p>
             <a href="securite.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails</a>
-          </div>
         </div>
-      </div>
+        </div>
     </div>
+  </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <form class="newsletter" id="newsletterForm">
+ <!-- Footer -->
+ <footer class="footer">
+  <form class="newsletter" id="newsletterForm">
       <input type="email" name="newsletterEmail" placeholder="Votre email pour recevoir nos conseils et actualités" required>
       <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
     </form>
-    </br>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Porokhane Digital</h3>
-          <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  </br>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Porokhane Digital</h3>
+        <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="tiktok"><i class="fab fa-tiktok"></i></a>>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
-        <div class="footer-section">
-          <h4>Nos Services</h4>
-          <ul>
+      </div>
+      <div class="footer-section">
+        <h4>Nos Services</h4>
+        <ul>
             <li><a href="formations.html"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
             <li><a href="marketing.html"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
             <li><a href="accompagnement.html"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
             <li><a href="erp.html"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
             <li><a href="site.html"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
             <li><a href="securite.html"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
+        </ul>
+      </div>
+      <div class="footer-section">
           <h4>Informations</h4>
           <ul>
             <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
             <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
             <li><a href="#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
-            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
             <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
-            <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+          <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
             <li><a href="#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
+        </ul>
+      </div>
+      <div class="footer-section">
           <h4>Contact</h4>
           <ul>
             <li><a href="tel:+221776125660"><i class="fas fa-phone"></i> +221 77 612 56 60</a></li>
             <li><a href="mailto:contact@porokhane.com"><i class="fas fa-envelope"></i> contact@porokhane.com</a></li>
             <li><a href="https://goo.gl/maps/xyz" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Script pour le menu hamburger -->
+  <script>
+    // Menu Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    
+    // Fermer le menu quand on clique sur un lien
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+    
+    // Fermer le menu quand on clique en dehors
+    document.addEventListener('click', function(event) {
+      const isClickInsideNav = navMenu.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+      
+      if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+    
+    // Fermer le menu au redimensionnement de l'écran
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>

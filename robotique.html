@@ -103,8 +103,16 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <div class="nav-logo"><h2></i> Porokhane Digital</h2></div>
-      <ul class="nav-menu">
+      <div class="nav-logo"><h2>Porokhane Digital</h2></div>
+      
+      <!-- Menu Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html" class="nav-link">Accueil</a></li>
         <li><a href="a-propos.html" class="nav-link">À propos</a></li>
         <li class="nav-item">
@@ -301,6 +309,46 @@
       <button type="submit" class="chatbot-send" aria-label="Envoyer"><i class="fas fa-paper-plane"></i></button>
     </form>
   </div>
+
+  <!-- Script pour le menu hamburger -->
+  <script>
+    // Menu Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    
+    // Fermer le menu quand on clique sur un lien
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+    
+    // Fermer le menu quand on clique en dehors
+    document.addEventListener('click', function(event) {
+      const isClickInsideNav = navMenu.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+      
+      if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+    
+    // Fermer le menu au redimensionnement de l'écran
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  </script>
 
   <!-- Chatbot et JS ... -->
 </body>

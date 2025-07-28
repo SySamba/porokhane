@@ -115,6 +115,38 @@
       width: 100%;
     }
     
+    /* Menu Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+    
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--vert);
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
     /* Bouton Devis */
     .nav-devis {
       position: relative;
@@ -175,19 +207,77 @@
     }
     
     @media (max-width: 768px) {
-      .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
+      .hamburger {
+        display: flex;
       }
       
       .nav-menu {
-        flex-wrap: wrap;
-        margin-top: 1rem;
-        gap: 0.8rem;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--blanc);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem 2rem;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        gap: 0;
+        margin: 0;
+        overflow-y: auto;
+      }
+      
+      .nav-menu.active {
+        right: 0;
+      }
+      
+      .nav-menu li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-link {
+        display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gris-fonce);
+        font-size: 1.1rem;
+        width: 100%;
+      }
+      
+      .nav-link::after {
+        display: none;
       }
       
       .nav-devis {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .submenu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        background: var(--gris);
+        border-radius: 8px;
         margin-top: 0.5rem;
+        box-shadow: none;
+        border: none;
+        padding: 0.5rem 0;
+        width: 100%;
+      }
+      
+      .submenu-link {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+      }
+      
+      .submenu-link:last-child {
+        border-bottom: none;
       }
     }
     /* Hero */
@@ -544,6 +634,15 @@
       visibility: visible;
       transform: translateX(-50%) translateY(0);
     }
+
+    /* Classe pour afficher les sous-menus au clic */
+    .nav-item.active .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+
     
     .submenu-link {
       display: block;
@@ -1472,9 +1571,16 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <div class="nav-logo"><h2></i> Porokhane Digital</h2></div>
-      <ul class="nav-menu">
-        
+      <div class="nav-logo"><h2>Porokhane Digital</h2></div>
+      
+      <!-- Menu Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-menu" id="nav-menu">
         <li><a href="a-propos.html" class="nav-link">À propos</a></li>
         <!-- Formations -->
         <li class="nav-item">
@@ -2608,6 +2714,73 @@
     chatbotBody.appendChild(msg);
     chatbotBody.scrollTop = chatbotBody.scrollHeight;
   }
+  </script>
+
+  <!-- Script pour le menu hamburger -->
+  <script>
+    // Script pour le menu hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    
+    // Gestion des sous-menus au clic (desktop)
+    const navItems = document.querySelectorAll('.nav-item');
+    
+    navItems.forEach(item => {
+      const link = item.querySelector('.nav-link');
+      
+      link.addEventListener('click', function(e) {
+        // Sur desktop, empêcher la navigation et afficher le sous-menu
+        if (window.innerWidth > 768) {
+          e.preventDefault(); // Empêche la navigation
+          item.classList.toggle('active');
+          
+          // Fermer les autres sous-menus
+          navItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+            }
+          });
+        }
+      });
+    });
+    
+    // Fermer les sous-menus au clic en dehors
+    document.addEventListener('click', function(event) {
+      if (window.innerWidth > 768) {
+        const isClickInsideNav = navMenu.contains(event.target);
+        const isClickOnHamburger = hamburger.contains(event.target);
+        
+        if (!isClickInsideNav && !isClickOnHamburger) {
+          navItems.forEach(item => {
+            item.classList.remove('active');
+          });
+        }
+      }
+    });
+    
+    // Fermer le menu quand on clique sur un lien (mobile)
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
+      });
+    });
+    
+    // Fermer le menu au redimensionnement de l'écran
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
   </script>
 
   
