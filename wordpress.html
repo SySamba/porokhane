@@ -1,222 +1,347 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sécuriser son site WordPress & Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sécuriser son site WordPress - Porokhane Digital Consulting</title>
+  <meta name="description" content="Protégez votre site WordPress contre les piratages avec 10 conseils simples et efficaces, accessibles à tous. Guide complet de sécurité WordPress.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f9fafc;
-      color: #333;
-      margin: 0; padding: 0;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 740px;
-      margin: 2rem auto 4rem;
-      padding: 0 20px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-    }
-    h1, h2, h3 {
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-    }
-    h1 {
-      font-size: 2.6rem;
-      color: #0d47a1;
-      margin-top: 2rem;
-      border-bottom: 2px solid #0d47a1;
-      padding-bottom: 0.4rem;
-    }
-    h2 {
-      font-size: 1.6rem;
-      margin-top: 2rem;
-      color: #1565c0;
-      border-left: 5px solid #1565c0;
-      padding-left: 10px;
-    }
-    h3 {
-      font-size: 1.2rem;
-      color: #424242;
-    }
-    p, li {
-      margin-bottom: 1rem;
-    }
-    .tip, .bonus, .summary, blockquote {
-      border-radius: 6px;
-      padding: 1rem;
-      margin: 1.5rem 0;
-    }
-    .tip {
-      background: #e3f2fd;
-      border-left: 4px solid #2196f3;
-      color: #0d47a1;
-      font-style: italic;
-    }
-    .bonus {
-      background: #fbe9e7;
-      border-left: 6px solid #d84315;
-      color: #bf360c;
-    }
-    .summary {
-      background: #fff8e1;
-      border-left: 6px solid #fbc02d;
-      color: #795548;
-    }
-    blockquote {
-      background: #f1f8e9;
-      border-left: 6px solid #8bc34a;
-      font-style: italic;
-      color: #33691e;
-    }
-    code {
-      background: #f1f1f1;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-    pre {
-      background: #263238;
-      color: #eceff1;
-      padding: 1rem;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-size: 0.9rem;
-    }
-    .hashtags {
-      margin-top: 2rem;
-      text-align: center;
-    }
-    .hashtags span {
-      background: #e3f2fd;
-      color: #0d47a1;
-      padding: 6px 12px;
-      margin: 4px;
-      border-radius: 20px;
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-    .other-articles {
-      margin-top: 3rem;
-    }
-    .article-item {
-      background: #f4f4f4;
-      padding: 1rem;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-    }
-    .article-title {
-      font-size: 1.2rem;
-      margin: 0.3rem 0;
-      color: #222;
-    }
-    .read-more {
-      font-weight: 600;
-      color: #d81b60;
-      text-decoration: none;
-    }
-    .read-more:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 500px) {
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.4rem; }
-      .article-title { font-size: 1rem; }
-    }
+    :root { --vert: #1fa47a; --vert-clair: #d1fae5; --bleu: #2563eb; --bleu-clair: #dbeafe; --blanc: #fff; --gris-bg: #f6f8fa; --gris-texte: #64748b; --gris-titre: #1e293b; --ombre: 0 4px 24px rgba(0,0,0,0.08); --rayon: 18px; --rayon-grand: 28px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--gris-bg); font-family: 'Inter', sans-serif; color: var(--gris-titre); line-height: 1.6; min-height: 100vh; background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.92)), url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed; background-size: cover; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .navbar { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 1rem 0; border-bottom: 1px solid var(--gris-fonce); position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo h2 { color: var(--vert); font-size: 1.5rem; margin: 0; display: flex; align-items: center; gap: 0.5rem; }
+    .nav-menu { display: flex; list-style: none; margin: 0; padding: 0; align-items: center; gap: 1.5rem; }
+    .nav-link { color: var(--noir); text-decoration: none; font-weight: 600; font-size: 1rem; padding: 0.5rem 0; position: relative; transition: color 0.3s; display: inline-block; }
+    .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--vert); transition: width 0.3s; }
+    .nav-link:hover { color: var(--vert); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-devis { position: relative; display: inline-flex; align-items: center; padding: 0.7rem 1.5rem; background: linear-gradient(90deg, var(--vert), var(--bleu)); color: white; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; overflow: hidden; z-index: 1; transition: all 0.4s; box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3); border: none; cursor: pointer; white-space: nowrap; }
+    .nav-devis:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4); background: linear-gradient(90deg, var(--bleu), var(--vert)); }
+    .devis-icon { margin-left: 0.5rem; transition: transform 0.3s; }
+    .nav-devis:hover .devis-icon { transform: translateX(5px); animation: pulse 1s infinite; }
+    @keyframes pulse { 0% { transform: translateX(5px) scale(1); } 50% { transform: translateX(5px) scale(1.2); } 100% { transform: translateX(5px) scale(1); } }
+    @media (max-width: 992px) { .nav-menu { gap: 1rem; } .nav-link { font-size: 0.9rem; } .nav-devis { padding: 0.6rem 1.2rem; font-size: 0.9rem; } }
+    @media (max-width: 768px) { .nav-container { flex-direction: column; align-items: flex-start; } .nav-menu { flex-wrap: wrap; margin-top: 1rem; gap: 0.8rem; } .nav-devis { margin-top: 0.5rem; } }
+    .submenu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); background: var(--blanc); border-radius: var(--rayon); box-shadow: var(--ombre); min-width: 220px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 100; border: 1px solid var(--gris-fonce); padding: 0.5rem 0; }
+    .nav-item:hover .submenu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .submenu-link { display: block; padding: 0.7rem 1.5rem; color: var(--noir); text-decoration: none; transition: all 0.2s; font-weight: 500; }
+    .submenu-link:hover { background: var(--gris-clair); color: var(--vert); padding-left: 1.7rem; }
+    .footer { background: linear-gradient(135deg, var(--vert), var(--bleu)); color: var(--blanc); padding: 80px 0 30px; position: relative; }
+    .footer::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100px; background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231fa47a" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%231fa47a" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%231fa47a"/></svg>'); background-size: cover; transform: rotate(180deg); }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem; position: relative; z-index: 1; }
+    .footer-section h3, .footer-section h4 { color: var(--blanc); margin-bottom: 1.5rem; font-size: 1.3rem; font-weight: 700; position: relative; display: inline-block; }
+    .footer-section h3::after, .footer-section h4::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 50px; height: 3px; background: rgba(255,255,255,0.3); border-radius: 2px; }
+    .footer-section p { color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 1.5rem; }
+    .footer-section ul { list-style: none; }
+    .footer-section ul li { margin-bottom: 0.8rem; }
+    .footer-section ul li a { color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; }
+    .footer-section ul li a:hover { color: var(--blanc); transform: translateX(5px); }
+    .footer-section ul li a i { font-size: 0.8rem; }
+    .social-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
+    .social-links a { width: 40px; height: 40px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--blanc); text-decoration: none; transition: all 0.3s; }
+    .social-links a:hover { background: var(--blanc); color: var(--vert); transform: translateY(-3px) scale(1.1); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.7); font-size: 0.9rem; position: relative; z-index: 1; }
+    .newsletter { margin-top: 3rem; background: var(--blanc); border-radius: var(--rayon); padding: 1.5rem; box-shadow: var(--ombre); display: flex; gap: 0.5rem; align-items: center; max-width: 600px; margin-left: auto; margin-right: auto; border-top: 4px solid var(--vert); }
+    .newsletter input[type="email"] { flex: 1; padding: 1rem; border-radius: 8px; border: 1px solid var(--gris-fonce); font-size: 1rem; transition: all 0.3s; }
+    .newsletter input[type="email"]:focus { border-color: var(--vert); outline: none; box-shadow: 0 0 0 3px var(--vert-clair); }
+    .newsletter button { padding: 1rem 2rem; border-radius: 8px; background: linear-gradient(90deg, var(--vert), var(--bleu)); color: var(--blanc); border: none; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; }
+    .newsletter button:hover { background: linear-gradient(90deg, var(--bleu), var(--vert)); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3); }
+    .chatbot-btn { position: fixed; bottom: 32px; right: 32px; background: linear-gradient(90deg, var(--vert), var(--bleu)); color: var(--blanc); border: none; border-radius: 50%; width: 64px; height: 64px; box-shadow: 0 4px 24px rgba(31,164,122,0.18); font-size: 2.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; transition: background 0.3s, transform 0.2s; animation: chatbot-bounce 1.5s infinite alternate; }
+    .chatbot-btn:hover { background: linear-gradient(90deg, var(--bleu), var(--vert)); transform: scale(1.08); }
+    @keyframes chatbot-bounce { 0% { box-shadow: 0 4px 24px rgba(31,164,122,0.18); transform: scale(1); } 100% { box-shadow: 0 8px 32px rgba(37,99,235,0.18); transform: scale(1.08); } }
+    .chatbot-btn .fa-comments { font-size: 2.2rem; animation: chatbot-icon-wave 2.5s infinite; }
+    @keyframes chatbot-icon-wave { 0%, 100% { color: var(--blanc); transform: scale(1); } 50% { color: var(--vert); transform: scale(1.18) rotate(-8deg); } }
+    .chatbot-window { position: fixed; bottom: 110px; right: 32px; width: 340px; max-width: 95vw; background: var(--blanc); border-radius: 20px; box-shadow: 0 8px 32px rgba(37,99,235,0.18); border: 1.5px solid var(--vert); z-index: 9999; display: none; flex-direction: column; overflow: hidden; animation: fadeInUp 0.4s; }
+    .chatbot-header { background: linear-gradient(90deg, var(--vert), var(--bleu)); color: var(--blanc); padding: 1rem 1.2rem; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; justify-content: space-between; }
+    .chatbot-close { background: none; border: none; color: var(--blanc); font-size: 1.3rem; cursor: pointer; margin-left: 1rem; transition: color 0.2s; }
+    .chatbot-close:hover { color: #e67e22; }
+    .chatbot-body { padding: 1.2rem; background: var(--gris); min-height: 180px; max-height: 320px; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; }
+    .chatbot-message { background: var(--blanc); border-radius: 14px 14px 14px 4px; padding: 0.8rem 1rem; color: var(--gris-titre); font-size: 1rem; box-shadow: 0 2px 8px rgba(31,164,122,0.07); align-self: flex-start; max-width: 85%; }
+    .chatbot-message.user { background: var(--vert); color: var(--blanc); align-self: flex-end; border-radius: 14px 14px 4px 14px; }
+    .chatbot-suggestions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+    .chatbot-suggestion { background: var(--bleu-clair); color: var(--bleu); border: none; border-radius: 20px; padding: 0.4rem 1rem; font-size: 0.95rem; cursor: pointer; transition: background 0.2s, color 0.2s; }
+    .chatbot-suggestion:hover { background: var(--bleu); color: var(--blanc); }
+    .chatbot-footer { padding: 0.8rem 1.2rem; background: var(--blanc); border-top: 1px solid var(--gris-fonce); display: flex; gap: 0.5rem; }
+    .chatbot-input { flex: 1; border: 1px solid var(--gris-fonce); border-radius: 20px; padding: 0.5rem 1rem; font-size: 1rem; outline: none; transition: border 0.2s; }
+    .chatbot-input:focus { border-color: var(--vert); }
+    .chatbot-send { background: linear-gradient(90deg, var(--vert), var(--bleu)); color: var(--blanc); border: none; border-radius: 50%; width: 38px; height: 38px; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
+    .chatbot-send:hover { background: linear-gradient(90deg, var(--bleu), var(--vert)); }
+    .chatbot-message.bot { display: flex; align-items: flex-start; gap: 0.7rem; }
+    .chatbot-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 8px rgba(31,164,122,0.07); border: 2px solid var(--vert); flex-shrink: 0; }
+    
+    /* Styles pour l'article blog */
+    .blog-main { max-width: 800px; margin: 60px auto 40px auto; background: var(--blanc); border-radius: var(--rayon-grand); box-shadow: var(--ombre); padding: 40px 32px; position: relative; z-index: 2; }
+    .blog-title { display: flex; align-items: center; gap: 1rem; font-size: 2.4rem; font-weight: 800; color: var(--vert); margin-bottom: 1.5rem; }
+    .blog-title i { font-size: 2.2rem; color: var(--bleu); }
+    .blog-intro { font-size: 1.2rem; color: var(--gris-texte); margin-bottom: 2.5rem; line-height: 1.7; }
+    .blog-section { margin-bottom: 2.5rem; }
+    .blog-section h2 { color: var(--bleu); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .blog-section h3 { color: var(--gris-titre); font-size: 1.2rem; font-weight: 600; margin: 1.5rem 0 0.8rem 0; }
+    .blog-section p { color: var(--gris-texte); margin-bottom: 1rem; line-height: 1.7; }
+    .blog-tip { background: var(--vert-clair); border-left: 4px solid var(--vert); border-radius: 8px; padding: 1.2rem; margin: 1.5rem 0; color: var(--gris-titre); }
+    .blog-bonus { background: var(--bleu-clair); border-left: 4px solid var(--bleu); border-radius: 8px; padding: 1.2rem; margin: 1.5rem 0; color: var(--gris-titre); }
+    .blog-summary { background: linear-gradient(135deg, var(--vert-clair), var(--bleu-clair)); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+    .blog-quote { background: var(--gris-bg); border-left: 4px solid var(--vert); border-radius: 8px; padding: 1.2rem; margin: 1.5rem 0; font-style: italic; color: var(--gris-titre); }
+    .blog-code { background: var(--gris-bg); border-radius: 6px; padding: 0.3rem 0.6rem; font-family: 'Courier New', monospace; color: var(--bleu); font-size: 0.9rem; }
+    .blog-hashtags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0; }
+    .blog-hashtag { background: var(--vert-clair); color: var(--vert); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600; }
+    .blog-articles { margin-top: 3rem; }
+    .blog-article-item { background: var(--gris-bg); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; transition: transform 0.2s; }
+    .blog-article-item:hover { transform: translateY(-2px); }
+    .blog-article-title { font-size: 1.2rem; font-weight: 600; color: var(--bleu); margin-bottom: 0.5rem; }
+    .blog-article-link { color: var(--vert); font-weight: 600; text-decoration: none; }
+    .blog-article-link:hover { text-decoration: underline; }
+    @media (max-width: 800px) { .blog-main { padding: 28px 6vw; } .blog-title { font-size: 2rem; } }
+    @media (max-width: 600px) { .blog-main { padding: 20px 4vw; } .blog-title { font-size: 1.6rem; } }
   </style>
 </head>
 <body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo"><h2></i> Porokhane Digital</h2></div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        <li class="nav-item">
+          <a href="formations.html" class="nav-link">Formations <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="robotique.html" class="submenu-link">Robotique</a></li>
+            <li><a href="impression_3D.html" class="submenu-link"><i class="fas fa-print"></i> Impression 3D</a></li>
+            <li><a href="cybersecurite.html" class="submenu-link">Cybersécurité</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="marketing.html" class="nav-link">Marketing <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="audit_express.html" class="submenu-link">Audit Express</a></li>
+            <li><a href="site.html" class="submenu-link">Création/Réfonte de site</a></li>
+            <li><a href="strategie_digitale.html" class="submenu-link"> Stratégie digitale</a></li>
+            <li><a href="seo.html" class="submenu-link">Référencement naturel</a></li>
+            <li><a href="reseaux_sociaux.html" class="submenu-link">Réseaux sociaux</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="accompagnement.html" class="nav-link">Accompagnement <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="automatisation.html" class="submenu-link">Automatisation</a></li>
+            <li><a href="base_donnee.html" class="submenu-link">Bases de données</a></li>
+            <li><a href="erp.html" class="submenu-link">ERP</a></li>
+            <li><a href="ia.html" class="submenu-link">Intelligence Artificielle</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html" class="nav-link">Actualités</a></li>
+        <!--<li><a href="emplois" class="nav-link">Emplois</a></li>-->
+        <li>
+          <a href="devis.html" class="nav-devis">
+            Demander un devis
+            <span class="devis-icon"><i class="fas fa-paper-plane"></i></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<div class="container">
-  <h1>🔒 Sécuriser son site WordPress</h1>
-  <p><strong>Protégez votre site WordPress contre les piratages</strong> avec 10 conseils simples et efficaces, accessibles à tous.</p>
+  <main class="blog-main">
+    <div class="blog-title"><i class="fas fa-shield-alt"></i> Sécuriser son site WordPress</div>
+    <div class="blog-intro"><strong>Protégez votre site WordPress contre les piratages</strong> avec 10 conseils simples et efficaces, accessibles à tous.</div>
 
-  <h2>🚀 10 conseils indispensables</h2>
-  <p>WordPress est populaire, mais donc visé. Voici les 10 pratiques essentielles pour assurer votre tranquillité.</p>
-
-  <h2>1. 🔄 Gardez tout à jour</h2>
-  <p>Mettez plugins, thèmes, et WordPress à jour. C’est vital.</p>
-  <div class="tip">👉 Utilisez les mises à jour automatiques ou <em>ManageWP</em>.</div>
-
-  <h2>2. 👨‍💻 Changez l’URL de connexion</h2>
-  <p>Ne laissez pas <code>/wp-admin</code> visible à tous.</p>
-  <div class="tip">👉 Utilisez <em>WPS Hide Login</em>.</div>
-
-  <h2>3. 🔐 Mots de passe forts & 2FA</h2>
-  <p>Un mot de passe fort + 2FA = sécurité renforcée.</p>
-  <div class="tip">👉 Plugins : <em>Google Authenticator</em>, <em>WP 2FA</em>.</div>
-
-  <h2>4. 🧱 Limitez les tentatives</h2>
-  <p>Empêchez les attaques par force brute.</p>
-  <div class="tip">👉 Installez <em>Limit Login Attempts Reloaded</em>.</div>
-
-  <h2>5. 🚫 Supprimez les plugins inutilisés</h2>
-  <p>Ne gardez que ce que vous utilisez.</p>
-  <div class="tip">👉 Supprimez les extensions inactives.</div>
-
-  <h2>6. 🧪 Analysez régulièrement</h2>
-  <p>Scannez pour détecter des fichiers suspects.</p>
-  <div class="tip">👉 Plugins : <em>Wordfence</em>, <em>Sucuri</em>.</div>
-
-  <h2>7. 🔐 Changez le préfixe des tables</h2>
-  <p>Ne laissez pas <code>wp_</code> comme préfixe.</p>
-  <div class="tip">👉 Changez-le à l’installation ou via plugin.</div>
-
-  <h2>8. 🛡 Activez un pare-feu</h2>
-  <p>Filtrez les attaques en amont.</p>
-  <div class="tip">👉 <em>Cloudflare</em> ou <em>Wordfence Premium</em>.</div>
-
-  <h2>9. 📦 Sauvegardes régulières</h2>
-  <p>Créez des sauvegardes automatiques.</p>
-  <div class="tip">👉 Plugins : <em>UpdraftPlus</em>, <em>BlogVault</em>.</div>
-
-  <h2>10. 🔍 Cachez la version WordPress</h2>
-  <p>Évitez de révéler la version du CMS.</p>
-  <div class="tip">👉 Supprimez dans <code>functions.php</code> : <code>remove_action('wp_head', 'wp_generator');</code></div>
-
-  <div class="bonus">
-    <h3>🎁 Bonus</h3>
-    <p>Plugins sécurité tout-en-un : <strong>Wordfence</strong> ou <strong>iThemes Security</strong>.</p>
-  </div>
-
-  <div class="summary">
-    <h3>🧠 En résumé</h3>
-    <p>Ne laissez pas votre site sans défense. Appliquez ces conseils et sécurisez-le dès aujourd’hui.</p>
-    <blockquote>Un site piraté, c’est du stress. Un site protégé, c’est la sérénité.</blockquote>
-  </div>
-
-  <h3>📢 Et vous ? Partagez vos astuces WordPress en commentaire 👇</h3>
-
-  <div class="hashtags">
-    <span>#WordPress</span>
-    <span>#Sécurité</span>
-    <span>#BlogSEO</span>
-    <span>#WebTips</span>
-    <span>#ProtectionWP</span>
-  </div>
-
-  <section class="other-articles">
-    <h2>📚 Autres articles</h2>
-
-    <div class="article-item">
-      <div class="article-title">🚀 SEO Google 2024 : 10 astuces à connaître</div>
-      <p>Les dernières tendances SEO expliquées simplement pour booster ton site.</p>
-      <a class="read-more" href="#">Lire l’article →</a>
+    <div class="blog-section">
+      <h2><i class="fas fa-rocket"></i> 10 conseils indispensables</h2>
+      <p>WordPress est populaire, mais donc visé. Voici les 10 pratiques essentielles pour assurer votre tranquillité.</p>
     </div>
 
-    <div class="article-item">
-      <div class="article-title">🔎 14 outils SEO gratuits à tester</div>
-      <p>Les meilleurs outils pour trouver des mots-clés et analyser ton trafic.</p>
-      <a class="read-more" href="#">Lire l’article →</a>
+    <div class="blog-section">
+      <h2><i class="fas fa-sync-alt"></i> 1. Gardez tout à jour</h2>
+      <p>Mettez plugins, thèmes, et WordPress à jour. C'est vital.</p>
+      <div class="blog-tip">👉 Utilisez les mises à jour automatiques ou <em>ManageWP</em>.</div>
     </div>
-  </section>
-</div>
 
+    <div class="blog-section">
+      <h2><i class="fas fa-user-shield"></i> 2. Changez l'URL de connexion</h2>
+      <p>Ne laissez pas <span class="blog-code">/wp-admin</span> visible à tous.</p>
+      <div class="blog-tip">👉 Utilisez <em>WPS Hide Login</em>.</div>
+    </div>
+
+    <div class="blog-section">
+      <h2><i class="fas fa-lock"></i> 3. Mots de passe forts & 2FA</h2>
+      <p>Un mot de passe fort + 2FA = sécurité renforcée.</p>
+      <div class="blog-tip">👉 Plugins : <em>Google Authenticator</em>, <em>WP 2FA</em>.</div>
+    </div>
+
+    <div class="blog-section">
+      <h2><i class="fas fa-shield-alt"></i> 4. Limitez les tentatives</h2>
+      <p>Empêchez les attaques par force brute.</p>
+      <div class="blog-tip">👉 Installez <em>Limit Login Attempts Reloaded</em>.</div>
+    </div>
+
+    <div class="blog-section">
+      <h2><i class="fas fa-trash"></i> 5. Supprimez les plugins inutilisés</h2>
+      <p>Ne gardez que ce que vous utilisez.</p>
+      <div class="blog-tip">👉 Supprimez les extensions inactives.</div>
+    </div>
+
+    <div class="blog-section">
+      <h2><i class="fas fa-search"></i> 6. Analysez régulièrement</h2>
+      <p>Scannez pour détecter des fichiers suspects.</p>
+      <div class="blog-tip">👉 Plugins : <em>Wordfence</em>, <em>Sucuri</em>.</div>
+    </div>
+
+    <div class="blog-section">
+      <h2><i class="fas fa-database"></i> 7. Changez le préfixe des tables</h2>
+      <p>Ne laissez pas <span class="blog-code">wp_</span> comme préfixe.</p>
+      <div class="blog-tip">👉 Changez-le à l'installation ou via plugin.</div>
+    </div>
+
+    <div class="blog-section">
+      <h2><i class="fas fa-fire"></i> 8. Activez un pare-feu</h2>
+      <p>Filtrez les attaques en amont.</p>
+      <div class="blog-tip">👉 <em>Cloudflare</em> ou <em>Wordfence Premium</em>.</div>
+    </div>
+
+    <div class="blog-section">
+      <h2><i class="fas fa-save"></i> 9. Sauvegardes régulières</h2>
+      <p>Créez des sauvegardes automatiques.</p>
+      <div class="blog-tip">👉 Plugins : <em>UpdraftPlus</em>, <em>BlogVault</em>.</div>
+    </div>
+
+    <div class="blog-section">
+      <h2><i class="fas fa-eye-slash"></i> 10. Cachez la version WordPress</h2>
+      <p>Évitez de révéler la version du CMS.</p>
+      <div class="blog-tip">👉 Supprimez dans <span class="blog-code">functions.php</span> : <span class="blog-code">remove_action('wp_head', 'wp_generator');</span></div>
+    </div>
+
+    <div class="blog-bonus">
+      <h3><i class="fas fa-gift"></i> Bonus</h3>
+      <p>Plugins sécurité tout-en-un : <strong>Wordfence</strong> ou <strong>iThemes Security</strong>.</p>
+    </div>
+
+    <div class="blog-summary">
+      <h3><i class="fas fa-brain"></i> En résumé</h3>
+      <p>Ne laissez pas votre site sans défense. Appliquez ces conseils et sécurisez-le dès aujourd'hui.</p>
+      <div class="blog-quote">Un site piraté, c'est du stress. Un site protégé, c'est la sérénité.</div>
+    </div>
+
+    <div class="blog-section">
+      <h3><i class="fas fa-comments"></i> Et vous ? Partagez vos astuces WordPress en commentaire 👇</h3>
+    </div>
+
+    <div class="blog-hashtags">
+      <span class="blog-hashtag">#WordPress</span>
+      <span class="blog-hashtag">#Sécurité</span>
+      <span class="blog-hashtag">#BlogSEO</span>
+      <span class="blog-hashtag">#WebTips</span>
+      <span class="blog-hashtag">#ProtectionWP</span>
+    </div>
+
+    <div class="blog-articles">
+      <h2><i class="fas fa-book"></i> Autres articles</h2>
+
+      <div class="blog-article-item">
+        <div class="blog-article-title"><i class="fas fa-rocket"></i> SEO Google 2024 : 10 astuces à connaître</div>
+        <p>Les dernières tendances SEO expliquées simplement pour booster ton site.</p>
+        <a class="blog-article-link" href="visible_seo.html">Lire l'article →</a>
+      </div>
+
+      <div class="blog-article-item">
+        <div class="blog-article-title"><i class="fas fa-search"></i> 14 outils SEO gratuits à tester</div>
+        <p>Les meilleurs outils pour trouver des mots-clés et analyser ton trafic.</p>
+        <a class="blog-article-link" href="seo_outil.html">Lire l'article →</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <form class="newsletter" id="newsletterForm">
+        <input type="email" name="newsletterEmail" placeholder="Votre email pour recevoir nos conseils et actualités" required>
+        <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
+      </form>
+    </br>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Porokhane Digital</h3>
+          <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Nos Services</h4>
+          <ul>
+            <li><a href="formations.html"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
+            <li><a href="marketing.html"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+            <li><a href="accompagnement.html"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+            <li><a href="erp.html"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+            <li><a href="site.html"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
+            <li><a href="securite.html"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+            <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+            <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+            <li><a href="#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+221776125660"><i class="fas fa-phone"></i> +221 77 612 56 60</a></li>
+            <li><a href="mailto:contact@porokhane.com"><i class="fas fa-envelope"></i> contact@porokhane.com</a></li>
+            <li><a href="https://goo.gl/maps/xyz" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot Flottant -->
+  <button class="chatbot-btn" id="chatbotBtn" aria-label="Ouvrir le chat" title="Discuter avec nous">
+    <i class="fas fa-comments"></i>
+  </button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <span>🤖 Porokhane Chatbot</span>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">&times;</button>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+      <div class="chatbot-message">Bonjour 👋 ! Je suis le chatbot Porokhane. Posez-moi vos questions ou choisissez une suggestion ci-dessous :</div>
+      <div class="chatbot-message" style="background: var(--bleu-clair); color: var(--bleu); font-size: 0.98rem;">
+        Vous pouvez aussi envoyer ici un message à notre équipe, nous vous répondrons rapidement !
+      </div>
+      <div class="chatbot-suggestions" id="chatbotSuggestions">
+        <button class="chatbot-suggestion">Quels services proposez-vous ?</button>
+        <button class="chatbot-suggestion">Comment demander un devis ?</button>
+        <button class="chatbot-suggestion">Quels sont vos délais de livraison ?</button>
+        <button class="chatbot-suggestion">Proposez-vous des formations ?</button>
+        <button class="chatbot-suggestion">Comment vous contacter ?</button>
+      </div>
+    </div>
+    <form class="chatbot-footer" id="chatbotForm" autocomplete="off">
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Écrivez votre question..." />
+      <button type="submit" class="chatbot-send" aria-label="Envoyer"><i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <!-- Chatbot et JS ... -->
 </body>
 </html>
