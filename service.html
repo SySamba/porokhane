@@ -35,6 +35,7 @@
       background: var(--blanc); 
       color: var(--gris-titre);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     .container {
@@ -226,10 +227,93 @@
       .nav-devis { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
     }
     
-    @media (max-width: 768px) {
-      .nav-container { flex-direction: column; align-items: flex-start; }
-      .nav-menu { flex-wrap: wrap; margin-top: 1rem; gap: 0.8rem; }
-      .nav-devis { margin-top: 0.5rem; }
+    @media (max-width: 768px) { 
+      .nav-container { 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .nav-menu { 
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--blanc);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem 2rem;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        gap: 0;
+        margin: 0;
+        overflow-y: auto;
+        z-index: 1000;
+      }
+      .nav-menu.active {
+        right: 0;
+      }
+      .nav-menu li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-link {
+        display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gris-fonce);
+        font-size: 1.1rem;
+        width: 100%;
+      }
+      .nav-link::after {
+        display: none;
+      }
+      .nav-devis { 
+        margin: 1rem 0 0 0; 
+        width: 100%;
+        justify-content: center;
+      }
+      /* Sous-menus en mode mobile */
+      .submenu {
+        position: static !important;
+        transform: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        background: var(--gris-bg) !important;
+        border-radius: 8px !important;
+        margin-top: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-width: auto !important;
+        transition: all 0.3s ease !important;
+      }
+      /* Affichage des sous-menus au survol/touch sur mobile */
+      .nav-item:hover .submenu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-height: 200px !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+      }
+      .submenu-link {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-size: 1rem;
+      }
+      .submenu-link:hover {
+        padding-left: 1rem;
+      }
+      .submenu-link:last-child {
+        border-bottom: none;
+      }
     }
     
     /* Services Section */
@@ -779,6 +863,13 @@
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
+      
+      // Empêcher le scroll du body quand le menu est ouvert
+      if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     });
     
     // Fermer le menu quand on clique sur un lien
@@ -787,6 +878,7 @@
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        document.body.style.overflow = '';
       });
     });
     

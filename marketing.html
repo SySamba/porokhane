@@ -8,100 +8,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    :root {
-      --vert: #1fa47a;
-      --vert-clair: #d1fae5;
-      --bleu: #2563eb;
-      --bleu-clair: #dbeafe;
-      --blanc: #fff;
-      --noir: #0f172a;
-      --gris: #f8fafc;
-      --gris-fonce: #e2e8f0;
-      --gris-texte: #64748b;
-      --gris-titre: #1e293b;
-      --ombre: 0 4px 24px rgba(0,0,0,0.08);
-      --rayon: 16px;
-      --rayon-grand: 24px;
-    }
-    
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body { 
-      font-family: 'Inter', sans-serif; 
-      background: var(--blanc); 
-      color: var(--gris-titre); 
-      line-height: 1.6;
-    }
-    
-    .container { 
-      max-width: 1200px; 
-      margin: 0 auto; 
-      padding: 0 20px; 
-    }
-    
-    /* Navigation */
-    .navbar {
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--gris-fonce);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .nav-logo h2 {
-      color: var(--vert);
-      font-size: 1.5rem;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .nav-menu {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      align-items: center;
-      gap: 1.5rem;
-    }
-    
-    .nav-item {
-      position: relative;
-    }
-    
-    .nav-link {
-      color: var(--noir);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 0.5rem 0;
-      position: relative;
-      transition: color 0.3s;
-      display: inline-block;
-    }
-    
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--vert);
-      transition: width 0.3s;
+    /* CSS complet du menu, pied de page, chatbot, responsive, etc. (copié depuis strategie_digitale.html) */
+    :root { --vert: #1fa47a; --vert-clair: #d1fae5; --bleu: #2563eb; --bleu-clair: #dbeafe; --blanc: #fff; --noir: #0f172a; --gris: #f8fafc; --gris-clair: #f1f5f9; --gris-fonce: #e2e8f0; --gris-bg: #f6f8fa; --gris-texte: #64748b; --gris-titre: #1e293b; --ombre: 0 4px 24px rgba(0,0,0,0.08); --rayon: 18px; --rayon-grand: 28px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--gris-bg); font-family: 'Inter', sans-serif; color: var(--gris-titre); line-height: 1.6; min-height: 100vh; background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.92)), url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed; background-size: cover; }
+     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .navbar { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 1rem 0; border-bottom: 1px solid var(--gris-fonce); position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo h2 { color: var(--vert); font-size: 1.5rem; margin: 0; display: flex; align-items: center; gap: 0.5rem; }
+    .nav-menu { display: flex; list-style: none; margin: 0; padding: 0; align-items: center; gap: 1.5rem; }
+    .nav-link { color: var(--noir); text-decoration: none; font-weight: 600; font-size: 1rem; padding: 0.5rem 0; position: relative; transition: color 0.3s; display: inline-block; }
+    .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--vert); transition: width 0.3s; }
+    .nav-link:hover { color: var(--vert); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-devis { position: relative; display: inline-flex; align-items: center; padding: 0.7rem 1.5rem; background: linear-gradient(90deg, var(--vert), var(--bleu)); color: white; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; overflow: hidden; z-index: 1; transition: all 0.4s; box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3); border: none; cursor: pointer; white-space: nowrap; }
+    .nav-devis:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4); background: linear-gradient(90deg, var(--bleu), var(--vert)); }
+    .devis-icon { margin-left: 0.5rem; transition: transform 0.3s; }
+    .nav-devis:hover .devis-icon { transform: translateX(5px); animation: pulse 1s infinite; }
+    @keyframes pulse { 0% { transform: translateX(5px) scale(1); } 50% { transform: translateX(5px) scale(1.2); } 100% { transform: translateX(5px) scale(1); } }
+    @media (max-width: 992px) { .nav-menu { gap: 1rem; } .nav-link { font-size: 0.9rem; } .nav-devis { padding: 0.6rem 1.2rem; font-size: 0.9rem; } }
+    @media (max-width: 768px) { 
+      .nav-container { 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between;
+      } 
+      .nav-menu { 
+        display: none;
+      } 
+      .nav-devis { 
+        display: none;
+      } 
     }
     
     .nav-link:hover {
@@ -508,7 +445,17 @@
       .hero-banner h1 { font-size: 2rem; }
       .section-header h2 { font-size: 1.8rem; }
       .services-grid { grid-template-columns: 1fr; }
-      .nav-menu { flex-wrap: wrap; gap: 1rem; }
+      .nav-container { 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between;
+      } 
+      .nav-menu { 
+        display: none;
+      } 
+      .nav-devis { 
+        display: none;
+      } 
     }
 
     .newsletter { 
@@ -560,6 +507,140 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
     }
+
+    /* Menu Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--vert);
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex !important;
+        order: 2;
+        margin-left: auto;
+        position: relative;
+        z-index: 1002;
+      }
+      
+      .nav-menu {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: var(--blanc) !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        padding: 80px 2rem 2rem 2rem !important;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1) !important;
+        transition: right 0.3s ease !important;
+        gap: 0 !important;
+        margin: 0 !important;
+        overflow-y: auto !important;
+        z-index: 1000 !important;
+        display: none !important;
+      }
+      
+      .nav-menu.active {
+        right: 0 !important;
+        display: flex !important;
+      }
+      
+      .nav-menu li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-link {
+        display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gris-fonce);
+        font-size: 1.1rem;
+        width: 100%;
+      }
+      
+      .nav-link::after {
+        display: none;
+      }
+      
+      .nav-devis {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        justify-content: center;
+        display: block !important;
+      }
+      
+      /* Sous-menus en mode mobile */
+      .submenu {
+        position: static !important;
+        transform: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        background: var(--gris) !important;
+        border-radius: 8px !important;
+        margin-top: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-width: auto !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      /* Affichage des sous-menus au survol/touch sur mobile */
+      .nav-item:hover .submenu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-height: 200px !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+      }
+      
+      .submenu-link {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-size: 1rem;
+      }
+      
+      .submenu-link:hover {
+        padding-left: 1rem;
+      }
+      
+      .submenu-link:last-child {
+        border-bottom: none;
+      }
+    }
     
   </style>
 </head>
@@ -568,7 +649,13 @@
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <div class="nav-logo"><h2>Porokhane Digital</h2></div>
-      <ul class="nav-menu">
+      <!-- Menu Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
         <li><a href="a-propos.html" class="nav-link">À propos</a></li>
         <li class="nav-item">
@@ -770,6 +857,44 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Script pour le menu hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Fermer le menu quand on clique en dehors
+    document.addEventListener('click', function(event) {
+      const isClickInsideNav = navMenu.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+      
+      if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+    // Fermer le menu au redimensionnement de l'écran
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  </script>
 </body>
-</html> 
 </html> 

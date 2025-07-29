@@ -678,12 +678,14 @@
         transform: none;
         opacity: 0;
         visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
         background: var(--gris);
         border-radius: 8px;
-        margin-top: 0.5rem;
+        margin-top: 0;
         box-shadow: none;
         border: none;
-        padding: 0.5rem 0;
+        padding: 0;
         width: 100%;
         min-width: auto;
         transition: all 0.3s ease;
@@ -693,6 +695,9 @@
       .nav-item:hover .submenu {
         opacity: 1;
         visibility: visible;
+        max-height: 200px;
+        margin-top: 0.5rem;
+        padding: 0.5rem 0;
       }
       
       .submenu-link {
@@ -1226,7 +1231,7 @@
         </div>
         <div class="team-card">
           <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Community Manager">
-          <h4>Mme Faye</h4>
+          <h4>Mme Ndiaye</h4>
           <div class="role">Community Manager</div>
           <p>Anime les réseaux sociaux, gère les campagnes et l'innovation digitale.</p>
         </div>

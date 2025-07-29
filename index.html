@@ -35,6 +35,7 @@
       background: var(--blanc); 
       color: var(--gris-titre); 
       line-height: 1.6;
+      overflow-x: hidden;
     }
     
     .container { 
@@ -190,6 +191,107 @@
       100% { transform: translateX(5px) scale(1); }
     }
     
+    /* Sous-menus pour desktop */
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: var(--blanc);
+      border-radius: var(--rayon);
+      box-shadow: var(--ombre);
+      min-width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 100;
+      border: 1px solid var(--gris-fonce);
+      padding: 0.5rem 0;
+    }
+    
+    .nav-item:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    /* Position relative pour les éléments nav-item */
+    .nav-item {
+      position: relative;
+    }
+    
+    /* Styles spécifiques pour desktop - plus spécifiques que mobile */
+    @media (min-width: 769px) {
+      .submenu {
+        position: absolute !important;
+        top: 100% !important;
+        left: 50% !important;
+        transform: translateX(-50%) translateY(10px) !important;
+        background: var(--blanc) !important;
+        border-radius: var(--rayon) !important;
+        box-shadow: var(--ombre) !important;
+        min-width: 220px !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: all 0.3s ease !important;
+        z-index: 100 !important;
+        border: 1px solid var(--gris-fonce) !important;
+        padding: 0.5rem 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        width: auto !important;
+        margin-top: 0 !important;
+      }
+      
+      .nav-item:hover .submenu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateX(-50%) translateY(0) !important;
+        max-height: none !important;
+        margin-top: 0 !important;
+        padding: 0.5rem 0 !important;
+      }
+    }
+    
+    .submenu-link {
+      display: block;
+      padding: 0.7rem 1.5rem;
+      color: var(--noir);
+      text-decoration: none;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+    
+    .submenu-link:hover {
+      background: var(--gris-clair);
+      color: var(--vert);
+      padding-left: 1.7rem;
+    }
+    
+    /* Styles spécifiques pour les liens des sous-menus sur desktop */
+    @media (min-width: 769px) {
+      .submenu-link {
+        display: block !important;
+        padding: 0.7rem 1.5rem !important;
+        color: var(--noir) !important;
+        text-decoration: none !important;
+        transition: all 0.2s !important;
+        font-weight: 500 !important;
+        border-bottom: none !important;
+        font-size: 1rem !important;
+      }
+      
+      .submenu-link:hover {
+        background: var(--gris-clair) !important;
+        color: var(--vert) !important;
+        padding-left: 1.7rem !important;
+      }
+      
+      .submenu-link:last-child {
+        border-bottom: none !important;
+      }
+    }
+    
     /* Responsive */
     @media (max-width: 992px) {
       .nav-menu {
@@ -257,23 +359,42 @@
         justify-content: center;
       }
       
+      /* Sous-menus en mode mobile */
       .submenu {
-        position: static;
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-        background: var(--gris);
-        border-radius: 8px;
-        margin-top: 0.5rem;
-        box-shadow: none;
-        border: none;
-        padding: 0.5rem 0;
-        width: 100%;
+        position: static !important;
+        transform: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        background: var(--gris) !important;
+        border-radius: 8px !important;
+        margin-top: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-width: auto !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      /* Affichage des sous-menus au survol/touch sur mobile */
+      .nav-item:hover .submenu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-height: 200px !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
       }
       
       .submenu-link {
         padding: 0.8rem 1rem;
         border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-size: 1rem;
+      }
+      
+      .submenu-link:hover {
+        padding-left: 1rem;
       }
       
       .submenu-link:last-child {
@@ -1581,6 +1702,7 @@
       </button>
       
       <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
         <li><a href="a-propos.html" class="nav-link">À propos</a></li>
         <!-- Formations -->
         <li class="nav-item">
@@ -2394,14 +2516,18 @@
     });
 
 
-    // Assurer que les sous-menus restent ouverts quand on les survole
+    // Gestion des sous-menus au survol (desktop seulement)
     document.querySelectorAll('.nav-item').forEach(item => {
       item.addEventListener('mouseenter', () => {
-        item.querySelector('.submenu')?.style.setProperty('display', 'block', 'important');
+        if (window.innerWidth > 768) {
+          // Laisser le CSS gérer l'affichage au survol
+        }
       });
       
       item.addEventListener('mouseleave', () => {
-        item.querySelector('.submenu')?.style.setProperty('display', 'none', 'important');
+        if (window.innerWidth > 768) {
+          // Laisser le CSS gérer le masquage
+        }
       });
     });
   </script>
@@ -2725,41 +2851,12 @@
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
-    });
-    
-    // Gestion des sous-menus au clic (desktop)
-    const navItems = document.querySelectorAll('.nav-item');
-    
-    navItems.forEach(item => {
-      const link = item.querySelector('.nav-link');
       
-      link.addEventListener('click', function(e) {
-        // Sur desktop, empêcher la navigation et afficher le sous-menu
-        if (window.innerWidth > 768) {
-          e.preventDefault(); // Empêche la navigation
-          item.classList.toggle('active');
-          
-          // Fermer les autres sous-menus
-          navItems.forEach(otherItem => {
-            if (otherItem !== item) {
-              otherItem.classList.remove('active');
-            }
-          });
-        }
-      });
-    });
-    
-    // Fermer les sous-menus au clic en dehors
-    document.addEventListener('click', function(event) {
-      if (window.innerWidth > 768) {
-        const isClickInsideNav = navMenu.contains(event.target);
-        const isClickOnHamburger = hamburger.contains(event.target);
-        
-        if (!isClickInsideNav && !isClickOnHamburger) {
-          navItems.forEach(item => {
-            item.classList.remove('active');
-          });
-        }
+      // Empêcher le scroll du body quand le menu est ouvert
+      if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
       }
     });
     
@@ -2770,8 +2867,21 @@
         if (window.innerWidth <= 768) {
           hamburger.classList.remove('active');
           navMenu.classList.remove('active');
+          document.body.style.overflow = '';
         }
       });
+    });
+    
+    // Navigation sticky avec effet de scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 100) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+      } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = 'none';
+      }
     });
     
     // Fermer le menu au redimensionnement de l'écran
@@ -2779,6 +2889,7 @@
       if (window.innerWidth > 768) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
   </script>
