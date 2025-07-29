@@ -87,11 +87,11 @@
     }
 
     .section.bg {
-      background: linear-gradient(135deg, var(--vert) 0%, var(--bleu) 100%);
+      /* background: linear-gradient(135deg, var(--vert) 0%, var(--bleu) 100%); */
       color: var(--blanc);
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
-      background-size: cover;
-      background-blend-mode: overlay;
+      /* background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80'); */
+      /* background-size: cover; */
+      /* background-blend-mode: overlay; */
       position: relative;
     }
 
@@ -225,7 +225,7 @@
     }
 
     .kpi-card {
-      background: var(--bleu-clair);
+      background: var(--blanc);
       border-radius: 18px;
       padding: 2rem 1.5rem;
       min-width: 180px;
@@ -313,6 +313,33 @@
       font-size: 0.95rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
+    }
+    
+    .team-card .social-links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    .team-card .linkedin-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--vert);
+      color: var(--blanc);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+    
+    .team-card .linkedin-link:hover {
+      background: var(--bleu);
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(37,99,235,0.3);
     }
 
     /* Appel à l'action */
@@ -1159,10 +1186,10 @@
         </div>
       </div>
     </div>
-  </section>
+      </section>
 
   <!-- Chiffres clés -->
-  <section class="section bg">
+  <section class="section alt">
     <div class="container">
       <div class="section-header">
         <h2>Nos Engagements en Chiffres</h2>
@@ -1189,11 +1216,7 @@
           <h4 style="color:var(--bleu);font-size:2.5rem;">40h</h4>
           <p>Formation/an</p>
         </div>
-        <div class="kpi-card">
-          <i class="fas fa-shield-alt" style="font-size:2.1rem;color:var(--bleu);margin-bottom:0.5rem;"></i>
-          <h4 style="color:var(--vert);font-size:2.5rem;">0</h4>
-          <p>Incident RGPD</p>
-        </div>
+        
         <div class="kpi-card">
           <i class="fas fa-heart" style="font-size:2.1rem;color:var(--bleu);margin-bottom:0.5rem;"></i>
           <h4 style="color:var(--vert);font-size:2.5rem;">90%</h4>
@@ -1212,34 +1235,49 @@
       </div>
       <div class="team-grid">
         <div class="team-card">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Directeur Administratif">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Chef de Projet Digital">
           <h4>M. Dieng</h4>
-          <div class="role">Directeur Administratif</div>
-          <p>Supervise la gestion administrative, financière et la conformité RGPD.</p>
+          <div class="role">Chef de Projet Digital</div>
+          <p>Piloter, coordonner et assurer la réussite des projets digitaux (site web, réseaux sociaux, campagnes numériques, CRM, automatisation) en lien avec les objectifs stratégiques de l'entreprise</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/bambiste4/" aria-label="LinkedIn" class="linkedin-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
         <div class="team-card">
           <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Directrice Technique">
           <h4>Mlle Ndiaye</h4>
           <div class="role">Directrice Technique</div>
-          <p>Pilote la stratégie, la qualité, l'innovation et le bien-être de l'équipe.</p>
+          <p>Pilote la stratégie, la qualité, l'innovation et le bien-être de l'équipe. Stratégie globale des projets, SEO technique, rédaction d'articles de blog, newsletters, emailing, recherche de mots-clés.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="linkedin-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
         <div class="team-card">
           <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Développeur Web">
           <h4>M. Sy</h4>
           <div class="role">Développeur Web</div>
-          <p>Conçoit des plateformes robustes, veille technologique et sécurité.</p>
+          <p>Développement web et mise à jour, développement d'applications, automatisation, cybersécurité et intelligence artificielle pour des solutions innovantes.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/samba-sy/" aria-label="LinkedIn" class="linkedin-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
         <div class="team-card">
           <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Community Manager">
           <h4>Mme Ndiaye</h4>
           <div class="role">Community Manager</div>
-          <p>Anime les réseaux sociaux, gère les campagnes et l'innovation digitale.</p>
+          <p>Création des contenus multimédia, gestion des réseaux sociaux, gestion des campagnes de publicité Google ADS et Facebook AD pour maximiser la visibilité.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/maty-ndiaye-981a63338/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn" class="linkedin-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
         <div class="team-card">
           <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Responsable Formation">
           <h4>M. Faye</h4>
           <div class="role">Responsable Formation</div>
-          <p>Développe les programmes, anime les ateliers et accompagne les clients.</p>
+          <p>Pilotage des outils de travail (Slack, Notion, Semrush), gestion des comptes Google de l'agence, conception des contenus d'ateliers et plan de formation du personnel.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="linkedin-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
       </div>
     </div>
@@ -1424,25 +1462,36 @@
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
+      
+      // Empêcher le scroll du body quand le menu est ouvert
+      if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     });
     
-    // Fermer le menu quand on clique sur un lien
+    // Fermer le menu quand on clique sur un lien (mobile)
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        if (window.innerWidth <= 768) {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        }
       });
     });
     
-    // Fermer le menu quand on clique en dehors
-    document.addEventListener('click', function(event) {
-      const isClickInsideNav = navMenu.contains(event.target);
-      const isClickOnHamburger = hamburger.contains(event.target);
-      
-      if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+    // Navigation sticky avec effet de scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 100) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+      } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = 'none';
       }
     });
     
@@ -1451,6 +1500,7 @@
       if (window.innerWidth > 768) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
   </script>
