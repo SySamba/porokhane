@@ -1547,6 +1547,45 @@
 .realisation-meta i {
   font-size: 0.8rem;
 }
+
+@keyframes newsletterFloat {
+  0% {
+    transform: translateX(-30px);
+    box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+  }
+  25% {
+    transform: translateX(-10px);
+    box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+  }
+  50% {
+    transform: translateX(30px);
+    box-shadow: 0 10px 35px rgba(31, 164, 122, 0.3);
+  }
+  75% {
+    transform: translateX(10px);
+    box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+  }
+  100% {
+    transform: translateX(-30px);
+    box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+  }
+}
+
+.newsletter { 
+  margin-top: 3rem; 
+  background: var(--blanc); 
+  border-radius: var(--rayon); 
+  padding: 1.5rem; 
+  box-shadow: var(--ombre); 
+  display: flex; 
+  gap: 0.5rem; 
+  align-items: center; 
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 4px solid var(--vert);
+  animation: newsletterFloat 2s ease-in-out infinite;
+}
   </style>
 </head>
 <body>
@@ -1987,6 +2026,33 @@
         console.error('Hamburger or nav menu element not found!');
       }
     });
+
+
+    // Animation du newsletter
+document.addEventListener('DOMContentLoaded', function() {
+  const newsletter = document.querySelector('.newsletter');
+  
+  if (newsletter) {
+    // L'animation CSS est déjà appliquée, mais on peut ajouter des interactions
+    newsletter.addEventListener('mouseenter', function() {
+      this.style.animationPlayState = 'paused';
+    });
+    
+    newsletter.addEventListener('mouseleave', function() {
+      this.style.animationPlayState = 'running';
+    });
+    
+    // Gestion du formulaire newsletter
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
+        this.reset();
+      });
+    }
+  }
+});
   </script>
 </body>
 </html>
