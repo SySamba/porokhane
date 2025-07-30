@@ -219,9 +219,7 @@
       gap: 2.5rem;
       justify-content: flex-start;
       margin-top: 2rem;
-      overflow-x: auto;
-      scrollbar-width: thin;
-      scrollbar-color: var(--vert) var(--bleu-clair);
+      overflow-x: hidden;
     }
 
     .kpi-card {
@@ -253,24 +251,29 @@
     /* Equipe */
     .team-grid {
       display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+      flex-wrap: nowrap;
+      gap: 1.5rem;
       justify-content: center;
       margin-top: 2rem;
+      overflow-x: hidden;
+      padding: 0 1rem;
     }
 
     .team-card {
       background: var(--blanc);
       border-radius: 18px;
       box-shadow: 0 4px 24px rgba(31,164,122,0.08);
-      padding: 2rem 1.2rem 1.2rem 1.2rem;
-      min-width: 200px;
-      max-width: 260px;
-      flex: 1 1 200px;
+      padding: 1.5rem 1rem 1rem 1rem;
+      width: 220px;
+      height: 350px;
+      flex: 0 0 220px;
       text-align: center;
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       opacity: 0;
       transform: translateY(40px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .team-card:hover {
@@ -278,21 +281,33 @@
       box-shadow: 0 8px 32px rgba(37,99,235,0.13);
     }
 
-    .team-card img {
-      width: 80px;
-      height: 80px;
+    .team-card .avatar {
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--vert), var(--bleu));
+      margin: 0 auto 0.8rem auto;
       border: 3px solid var(--vert);
       transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-      filter: grayscale(30%) brightness(95%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(31,164,122,0.3);
     }
 
-    .team-card:hover img {
+    .team-card .avatar i {
+      font-size: 1.8rem;
+      color: var(--blanc);
+      transition: all 0.3s ease;
+    }
+
+    .team-card:hover .avatar {
       transform: scale(1.1);
-      filter: grayscale(0%) brightness(100%);
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .team-card:hover .avatar i {
+      transform: scale(1.1);
     }
 
     .team-card h4 {
@@ -340,6 +355,32 @@
       background: var(--bleu);
       transform: scale(1.1);
       box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+    }
+
+    .team-card .member-skills {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 1rem 0;
+      text-align: left;
+      flex: 1;
+    }
+
+    .team-card .member-skills li {
+      color: var(--gris-texte);
+      font-size: 0.8rem;
+      margin-bottom: 0.25rem;
+      padding-left: 1rem;
+      position: relative;
+      line-height: 1.2;
+    }
+
+    .team-card .member-skills li::before {
+      content: '•';
+      color: var(--vert);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
     /* Appel à l'action */
@@ -877,6 +918,29 @@
       z-index: 1;
     }
 
+    @keyframes newsletterFloat {
+      0% {
+        transform: translateX(-30px);
+        box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+      }
+      25% {
+        transform: translateX(-10px);
+        box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+      }
+      50% {
+        transform: translateX(30px);
+        box-shadow: 0 10px 35px rgba(31, 164, 122, 0.3);
+      }
+      75% {
+        transform: translateX(10px);
+        box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+      }
+      100% {
+        transform: translateX(-30px);
+        box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+      }
+    }
+
     .newsletter { 
       margin-top: 3rem; 
       background: var(--blanc); 
@@ -890,6 +954,7 @@
       margin-left: auto;
       margin-right: auto;
       border-top: 4px solid var(--vert);
+      animation: newsletterFloat 2s ease-in-out infinite;
     }
     
     .newsletter input[type="email"] { 
@@ -1235,46 +1300,76 @@
       </div>
       <div class="team-grid">
         <div class="team-card">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Chef de Projet Digital">
+          <div class="avatar">
+            <i class="fas fa-user-tie"></i>
+          </div>
           <h4>M. Dieng</h4>
           <div class="role">Chef de Projet Digital</div>
-          <p>Piloter, coordonner et assurer la réussite des projets digitaux (site web, réseaux sociaux, campagnes numériques, CRM, automatisation) en lien avec les objectifs stratégiques de l'entreprise</p>
+          <ul class="member-skills">
+            <li>Pilotage et coordination des projets digitaux</li>
+            <li>Gestion des sites web et réseaux sociaux</li>
+            <li>Optimisation des campagnes numériques</li>
+          </ul>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/bambiste4/" aria-label="LinkedIn" class="linkedin-link"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div class="team-card">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Directrice Technique">
+          <div class="avatar">
+            <i class="fas fa-user-cog"></i>
+          </div>
           <h4>Mme Ndiaye</h4>
           <div class="role">Directrice Technique</div>
-          <p>Pilote la stratégie, la qualité, l'innovation et le bien-être de l'équipe. Stratégie globale des projets, SEO technique, rédaction d'articles de blog, newsletters, emailing, recherche de mots-clés.</p>
+          <ul class="member-skills">
+            <li>Pilotage de la stratégie et de l'innovation</li>
+            <li>SEO technique et rédaction de contenu</li>
+            <li>Gestion des newsletters et emailing</li>
+          </ul>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/mame-diarra-bousso-l%C3%B4-9a23b6140/" aria-label="LinkedIn" class="linkedin-link"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div class="team-card">
-          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Développeur Web">
+          <div class="avatar">
+            <i class="fas fa-code"></i>
+          </div>
           <h4>M. Sy</h4>
           <div class="role">Développeur Web</div>
-          <p>Développement web et mise à jour, développement d'applications, automatisation, cybersécurité et intelligence artificielle pour des solutions innovantes.</p>
+          <ul class="member-skills">
+            <li>Développement web et applications</li>
+            <li>Automatisation et cybersécurité</li>
+            <li>Intelligence artificielle</li>
+          </ul>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/samba-sy/" aria-label="LinkedIn" class="linkedin-link"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div class="team-card">
-          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Community Manager">
+          <div class="avatar">
+            <i class="fas fa-share-alt"></i>
+          </div>
           <h4>Mlle Ndiaye</h4>
           <div class="role">Community Manager</div>
-          <p>Création des contenus multimédia, gestion des réseaux sociaux, gestion des campagnes de publicité Google ADS et Facebook AD pour maximiser la visibilité.</p>
+          <ul class="member-skills">
+            <li>Création de contenus multimédia</li>
+            <li>Gestion des réseaux sociaux</li>
+            <li>Campagnes publicitaires digitales</li>
+          </ul>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/maty-ndiaye-981a63338/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn" class="linkedin-link"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div class="team-card">
-          <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Responsable Formation">
+          <div class="avatar">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
           <h4>M. Faye</h4>
           <div class="role">Responsable Formation</div>
-          <p>Pilotage des outils de travail (Slack, Notion, Semrush), gestion des comptes Google de l'agence, conception des contenus d'ateliers et plan de formation du personnel.</p>
+          <ul class="member-skills">
+            <li>Pilotage des outils de travail</li>
+            <li>Gestion des comptes Google</li>
+            <li>Conception de formations</li>
+          </ul>
           <div class="social-links">
             <a href="#" aria-label="LinkedIn" class="linkedin-link"><i class="fab fa-linkedin-in"></i></a>
           </div>
