@@ -68,6 +68,20 @@
       align-items: center;
     }
     
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+    }
+    
+    .nav-logo img {
+      height: 90px;
+      width: auto;
+      display: block;
+      margin-right: 0.5rem;
+    }
+    
     .nav-logo h2 {
       color: var(--vert);
       font-size: 1.5rem;
@@ -1692,7 +1706,11 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <div class="nav-logo"><h2>Porokhane Digital</h2></div>
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="logo.png" alt="Porokhane Digital Consulting Logo">
+        </a>
+      </div>
       
       <!-- Menu Hamburger -->
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -1702,7 +1720,7 @@
       </button>
       
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        
         <li><a href="a-propos.html" class="nav-link">À propos</a></li>
         <!-- Formations -->
         <li class="nav-item">

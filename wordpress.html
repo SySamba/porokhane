@@ -259,14 +259,48 @@
   border-top: 4px solid var(--vert);
   animation: newsletterFloat 2s ease-in-out infinite;
 }
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo a:hover {
+  transform: scale(1.05);
+}
+
+.nav-logo img {
+  height: 90px;
+  width: auto;
+  display: block;
+  margin-right: 0.5rem;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+  .nav-logo img {
+    height: 70px;
+  }
+}
   </style>
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <div class="nav-logo"><h2></i> Porokhane Digital</h2></div>
-      
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="logo.png" alt="Porokhane Digital Consulting Logo">
+        </a>
+      </div>
+        
       <!-- Menu Hamburger -->
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span>
@@ -542,6 +576,42 @@ document.addEventListener('DOMContentLoaded', function() {
         this.reset();
       });
     }
+  }
+});
+
+
+// Animation du logo au clic
+document.addEventListener('DOMContentLoaded', function() {
+  const logoLink = document.querySelector('.nav-logo a');
+  
+  if (logoLink) {
+    logoLink.addEventListener('click', function(e) {
+      // Animation de clic
+      this.style.transform = 'scale(0.95)';
+      
+      setTimeout(() => {
+        this.style.transform = 'scale(1)';
+      }, 150);
+      
+      // Si on est déjà sur la page d'accueil, empêcher la navigation
+      if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
+        e.preventDefault();
+        // Scroll vers le haut de la page
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    });
+    
+    // Animation au survol
+    logoLink.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.05)';
+    });
+    
+    logoLink.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+    });
   }
 });
   </script>
