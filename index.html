@@ -369,10 +369,10 @@
         transition: all 0.3s ease;
       }
       
-      .menu-overlay.active {
-        opacity: 1;
-        visibility: visible;
-      }
+             .menu-overlay.active {
+         opacity: 1;
+         visibility: visible;
+       }
       
       .nav-menu li {
         width: 100%;
@@ -2755,27 +2755,42 @@
 
 
     @keyframes newsletterFloat {
-  0% {
-    transform: translateX(-30px);
-    box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
-  }
-  25% {
-    transform: translateX(-10px);
-    box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
-  }
-  50% {
-    transform: translateX(30px);
-    box-shadow: 0 10px 35px rgba(31, 164, 122, 0.3);
-  }
-  75% {
-    transform: translateX(10px);
-    box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
-  }
-  100% {
-    transform: translateX(-30px);
-    box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
-  }
-}
+      0% {
+        transform: translateX(-30px) scale(1);
+        box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+      }
+      25% {
+        transform: translateX(-10px) scale(1.02);
+        box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+      }
+      50% {
+        transform: translateX(30px) scale(1.05);
+        box-shadow: 0 10px 35px rgba(31, 164, 122, 0.3);
+      }
+      75% {
+        transform: translateX(10px) scale(1.02);
+        box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+      }
+      100% {
+        transform: translateX(-30px) scale(1);
+        box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+      }
+    }
+
+    @keyframes newsletterPulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+      }
+      50% {
+        transform: scale(1.03);
+        box-shadow: 0 8px 30px rgba(31, 164, 122, 0.25);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+      }
+    }
 
 .newsletter { 
   margin-top: 3rem; 
@@ -2790,7 +2805,8 @@
   margin-left: auto;
   margin-right: auto;
   border-top: 4px solid var(--vert);
-  animation: newsletterFloat 2s ease-in-out infinite;
+  animation: newsletterFloat 3s ease-in-out infinite, newsletterPulse 2s ease-in-out infinite;
+  animation-delay: 0s, 1.5s;
 }
   </style>
 
@@ -2998,18 +3014,35 @@
     });
 
 
-    // Animation du newsletter
+    // Animation du newsletter avec pulsation
 document.addEventListener('DOMContentLoaded', function() {
   const newsletter = document.querySelector('.newsletter');
   
   if (newsletter) {
-    // L'animation CSS est déjà appliquée, mais on peut ajouter des interactions
+    // Pause au survol avec effet de pulsation
     newsletter.addEventListener('mouseenter', function() {
       this.style.animationPlayState = 'paused';
+      this.style.transform = 'scale(1.05)';
+      this.style.boxShadow = '0 12px 40px rgba(31, 164, 122, 0.3)';
+      this.style.transition = 'all 0.3s ease';
     });
     
+    // Reprise de l'animation
     newsletter.addEventListener('mouseleave', function() {
       this.style.animationPlayState = 'running';
+      this.style.transform = '';
+      this.style.boxShadow = '';
+      this.style.transition = '';
+    });
+    
+    // Effet de clic avec pulsation
+    newsletter.addEventListener('click', function() {
+      this.style.transform = 'scale(0.98)';
+      this.style.boxShadow = '0 2px 15px rgba(31, 164, 122, 0.2)';
+      setTimeout(() => {
+        this.style.transform = '';
+        this.style.boxShadow = '';
+      }, 150);
     });
     
     // Gestion du formulaire newsletter
@@ -3022,6 +3055,8 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   }
+  
+
 });
   </script>
 
