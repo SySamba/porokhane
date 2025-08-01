@@ -156,6 +156,20 @@
       z-index: 1001;
     }
     
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex !important;
+      }
+      
+      .nav-menu {
+        display: none !important;
+      }
+      
+      .nav-menu.active {
+        display: flex !important;
+      }
+    }
+    
     .hamburger span {
       width: 25px;
       height: 3px;
@@ -343,6 +357,7 @@
       }
       
       .nav-menu {
+        display: none;
         position: fixed;
         top: 0;
         right: -100%;
@@ -362,6 +377,7 @@
       }
       
       .nav-menu.active {
+        display: flex;
         right: 0;
       }
       
