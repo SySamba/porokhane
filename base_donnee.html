@@ -36,6 +36,7 @@
       } 
       .nav-menu { 
         display: none !important;
+        display: none;
       } 
       .nav-devis { 
         display: none;
@@ -113,13 +114,13 @@
 
     /* Menu Hamburger */
     .hamburger {
-      display: flex !important;
       flex-direction: column;
       cursor: pointer;
       padding: 8px;
       background: none;
       border: none;
       z-index: 1001;
+      display: none;
     }
 
     .hamburger span {
@@ -543,23 +544,22 @@
 
     
    // Script pour le menu hamburger
-   const hamburger = document.getElementById('hamburger');
+    const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
-    const menuOverlay = document.getElementById('menuOverlay');
 
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
-      menuOverlay.classList.toggle('active');
-      
-      // Empêcher le scroll du body quand le menu est ouvert
-      if (navMenu.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = '';
-      }
     });
-    
+
+    // Fermer le menu quand on clique sur un lien
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
 
     // Fermer le menu quand on clique en dehors
     document.addEventListener('click', function(event) {
@@ -579,6 +579,7 @@
         navMenu.classList.remove('active');
       }
     });
+
 
     // Animation du newsletter
 document.addEventListener('DOMContentLoaded', function() {
@@ -605,6 +606,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
+
 
 // Animation du logo au clic
 document.addEventListener('DOMContentLoaded', function() {
@@ -640,6 +642,81 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+
+// Réponses automatiques (FAQ)
+  const chatbotFAQ = {
+    'services': "Nous proposons : formations (robotique, impression 3D, cybersécurité), marketing digital, accompagnement (automatisation, IA, bases de données), développement web mobile et plus encore !",
+    'devis': "Pour demander un devis, cliquez sur 'Demander un devis' dans le menu ou rendez-vous sur la page devis. Nous vous répondrons rapidement !",
+    'délais': "Nos délais varient selon le projet, mais nous nous engageons à livrer dans les temps convenus, avec un suivi régulier.",
+    'formations': "Oui, nous proposons des formations en robotique, impression 3D, cybersécurité et plus. Consultez la page Formations pour plus d'infos !",
+    'contacter': "Vous pouvez nous contacter via la page Contact, par téléphone ou par email. Nous sommes à votre écoute !",
+    'salutation': "Bonjour et bienvenue chez Porokhane Digital Consulting ! 👋\n\nJe peux répondre à vos questions sur :\n• Nos services\n• Comment demander un devis\n• Nos délais de livraison\n• Nos formations\n• Comment nous contacter\n\nCliquez sur une suggestion ou posez votre question !"
+  };
+
+  const chatbotBtn = document.getElementById('chatbotBtn');
+  const chatbotWindow = document.getElementById('chatbotWindow');
+  const chatbotClose = document.getElementById('chatbotClose');
+  const chatbotBody = document.getElementById('chatbotBody');
+  const chatbotForm = document.getElementById('chatbotForm');
+  const chatbotInput = document.getElementById('chatbotInput');
+  const chatbotSuggestions = document.getElementById('chatbotSuggestions');
+
+  chatbotBtn.onclick = () => {
+    chatbotWindow.style.display = 'flex';
+    setTimeout(() => chatbotInput.focus(), 300);
+  };
+  chatbotClose.onclick = () => {
+    chatbotWindow.style.display = 'none';
+  };
+
+  // Suggestions cliquables
+  chatbotSuggestions.onclick = function(e) {
+    if (e.target.classList.contains('chatbot-suggestion')) {
+      const question = e.target.textContent;
+      addUserMessage(question);
+      respondToUser(question);
+    }
+  };
+
+  // Envoi du formulaire
+  chatbotForm.onsubmit = function(e) {
+    e.preventDefault();
+    const question = chatbotInput.value.trim();
+    if (question) {
+      addUserMessage(question);
+      respondToUser(question);
+      chatbotInput.value = '';
+    }
+  };
+
+  function addUserMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message user';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function addBotMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function respondToUser(question) {
+    let response = "Je suis désolé, je n'ai pas compris votre question. Essayez une des suggestions ci-dessus ou contactez-nous directement.";
+    const q = question.toLowerCase();
+    if (q.includes('service')) response = chatbotFAQ['services'];
+    else if (q.includes('devis')) response = chatbotFAQ['devis'];
+    else if (q.includes('délai') || q.includes('delai')) response = chatbotFAQ['délais'];
+    else if (q.includes('formation')) response = chatbotFAQ['formations'];
+    else if (q.includes('contact')) response = chatbotFAQ['contacter'];
+    else if (q.includes('salut') || q.includes('bonjour') || q.includes('bonsoir') || q.includes('hello')) response = chatbotFAQ['salutation'];
+    setTimeout(() => addBotMessage(response), 600);
+  }
   </script>
 </body>
 </html>
