@@ -982,6 +982,8 @@
       margin-right: auto;
       border-top: 4px solid var(--vert);
       animation: newsletterFloat 2s ease-in-out infinite;
+      width: 100%;
+      box-sizing: border-box;
     }
     
     .newsletter input[type="email"] { 
@@ -1030,6 +1032,40 @@
       .hero-banner h1 { font-size: 2rem; }
       .section-header h2 { font-size: 1.3rem; }
       .container { padding: 0 8px; }
+      
+      .newsletter {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 2rem 10px;
+      }
+      
+      .newsletter input[type="email"] {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+      
+      .newsletter button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .newsletter {
+        margin: 2rem 5px;
+        padding: 1rem;
+      }
+      
+      .newsletter input[type="email"] {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+      }
+      
+      .newsletter button {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+      }
     }
 
 
@@ -1345,8 +1381,21 @@
           <h4 style="color:var(--bleu);font-size:2.5rem;">40h</h4>
           <p>Formation/an</p>
         </div>
-        
-        
+        <div class="kpi-card">
+          
+          <h4 style="color:var(--vert);font-size:2.5rem;">50+</h4>
+          <p>Projets réalisés</p>
+        </div>
+        <div class="kpi-card">
+          
+          <h4 style="color:var(--bleu);font-size:2.5rem;">100+</h4>
+          <p>Stagiaires formés</p>
+        </div>
+        <div class="kpi-card">
+          
+          <h4 style="color:var(--vert);font-size:2.5rem;">24h</h4>
+          <p>Délai de réponse</p>
+        </div>
       </div>
     </div>
   </section>

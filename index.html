@@ -1303,6 +1303,8 @@
       margin-left: auto;
       margin-right: auto;
       border-top: 4px solid var(--vert);
+      width: 100%;
+      box-sizing: border-box;
     }
     
     .newsletter input[type="email"] { 
@@ -1547,11 +1549,18 @@
       
       .newsletter {
         flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 2rem 10px;
       }
       
       .newsletter input[type="email"],
       .newsletter button {
         width: 100%;
+      }
+      
+      .newsletter button {
+        justify-content: center;
       }
     }
     
@@ -1585,6 +1594,21 @@
       .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+      }
+      
+      .newsletter {
+        margin: 2rem 5px;
+        padding: 1rem;
+      }
+      
+      .newsletter input[type="email"] {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+      }
+      
+      .newsletter button {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
       }
     }
     
