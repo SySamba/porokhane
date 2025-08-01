@@ -80,7 +80,15 @@
 
     @media (max-width: 768px) {
       .hamburger {
-        display: flex;
+        display: flex !important;
+      }
+      
+      .nav-menu {
+        display: none !important;
+      }
+      
+      .nav-menu.active {
+        display: flex !important;
       }
       
       .nav-menu {
@@ -170,6 +178,25 @@
       .submenu-link:last-child {
         border-bottom: none;
       }
+      
+      /* Overlay pour fermer le menu */
+      .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
     }
     .submenu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); background: var(--blanc); border-radius: var(--rayon); box-shadow: var(--ombre); min-width: 220px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 100; border: 1px solid var(--gris-fonce); padding: 0.5rem 0; }
     .nav-item:hover .submenu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
@@ -190,7 +217,7 @@
     .social-links a { width: 40px; height: 40px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--blanc); text-decoration: none; transition: all 0.3s; }
     .social-links a:hover { background: var(--blanc); color: var(--vert); transform: translateY(-3px) scale(1.1); }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.7); font-size: 0.9rem; position: relative; z-index: 1; }
-    .newsletter { margin-top: 3rem; background: var(--blanc); border-radius: var(--rayon); padding: 1.5rem; box-shadow: var(--ombre); display: flex; gap: 0.5rem; align-items: center; max-width: 600px; margin-left: auto; margin-right: auto; border-top: 4px solid var(--vert); }
+    .newsletter { margin-top: 3rem; background: var(--blanc); border-radius: var(--rayon); padding: 1.5rem; box-shadow: var(--ombre); display: flex; gap: 0.5rem; align-items: center; max-width: 600px; margin-left: auto; margin-right: auto; border-top: 4px solid var(--vert); width: 100%; box-sizing: border-box; }
     .newsletter input[type="email"] { flex: 1; padding: 1rem; border-radius: 8px; border: 1px solid var(--gris-fonce); font-size: 1rem; transition: all 0.3s; }
     .newsletter input[type="email"]:focus { border-color: var(--vert); outline: none; box-shadow: 0 0 0 3px var(--vert-clair); }
     .newsletter button { padding: 1rem 2rem; border-radius: 8px; background: linear-gradient(90deg, var(--vert), var(--bleu)); color: var(--blanc); border: none; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; }
@@ -429,6 +456,40 @@
   .nav-logo img {
     height: 70px;
   }
+  
+  .newsletter {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 2rem 10px;
+  }
+  
+  .newsletter input[type="email"] {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .newsletter button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter {
+    margin: 2rem 5px;
+    padding: 1rem;
+  }
+  
+  .newsletter input[type="email"] {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  
+  .newsletter button {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+  }
 }
   </style>
 </head>
@@ -488,6 +549,9 @@
       </ul>
     </div>
   </nav>
+
+  <!-- Overlay pour le menu mobile -->
+  <div class="menu-overlay" id="menuOverlay"></div>
 
   <main class="audit-main">
     <div class="audit-title"> Audit Express Digital</div>
@@ -649,10 +713,27 @@
     // Script pour le menu hamburger
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
+    const menuOverlay = document.getElementById('menuOverlay');
 
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+      
+      // Empêcher le scroll du body quand le menu est ouvert
+      if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // Fermer le menu en cliquant sur l'overlay
+    menuOverlay.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
     });
 
     // Fermer le menu quand on clique sur un lien
@@ -661,6 +742,8 @@
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
       });
     });
 
@@ -680,6 +763,8 @@
       if (window.innerWidth > 768) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
 

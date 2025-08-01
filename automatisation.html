@@ -28,18 +28,125 @@
     .nav-devis:hover .devis-icon { transform: translateX(5px); animation: pulse 1s infinite; }
     @keyframes pulse { 0% { transform: translateX(5px) scale(1); } 50% { transform: translateX(5px) scale(1.2); } 100% { transform: translateX(5px) scale(1); } }
     @media (max-width: 992px) { .nav-menu { gap: 1rem; } .nav-link { font-size: 0.9rem; } .nav-devis { padding: 0.6rem 1.2rem; font-size: 0.9rem; } }
+    /* Menu Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--vert);
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+
     @media (max-width: 768px) { 
+      .hamburger {
+        display: flex !important;
+      }
+      
+      .nav-menu {
+        display: none !important;
+      }
+      
+      .nav-menu.active {
+        display: flex !important;
+      }
+      
       .nav-container { 
         flex-direction: row; 
         align-items: center; 
         justify-content: space-between;
       } 
-      .nav-menu { 
-        display: none;
-      } 
       .nav-devis { 
         display: none;
       } 
+      
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--blanc);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem 2rem;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        gap: 0;
+        margin: 0;
+        overflow-y: auto;
+        z-index: 1000;
+      }
+      
+      .nav-menu.active {
+        right: 0;
+      }
+      
+      .nav-menu li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-link {
+        display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gris-fonce);
+        font-size: 1.1rem;
+        width: 100%;
+      }
+      
+      .nav-link::after {
+        display: none;
+      }
+      
+      .nav-devis {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        justify-content: center;
+      }
+      
+      /* Overlay pour fermer le menu */
+      .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
     }
     .submenu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); background: var(--blanc); border-radius: var(--rayon); box-shadow: var(--ombre); min-width: 220px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 100; border: 1px solid var(--gris-fonce); padding: 0.5rem 0; }
     .nav-item:hover .submenu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
@@ -60,7 +167,7 @@
     .social-links a { width: 40px; height: 40px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--blanc); text-decoration: none; transition: all 0.3s; }
     .social-links a:hover { background: var(--blanc); color: var(--vert); transform: translateY(-3px) scale(1.1); }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.7); font-size: 0.9rem; position: relative; z-index: 1; }
-    .newsletter { margin-top: 3rem; background: var(--blanc); border-radius: var(--rayon); padding: 1.5rem; box-shadow: var(--ombre); display: flex; gap: 0.5rem; align-items: center; max-width: 600px; margin-left: auto; margin-right: auto; border-top: 4px solid var(--vert); }
+    .newsletter { margin-top: 3rem; background: var(--blanc); border-radius: var(--rayon); padding: 1.5rem; box-shadow: var(--ombre); display: flex; gap: 0.5rem; align-items: center; max-width: 600px; margin-left: auto; margin-right: auto; border-top: 4px solid var(--vert); width: 100%; box-sizing: border-box; }
     .newsletter input[type="email"] { flex: 1; padding: 1rem; border-radius: 8px; border: 1px solid var(--gris-fonce); font-size: 1rem; transition: all 0.3s; }
     .newsletter input[type="email"]:focus { border-color: var(--vert); outline: none; box-shadow: 0 0 0 3px var(--vert-clair); }
     .newsletter button { padding: 1rem 2rem; border-radius: 8px; background: linear-gradient(90deg, var(--vert), var(--bleu)); color: var(--blanc); border: none; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; }
@@ -241,6 +348,40 @@
       .submenu-link:last-child {
         border-bottom: none;
       }
+      
+      .newsletter {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 2rem 10px;
+      }
+      
+      .newsletter input[type="email"] {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+      
+      .newsletter button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .newsletter {
+        margin: 2rem 5px;
+        padding: 1rem;
+      }
+      
+      .newsletter input[type="email"] {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+      }
+      
+      .newsletter button {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+      }
     }
 
     @keyframes newsletterFloat {
@@ -369,6 +510,10 @@
       </ul>
     </div>
   </nav>
+
+  <!-- Overlay pour le menu mobile -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
   <main class="service-main">
     <div class="service-title">Automatisation des Processus</div>
     <div class="service-intro">Pourquoi automatiser vos tâches ?<br>Pour gagner en efficacité, réduire les erreurs et libérer du temps pour ce qui compte vraiment. Nous créons des solutions d’automatisation sur mesure, fiables et simples à utiliser.</div>
@@ -538,10 +683,27 @@
     // Script pour le menu hamburger
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
+    const menuOverlay = document.getElementById('menuOverlay');
 
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+      
+      // Empêcher le scroll du body quand le menu est ouvert
+      if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // Fermer le menu en cliquant sur l'overlay
+    menuOverlay.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
     });
 
     // Fermer le menu quand on clique sur un lien
@@ -550,6 +712,8 @@
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
       });
     });
 
@@ -569,6 +733,8 @@
       if (window.innerWidth > 768) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
 
