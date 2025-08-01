@@ -280,6 +280,136 @@
   border-top: 4px solid var(--vert);
   animation: newsletterFloat 2s ease-in-out infinite;
 }
+/* Menu Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--vert);
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex !important;
+        order: 2;
+        margin-left: auto;
+      }
+      
+      .nav-menu {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: var(--blanc) !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        padding: 80px 2rem 2rem 2rem !important;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1) !important;
+        transition: right 0.3s ease !important;
+        gap: 0 !important;
+        margin: 0 !important;
+        overflow-y: auto !important;
+        z-index: 1000 !important;
+        display: none !important;
+      }
+      
+      .nav-menu.active {
+        right: 0 !important;
+        display: flex !important;
+      }
+      
+      .nav-menu li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-link {
+        display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gris-fonce);
+        font-size: 1.1rem;
+        width: 100%;
+      }
+      
+      .nav-link::after {
+        display: none;
+      }
+      
+      .nav-devis {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        justify-content: center;
+        display: block !important;
+      }
+      
+      /* Sous-menus en mode mobile */
+      .submenu {
+        position: static !important;
+        transform: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        background: var(--gris) !important;
+        border-radius: 8px !important;
+        margin-top: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-width: auto !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      /* Affichage des sous-menus au survol/touch sur mobile */
+      .nav-item:hover .submenu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-height: 200px !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+      }
+      
+      .submenu-link {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-size: 1rem;
+      }
+      
+      .submenu-link:hover {
+        padding-left: 1rem;
+      }
+      
+      .submenu-link:last-child {
+        border-bottom: none;
+      }
+    }
 
 .nav-logo {
   display: flex;
@@ -314,16 +444,22 @@
   </style>
 </head>
 <body>
-  <!-- Navigation -->
+   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <div class="nav-logo">
-        <a href="index.html">
-          <img src="logo.png" alt="Porokhane Digital Consulting Logo">
-        </a>
-      </div>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <div class="nav-logo">
+          <a href="index.html">
+            <img src="logo.png" alt="Porokhane Digital Consulting Logo">
+          </a>
+        </div>
+      <!-- Menu Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
         <li><a href="a-propos.html" class="nav-link">À propos</a></li>
         <li class="nav-item">
           <a href="formations.html" class="nav-link">Formations <i class="fas fa-chevron-down"></i></a>
@@ -348,10 +484,11 @@
           <ul class="submenu">
             <li><a href="automatisation.html" class="submenu-link">Automatisation</a></li>
             <li><a href="base_donnee.html" class="submenu-link">Bases de données</a></li>
+            <li><a href="erp.html" class="submenu-link">ERP</a></li>
             <li><a href="ia.html" class="submenu-link">Intelligence Artificielle</a></li>
           </ul>
         </li>
-        <li><a href="blog.html" class="nav-link" style="color: var(--vert);">Actualités</a></li>
+        <li><a href="blog.html" class="nav-link">Actualités</a></li>
         <li>
           <a href="devis.html" class="nav-devis">
             Demander un devis
@@ -470,6 +607,44 @@
     </div>
   </footer>
   <SCRipt>
+    // Script pour le menu hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Fermer le menu quand on clique en dehors
+    document.addEventListener('click', function(event) {
+      const isClickInsideNav = navMenu.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+      
+      if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+    // Fermer le menu au redimensionnement de l'écran
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+
     // Animation du newsletter
 document.addEventListener('DOMContentLoaded', function() {
   const newsletter = document.querySelector('.newsletter');
@@ -495,6 +670,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
+
 
 // Animation du logo au clic
 document.addEventListener('DOMContentLoaded', function() {
