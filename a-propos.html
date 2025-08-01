@@ -691,7 +691,15 @@
     /* Responsive Menu */
     @media (max-width: 768px) {
       .hamburger {
-        display: flex;
+        display: flex !important;
+      }
+      
+      .nav-menu {
+        display: none !important;
+      }
+      
+      .nav-menu.active {
+        display: flex !important;
       }
       
       .nav-menu {
@@ -780,6 +788,25 @@
       
       .submenu-link:last-child {
         border-bottom: none;
+      }
+      
+      /* Overlay pour fermer le menu */
+      .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
       }
     }
 
@@ -1203,6 +1230,9 @@
     </div>
   </nav>
 
+  <!-- Overlay pour le menu mobile -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
   <!-- Hero Banner -->
   <section class="hero-banner">
     <div class="container">
@@ -1583,10 +1613,12 @@
     // Script pour le menu hamburger
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
+    const menuOverlay = document.getElementById('menuOverlay');
     
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
       
       // Empêcher le scroll du body quand le menu est ouvert
       if (navMenu.classList.contains('active')) {
@@ -1596,6 +1628,14 @@
       }
     });
     
+    // Fermer le menu en cliquant sur l'overlay
+    menuOverlay.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+    
     // Fermer le menu quand on clique sur un lien (mobile)
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
@@ -1603,6 +1643,7 @@
         if (window.innerWidth <= 768) {
           hamburger.classList.remove('active');
           navMenu.classList.remove('active');
+          menuOverlay.classList.remove('active');
           document.body.style.overflow = '';
         }
       });
@@ -1625,6 +1666,7 @@
       if (window.innerWidth > 768) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
         document.body.style.overflow = '';
       }
     });
