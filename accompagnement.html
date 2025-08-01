@@ -592,7 +592,15 @@
 
     @media (max-width: 768px) {
       .hamburger {
-        display: flex;
+        display: flex !important;
+      }
+      
+      .nav-menu {
+        display: none !important;
+      }
+      
+      .nav-menu.active {
+        display: flex !important;
       }
       
       .nav-menu {
@@ -682,6 +690,25 @@
       .submenu-link:last-child {
         border-bottom: none;
       }
+      
+      /* Overlay pour fermer le menu */
+      .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
     }
     .submenu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); background: var(--blanc); border-radius: var(--rayon); box-shadow: var(--ombre); min-width: 220px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 100; border: 1px solid var(--gris-fonce); padding: 0.5rem 0; }
     .nav-item:hover .submenu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
@@ -726,6 +753,8 @@
   margin-right: auto;
   border-top: 4px solid var(--vert);
   animation: newsletterFloat 2s ease-in-out infinite;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .nav-logo {
@@ -755,6 +784,40 @@
 @media (max-width: 768px) {
   .nav-logo img {
     height: 70px;
+  }
+  
+  .newsletter {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 2rem 10px;
+  }
+  
+  .newsletter input[type="email"] {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .newsletter button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter {
+    margin: 2rem 5px;
+    padding: 1rem;
+  }
+  
+  .newsletter input[type="email"] {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  
+  .newsletter button {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
   }
 }
       
@@ -814,6 +877,9 @@
       </ul>
     </div>
   </nav>
+
+  <!-- Overlay pour le menu mobile -->
+  <div class="menu-overlay" id="menuOverlay"></div>
 
   <!-- Hero Banner -->
   <section class="hero-banner">
@@ -966,10 +1032,27 @@
     // Script pour le menu hamburger
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
+    const menuOverlay = document.getElementById('menuOverlay');
 
     hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+      
+      // Empêcher le scroll du body quand le menu est ouvert
+      if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // Fermer le menu en cliquant sur l'overlay
+    menuOverlay.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
     });
 
     // Fermer le menu quand on clique sur un lien
@@ -978,6 +1061,8 @@
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
       });
     });
 
@@ -997,6 +1082,8 @@
       if (window.innerWidth > 768) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
 
