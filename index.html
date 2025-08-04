@@ -1806,82 +1806,7 @@
   height: auto;
 }
 
-@media (max-width: 768px) {
-  #apropos.services-section {
-    padding: 60px 0;
-    min-height: auto;
-  }
 
-  .hero-container {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .hero-img, .hero-content {
-    flex: 1 1 100%;
-    padding: 0 10px;
-  }
-
-  .hero-img img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-title1 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .hero-subtitle1 {
-    font-size: 1.1rem;
-    text-align: center;
-  }
-
-  .content-blocks {
-    margin-bottom: 1.5rem;
-  }
-
-  .mission-block, .values-block {
-    padding: 1.2rem;
-    margin-bottom: 1rem;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 480px) {
-  #apropos.services-section {
-    padding: 40px 0;
-  }
-
-  .hero-title1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-subtitle1 {
-    font-size: 1rem;
-  }
-
-  .mission-block, .values-block {
-    padding: 1rem;
-  }
-
-  .mission-block h3, .values-block h3 {
-    font-size: 1.1rem;
-  }
-
-  .mission-block p, .values-block ul {
-    font-size: 0.95rem;
-  }
-}
 
 
     /* Section Réalisations */
@@ -2148,46 +2073,64 @@
   </section>
 
 
-<!-- Section À propos - Version simple et propre -->
+  <!-- Section À propos - Version optimisée -->
 <section id="apropos" class="services-section">
+  <!-- Animation éléments flottants -->
+  <div class="floating-elements">
+    <div class="floating-circle"></div>
+    <div class="floating-triangle"></div>
+  </div>
+
   <div class="container">
     <div class="hero-container">
-      <!-- Colonne image - MOBILE FIRST -->
+      <!-- Colonne image -->
       <div class="hero-img">
-        <img src="equipe_porokhane.png" alt="Équipe Porokhane Digital">
+        <div class="parallax-wrapper">
+          <img src="equipe_porokhane.png" alt="Équipe Porokhane Digital">
+        </div>
       </div>
       
       <!-- Colonne texte -->
       <div class="hero-content">
-        <h2 class="hero-title1">Notre ADN Digital</h2>
+        <h2 class="hero-title1">
+          <span class="title-underline"></span>
+          Notre ADN Digital
+        </h2>
         
         <p class="hero-subtitle1">
-          Porokhane Digital Consulting réinvente l'accompagnement technologique avec une approche humaine.
+          Porokhane Digital Consulting réinvente  l'accompagnement technologique avec une approche humaine.
         </p>
         
         <div class="content-blocks">
-          <!-- Bloc Mission -->
+          <!-- Item Mission -->
           <div class="mission-block">
-            <h3>Notre Mission</h3>
+            <h3>
+              
+              Notre Mission
+            </h3>
             <p>
-              Accélérer la transformation digitale des entreprises africaines grâce à des solutions innovantes.
+              Accélérer la transformation digitale des entreprises africaines <br> grâce à des solutions innovantes.
             </p>
           </div>
           
-          <!-- Bloc Valeurs -->
+          <!-- Item Valeurs -->
           <div class="values-block">
-            <h3>Nos Valeurs</h3>
+            <h3>
+              
+              Nos Valeurs
+            </h3>
             <ul>
-              <li>Innovation responsable</li>
-              <li>Fiabilité</li>
-              <li>Créer de la valeur pour tous</li>
+              <li><span>Innovation responsable</span></li>
+              <li><span>Fiabilité</span></li>
+              <li><span>Créer de la valeur pour tous</span></li>
             </ul>
           </div>
         </div>
         
         <div class="hero-buttons">
           <a href="a-propos.html" class="btn btn-primary">
-            En savoir plus
+            
+             En savoir plus
           </a>
         </div>
       </div>
@@ -2200,8 +2143,8 @@
   #apropos.services-section {
     background: linear-gradient(rgba(248, 250, 252, 0.92), rgba(248, 250, 252, 0.92)),
       url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=90') no-repeat center center/cover;
-    min-height: 100vh;
-    width: 100%;
+    padding: 60px 0;
+    
     background-size: cover;
     background-position: center;
     position: relative;
@@ -2309,55 +2252,39 @@
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-  // --- Effet Parallax ---
-  let parallaxListener = null;
+  // Effet parallax
+  document.addEventListener('DOMContentLoaded', function() {
+    const parallaxInit = function() {
+      if (window.innerWidth > 768) {
+        const parallax = document.querySelector('.parallax-wrapper');
+        
+        document.addEventListener('mousemove', function(e) {
+          const x = (window.innerWidth - e.pageX) / 100;
+          const y = (window.innerHeight - e.pageY) / 100;
+          if (parallax) {
+            parallax.style.transform = `rotateY(${x/5}deg) rotateX(${y/5}deg)`;
+          }
+        });
+      }
+    };
 
-  function parallaxInit() {
-    const parallax = document.querySelector('.parallax-wrapper');
-
-    // Supprimer l'ancien listener s'il existe
-    if (parallaxListener) {
-      document.removeEventListener('mousemove', parallaxListener);
-      parallaxListener = null;
-    }
-
-    // Appliquer effet seulement sur desktop
-    if (window.innerWidth > 768 && parallax) {
-      parallaxListener = function (e) {
-        const x = (window.innerWidth - e.pageX) / 100;
-        const y = (window.innerHeight - e.pageY) / 100;
-        parallax.style.transform = `rotateY(${x / 5}deg) rotateX(${y / 5}deg)`;
-      };
-      document.addEventListener('mousemove', parallaxListener);
-    } else if (parallax) {
-      // Reset le transform si on revient en mobile
-      parallax.style.transform = '';
-    }
-  }
-
-  // --- Animation bouton ---
-  const btn = document.querySelector('.btn-primary');
-  if (btn) {
-    const icon = btn.querySelector('i');
-    if (icon) {
-      btn.addEventListener('mouseenter', function () {
-        icon.style.transform = 'rotate(10deg)';
-        icon.style.transition = 'transform 0.2s ease';
+    // Animation bouton
+    const btn = document.querySelector('.btn-primary');
+    if (btn) {
+      btn.addEventListener('mouseenter', function() {
+        this.querySelector('i').style.transform = 'rotate(10deg)';
       });
-      btn.addEventListener('mouseleave', function () {
-        icon.style.transform = 'rotate(0)';
+      btn.addEventListener('mouseleave', function() {
+        this.querySelector('i').style.transform = 'rotate(0)';
       });
     }
-  }
 
-  // Initialisation
-  parallaxInit();
-
-  // Réinitialiser proprement au redimensionnement
-  window.addEventListener('resize', parallaxInit);
-});
-
+    // Initialisation
+    parallaxInit();
+    
+    // Réinitialisation au redimensionnement
+    window.addEventListener('resize', parallaxInit);
+  });
 </script>
   
   <!-- Services -->
