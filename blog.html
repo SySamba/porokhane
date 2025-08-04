@@ -615,6 +615,42 @@
       flex-shrink: 0;
     }
 
+    /* Newsletter Responsive - Version Mobile uniquement */
+@media (max-width: 768px) {
+  .newsletter {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 2rem 10px;
+  }
+  
+  .newsletter input[type="email"],
+  .newsletter button {
+    width: 100%;
+  }
+  
+  .newsletter button {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter {
+    margin: 2rem 5px;
+    padding: 1rem;
+  }
+  
+  .newsletter input[type="email"] {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  
+  .newsletter button {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
   </style>
 </head>
 <body>
