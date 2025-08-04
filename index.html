@@ -2109,7 +2109,7 @@
               Notre Mission
             </h3>
             <p>
-              Accélérer la transformation digitale des entreprises africaines <br> grâce à des solutions innovantes.
+              Accélérer la transformation digitale des entreprises africaines grâce à des solutions innovantes.
             </p>
           </div>
           
@@ -2243,9 +2243,102 @@
     color: var(--vert);
     margin-top: 3px;
   }
+  
+  /* Responsive pour la section À propos */
   @media (max-width: 900px) {
-    .hero-container { flex-direction: column; }
-    .hero-img, .hero-content { padding: 0; }
+    .hero-container { 
+      flex-direction: column; 
+      gap: 1.5rem;
+    }
+    .hero-img, .hero-content { 
+      padding: 0; 
+      flex: 1 1 auto;
+      min-width: auto;
+    }
+    .hero-title1 {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      text-align: center;
+    }
+    .hero-subtitle1 {
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #apropos.services-section {
+      padding: 60px 0;
+    }
+    .hero-container {
+      gap: 1rem;
+    }
+    .hero-title1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .hero-subtitle1 {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .content-blocks {
+      gap: 1rem;
+    }
+    .mission-block, .values-block {
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .mission-block h3, .values-block h3 {
+      font-size: 1.1rem;
+    }
+    .mission-block p, .values-block ul {
+      font-size: 1rem;
+    }
+    .hero-buttons {
+      justify-content: center;
+    }
+    .hero-buttons .btn {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #apropos.services-section {
+      padding: 40px 0;
+    }
+    .hero-title1 {
+      font-size: 1.5rem;
+    }
+    .hero-subtitle1 {
+      font-size: 0.9rem;
+    }
+    .mission-block, .values-block {
+      padding: 1rem;
+    }
+    .mission-block h3, .values-block h3 {
+      font-size: 1rem;
+    }
+    .mission-block p, .values-block ul {
+      font-size: 0.9rem;
+    }
+    .hero-buttons .btn {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+    }
+    
+    /* Correction pour le texte en paragraphe sur mobile */
+    .mission-block p {
+      display: block;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+    
+    .mission-block p br {
+      display: block;
+      content: "";
+      margin-top: 0.5rem;
+    }
   }
 
   
@@ -2699,7 +2792,7 @@
           <ul>
             <li><a href="tel:+221710589088 "><i class="fas fa-phone"></i> +221 710589088 </a></li>
             <li><a href="mailto:contact@digital-porokhane.com"><i class="fas fa-envelope"></i> contact@digital-porokhane.com</a></li>
-            <li><a href="https://goo.gl/maps/xyz" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
+            <li><a href="https://goo.gl/maps/xyz" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
           </ul>
         </div>
       </div>
@@ -2835,20 +2928,57 @@
       });
     });
   </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Gestion responsive de la section À propos
+    function handleAproposResponsive() {
+      const isMobile = window.innerWidth <= 768;
+      const isSmallMobile = window.innerWidth <= 480;
+      
       document.querySelectorAll('.mission-block, .values-block').forEach(function(block) {
         block.style.width = '100%';
         block.style.maxWidth = '100%';
         block.style.boxSizing = 'border-box';
         block.style.margin = '0 auto 1.5rem auto';
+        
+        // Ajustements pour mobile
+        if (isMobile) {
+          block.style.padding = '1.2rem';
+          block.style.marginBottom = '1rem';
+        }
+        if (isSmallMobile) {
+          block.style.padding = '1rem';
+        }
       });
+      
       document.querySelectorAll('.content-blocks, .hero-content').forEach(function(parent) {
         parent.style.overflowX = 'hidden';
-        parent.style.width = '100vw';
-        parent.style.maxWidth = '100vw';
+        parent.style.width = '100%';
+        parent.style.maxWidth = '100%';
+        
+        // Centrage du contenu sur mobile
+        if (isMobile) {
+          parent.style.textAlign = 'center';
+        }
       });
-    });
+      
+      // Ajustement des boutons sur mobile
+      const buttons = document.querySelectorAll('#apropos .hero-buttons .btn');
+      buttons.forEach(function(btn) {
+        if (isMobile) {
+          btn.style.width = '100%';
+          btn.style.maxWidth = '280px';
+          btn.style.justifyContent = 'center';
+        }
+      });
+    }
+    
+    // Exécution initiale
+    handleAproposResponsive();
+    
+    // Réexécution lors du redimensionnement
+    window.addEventListener('resize', handleAproposResponsive);
+  });
   </script>
 
   <!-- Chatbot Flottant -->
