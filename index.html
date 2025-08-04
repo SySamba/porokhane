@@ -1793,6 +1793,20 @@
       }
     }
 
+    .parallax-wrapper {
+  min-height: 300px; /* ou auto si image fixée */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-out;
+}
+
+.parallax-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
 
 
     /* Section Réalisations */
@@ -1949,6 +1963,7 @@
   0%, 100% { color: var(--blanc); transform: scale(1); }
   50% { color: var(--vert); transform: scale(1.18) rotate(-8deg); }
 }
+
   </style>
   <style>
     .temoignage-highlight {
@@ -1957,6 +1972,9 @@
       font-size: 1.15rem;
       letter-spacing: 0.5px;
     }
+
+
+    
   </style>
 </head>
 <body>
@@ -2055,21 +2073,14 @@
   </section>
 
 
-  <!-- Section À propos - Version optimisée -->
+<!-- Section À propos - Version simple et propre -->
 <section id="apropos" class="services-section">
-  <!-- Animation éléments flottants -->
-  <div>
-    <div class="floating-circle"></div>
-    <div class="floating-triangle"></div>
-  </div>
-
   <div class="container">
     <div class="hero-container">
+      
       <!-- Colonne image -->
       <div class="hero-img">
-        <div>
-          <img src="equipe_porokhane.png" alt="Équipe Porokhane Digital">
-        </div>
+        <img src="equipe_porokhane.png" alt="Équipe Porokhane Digital">
       </div>
       
       <!-- Colonne texte -->
@@ -2080,27 +2091,22 @@
         </h2>
         
         <p class="hero-subtitle1">
-          Porokhane Digital Consulting réinvente  l'accompagnement technologique avec une approche humaine.
+          Porokhane Digital Consulting réinvente l'accompagnement technologique avec une approche humaine.
         </p>
         
         <div class="content-blocks">
-          <!-- Item Mission -->
+          <!-- Bloc Mission -->
           <div class="mission-block">
-            <h3>
-              
-              Notre Mission
-            </h3>
+            <h3>Notre Mission</h3>
             <p>
-              Accélérer la transformation digitale des entreprises africaines <br> grâce à des solutions innovantes.
+              Accélérer la transformation digitale des entreprises africaines <br>
+              grâce à des solutions innovantes.
             </p>
           </div>
           
-          <!-- Item Valeurs -->
+          <!-- Bloc Valeurs -->
           <div class="values-block">
-            <h3>
-              
-              Nos Valeurs
-            </h3>
+            <h3>Nos Valeurs</h3>
             <ul>
               <li><span>Innovation responsable</span></li>
               <li><span>Fiabilité</span></li>
@@ -2111,14 +2117,15 @@
         
         <div class="hero-buttons">
           <a href="a-propos.html" class="btn btn-primary">
-            
-             En savoir plus
+            En savoir plus
           </a>
         </div>
       </div>
+      
     </div>
   </div>
 </section>
+
 
 <style>
   /* Amélioration section À propos sur index */
@@ -2229,42 +2236,60 @@
     .hero-container { flex-direction: column; }
     .hero-img, .hero-content { padding: 0; }
   }
+
+  
 </style>
 
 <script>
-  // Effet parallax
-  document.addEventListener('DOMContentLoaded', function() {
-    const parallaxInit = function() {
-      if (window.innerWidth > 768) {
-        const parallax = document.querySelector('.parallax-wrapper');
-        
-        document.addEventListener('mousemove', function(e) {
-          const x = (window.innerWidth - e.pageX) / 100;
-          const y = (window.innerHeight - e.pageY) / 100;
-          if (parallax) {
-            parallax.style.transform = `rotateY(${x/5}deg) rotateX(${y/5}deg)`;
-          }
-        });
-      }
-    };
+  document.addEventListener('DOMContentLoaded', function () {
+  // --- Effet Parallax ---
+  let parallaxListener = null;
 
-    // Animation bouton
-    const btn = document.querySelector('.btn-primary');
-    if (btn) {
-      btn.addEventListener('mouseenter', function() {
-        this.querySelector('i').style.transform = 'rotate(10deg)';
-      });
-      btn.addEventListener('mouseleave', function() {
-        this.querySelector('i').style.transform = 'rotate(0)';
-      });
+  function parallaxInit() {
+    const parallax = document.querySelector('.parallax-wrapper');
+
+    // Supprimer l'ancien listener s'il existe
+    if (parallaxListener) {
+      document.removeEventListener('mousemove', parallaxListener);
+      parallaxListener = null;
     }
 
-    // Initialisation
-    parallaxInit();
-    
-    // Réinitialisation au redimensionnement
-    window.addEventListener('resize', parallaxInit);
-  });
+    // Appliquer effet seulement sur desktop
+    if (window.innerWidth > 768 && parallax) {
+      parallaxListener = function (e) {
+        const x = (window.innerWidth - e.pageX) / 100;
+        const y = (window.innerHeight - e.pageY) / 100;
+        parallax.style.transform = `rotateY(${x / 5}deg) rotateX(${y / 5}deg)`;
+      };
+      document.addEventListener('mousemove', parallaxListener);
+    } else if (parallax) {
+      // Reset le transform si on revient en mobile
+      parallax.style.transform = '';
+    }
+  }
+
+  // --- Animation bouton ---
+  const btn = document.querySelector('.btn-primary');
+  if (btn) {
+    const icon = btn.querySelector('i');
+    if (icon) {
+      btn.addEventListener('mouseenter', function () {
+        icon.style.transform = 'rotate(10deg)';
+        icon.style.transition = 'transform 0.2s ease';
+      });
+      btn.addEventListener('mouseleave', function () {
+        icon.style.transform = 'rotate(0)';
+      });
+    }
+  }
+
+  // Initialisation
+  parallaxInit();
+
+  // Réinitialiser proprement au redimensionnement
+  window.addEventListener('resize', parallaxInit);
+});
+
 </script>
   
   <!-- Services -->
