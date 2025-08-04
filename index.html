@@ -1806,7 +1806,82 @@
   height: auto;
 }
 
+@media (max-width: 768px) {
+  #apropos.services-section {
+    padding: 60px 0;
+    min-height: auto;
+  }
 
+  .hero-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero-img, .hero-content {
+    flex: 1 1 100%;
+    padding: 0 10px;
+  }
+
+  .hero-img img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .hero-subtitle1 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .content-blocks {
+    margin-bottom: 1.5rem;
+  }
+
+  .mission-block, .values-block {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  #apropos.services-section {
+    padding: 40px 0;
+  }
+
+  .hero-title1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle1 {
+    font-size: 1rem;
+  }
+
+  .mission-block, .values-block {
+    padding: 1rem;
+  }
+
+  .mission-block h3, .values-block h3 {
+    font-size: 1.1rem;
+  }
+
+  .mission-block p, .values-block ul {
+    font-size: 0.95rem;
+  }
+}
 
 
     /* Section Réalisations */
@@ -2077,18 +2152,14 @@
 <section id="apropos" class="services-section">
   <div class="container">
     <div class="hero-container">
-      
-      <!-- Colonne image -->
+      <!-- Colonne image - MOBILE FIRST -->
       <div class="hero-img">
         <img src="equipe_porokhane.png" alt="Équipe Porokhane Digital">
       </div>
       
       <!-- Colonne texte -->
       <div class="hero-content">
-        <h2 class="hero-title1">
-          <span class="title-underline"></span>
-          Notre ADN Digital
-        </h2>
+        <h2 class="hero-title1">Notre ADN Digital</h2>
         
         <p class="hero-subtitle1">
           Porokhane Digital Consulting réinvente l'accompagnement technologique avec une approche humaine.
@@ -2099,8 +2170,7 @@
           <div class="mission-block">
             <h3>Notre Mission</h3>
             <p>
-              Accélérer la transformation digitale des entreprises africaines <br>
-              grâce à des solutions innovantes.
+              Accélérer la transformation digitale des entreprises africaines grâce à des solutions innovantes.
             </p>
           </div>
           
@@ -2108,9 +2178,9 @@
           <div class="values-block">
             <h3>Nos Valeurs</h3>
             <ul>
-              <li><span>Innovation responsable</span></li>
-              <li><span>Fiabilité</span></li>
-              <li><span>Créer de la valeur pour tous</span></li>
+              <li>Innovation responsable</li>
+              <li>Fiabilité</li>
+              <li>Créer de la valeur pour tous</li>
             </ul>
           </div>
         </div>
@@ -2121,11 +2191,9 @@
           </a>
         </div>
       </div>
-      
     </div>
   </div>
 </section>
-
 
 <style>
   /* Amélioration section À propos sur index */
