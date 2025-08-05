@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" href="logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <style>
     :root {
       --vert: #1fa47a;
@@ -1790,42 +1791,6 @@
       border: 2px solid var(--vert);
       flex-shrink: 0;
     }
-
-    /* Newsletter Responsive - Version Mobile uniquement */
-@media (max-width: 768px) {
-  .newsletter {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-    margin: 2rem 10px;
-  }
-  
-  .newsletter input[type="email"],
-  .newsletter button {
-    width: 100%;
-  }
-  
-  .newsletter button {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .newsletter {
-    margin: 2rem 5px;
-    padding: 1rem;
-  }
-  
-  .newsletter input[type="email"] {
-    font-size: 0.9rem;
-    padding: 0.8rem;
-  }
-  
-  .newsletter button {
-    font-size: 0.9rem;
-    padding: 0.8rem 1.5rem;
-  }
-}
   </style>
 </head>
 <body>
@@ -1939,7 +1904,66 @@
   
   
   
-  
+  <!-- Contact & Newsletter 
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contactez Notre Équipe</h2>
+        <p>Prêt à transformer votre entreprise ? Parlons de votre projet</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h3>Email</h3>
+              <p>contact@porokhane-digital.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h3>Téléphone</h3>
+              <p>+221 XX XXX XX XX</p>
+              <p>Lun-Ven : 8h-18h</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h3>Adresse</h3>
+              <p>Rue des Entrepreneurs, Porokhane</p>
+              <p>Sénégal</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h3>Horaires</h3>
+              <p>Lundi - Vendredi : 8h - 18h</p>
+              <p>Samedi : 9h - 13h</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Votre nom complet" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Votre adresse email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Sujet de votre message" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Comment pouvons-nous vous aider ?" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
+        </form>
+      </div>
+     
+    </div>
+  </section> -->
   
   <!-- Footer -->
   <footer class="footer">
@@ -2113,10 +2137,23 @@
     // Form submissions
     const devisForm = document.getElementById('devisForm');
     if (devisForm) {
+      emailjs.init('user_xxxxxxxxxxxxxxxxx'); // Remplacez par votre userID EmailJS (public key)
       devisForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        alert('Merci ! Votre demande de devis a bien été envoyée. Nous vous répondrons dans les plus brefs délais.');
-        this.reset();
+        // Récupération des données du formulaire
+        const formData = new FormData(devisForm);
+        const data = {};
+        formData.forEach((value, key) => {
+          data[key] = value;
+        });
+        // Envoi via EmailJS
+        emailjs.send('service_c8vcg1l', 'template_xxxxxxxx', data)
+          .then(function(response) {
+            alert('Merci ! Votre demande de devis a bien été envoyée. Nous vous répondrons dans les plus brefs délais.');
+            devisForm.reset();
+          }, function(error) {
+            alert('Une erreur est survenue lors de l\'envoi du devis. Veuillez réessayer.');
+          });
       });
     }
     
@@ -2381,5 +2418,30 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => addBotMessage(response), 600);
   }
   </script>
+
+
+<!-- Script EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Initialiser EmailJS avec ton User ID (remplace par le tien)
+  (function(){
+    emailjs.init("nwp2QzoxgP9Jpfn_S"); // ← Remplace ici
+  })();
+
+  // Gérer la soumission du formulaire
+  document.getElementById('devisForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Envoi du formulaire
+    emailjs.sendForm('service_c8vcg1l', 'template_phmim58', this) 
+      .then(function() {
+        alert("Demande de devis envoyée avec succès !");
+        document.getElementById('devisForm').reset(); // Réinitialiser le formulaire
+      }, function(error) {
+        alert("Erreur lors de l'envoi : " + error.text);
+      });
+  });
+</script>
+
 </body>
 </html>
