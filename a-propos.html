@@ -223,6 +223,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .value-card:nth-child(5) { animation-delay: 0.5s; }
     .value-card:nth-child(6) { animation-delay: 0.6s; }
 
+    /* Section méthodologie - espacement amélioré pour 4 cartes */
+    .methodology-section {
+      gap: 2.5rem;
+    }
+    
+    .methodology-section .value-card {
+      min-width: 240px;
+      max-width: 280px;
+      flex: 1 1 240px;
+      padding: 2.2rem 1.8rem;
+    }
+
     /* Chiffres clés */
     .kpi-grid {
       display: flex;
@@ -1041,13 +1053,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     
     @media (max-width: 768px) {
-      .values-grid {
+      .values-grid, .methodology-grid {
         flex-direction: column;
         gap: 1.5rem;
         align-items: center;
       }
       
-      .value-card {
+      .value-card, .methodology-card {
         width: 100%;
         max-width: 350px;
         flex: none;
@@ -1741,7 +1753,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>Notre Méthodologie &amp; Outils</h2>
         <p>Une organisation agile, collaborative et transparente pour garantir la réussite de chaque projet.</p>
       </div>
-      <div class="values-grid">
+      <div class="values-grid methodology-section">
         <div class="value-card">
          
           <h3>Agilité &amp; Sprints</h3>
