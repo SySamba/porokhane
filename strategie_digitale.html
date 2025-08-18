@@ -98,9 +98,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         justify-content: space-between;
       }
       .hamburger {
-        display: flex;
+        display: flex !important;
       }
       .nav-menu { 
+        display: none !important;
         position: fixed;
         top: 0;
         right: -100%;
@@ -119,6 +120,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         z-index: 1000;
       }
       .nav-menu.active {
+        display: flex !important;
         right: 0;
       }
       .nav-menu li {
