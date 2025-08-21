@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGENCE DE COMMUNICATION DIGITALE DAKAR - Porokhane Digital Consulting | Solutions Digitales</title>
-  <meta name="description" content="AGENCE DE COMMUNICATION DIGITALE DAKAR - Porokhane Digital Consulting vous accompagne dans votre transformation digitale. Solutions innovantes : développement web, marketing digital, communication visuelle à Dakar.">
+  <title>AGENCE DE COMMUNICATION DIGITALE DAKAR | Porokhane Digital Consulting</title>
+  <meta name="description" content="AGENCE DE COMMUNICATION DIGITALE DAKAR — SEO, webmarketing et stratégie digitale. Devis gratuit sous 24h.">
   <link rel="icon" type="image/png" href="logo.png">
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -20,7 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   <!-- Open Graph -->
   <meta property="og:title" content="AGENCE DE COMMUNICATION DIGITALE DAKAR - Porokhane Digital Consulting">
-  <meta property="og:description" content="Solutions digitales innovantes à Dakar : développement web, marketing digital, communication visuelle">
+  <meta property="og:description" content="AGENCE DE COMMUNICATION DIGITALE DAKAR — SEO, webmarketing et stratégie digitale. Devis gratuit sous 24h.">
   <meta property="og:image" content="https://digital-porokhane.com/logo.png">
   <meta property="og:url" content="https://digital-porokhane.com/">
   <meta property="og:type" content="website">
@@ -28,7 +28,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AGENCE DE COMMUNICATION DIGITALE DAKAR - Porokhane Digital">
-  <meta name="twitter:description" content="Solutions digitales innovantes à Dakar">
+  <meta name="twitter:description" content="AGENCE DE COMMUNICATION DIGITALE DAKAR — SEO, webmarketing et stratégie digitale. Devis gratuit sous 24h.">
   <meta name="twitter:image" content="https://digital-porokhane.com/logo.png">
   
   <link rel="canonical" href="https://digital-porokhane.com/">
@@ -2089,7 +2089,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="accueil" class="hero">
     <div class="container hero-container">
       <div class="hero-content">
-        <h1>Agence de Communication Digitale Dakar - Votre partenaire pour un monde numérique inclusif</h1>
+        <h1>AGENCE DE COMMUNICATION DIGITALE DAKAR – Votre partenaire pour un monde numérique inclusif</h1>
         <p class="hero-subtitle">Porokhane Digital Consulting vous accompagne dans votre transformation digitale avec des solutions innovantes et sur mesure pour booster votre activité.</p>
         <div class="hero-buttons">
           
@@ -2789,7 +2789,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
           <div class="social-links">
             <a href="https://www.facebook.com/Porokhane.Digital.Consulting" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="tiktok"><i class="fab fa-tiktok"></i></a>
             <a href="https://www.linkedin.com/company/porokhane-digital-consulting" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://www.instagram.com/porokhane_digital_consulting/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
@@ -2810,8 +2809,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <ul>
             <li><a href="#accueil"><i class="fas fa-chevron-right"></i> Accueil</a></li>
             <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
-            
-            <li><a href="#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
             <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
             <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
             <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
@@ -2836,57 +2833,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script>
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
+    if (navbar) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    }
     
     // Témoignages carrousel
     const carousel = document.getElementById('carousel');
-    const items = carousel.querySelectorAll('.carousel-item');
-    const controls = document.getElementById('carouselControls');
-    const prev = document.getElementById('prev');
-    const next = document.getElementById('next');
-    let current = 0;
-    
-    function showSlide(idx) {
-      items.forEach((item, i) => {
-        item.classList.toggle('active', i === idx);
-      });
+    if (carousel) {
+      const items = carousel.querySelectorAll('.carousel-item');
+      const controls = document.getElementById('carouselControls');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      let current = 0;
       
-      Array.from(controls.children).forEach((dot, i) => {
-        dot.classList.toggle('active', i === idx);
-      });
+      function showSlide(idx) {
+        items.forEach((item, i) => {
+          item.classList.toggle('active', i === idx);
+        });
+        
+        if (controls) {
+          Array.from(controls.children).forEach((dot, i) => {
+            dot.classList.toggle('active', i === idx);
+          });
+        }
+        
+        current = idx;
+      }
       
-      current = idx;
-    }
-    
-    // Create dots
-    for (let i = 0; i < items.length; i++) {
-      const dot = document.createElement('span');
-      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-      dot.addEventListener('click', () => showSlide(i));
-      controls.appendChild(dot);
-    }
-    
-    prev.addEventListener('click', () => showSlide((current - 1 + items.length) % items.length));
-    next.addEventListener('click', () => showSlide((current + 1) % items.length));
-    
-    // Auto slide
-    let slideInterval = setInterval(() => {
-      showSlide((current + 1) % items.length);
-    }, 8000);
-    
-    // Pause on hover
-    carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
-    carousel.addEventListener('mouseleave', () => {
-      slideInterval = setInterval(() => {
+      // Create dots
+      if (controls) {
+        for (let i = 0; i < items.length; i++) {
+          const dot = document.createElement('span');
+          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          dot.addEventListener('click', () => showSlide(i));
+          controls.appendChild(dot);
+        }
+      }
+      
+      if (prev) prev.addEventListener('click', () => showSlide((current - 1 + items.length) % items.length));
+      if (next) next.addEventListener('click', () => showSlide((current + 1) % items.length));
+      
+      // Auto slide
+      let slideInterval = setInterval(() => {
         showSlide((current + 1) % items.length);
       }, 8000);
-    });
+      
+      // Pause on hover
+      carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
+      carousel.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(() => {
+          showSlide((current + 1) % items.length);
+        }, 8000);
+      });
+    }
     
     // FAQ accordéon
     document.querySelectorAll('.faq-question').forEach(q => {
@@ -2906,24 +2911,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     });
     
-    // Form submissions
-    document.getElementById('devisForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Merci ! Votre demande de devis a bien été envoyée. Nous vous répondrons dans les plus brefs délais.');
-      this.reset();
-    });
+    // Form submissions (guarded)
+    const devisForm = document.getElementById('devisForm');
+    if (devisForm) {
+      devisForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Merci ! Votre demande de devis a bien été envoyée. Nous vous répondrons dans les plus brefs délais.');
+        this.reset();
+      });
+    }
     
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Merci pour votre message ! Notre équipe vous contactera très rapidement.');
-      this.reset();
-    });
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Merci pour votre message ! Notre équipe vous contactera très rapidement.');
+        this.reset();
+      });
+    }
     
-    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
-      this.reset();
-    });
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
+        this.reset();
+      });
+    }
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
