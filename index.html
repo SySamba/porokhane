@@ -7,12 +7,16 @@
   <title>AGENCE DE MARKETING DIGITAL DAKAR | Porokhane Digital Consulting</title>
   <meta name="description" content="AGENCE DE MARKETING DIGITAL DAKAR — SEO, webmarketing et stratégie digitale. Devis gratuit sous 24h.">
   <link rel="icon" type="image/png" href="logo.png">
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MT6DMTW8');</script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-11G8LFMCBG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-11G8LFMCBG');
+</script>
+
 <!-- End Google Tag Manager -->
   
   <!-- Meta keywords -->
@@ -2169,7 +2173,1118 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- Popup Promo Modal -->
+<!-- 
+  POPUP PROMO DESIGN CONCEPT:
+  - Modal popup professionnel avec overlay blur
+  - Animations d'entrée spectaculaires (slide + fade + scale)
+  - Design ultra-moderne avec glassmorphism
+  - Auto-ouverture après 3 secondes sur la page d'accueil
+  - Effets visuels avancés (particules, gradients animés)
+  - Bouton WhatsApp intégré avec message prédéfini
+  - Fermeture intelligente avec sauvegarde de préférence
+-->
+
+<!-- Overlay du popup -->
+<div class="promo-popup-overlay" id="promoPopupOverlay">
+  <!-- Particules animées en arrière-plan -->
+  <div class="popup-particles">
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+  </div>
+  
+  <!-- Container du popup -->
+  <div class="promo-popup-container" id="promoPopupContainer">
+    <!-- Bouton de fermeture -->
+    <button class="popup-close-btn" id="closePromoPopup" aria-label="Fermer">
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <!-- Contenu du popup -->
+    <div class="popup-content">
+      <!-- En-tête avec badge animé -->
+      <div class="popup-header">
+        <div class="popup-badge">
+          <span class="badge-icon">🔥</span>
+          <span class="badge-text">OFFRE EXCLUSIVE</span>
+          <div class="badge-glow"></div>
+        </div>
+        
+        <!-- Titre principal -->
+        <h2 class="popup-title">
+          <span class="title-accent">-50%</span>
+          <span class="title-main">Sur tous nos services digitaux</span>
+        </h2>
+        
+        <p class="popup-subtitle">
+          Transformez votre présence digitale avec notre offre exceptionnelle
+        </p>
+      </div>
+      
+      <!-- Corps du popup -->
+      <div class="popup-body">
+        <!-- Image promo avec effet parallax -->
+        <div class="popup-image-section">
+          <div class="popup-image-wrapper">
+            <img src="promo-image.jpg" alt="Offre Spéciale Porokhane Digital" class="popup-img">
+            <div class="image-overlay">
+              <div class="overlay-badge">
+                <span>NOUVEAU</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contenu principal -->
+        <div class="popup-main-content">
+          <!-- Liste des avantages avec animations -->
+          <div class="popup-benefits">
+            <div class="benefit-item" style="animation-delay: 0.1s">
+              <div class="benefit-icon">
+                <i class="fas fa-gift"></i>
+              </div>
+              <span>Audit digital complet gratuit</span>
+            </div>
+            <div class="benefit-item" style="animation-delay: 0.2s">
+              <div class="benefit-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <span>Stratégie sur-mesure incluse</span>
+            </div>
+            <div class="benefit-item" style="animation-delay: 0.3s">
+              <div class="benefit-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <span>Support prioritaire 24/7</span>
+            </div>
+            <div class="benefit-item" style="animation-delay: 0.4s">
+              <div class="benefit-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <span>Suivi personnalisé inclus</span>
+            </div>
+          </div>
+          
+          <!-- Countdown timer premium -->
+          <div class="popup-countdown">
+            <div class="countdown-title">
+              <i class="fas fa-clock"></i>
+              <span>Offre limitée dans le temps</span>
+            </div>
+            <div class="countdown-timer">
+              <div class="timer-item">
+                <span class="timer-number" id="popupDays">07</span>
+                <span class="timer-label">Jours</span>
+              </div>
+              <div class="timer-separator">:</div>
+              <div class="timer-item">
+                <span class="timer-number" id="popupHours">12</span>
+                <span class="timer-label">Heures</span>
+              </div>
+              <div class="timer-separator">:</div>
+              <div class="timer-item">
+                <span class="timer-number" id="popupMinutes">30</span>
+                <span class="timer-label">Minutes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer avec bouton d'action -->
+      <div class="popup-footer">
+        <!-- Bouton WhatsApp premium -->
+        <a href="https://wa.me/221710589088?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20promo%20-50%25%20sur%20vos%20services%20digitaux.%20Pouvez-vous%20me%20donner%20plus%20d%27informations%20%3F" 
+           class="popup-whatsapp-btn" 
+           target="_blank"
+           rel="noopener">
+          <div class="btn-shine"></div>
+          <div class="btn-content">
+            <div class="btn-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="btn-text">
+              <span class="btn-main">Profiter de l'offre maintenant</span>
+              <span class="btn-sub">Réponse garantie en 5 minutes</span>
+            </div>
+            <div class="btn-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Indicateurs de confiance -->
+        <div class="popup-trust-indicators">
+          <div class="trust-item">
+            <i class="fas fa-shield-check"></i>
+            <span>Sécurisé</span>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-users"></i>
+            <span>+200 clients</span>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-star"></i>
+            <span>5/5 étoiles</span>
+          </div>
+        </div>
+        
+        <!-- Lien de fermeture discret -->
+        <button class="popup-dismiss" id="dismissPromoPopup">
+          Non merci, peut-être plus tard
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <style>
+  /* 
+    POPUP PROMO STYLES - DESIGN ULTRA-PROFESSIONNEL
+    - Modal popup avec glassmorphism et blur effects
+    - Animations d'entrée spectaculaires et fluides
+    - Particules animées en arrière-plan
+    - Bouton WhatsApp premium avec effets shine
+    - Layout responsive ultra-moderne
+    - Palette de couleurs cohérente avec gradients avancés
+  */
+  
+  /* Overlay principal du popup */
+  .promo-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .promo-popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Particules animées */
+  .popup-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    background: rgba(31, 164, 122, 0.3);
+    border-radius: 50%;
+    animation: float-particles 8s infinite linear;
+  }
+
+  .particle-1 {
+    width: 4px;
+    height: 4px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .particle-2 {
+    width: 6px;
+    height: 6px;
+    top: 60%;
+    left: 80%;
+    animation-delay: 2s;
+  }
+
+  .particle-3 {
+    width: 3px;
+    height: 3px;
+    top: 80%;
+    left: 20%;
+    animation-delay: 4s;
+  }
+
+  .particle-4 {
+    width: 5px;
+    height: 5px;
+    top: 30%;
+    left: 70%;
+    animation-delay: 6s;
+  }
+
+  .particle-5 {
+    width: 4px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
+    animation-delay: 1s;
+  }
+
+  @keyframes float-particles {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Container principal du popup */
+  .promo-popup-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.7) translateY(50px);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .promo-popup-overlay.active .promo-popup-container {
+    transform: scale(1) translateY(0);
+  }
+
+  /* Bouton de fermeture */
+  .popup-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .popup-close-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .popup-close-btn i {
+    color: #666;
+    font-size: 16px;
+  }
+
+  /* Contenu principal */
+  .popup-content {
+    padding: 40px;
+  }
+
+  /* En-tête du popup */
+  .popup-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .popup-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: pulse-glow 2s infinite;
+  }
+
+  .badge-icon {
+    font-size: 16px;
+    animation: bounce-icon 2s infinite;
+  }
+
+  .badge-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shine 3s infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 107, 0.4); }
+    50% { box-shadow: 0 0 30px rgba(255, 107, 107, 0.6); }
+  }
+
+  @keyframes bounce-icon {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-4px); }
+    60% { transform: translateY(-2px); }
+  }
+
+  @keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  /* Titre principal */
+  .popup-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .title-accent {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.3em;
+    display: inline-block;
+    animation: glow-text 2s ease-in-out infinite alternate;
+  }
+
+  .title-main {
+    color: var(--gris-titre);
+    display: block;
+    margin-top: 5px;
+  }
+
+  @keyframes glow-text {
+    0% { filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); }
+    100% { filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8)); }
+  }
+
+  .popup-subtitle {
+    color: var(--gris-texte);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Corps du popup */
+  .popup-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+
+  /* Section image */
+  .popup-image-section {
+    position: relative;
+  }
+
+  .popup-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: all 0.5s ease;
+  }
+
+  .popup-image-wrapper:hover {
+    transform: perspective(1000px) rotateY(0deg) scale(1.02);
+  }
+
+  .popup-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .popup-image-wrapper:hover .popup-img {
+    transform: scale(1.05);
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(31, 164, 122, 0.1), rgba(37, 99, 235, 0.1));
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 15px;
+  }
+
+  .overlay-badge {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--vert);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Contenu principal */
+  .popup-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  /* Liste des avantages */
+  .popup-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(31, 164, 122, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid var(--vert);
+    transform: translateX(-20px);
+    opacity: 0;
+    animation: slide-in-benefits 0.6s ease forwards;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-item:hover {
+    background: rgba(31, 164, 122, 0.1);
+    transform: translateX(0);
+  }
+
+  @keyframes slide-in-benefits {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--vert), var(--bleu));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .benefit-item span {
+    font-weight: 600;
+    color: var(--gris-titre);
+  }
+
+  /* Countdown timer */
+  .popup-countdown {
+    background: linear-gradient(135deg, rgba(31, 164, 122, 0.1), rgba(37, 99, 235, 0.1));
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .countdown-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--gris-titre);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .countdown-title i {
+    color: var(--vert);
+  }
+
+  .countdown-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .timer-item {
+    background: white;
+    border-radius: 12px;
+    padding: 12px 8px;
+    min-width: 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .timer-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--vert);
+    line-height: 1;
+  }
+
+  .timer-label {
+    font-size: 11px;
+    color: var(--gris-texte);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .timer-separator {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--vert);
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+  }
+
+  /* Footer du popup */
+  .popup-footer {
+    text-align: center;
+  }
+
+  /* Bouton WhatsApp premium */
+  .popup-whatsapp-btn {
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    text-decoration: none;
+    border-radius: 60px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .popup-whatsapp-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+  }
+
+  .btn-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .popup-whatsapp-btn:hover .btn-shine {
+    left: 100%;
+  }
+
+  .btn-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 30px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-icon {
+    font-size: 2rem;
+    animation: bounce-whatsapp 2s infinite;
+  }
+
+  @keyframes bounce-whatsapp {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-6px); }
+    60% { transform: translateY(-3px); }
+  }
+
+  .btn-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .btn-main {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .btn-sub {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  .btn-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .popup-whatsapp-btn:hover .btn-arrow {
+    transform: translateX(5px);
+  }
+
+  /* Indicateurs de confiance */
+  .popup-trust-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--gris-texte);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .trust-item i {
+    color: #ffd700;
+    font-size: 16px;
+  }
+
+  /* Bouton de fermeture discret */
+  .popup-dismiss {
+    background: none;
+    border: none;
+    color: var(--gris-texte);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+
+  .popup-dismiss:hover {
+    color: var(--gris-titre);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .promo-popup-container {
+      width: 95%;
+      max-height: 95vh;
+    }
+
+    .popup-content {
+      padding: 30px 20px;
+    }
+
+    .popup-body {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .popup-title {
+      font-size: 2rem;
+    }
+
+    .countdown-timer {
+      gap: 8px;
+    }
+
+    .timer-item {
+      min-width: 50px;
+      padding: 10px 6px;
+    }
+
+    .timer-number {
+      font-size: 1.3rem;
+    }
+
+    .btn-content {
+      padding: 16px 25px;
+      gap: 12px;
+    }
+
+    .popup-trust-indicators {
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .popup-content {
+      padding: 25px 15px;
+    }
+
+    .popup-title {
+      font-size: 1.6rem;
+    }
+
+    .popup-img {
+      height: 200px;
+    }
+
+    .benefit-item {
+      padding: 12px;
+    }
+
+    .benefit-icon {
+      width: 35px;
+      height: 35px;
+      font-size: 14px;
+    }
+
+    .btn-content {
+      padding: 14px 20px;
+    }
+
+    .btn-main {
+      font-size: 1rem;
+    }
+  }
+
+  @keyframes pulse-badge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+  }
+
+  /* Contenu promo */
+  .promo-content {
+    flex: 1;
+    color: white;
+    max-width: 600px;
+  }
+
+  /* Tag nouveau */
+  .promo-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .promo-tag i {
+    color: #ffd700;
+    animation: sparkle 2s infinite;
+  }
+
+  @keyframes sparkle {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+  }
+
+  /* Titre promo */
+  .promo-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .promo-highlight {
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.2em;
+    display: inline-block;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    0% { filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); }
+    100% { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)); }
+  }
+
+  /* Description */
+  .promo-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    line-height: 1.6;
+  }
+
+  /* Liste des avantages */
+  .promo-benefits {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .promo-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+
+  .promo-benefits i {
+    color: #4ade80;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  /* Countdown */
+  .promo-countdown {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    justify-content: flex-start;
+  }
+
+  .countdown-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 12px;
+    min-width: 70px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .countdown-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffd700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .countdown-label {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Bouton WhatsApp */
+  .promo-whatsapp-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(45deg, #25d366, #128c7e);
+    color: white;
+    padding: 1.2rem 2rem;
+    border-radius: 60px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .promo-whatsapp-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .promo-whatsapp-btn:hover::before {
+    left: 100%;
+  }
+
+  .promo-whatsapp-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+    background: linear-gradient(45deg, #128c7e, #25d366);
+  }
+
+  .btn-icon {
+    font-size: 1.8rem;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+    60% { transform: translateY(-4px); }
+  }
+
+  .btn-content {
+    flex: 1;
+  }
+
+  .btn-text {
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .btn-subtext {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    font-weight: 500;
+  }
+
+  .btn-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .promo-whatsapp-btn:hover .btn-arrow {
+    transform: translateX(5px);
+  }
+
+  /* Indicateur de confiance */
+  .promo-trust {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .trust-icons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .trust-icons i {
+    color: #ffd700;
+    font-size: 1rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .promo-section {
+      padding: 60px 0;
+      min-height: auto;
+    }
+
+    .promo-container {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .promo-image-wrapper {
+      transform: none;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .promo-img {
+      height: 250px;
+    }
+
+    .promo-title {
+      font-size: 2.2rem;
+    }
+
+    .promo-countdown {
+      justify-content: center;
+    }
+
+    .countdown-item {
+      min-width: 60px;
+      padding: 0.8rem;
+    }
+
+    .countdown-number {
+      font-size: 1.5rem;
+    }
+
+    .promo-whatsapp-btn {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .promo-section {
+      padding: 40px 0;
+    }
+
+    .promo-container {
+      gap: 1.5rem;
+    }
+
+    .promo-title {
+      font-size: 1.8rem;
+    }
+
+    .promo-countdown {
+      gap: 0.5rem;
+    }
+
+    .countdown-item {
+      min-width: 50px;
+      padding: 0.6rem;
+    }
+
+    .countdown-number {
+      font-size: 1.2rem;
+    }
+
+    .promo-whatsapp-btn {
+      padding: 0.9rem 1.2rem;
+      font-size: 0.95rem;
+    }
+  }
+
   /* Amélioration section À propos sur index */
   #apropos.services-section {
     background: linear-gradient(rgba(248, 250, 252, 0.92), rgba(248, 250, 252, 0.92)),
@@ -2408,6 +3523,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     // Réinitialisation au redimensionnement
     window.addEventListener('resize', parallaxInit);
+  });
+
+  // Script pour le popup promo
+  document.addEventListener('DOMContentLoaded', function() {
+    const promoOverlay = document.getElementById('promoPopupOverlay');
+    const promoContainer = document.getElementById('promoPopupContainer');
+    const closeBtn = document.getElementById('closePromoPopup');
+    const dismissBtn = document.getElementById('dismissPromoPopup');
+    
+    // Fonction pour ouvrir le popup
+    function openPromoPopup() {
+      promoOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    // Fonction pour fermer le popup
+    function closePromoPopup() {
+      promoOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+      // Sauvegarder que l'utilisateur a vu le popup
+      localStorage.setItem('promoPopupSeen', 'true');
+    }
+    
+    // Vérifier si le popup a déjà été vu
+    const popupSeen = localStorage.getItem('promoPopupSeen');
+    
+    // Ouvrir automatiquement après 3 secondes si pas encore vu
+    if (!popupSeen) {
+      setTimeout(openPromoPopup, 3000);
+    }
+    
+    // Événements de fermeture
+    closeBtn.addEventListener('click', closePromoPopup);
+    dismissBtn.addEventListener('click', closePromoPopup);
+    
+    // Fermer en cliquant sur l'overlay
+    promoOverlay.addEventListener('click', function(e) {
+      if (e.target === promoOverlay) {
+        closePromoPopup();
+      }
+    });
+    
+    // Fermer avec la touche Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && promoOverlay.classList.contains('active')) {
+        closePromoPopup();
+      }
+    });
+    
+    // Animation du countdown (optionnel)
+    function updateCountdown() {
+      const days = document.getElementById('popupDays');
+      const hours = document.getElementById('popupHours');
+      const minutes = document.getElementById('popupMinutes');
+      
+      if (days && hours && minutes) {
+        // Exemple de countdown statique - vous pouvez le rendre dynamique
+        let daysLeft = parseInt(days.textContent);
+        let hoursLeft = parseInt(hours.textContent);
+        let minutesLeft = parseInt(minutes.textContent);
+        
+        // Décrémenter les minutes
+        minutesLeft--;
+        if (minutesLeft < 0) {
+          minutesLeft = 59;
+          hoursLeft--;
+          if (hoursLeft < 0) {
+            hoursLeft = 23;
+            daysLeft--;
+          }
+        }
+        
+        days.textContent = daysLeft.toString().padStart(2, '0');
+        hours.textContent = hoursLeft.toString().padStart(2, '0');
+        minutes.textContent = minutesLeft.toString().padStart(2, '0');
+      }
+    }
+    
+    // Mettre à jour le countdown toutes les minutes
+    setInterval(updateCountdown, 60000);
   });
 </script>
   
