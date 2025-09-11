@@ -96,15 +96,45 @@
 
     /* Hero Banner */
     .hero-banner {
-      background: linear-gradient(rgba(31,164,122,0.85),rgba(37,99,235,0.85)), url('propos.JPG') center/cover no-repeat;
+      background: url('propos.JPG') center no-repeat;
       color: var(--blanc);
-      min-height: 60vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       position: relative;
       overflow: hidden;
+      background-size: 100% auto;
+      background-position: center top;
+      width: 100%;
+    }
+
+    /* Superposition arrière-plan avec opacité réduite */
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 1;
+    }
+
+    .hero-banner > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Version mobile */
+    @media (max-width: 768px) {
+      .hero-banner {
+        min-height: 70vh;
+        background-attachment: scroll;
+        background-position: center top;
+        background-size: 100% auto;
+      }
     }
 
     .hero-banner h1 {
@@ -112,16 +142,32 @@
       font-weight: 800;
       margin-bottom: 1.2rem;
       letter-spacing: 1px;
-      text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
       animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      color: #ffffff;
     }
 
     .hero-banner p {
       font-size: 1.4rem;
       max-width: 700px;
       margin: 0 auto;
-      color: #e6fff6;
+      color: #ffffff;
       animation: fadeInUp 1.2s 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .hero-banner h1 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+      }
+      
+      .hero-banner p {
+        font-size: 1.1rem;
+        margin-top: 15px;
+      }
     }
 
     /* Sections */
