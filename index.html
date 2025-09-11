@@ -7,7 +7,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGENCE DE MARKETING DIGITAL DAKAR #1 | Porokhane Digital Consulting</title>
+  <title>AGENCE DE MARKETING DIGITAL DAKAR  | Porokhane Digital Consulting</title>
   <meta name="description" content="🥇 AGENCE DE MARKETING DIGITAL DAKAR leader au Sénégal. SEO, création de sites web, stratégie digitale et webmarketing. Devis gratuit sous 24h ⚡">
   <link rel="icon" type="image/png" href="logo.png">
   <!-- Google tag (gtag.js) -->
@@ -620,6 +620,807 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
       border: 5px solid rgba(255,255,255,0.2);
       animation: float 6s ease-in-out infinite;
+    }
+    /* Promos dans le hero */
+    .hero-promos {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(260px, 1fr));
+      gap: 18px;
+      margin: 22px 0 18px;
+    }
+    .promo-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      min-height: 220px;
+      box-shadow: var(--ombre);
+      background: #000;
+      isolation: isolate;
+    }
+    .promo-card .bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      filter: brightness(0.7);
+      z-index: 0;
+      transform: scale(1.02);
+    }
+    .promo-card .scrim {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.75) 100%);
+      z-index: 1;
+    }
+    .promo-content {
+      position: relative; z-index: 2; color: #fff;
+      display: grid; gap: 8px; padding: 16px;
+      text-align: left;
+    }
+    .promo-title { font-weight: 800; font-size: 1.05rem; line-height: 1.25; }
+    .promo-sub { font-weight: 600; font-size: 0.95rem; opacity: 0.95; }
+    .promo-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .badge { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); color: #fff; padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 0.85rem; }
+    .promo-ctas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .promo-ctas a { text-decoration: none; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 999px; background: rgba(255,255,255,0.9); color: #0f172a; font-weight: 800; }
+    .btn-ghost.whatsapp { background: #25D366; color: #fff; }
+    .promo-deadline { margin-top: 4px; font-size: 0.85rem; opacity: 0.95; font-weight: 700; }
+
+    @media (max-width: 900px) {
+      .hero-promos { grid-template-columns: 1fr; }
+    }
+
+    /* Modals (popups) - Design professionnel amélioré */
+    .modal { 
+      position: fixed; 
+      inset: 0; 
+      display: none; 
+      place-items: center; 
+      padding: 20px; 
+      z-index: 2000;
+      animation: fadeIn 0.3s ease-out;
+    }
+    
+    .modal.open { 
+      display: grid; 
+    }
+    
+    .modal::before { 
+      content: ""; 
+      position: absolute; 
+      inset: 0; 
+      background: rgba(15, 23, 42, 0.8); 
+      backdrop-filter: blur(8px); 
+      animation: fadeIn 0.3s ease-out;
+    }
+    
+    .modal-dialog { 
+      position: relative; 
+      z-index: 1; 
+      width: min(950px, 95vw); 
+      max-height: 90vh;
+      border-radius: 24px; 
+      overflow: hidden; 
+      box-shadow: 0 25px 80px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1); 
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%); 
+      color: #fff;
+      transform: scale(0.9);
+      animation: modalSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes modalSlideIn {
+      from { 
+        transform: scale(0.9) translateY(20px); 
+        opacity: 0; 
+      }
+      to { 
+        transform: scale(1) translateY(0); 
+        opacity: 1; 
+      }
+    }
+    
+    .modal-hero { 
+      position: relative; 
+      min-height: 280px; 
+      background-size: cover; 
+      background-position: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .modal-hero::after { 
+      content: ""; 
+      position: absolute; 
+      inset: 0; 
+      background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 70%, rgba(15,23,42,0.95) 100%); 
+    }
+    
+    .modal-body { 
+      position: relative; 
+      padding: 32px; 
+      display: grid; 
+      gap: 20px;
+      background: linear-gradient(145deg, rgba(30,41,59,0.9) 0%, rgba(15,23,42,0.9) 100%);
+    }
+    
+    .modal-title { 
+      font-size: 1.75rem; 
+      font-weight: 800; 
+      line-height: 1.2;
+      background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+    
+    .modal-sub { 
+      opacity: 0.9; 
+      font-weight: 500;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+    
+    .modal-badges { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 12px;
+      margin: 16px 0;
+    }
+    
+    .modal-badges .badge { 
+      background: linear-gradient(135deg, rgba(31,164,122,0.2) 0%, rgba(37,99,235,0.2) 100%); 
+      border: 1px solid rgba(31,164,122,0.4); 
+      color: #10b981;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 12px rgba(31,164,122,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .modal-badges .badge:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(31,164,122,0.2);
+    }
+    
+    .modal-ctas { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 12px; 
+      margin-top: 24px;
+    }
+    
+    .modal-ctas .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .modal-ctas .btn-ghost:hover {
+      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    
+    .modal-ctas .btn-ghost.whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      border-color: #25D366;
+      color: #fff;
+    }
+    
+    .modal-ctas .btn-ghost.whatsapp:hover {
+      background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+      box-shadow: 0 8px 25px rgba(37,211,102,0.3);
+    }
+    
+    .modal-close { 
+      position: absolute; 
+      top: 16px; 
+      right: 16px; 
+      background: rgba(255,255,255,0.95); 
+      color: #0f172a; 
+      border: none; 
+      border-radius: 50%; 
+      width: 44px; 
+      height: 44px; 
+      display: grid; 
+      place-items: center; 
+      cursor: pointer; 
+      font-size: 1.3rem; 
+      font-weight: bold;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+    
+    .modal-close:hover {
+      background: #ef4444;
+      color: white;
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(239,68,68,0.4);
+    }
+    
+    .promo-deadline {
+      margin-top: 16px;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, rgba(239,68,68,0.1) 0%, rgba(220,38,38,0.1) 100%);
+      border: 1px solid rgba(239,68,68,0.3);
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #fca5a5;
+      text-align: center;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    
+    /* Responsive pour les modals */
+    @media (max-width: 768px) {
+      .modal-dialog {
+        width: 95vw;
+        max-height: 85vh;
+        border-radius: 20px;
+      }
+      
+      .modal-hero {
+        min-height: 200px;
+      }
+      
+      .modal-body {
+        padding: 24px 20px;
+        gap: 16px;
+      }
+      
+      .modal-title {
+        font-size: 1.4rem;
+      }
+      
+      .modal-sub {
+        font-size: 1rem;
+      }
+      
+      .modal-ctas {
+        flex-direction: column;
+      }
+      
+      .modal-ctas .btn-ghost {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    /* SECTION OFFRES SPÉCIALES - DESIGN TOP */
+    .offres-speciales {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offres-speciales::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(31,164,122,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(37,99,235,0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .offres-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .offres-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .offres-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+      box-shadow: 0 4px 20px rgba(239,68,68,0.3);
+    }
+
+    .offres-title {
+      font-size: 3rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .offres-subtitle {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .offres-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .offre-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 24px;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .offre-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    }
+
+    .offre-premium {
+      border-top: 4px solid #1fa47a;
+    }
+
+    .offre-trending {
+      border-top: 4px solid #2563eb;
+    }
+
+    .offre-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 32px 0;
+      margin-bottom: 20px;
+    }
+
+    .offre-badge {
+      background: linear-gradient(135deg, #1fa47a, #059669);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .offre-trending .offre-badge {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    }
+
+    .offre-icon {
+      font-size: 2.5rem;
+      opacity: 0.8;
+    }
+
+    .offre-content {
+      padding: 0 32px 32px;
+    }
+
+    .offre-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 16px;
+    }
+
+    .offre-price {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .price-old {
+      font-size: 1rem;
+      color: #64748b;
+      text-decoration: line-through;
+    }
+
+    .price-new {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #1fa47a;
+      background: linear-gradient(135deg, #1fa47a, #059669);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .offre-description {
+      color: #64748b;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .offre-features {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .offre-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .offre-features i {
+      color: #1fa47a;
+      font-size: 1rem;
+      width: 16px;
+    }
+
+    .offre-cta {
+      text-align: center;
+    }
+
+    .btn-offre {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      margin-bottom: 16px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #128C7E, #25D366);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(37,211,102,0.4);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(37,99,235,0.4);
+    }
+
+    .offre-urgence {
+      font-size: 0.9rem;
+      color: #ef4444;
+      font-weight: 700;
+      animation: pulse 2s infinite;
+    }
+
+    .offre-deadline {
+      font-size: 0.9rem;
+      color: #dc2626;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    .offre-contact {
+      margin: 24px 0;
+      padding: 20px;
+      background: rgba(31,164,122,0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(31,164,122,0.2);
+    }
+
+    .offre-contact p {
+      margin-bottom: 16px;
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .phone-btn {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+    }
+
+    .phone-btn:hover {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+    }
+
+    .email-btn {
+      background: linear-gradient(135deg, #64748b, #475569);
+      color: white;
+    }
+
+    .email-btn:hover {
+      background: linear-gradient(135deg, #475569, #64748b);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(100,116,139,0.3);
+    }
+
+    .whatsapp-btn {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+    }
+
+    .whatsapp-btn:hover {
+      background: linear-gradient(135deg, #128C7E, #25D366);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+    }
+
+    .offre-period {
+      margin: 16px 0;
+      padding: 12px 16px;
+      background: rgba(37,99,235,0.1);
+      border-radius: 8px;
+      border-left: 4px solid #2563eb;
+    }
+
+    .offre-period p {
+      margin: 0;
+      color: #1e293b;
+    }
+
+    /* Styles pour les images des offres */
+    .offre-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 20px 20px 0 0;
+      position: relative;
+    }
+
+    .offre-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .offre-card:hover .offre-img {
+      transform: scale(1.05);
+    }
+
+    /* Styles pour le countdown */
+    .countdown-container {
+      margin-top: 20px;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(220,38,38,0.1));
+      border: 2px solid rgba(239,68,68,0.3);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .countdown-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #dc2626;
+      margin-bottom: 16px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .countdown-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      color: white;
+      padding: 12px 16px;
+      border-radius: 12px;
+      min-width: 70px;
+      box-shadow: 0 4px 15px rgba(239,68,68,0.3);
+      animation: pulse 2s infinite;
+    }
+
+    .countdown-number {
+      font-size: 1.8rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .countdown-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes countdownPulse {
+      0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(239,68,68,0.3);
+      }
+      50% { 
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(239,68,68,0.5);
+      }
+    }
+
+    .countdown-item.urgent {
+      animation: countdownPulse 1s infinite;
+    }
+
+    .offres-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 32px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .garantie {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .garantie i {
+      color: #1fa47a;
+      font-size: 1.2rem;
+    }
+
+    .contact-rapide {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+    }
+
+    .contact-rapide a {
+      color: #1fa47a;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+
+    .contact-rapide a:hover {
+      color: #059669;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .offres-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .offre-card {
+        margin: 0 auto;
+        max-width: 500px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .offres-speciales {
+        padding: 60px 0;
+      }
+      
+      .offres-container {
+        padding: 0 15px;
+      }
+      
+      .offres-title {
+        font-size: 2.2rem;
+      }
+      
+      .offres-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      
+      .offre-card {
+        max-width: 100%;
+      }
+      
+      .offre-header,
+      .offre-content {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      
+      .offres-footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .offres-title {
+        font-size: 1.8rem;
+      }
+      
+      .offre-header,
+      .offre-content {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      
+      .btn-offre {
+        width: 100%;
+        justify-content: center;
+      }
     }
     
     /* Sections communes */
@@ -2162,11 +2963,153 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Overlay pour le menu mobile -->
   <div class="menu-overlay" id="menuOverlay"></div>
   
+  <!-- Section Offres Spéciales - Design TOP -->
+  <section class="offres-speciales">
+    <div class="offres-container">
+      <div class="offres-header">
+        <span class="offres-badge">🔥 OFFRES LIMITÉES</span>
+        <h2 class="offres-title">Profitez de nos offres exceptionnelles</h2>
+        <p class="offres-subtitle">Des solutions digitales premium à prix réduit pour booster votre business</p>
+      </div>
+      
+      <div class="offres-grid">
+        <!-- Offre 1: Site Vitrine -->
+        <div class="offre-card offre-premium">
+          <div class="offre-image">
+            <img src="affiche1.png" alt="Offre Site Vitrine" class="offre-img">
+          </div>
+          <div class="offre-header">
+            <div class="offre-badge">RÉSERVÉE AUX 10 PREMIERS</div>
+            <div class="offre-icon">🌐</div>
+          </div>
+          <div class="offre-content">
+            <h3 class="offre-title">Offre spéciale lancement !</h3>
+            <div class="offre-price">
+              <span class="price-new">90.000 FCFA SITE VITRINE</span>
+            </div>
+            <div class="offre-period">
+              <p><strong>📅 Offre valable du 11 au 20 septembre</strong></p>
+            </div>
+            <p class="offre-description">Donnez vie à votre entreprise en ligne avec un site vitrine professionnel ! Faites rayonner votre activité, attirez de nouveaux clients et boostez votre visibilité en ligne grâce à notre expertise digitale.</p>
+            <div class="offre-contact">
+              <p><strong>Contactez-nous dès maintenant :</strong></p>
+              <div class="contact-buttons">
+                <a href="tel:+221710589088" class="contact-btn phone-btn">
+                  <i class="fas fa-phone"></i> +221 71 058 90 88
+                </a>
+                <a href="mailto:contact@digital-porokhane.com" class="contact-btn email-btn">
+                  <i class="fas fa-envelope"></i> contact@digital-porokhane.com
+                </a>
+                <a href="https://wa.me/221710589088" class="contact-btn whatsapp-btn" target="_blank">
+                  <i class="fab fa-whatsapp"></i> WhatsApp +221 71 058 90 88
+                </a>
+              </div>
+            </div>
+            <div class="offre-cta">
+              <div class="offre-urgence">⚠️ Ne ratez pas cette opportunité, les places sont limitées !</div>
+              <div class="countdown-container">
+                <div class="countdown-title">⏰ Temps restant :</div>
+                <div class="countdown" id="countdown1">
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="days1">0</span>
+                    <span class="countdown-label">Jours</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="hours1">0</span>
+                    <span class="countdown-label">Heures</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="minutes1">0</span>
+                    <span class="countdown-label">Minutes</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="seconds1">0</span>
+                    <span class="countdown-label">Secondes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offre 2: Réseaux Sociaux -->
+        <div class="offre-card offre-trending">
+          <div class="offre-image">
+            <img src="affiche2.png" alt="Offre Réseaux Sociaux" class="offre-img">
+          </div>
+          <div class="offre-header">
+            <div class="offre-badge">OFFRE SPÉCIALE RENTRÉE</div>
+            <div class="offre-icon">📱</div>
+          </div>
+          <div class="offre-content">
+            <h3 class="offre-title">Boostez votre présence en ligne dès la rentrée !</h3>
+            <div class="offre-price">
+              <span class="price-new">30.000 FCFA/mois</span>
+            </div>
+            <p class="offre-description">La rentrée est le moment idéal pour donner plus de visibilité à votre business. Avec notre OFFRE SPÉCIALE → création et publication de contenu automatique sur Facebook, Instagram, LinkedIn et TikTok.</p>
+            <div class="offre-period">
+              <p><strong>📅 Offre valable du 11 au 20 septembre</strong></p>
+            </div>
+            <div class="offre-contact">
+              <p><strong>Contactez nous maintenant et profitez de l'offre !</strong></p>
+              <div class="contact-buttons">
+                <a href="tel:+221710589088" class="contact-btn phone-btn">
+                  <i class="fas fa-phone"></i> +221 71 058 90 88
+                </a>
+                <a href="mailto:contact@digital-porokhane.com" class="contact-btn email-btn">
+                  <i class="fas fa-envelope"></i> contact@digital-porokhane.com
+                </a>
+                <a href="https://wa.me/221710589088" class="contact-btn whatsapp-btn" target="_blank">
+                  <i class="fab fa-whatsapp"></i> WhatsApp +221 71 058 90 88
+                </a>
+              </div>
+            </div>
+            <div class="offre-cta">
+              <div class="offre-urgence">⚠️ Ne ratez pas cette opportunité, les places sont limitées !</div>
+              <div class="countdown-container">
+                <div class="countdown-title">⏰ Temps restant :</div>
+                <div class="countdown" id="countdown2">
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="days2">0</span>
+                    <span class="countdown-label">Jours</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="hours2">0</span>
+                    <span class="countdown-label">Heures</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="minutes2">0</span>
+                    <span class="countdown-label">Minutes</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="seconds2">0</span>
+                    <span class="countdown-label">Secondes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="offres-footer">
+        <div class="garantie">
+          <i class="fas fa-shield-alt"></i>
+          <span>Garantie satisfaction 30 jours</span>
+        </div>
+        <div class="contact-rapide">
+          <span>Une question ?</span>
+          <a href="tel:+221710589088">+221 71 058 90 88</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Hero -->
   <section id="accueil" class="hero">
     <div class="container hero-container">
       <div class="hero-content">
-        <h1>AGENCE DE MARKETING DIGITAL DAKAR #1 au Sénégal – Votre partenaire pour un monde numérique inclusif</h1>
+        <h1>AGENCE DE MARKETING DIGITAL DAKAR  au Sénégal – Votre partenaire pour un monde numérique inclusif</h1>
         <p class="hero-subtitle">En tant qu'AGENCE DE MARKETING DIGITAL DAKAR leader, Porokhane Digital Consulting vous accompagne dans votre transformation digitale avec des solutions innovantes et sur mesure pour booster votre activité au Sénégal.</p>
         <div class="hero-buttons">
           
@@ -2179,6 +3122,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </section>
+
+  <!-- Popups promos -->
+  <div class="modal" id="promo1">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="promo1-title">
+      <div class="modal-hero" style="background-image:url('affiche.jpg');"></div>
+      <button class="modal-close" data-close="promo1" aria-label="Fermer">×</button>
+      <div class="modal-body">
+        <div class="modal-title" id="promo1-title">Offre spéciale lancement ! – Site vitrine pro à 90.000 FCFA</div>
+        <div class="modal-sub">Donnez vie à votre entreprise en ligne: design pro, SEO de base, visibilité boostée. Réservée aux 10 premiers clients uniquement.</div>
+        <div class="modal-badges">
+          <span class="badge">Design pro</span>
+          <span class="badge">SEO de base</span>
+          <span class="badge">Support</span>
+          <span class="badge">Livraison rapide</span>
+        </div>
+        <div class="modal-ctas">
+          <a class="btn-ghost" href="tel:+221710589088"><i class="fas fa-phone"></i> +221 71 058 90 88</a>
+          <a class="btn-ghost" href="mailto:contact@digital-porokhane.com"><i class="fas fa-envelope"></i> Email</a>
+          <a class="btn-ghost whatsapp" href="https://wa.me/221710589088" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+        <div class="promo-deadline">Dernier délai: 20/09/2025 • Places limitées</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="promo2">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="promo2-title">
+      <div class="modal-hero" style="background-image:url('supe.jpg');"></div>
+      <button class="modal-close" data-close="promo2" aria-label="Fermer">×</button>
+      <div class="modal-body">
+        <div class="modal-title" id="promo2-title">Offre spéciale réseaux sociaux – 30.000 FCFA / mois</div>
+        <div class="modal-sub">Création et publication automatique de contenu sur Facebook, Instagram, LinkedIn et TikTok. Offre valable du 2 au 15 septembre.</div>
+        <div class="modal-badges">
+          <span class="badge">Planification auto</span>
+          <span class="badge">Créations incluses</span>
+          <span class="badge">Analytique</span>
+        </div>
+        <div class="modal-ctas">
+          <a class="btn-ghost" href="tel:+221710589088"><i class="fas fa-phone"></i> +221 71 058 90 88</a>
+          <a class="btn-ghost" href="mailto:contact@digital-porokhane.com"><i class="fas fa-envelope"></i> Email</a>
+          <a class="btn-ghost whatsapp" href="https://wa.me/221710589088" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+        <div class="promo-deadline">Dernier délai: 20/09/2025 • Places limitées</div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- Section À propos - Version optimisée -->
@@ -4761,6 +5750,190 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
     });
+  </script>
+
+  <!-- Script pour les popups/modals et countdown -->
+  <script>
+    // Fonction pour ouvrir une popup
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden'; // Empêcher le scroll du body
+        
+        // Animation d'entrée
+        const modalDialog = modal.querySelector('.modal-dialog');
+        if (modalDialog) {
+          modalDialog.style.animation = 'modalSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards';
+        }
+      }
+    }
+
+    // Fonction pour le countdown
+    function startCountdown() {
+      // Date limite : 20 septembre 2025 à 23:59:59
+      const targetDate = new Date('2025-09-20T23:59:59').getTime();
+      
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
+        
+        if (timeLeft > 0) {
+          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+          
+          // Mettre à jour les deux countdowns
+          ['1', '2'].forEach(id => {
+            const daysEl = document.getElementById(`days${id}`);
+            const hoursEl = document.getElementById(`hours${id}`);
+            const minutesEl = document.getElementById(`minutes${id}`);
+            const secondsEl = document.getElementById(`seconds${id}`);
+            
+            if (daysEl) daysEl.textContent = days.toString().padStart(2, '0');
+            if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+            if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+            if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+            
+            // Ajouter classe urgent si moins de 24h
+            const countdownItems = document.querySelectorAll(`#countdown${id} .countdown-item`);
+            if (timeLeft < 24 * 60 * 60 * 1000) {
+              countdownItems.forEach(item => item.classList.add('urgent'));
+            }
+          });
+        } else {
+          // Temps écoulé
+          ['1', '2'].forEach(id => {
+            const countdown = document.getElementById(`countdown${id}`);
+            if (countdown) {
+              countdown.innerHTML = '<div style="color: #ef4444; font-weight: 900; font-size: 1.2rem;">OFFRE EXPIRÉE</div>';
+            }
+          });
+        }
+      }
+      
+      // Mettre à jour immédiatement puis toutes les secondes
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+    
+    // Fonction pour fermer une popup
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        const modalDialog = modal.querySelector('.modal-dialog');
+        
+        // Animation de sortie
+        if (modalDialog) {
+          modalDialog.style.animation = 'modalSlideOut 0.3s ease-in forwards';
+        }
+        
+        // Fermer après l'animation
+        setTimeout(() => {
+          modal.classList.remove('open');
+          document.body.style.overflow = ''; // Restaurer le scroll du body
+        }, 300);
+      }
+    }
+    
+    // Animation de sortie
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes modalSlideOut {
+        from { 
+          transform: scale(1) translateY(0); 
+          opacity: 1; 
+        }
+        to { 
+          transform: scale(0.9) translateY(-20px); 
+          opacity: 0; 
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    // Initialisation au chargement de la page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Démarrer le countdown
+      startCountdown();
+      
+      // Gestion des clics sur les liens de fermeture
+      document.querySelectorAll('[data-close-modal]').forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const modalId = this.getAttribute('data-close-modal');
+          closeModal(modalId);
+        });
+      });
+
+      // Fermer les modals en cliquant sur le fond
+      document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeModal(this.id);
+          }
+        });
+      });
+
+      // Fermer les modals avec la touche Échap
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.modal.open').forEach(modal => {
+            closeModal(modal.id);
+          });
+        }
+      });
+
+      // Gestion de l'accessibilité au clavier pour les cartes promo
+      document.querySelectorAll('.promo-card').forEach(card => {
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+            if (onclick) {
+              eval(onclick);
+            }
+          }
+        });
+        
+        // Effet hover amélioré
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-5px) scale(1.02)';
+          this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+      
+      // Animation des badges dans les popups
+      document.querySelectorAll('.modal-badges .badge').forEach((badge, index) => {
+        badge.style.animationDelay = `${index * 0.1}s`;
+        badge.style.animation = 'fadeInUp 0.5s ease-out forwards';
+      });
+    });
+    
+    // Animation fadeInUp pour les badges
+    const badgeStyle = document.createElement('style');
+    badgeStyle.textContent = `
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .modal-badges .badge {
+        opacity: 0;
+      }
+    `;
+    document.head.appendChild(badgeStyle);
   </script>
 
   

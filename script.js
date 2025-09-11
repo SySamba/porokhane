@@ -634,3 +634,58 @@ document.head.appendChild(buttonRippleStyle);
 
 // Initialiser le bouton de retour en haut
 document.addEventListener('DOMContentLoaded', addBackToTopButton); 
+
+// Popups promos
+document.addEventListener('DOMContentLoaded', function(){
+    function openModal(id){
+        var el = document.getElementById(id);
+        if(!el) return;
+        el.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id){
+        var el = document.getElementById(id);
+        if(!el) return;
+        el.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    function delegate(selector, event, handler){
+        document.addEventListener(event, function(e){
+            var t = e.target;
+            while(t && t !== document){
+                if(t.matches && t.matches(selector)){
+                    handler(e, t);
+                    return;
+                }
+                t = t.parentNode;
+            }
+        });
+    }
+    // Open on card click
+    delegate('.promo-card', 'click', function(e, el){
+        // Avoid triggering when clicking links inside the card
+        if(e.target.closest('a')) return;
+        var idx = Array.prototype.indexOf.call(el.parentNode.children, el);
+        openModal(idx === 0 ? 'promo1' : 'promo2');
+    });
+    // Close actions
+    delegate('.modal-close', 'click', function(e, el){
+        var id = el.getAttribute('data-close');
+        closeModal(id);
+    });
+    // Close on backdrop click
+    document.addEventListener('click', function(e){
+        var modal = e.target.classList && e.target.classList.contains('modal') ? e.target : null;
+        if(modal && modal.classList.contains('open')){
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+    });
+    // Close on ESC
+    document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape'){
+            document.querySelectorAll('.modal.open').forEach(function(m){ m.classList.remove('open'); });
+            document.body.style.overflow = '';
+        }
+    });
+});
