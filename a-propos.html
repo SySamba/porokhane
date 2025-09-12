@@ -96,19 +96,35 @@
 
     /* Hero Banner */
     .hero-banner {
-      background: url('propos.JPG') center no-repeat;
+      background: linear-gradient(rgba(31,164,122,0.85),rgba(37,99,235,0.85)), url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
       color: var(--blanc);
-      min-height: 100vh;
+      min-height: 60vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       position: relative;
       overflow: hidden;
-      background-size: 100% auto;
-      background-position: center top;
-      width: 100%;
     }
+
+    .hero-banner h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      letter-spacing: 1px;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    .hero-banner p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #e6fff6;
+      animation: fadeInUp 1.2s 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+
 
     /* Superposition arrière-plan avec opacité réduite */
     .hero-banner::before {
