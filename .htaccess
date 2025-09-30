@@ -1,0 +1,15 @@
+# Activer le moteur de réécriture
+RewriteEngine On
+RewriteBase /
+
+# Redirections 301 vers les pages réelles
+# /ia -> /ia.html
+RewriteRule ^ia/?$ ia.html [L,R=301]
+
+# /emplois -> /offre_cdd_marketing.html
+RewriteRule ^emplois/?$ offre_cdd_marketing.html [L,R=301]
+
+# Optionnel: si vous souhaitez servir automatiquement fichier.html quand on visite /fichier
+# (décommentez ces 2 lignes si vous êtes sûr que cela ne perturbe pas vos assets)
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)/?$ $1.html [L]

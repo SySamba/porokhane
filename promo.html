@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions Spéciales - Montransfert Sàrl | Transport Premium Suisse</title>
+    <meta name="description" content="🚗 Offres promotionnelles exclusives Montransfert Sàrl. -25% sur Tesla Y électrique et Mercedes Classe V. Transport premium à 3.80 CHF/km. Réservez maintenant !">
+    <meta name="keywords" content="promotion transport suisse, tesla y électrique, mercedes classe v, montransfert, vevey, transport premium">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #272c38;
+            background: linear-gradient(135deg, #d9cfb1 0%, #f5f1e8 50%, #d9cfb1 100%);
+            min-height: 100vh;
+        }
+
+        .promo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .promo-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: rgba(39,44,56,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(217,207,177,0.3);
+        }
+
+        .promo-header h1 {
+            font-size: 3rem;
+            color: #272c38;
+            text-shadow: 2px 2px 4px rgba(217,207,177,0.8);
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 2px 2px 4px rgba(217,207,177,0.8), 0 0 20px rgba(39,44,56,0.3); }
+            to { text-shadow: 2px 2px 4px rgba(217,207,177,0.8), 0 0 30px rgba(39,44,56,0.5); }
+        }
+
+        .promo-header p {
+            font-size: 1.3rem;
+            color: #272c38;
+            text-shadow: 2px 2px 4px rgba(217,207,177,0.8);
+            margin-bottom: 10px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(39,44,56,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 100px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(217,207,177,0.3);
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #272c38;
+            text-shadow: 2px 2px 4px rgba(217,207,177,0.8);
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            color: #272c38;
+            text-shadow: 2px 2px 4px rgba(217,207,177,0.8);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .promo-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .promo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border-color: #667eea;
+        }
+
+        .promo-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .promo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .promo-card:hover .promo-img {
+            transform: scale(1.1);
+        }
+
+        .promo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .promo-card:hover .promo-overlay {
+            opacity: 1;
+        }
+
+        .promo-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .promo-icon {
+            font-size: 3rem;
+            margin: 20px 0 10px;
+            color: #667eea;
+        }
+
+        .promo-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+            padding: 0 20px;
+        }
+
+        .promo-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        .promo-price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding: 0 20px;
+        }
+
+        .promo-price-value {
+            font-size: 2.2rem;
+            color: #272c38;
+            font-weight: bold;
+        }
+
+        .promo-currency {
+            font-size: 1.1rem;
+            color: #272c38;
+            font-weight: 600;
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .promo-period {
+            background: rgba(217,207,177, 0.2);
+            padding: 10px;
+            margin: 15px 20px;
+            border-radius: 10px;
+            border-left: 4px solid #272c38;
+        }
+
+        .promo-period p {
+            margin: 0;
+            color: #272c38;
+            font-size: 0.9rem;
+        }
+
+        .promo-contact {
+            padding: 0 20px;
+            margin-bottom: 15px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 15px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .phone-btn {
+            background: linear-gradient(45deg, #272c38, #1a1e26);
+            color: #d9cfb1;
+        }
+
+        .email-btn {
+            background: rgba(217,207,177, 0.2);
+            color: #272c38;
+            border: 1px solid #272c38;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .promo-urgence {
+            background: rgba(255, 107, 107, 0.1);
+            color: #ff6b6b;
+            padding: 15px 20px;
+            margin: 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+
+        .flash-sale {
+            background: rgba(255,107,107,0.1);
+            border: 2px solid #ff6b6b;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(39,44,56,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(217,207,177,0.3);
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            color: #272c38;
+            text-shadow: 2px 2px 4px rgba(217,207,177,0.8);
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            color: #272c38;
+            text-shadow: 2px 2px 4px rgba(217,207,177,0.8);
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            background: linear-gradient(45deg, #272c38, #1a1e26);
+            color: #d9cfb1;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .cta-btn:hover {
+            background: linear-gradient(45deg, #1a1e26, #272c38);
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px rgba(39, 44, 56, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .promo-header h1 {
+                font-size: 2rem;
+            }
+            
+            .promo-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .countdown-timer {
+                gap: 10px;
+            }
+            
+            .countdown-item {
+                min-width: 80px;
+                padding: 15px;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="promo-container">
+        <!-- En-tête de promotion -->
+        <div class="promo-header">
+            <h1>🚗 OFFRES SPÉCIALES TRANSPORT PREMIUM</h1>
+            <p>Montransfert Sàrl - Transport de luxe en Suisse</p>
+            <p>⚡ -25% sur tous nos véhicules premium ⚡</p>
+            
+            <!-- Compteur de temps -->
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Jours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Heures</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Secondes</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grille des promotions -->
+        <div class="promo-grid">
+            <!-- Promo 1: Tesla Y Électrique -->
+            <div class="promo-card flash-sale">
+                <div class="promo-image">
+                    <img src="tesla-y.jpg" alt="Tesla Y Électrique" class="promo-img">
+                    <div class="promo-overlay"></div>
+                </div>
+                <div class="promo-badge">-25% RÉDUCTION</div>
+                <div class="promo-icon">⚡</div>
+                <h3 class="promo-title">Tesla Y 100% Électrique</h3>
+                <div class="promo-price">
+                    <span class="promo-price-value">3.80</span>
+                    <span class="promo-currency">CHF/km</span>
+                </div>
+                <div class="promo-period">
+                    <p><strong>📅 Offre valable jusqu'au 30 septembre</strong></p>
+                </div>
+                <p class="promo-description">
+                    Voyagez autrement à Vevey ! Découvrez notre Tesla Y 100% électrique avec chauffeur professionnel 
+                    et profitez d'un confort haut de gamme à prix réduit. Élégance, confort et mobilité durable.
+                </p>
+                <div class="promo-contact">
+                    <div class="contact-buttons">
+                        <a href="tel:+41795763979" class="contact-btn phone-btn">
+                            <i class="fas fa-phone"></i> +41 79 576 39 79
+                        </a>
+                        <a href="mailto:info@montransfert.ch" class="contact-btn email-btn">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                        <a href="https://wa.me/41795763979" class="contact-btn whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="promo-urgence">⚠️ Réservez dès maintenant directement sur WhatsApp !</div>
+            </div>
+
+            <!-- Promo 2: Mercedes Classe V -->
+            <div class="promo-card">
+                <div class="promo-image">
+                    <img src="mercedes-v.jpg" alt="Mercedes Classe V" class="promo-img">
+                    <div class="promo-overlay"></div>
+                </div>
+                <div class="promo-badge">-25% RÉDUCTION</div>
+                <div class="promo-icon">🚗</div>
+                <h3 class="promo-title">Mercedes Classe V Premium</h3>
+                <div class="promo-price">
+                    <span class="promo-price-value">3.80</span>
+                    <span class="promo-currency">CHF/km</span>
+                </div>
+                <div class="promo-period">
+                    <p><strong>📅 Offre valable jusqu'au 30 septembre</strong></p>
+                </div>
+                <p class="promo-description">
+                    Déjà une semaine de promo chez Montransfert Sàrl ! Profitez d'un confort haut de gamme 
+                    avec notre Mercedes Classe V. Transferts premium en Suisse et à l'international. 
+                    Voyagez avec élégance et tranquillité.
+                </p>
+                <div class="promo-contact">
+                    <div class="contact-buttons">
+                        <a href="tel:+41795763979" class="contact-btn phone-btn">
+                            <i class="fas fa-phone"></i> +41 79 576 39 79
+                        </a>
+                        <a href="mailto:info@montransfert.ch" class="contact-btn email-btn">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                        <a href="https://wa.me/41795763979" class="contact-btn whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="promo-urgence">⚠️ Réservez dès maintenant et voyagez avec élégance !</div>
+            </div>
+        </div>
+
+        <!-- Section Call-to-Action -->
+        <div class="cta-section">
+            <h2 class="cta-title">⏰ Offre Limitée dans le Temps !</h2>
+            <p class="cta-subtitle">
+                Ne manquez pas cette opportunité unique de voyager avec Montransfert Sàrl 
+                à prix exceptionnel. Transport premium en Suisse et à l'international.
+            </p>
+            <button class="cta-btn" onclick="contactUs()">Réservez Maintenant</button>
+        </div>
+    </div>
+
+    <script>
+        // Compteur de temps jusqu'au 30 septembre 2025
+        function startCountdown() {
+            const endDate = new Date('2025-09-30T23:59:59'); // 30 septembre 2025
+            
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endDate.getTime() - now;
+                
+                if (distance < 0) {
+                    // Si le temps est écoulé, afficher "OFFRE EXPIRÉE"
+                    const daysEl = document.getElementById('days');
+                    const hoursEl = document.getElementById('hours');
+                    const minutesEl = document.getElementById('minutes');
+                    const secondsEl = document.getElementById('seconds');
+                    
+                    if (daysEl) daysEl.textContent = '00';
+                    if (hoursEl) hoursEl.textContent = '00';
+                    if (minutesEl) minutesEl.textContent = '00';
+                    if (secondsEl) secondsEl.textContent = '00';
+                    return;
+                }
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                const daysEl = document.getElementById('days');
+                const hoursEl = document.getElementById('hours');
+                const minutesEl = document.getElementById('minutes');
+                const secondsEl = document.getElementById('seconds');
+                
+                if (daysEl) daysEl.textContent = days.toString().padStart(2, '0');
+                if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+                if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+                if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+                
+                // Debug: afficher les valeurs dans la console
+                console.log(`Countdown: ${days}j ${hours}h ${minutes}m ${seconds}s`);
+            }
+            
+            // Démarrer immédiatement et répéter chaque seconde
+            updateCountdown();
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            
+            // Vérifier que les éléments existent
+            console.log('Éléments countdown trouvés:', {
+                days: document.getElementById('days'),
+                hours: document.getElementById('hours'),
+                minutes: document.getElementById('minutes'),
+                seconds: document.getElementById('seconds')
+            });
+        }
+
+        // Animation des cartes au scroll
+        function animateOnScroll() {
+            const cards = document.querySelectorAll('.promo-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        }
+
+        // Fonction pour sélectionner une promo
+        function selectPromo(promoType) {
+            const promoDetails = {
+                seo: {
+                    name: 'Pack SEO Premium',
+                    price: '250 000 FCFA',
+                    description: 'Optimisation SEO complète'
+                },
+                website: {
+                    name: 'Création Site Web Pro',
+                    price: '480 000 FCFA',
+                    description: 'Site web professionnel responsive'
+                },
+                marketing: {
+                    name: 'Stratégie Marketing Digital',
+                    price: '390 000 FCFA',
+                    description: 'Campagne marketing complète'
+                },
+                complete: {
+                    name: 'Pack Complet Digital',
+                    price: '600 000 FCFA',
+                    description: 'Solution digitale complète'
+                }
+            };
+
+            const promo = promoDetails[promoType];
+            
+            // Animation de confirmation
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = '✅ Ajouté !';
+            button.style.background = 'linear-gradient(45deg, #27ae60, #2ecc71)';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
+            }, 2000);
+
+            // Stocker la sélection (localStorage pour persistance)
+            localStorage.setItem('selectedPromo', JSON.stringify(promo));
+            
+            // Afficher une notification
+            showNotification(`${promo.name} ajouté à votre sélection !`);
+            
+            // Rediriger vers la page de contact après 3 secondes
+            setTimeout(() => {
+                window.location.href = 'contact.html?promo=' + promoType;
+            }, 3000);
+        }
+
+        // Fonction pour contacter
+        function contactUs() {
+            // Animation du bouton
+            const button = event.target;
+            button.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                button.style.transform = 'scale(1.1)';
+                // Rediriger vers WhatsApp
+                window.open('https://wa.me/41795763979?text=Bonjour, je suis intéressé par vos offres de transport premium avec -25% de réduction.', '_blank');
+            }, 200);
+        }
+
+        // Fonction pour afficher les notifications
+        function showNotification(message) {
+            // Créer l'élément de notification
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(45deg, #27ae60, #2ecc71);
+                color: white;
+                padding: 15px 25px;
+                border-radius: 10px;
+                font-weight: bold;
+                z-index: 1000;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                transform: translateX(400px);
+                transition: transform 0.3s ease;
+            `;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Animation d'entrée
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Suppression automatique
+            setTimeout(() => {
+                notification.style.transform = 'translateX(400px)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 4000);
+        }
+
+        // Effet de particules en arrière-plan
+        function createParticles() {
+            const particlesContainer = document.createElement('div');
+            particlesContainer.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                z-index: -1;
+            `;
+            document.body.appendChild(particlesContainer);
+
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: absolute;
+                    width: 4px;
+                    height: 4px;
+                    background: rgba(255,255,255,0.3);
+                    border-radius: 50%;
+                    animation: float ${Math.random() * 3 + 2}s ease-in-out infinite;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    animation-delay: ${Math.random() * 2}s;
+                `;
+                particlesContainer.appendChild(particle);
+            }
+
+            // Ajouter l'animation CSS pour les particules
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes float {
+                    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+                    50% { transform: translateY(-20px) rotate(180deg); opacity: 0.5; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Initialisation au chargement de la page
+        document.addEventListener('DOMContentLoaded', function() {
+            startCountdown();
+            animateOnScroll();
+            createParticles();
+            
+            // Message de bienvenue
+            setTimeout(() => {
+                showNotification('🚗 Bienvenue chez Montransfert Sàrl ! -25% sur tous nos véhicules premium !');
+            }, 1000);
+        });
+
+        // Gestion du redimensionnement de la fenêtre
+        window.addEventListener('resize', function() {
+            // Réajuster les animations si nécessaire
+            const cards = document.querySelectorAll('.promo-card');
+            cards.forEach(card => {
+                card.style.transform = 'translateY(0)';
+                card.style.opacity = '1';
+            });
+        });
+    </script>
+</body>
+</html>
