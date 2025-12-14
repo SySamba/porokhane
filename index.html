@@ -4879,8 +4879,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <!-- Footer -->
   <footer class="footer">
-    <form class="newsletter" id="newsletterForm">
-        <input type="email" name="newsletterEmail" placeholder="Votre email pour recevoir nos conseils et actualités" required>
+    <form class="newsletter" id="newsletterForm" action="https://formspree.io/f/myzrvlwo" method="POST">
+        <input type="email" name="email" placeholder="Votre email pour recevoir nos conseils et actualités" required>
         <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
       </form>
     </br>
@@ -5037,14 +5037,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     }
     
-    const newsletterForm = document.getElementById('newsletterForm');
-    if (newsletterForm) {
-      newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
-        this.reset();
-      });
-    }
+    // Le formulaire newsletter est géré par Formspree
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -5585,15 +5578,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 150);
     });
     
-    // Gestion du formulaire newsletter
-    const newsletterForm = document.getElementById('newsletterForm');
-    if (newsletterForm) {
-      newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
-        this.reset();
-      });
-    }
+    // Le formulaire newsletter est géré par Formspree
   }
   
 

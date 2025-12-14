@@ -1276,7 +1276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanrkaop" method="POST">
           <div class="form-group">
             <input type="text" name="name" placeholder="Votre nom complet" required>
           </div>
@@ -1303,8 +1303,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <footer class="footer">
-    <form class="newsletter" id="newsletterForm">
-        <input type="email" name="newsletterEmail" placeholder="Votre email pour recevoir nos conseils et actualités" required>
+    <form class="newsletter" id="newsletterForm" action="https://formspree.io/f/myzrvlwo" method="POST">
+        <input type="email" name="email" placeholder="Votre email pour recevoir nos conseils et actualités" required>
         <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
       </form>
     <br>
@@ -1392,27 +1392,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </form>
   </div>
   <script>
-    // Gestion du formulaire de contact
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Merci pour votre message ! Nous vous contacterons rapidement.');
-      this.reset();
-    });
-    
-    // Gestion de la newsletter
-    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Merci pour votre inscription à notre newsletter !');
-      this.reset();
-    });
-
-
-
-    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
-      this.reset();
-    });
+    // Les formulaires sont maintenant gérés par Formspree
+    // Pas besoin de preventDefault, Formspree gère la soumission
 
     // Script pour le menu hamburger
     const hamburger = document.getElementById('hamburger');
@@ -1465,15 +1446,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.animationPlayState = 'running';
     });
     
-    // Gestion du formulaire newsletter
-    const newsletterForm = document.getElementById('newsletterForm');
-    if (newsletterForm) {
-      newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
-        this.reset();
-      });
-    }
+    // Le formulaire newsletter est géré par Formspree
   }
 });
 
@@ -1589,25 +1562,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </script>
   
 
-  <!-- EmailJS -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("nwp2QzoxgP9Jpfn_S"); // Ton Public Key (User ID) 
-  })();
-
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    emailjs.sendForm('service_c8vcg1l', 'template_v70j2gh', this) // ← remplace par ton vrai Template ID
-      .then(function() {
-        alert("Message envoyé avec succès !");
-        document.getElementById('contactForm').reset();
-      }, function(error) {
-        alert("Erreur lors de l'envoi : " + error.text);
-      });
-  });
-</script>
+  <!-- Formspree gère maintenant l'envoi des formulaires -->
 
 </body>
 </html>

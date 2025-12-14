@@ -63,7 +63,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <style>
     :root {
       --vert: #1fa47a;
@@ -1929,7 +1928,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1>AGENCE DE COMMUNICATION DIGITALE DAKAR - Demandez votre devis gratuit</h1>
         <p>Obtenez une estimation personnalisée pour votre projet digital</p>
       </div>
-      <form class="devis-form" id="devisForm">
+      <form class="devis-form" id="devisForm" action="https://formspree.io/f/mldqvaba" method="POST">
         <h3><i class="fas fa-file-signature"></i> Formulaire de devis</h3>
         <div style="margin-bottom:1rem;">
           <label style="font-weight:600;display:block;margin-bottom:0.5rem;">Vous êtes :</label>
@@ -2027,8 +2026,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <!-- Footer -->
   <footer class="footer">
-    <form class="newsletter" id="newsletterForm">
-        <input type="email" name="newsletterEmail" placeholder="Votre email pour recevoir nos conseils et actualités" required>
+    <form class="newsletter" id="newsletterForm" action="https://formspree.io/f/myzrvlwo" method="POST">
+        <input type="email" name="email" placeholder="Votre email pour recevoir nos conseils et actualités" required>
         <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
       </form>
     <br>
@@ -2194,46 +2193,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     }
     
-    // Form submissions
-    const devisForm = document.getElementById('devisForm');
-    if (devisForm) {
-      emailjs.init('user_xxxxxxxxxxxxxxxxx'); // Remplacez par votre userID EmailJS (public key)
-      devisForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Récupération des données du formulaire
-        const formData = new FormData(devisForm);
-        const data = {};
-        formData.forEach((value, key) => {
-          data[key] = value;
-        });
-        // Envoi via EmailJS
-        emailjs.send('service_c8vcg1l', 'template_xxxxxxxx', data)
-          .then(function(response) {
-            alert('Merci ! Votre demande de devis a bien été envoyée. Nous vous répondrons dans les plus brefs délais.');
-            devisForm.reset();
-          }, function(error) {
-            alert('Une erreur est survenue lors de l\'envoi du devis. Veuillez réessayer.');
-          });
-      });
-    }
+    // Les formulaires sont maintenant gérés par Formspree
     
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Merci pour votre message ! Notre équipe vous contactera très rapidement.');
-        this.reset();
-      });
-    }
-    
-    const newsletterForm = document.getElementById('newsletterForm');
-    if (newsletterForm) {
-      newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
-        this.reset();
-      });
-    }
+    // Les formulaires contact et newsletter sont gérés par Formspree
     
     // Smooth scrolling for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
@@ -2357,15 +2319,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.animationPlayState = 'running';
     });
     
-    // Gestion du formulaire newsletter
-    const newsletterForm = document.getElementById('newsletterForm');
-    if (newsletterForm) {
-      newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
-        this.reset();
-      });
-    }
+    // Le formulaire newsletter est géré par Formspree
   }
 });
 
@@ -2479,29 +2433,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   </script>
 
-
-<!-- Script EmailJS -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  // Initialiser EmailJS avec ton User ID (remplace par le tien)
-  (function(){
-    emailjs.init("nwp2QzoxgP9Jpfn_S"); // ← Remplace ici
-  })();
-
-  // Gérer la soumission du formulaire
-  document.getElementById('devisForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Envoi du formulaire
-    emailjs.sendForm('service_c8vcg1l', 'template_phmim58', this) 
-      .then(function() {
-        alert("Demande de devis envoyée avec succès !");
-        document.getElementById('devisForm').reset(); // Réinitialiser le formulaire
-      }, function(error) {
-        alert("Erreur lors de l'envoi : " + error.text);
-      });
-  });
-</script>
+<!-- Formspree gère maintenant l'envoi des formulaires -->
 
 </body>
 </html>
