@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme Santé Numérique | Porokhane</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #1fa47a 0%, #16a085 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+        
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .project-hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        
+        .project-tags {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .project-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+        
+        .context-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .context-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--gris-texte);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f5f1 0%, #d4f1e8 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--vert);
+        }
+        
+        .video-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        
+        .video-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .features-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: #f8fafc;
+            padding: 2.5rem;
+            border-radius: 16px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--vert);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(31,164,122,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--vert);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: var(--vert);
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+        
+        .benefits-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1fa47a 0%, #16a085 100%);
+            color: white;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .benefit-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+        }
+        
+        .benefit-item i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-stack {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .tech-item {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tech-item i {
+            font-size: 3rem;
+            color: var(--vert);
+            margin-bottom: 1rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: white;
+            color: var(--vert);
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+            margin-top: 2rem;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" style="font-size: 1.8rem; font-weight: 700; color: var(--vert); text-decoration: none;">
+                Porokhane
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#accueil">Accueil</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#realisations">Réalisations</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <div class="container">
+            <h1>Plateforme Santé Numérique</h1>
+            <p class="subtitle">Gestion numérique des patients & files d'attente - Moderniser l'accueil et fluidifier le parcours patient dans les centres de santé</p>
+            <div class="project-tags">
+                <span class="project-tag"><i class="fab fa-react"></i> React</span>
+                <span class="project-tag"><i class="fab fa-js"></i> TypeScript</span>
+                <span class="project-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                <span class="project-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="context-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contexte du Projet</h2>
+            </div>
+            <div class="context-content">
+                <p>Dans de nombreuses structures de santé au Sénégal, la gestion des patients repose encore sur des tickets papier, des registres manuscrits et des files d'attente désorganisées. Cette plateforme a été conçue pour moderniser l'accueil, fluidifier le parcours patient et améliorer la qualité du service, notamment dans les dispensaires et centres de santé.</p>
+                
+                <div class="highlight-box">
+                    <h3 style="color: var(--vert); margin-bottom: 1rem;"><i class="fas fa-bullseye"></i> Objectif de la Solution</h3>
+                    <p>Mettre en place une plateforme numérique complète permettant de :</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Organiser intelligemment les files d'attente</li>
+                        <li>Réduire les temps d'attente</li>
+                        <li>Éliminer les conflits liés au désordre</li>
+                        <li>Améliorer l'expérience des patients et du personnel</li>
+                        <li>Centraliser les données médicales et administratives</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Démonstration Vidéo</h2>
+                <p>Découvrez en action notre plateforme de gestion des patients</p>
+            </div>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe src="https://drive.google.com/file/d/1lIGqCk9_iYf_j0V55tsaMUhBXWBdmY3M/preview" allow="autoplay" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fonctionnalités Clés</h2>
+                <p>Une solution complète adaptée au contexte africain</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-plus"></i></div>
+                    <h3>Enregistrement Numérique</h3>
+                    <p>Enregistrement rapide des patients avec capture des informations essentielles et création automatique du dossier.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-ticket-alt"></i></div>
+                    <h3>Attribution Automatique</h3>
+                    <p>Génération automatique de numéros de passage avec système de priorités configurables.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3>Gestion Intelligente</h3>
+                    <p>Files d'attente intelligentes avec priorités pour personnes âgées, femmes enceintes et urgences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tv"></i></div>
+                    <h3>Affichage Temps Réel</h3>
+                    <p>Écrans d'affichage en temps réel des numéros appelés avec notifications sonores.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-folder-open"></i></div>
+                    <h3>Dossier Patient</h3>
+                    <p>Dossier numérique complet avec historique des consultations, tests et prescriptions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h3>Interface Médecin</h3>
+                    <p>Interface dédiée pour consultation, saisie de diagnostic et prescription électronique.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Tableau de Bord</h3>
+                    <p>Statistiques et suivi d'activité en temps réel pour la direction et l'administration.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Mode Hors Ligne</h3>
+                    <p>Fonctionnement en réseau local ou en ligne, adapté aux connexions instables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Valeur Ajoutée</h2>
+                <p style="color: rgba(255,255,255,0.9);">Les bénéfices concrets de la plateforme</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Organisation Fluide</h3>
+                    <p>Gestion équitable et transparente des files d'attente</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Meilleure Prise en Charge</h3>
+                    <p>Attention particulière aux patients vulnérables</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-smile"></i>
+                    <h3>Réduction du Stress</h3>
+                    <p>Personnel médical plus serein et efficace</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-database"></i>
+                    <h3>Données Fiables</h3>
+                    <p>Statistiques précises pour la direction</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-globe-africa"></i>
+                    <h3>Adapté au Contexte</h3>
+                    <p>Solution pensée pour l'Afrique</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technologies Utilisées</h2>
+                <p>Stack technique moderne et robuste</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                    <p>Interface utilisateur réactive</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-js"></i>
+                    <h3>TypeScript</h3>
+                    <p>Code typé et sécurisé</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                    <p>Backend performant</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-database"></i>
+                    <h3>PostgreSQL</h3>
+                    <p>Base de données fiable</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Sécurité</h3>
+                    <p>Authentification par rôles</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="index.html#realisations" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Retour aux réalisations
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Porokhane</h3>
+                    <p>Votre partenaire digital au Sénégal</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> contact@porokhane.com</p>
+                    <p><i class="fas fa-phone"></i> +221 XX XXX XX XX</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Porokhane. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

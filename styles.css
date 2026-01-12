@@ -8,6 +8,18 @@
   --gris-titre: #1e293b;
   --vert-fonce: #17805c;
   --bleu-fonce: #1746a2;
+  
+  /* Variables pour compatibilité */
+  --vert: #1fa47a;
+  --bleu: #2563eb;
+  --gris: #f8fafc;
+  --gris-fonce: #e2e8f0;
+  --noir: #1e293b;
+  --vert-clair: #d1fae5;
+  --bleu-clair: #dbeafe;
+  --ombre: 0 4px 24px rgba(0,0,0,0.08);
+  --rayon: 16px;
+  --rayon-grand: 24px;
 }
 
 body {
@@ -36,6 +48,35 @@ body {
   transition: all 0.3s;
 }
 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo a:hover {
+  transform: scale(1.05);
+}
+
+.nav-logo img {
+  height: 90px;
+  width: auto;
+  display: block;
+  margin-right: 0.5rem;
+}
+
 .nav-logo h2 {
   color: var(--vert-islam);
   font-weight: 700;
@@ -47,15 +88,23 @@ body {
   display: flex;
   list-style: none;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--gris-titre);
-  font-weight: 500;
+  font-weight: 600;
   padding: 0.5rem 0;
   transition: color 0.3s;
   position: relative;
+  display: inline-block;
 }
 
 .nav-link::after {
@@ -79,10 +128,130 @@ body {
   width: 100%;
 }
 
+/* Bouton Devis */
+.nav-devis {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(90deg, var(--vert-islam), var(--bleu-theologie));
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s;
+  box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav-devis:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+  background: linear-gradient(90deg, var(--bleu-theologie), var(--vert-islam));
+}
+
+.devis-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.nav-devis:hover .devis-icon {
+  transform: translateX(5px);
+}
+
+/* Sous-menus */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--blanc);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem 0;
+  list-style: none;
+}
+
+.nav-item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.submenu-link {
+  display: block;
+  padding: 0.7rem 1.5rem;
+  color: var(--gris-titre);
+  text-decoration: none;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.submenu-link:hover {
+  background: #f8fafc;
+  color: var(--vert-islam);
+  padding-left: 1.7rem;
+}
+
+/* Menu Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--vert-islam);
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .bar {
@@ -571,6 +740,118 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+  .nav-menu {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  
+  .nav-devis {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav-logo img {
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex !important;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--blanc);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 2rem 2rem 2rem;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    gap: 0;
+    margin: 0;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-menu li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+  
+  .nav-link::after {
+    display: none;
+  }
+  
+  .nav-devis {
+    margin: 1rem 0 0 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .submenu {
+    position: static !important;
+    transform: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    background: #f8fafc !important;
+    border-radius: 8px !important;
+    margin-top: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-width: auto !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .nav-item:hover .submenu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: 200px !important;
+    margin-top: 0.5rem !important;
+    padding: 0.5rem 0 !important;
+  }
+  
+  .submenu-link {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-size: 1rem;
+  }
+  
+  .submenu-link:hover {
+    padding-left: 1rem;
+  }
+  
+  .submenu-link:last-child {
+    border-bottom: none;
+  }
+}
+
 @media (max-width: 900px) {
   .about-content, .contact-content {
     flex-direction: column;
@@ -581,6 +862,7 @@ body {
     gap: 1.5rem;
   }
 }
+
 @media (max-width: 600px) {
   .hero-title {
     font-size: 2rem;
@@ -632,4 +914,124 @@ body {
   50% { opacity: 1; transform: scale(1.05); }
   70% { transform: scale(0.9); }
   100% { opacity: 1; transform: scale(1); }
+}
+
+/* Hero Banner pour page réalisations */
+.hero-banner {
+  padding: 140px 20px 80px;
+  background: linear-gradient(135deg, var(--vert-islam) 0%, var(--bleu-theologie) 100%);
+  color: var(--blanc);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--blanc);
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+/* Section générique */
+.section {
+  padding: 80px 0;
+}
+
+/* Réalisations Grid */
+.realisations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Realisation Card */
+.realisation-card {
+  background: var(--blanc);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(31,164,122,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.realisation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(31,164,122,0.15);
+}
+
+.realisation-img {
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.realisation-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.realisation-card:hover .realisation-img img {
+  transform: scale(1.05);
+}
+
+.realisation-info {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.realisation-info h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.realisation-info p {
+  color: var(--gris-texte);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+
+/* Responsive pour réalisations */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 120px 15px 60px;
+  }
+  
+  .hero-banner h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-banner p {
+    font-size: 1.1rem;
+  }
+  
+  .realisations-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner h1 {
+    font-size: 1.8rem;
+  }
+  
+  .realisation-info {
+    padding: 1.5rem;
+  }
 } 

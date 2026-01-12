@@ -693,8 +693,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </ul>
         </li>
         
-        <li><a href="offre_cdd_marketing.html" class="nav-link">Emplois</a></li>
-        <!--<li><a href="emplois" class="nav-link">Emplois</a></li>-->
+        <li><a href="offre_cdd_marketing.html" class="nav-link">Réalisations</a></li>
+        <!--<li><a href="Réalisations" class="nav-link">Réalisations</a></li>-->
         <li>
           <a href="devis.html" class="nav-devis">
             Demandez un devis
@@ -720,14 +720,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="projet-content">
         <h2>Détails du projet</h2>
         <ul>
-          <li><b>Technologie :</b> WordPress (thème sur mesure, plugins adaptés au secteur médical)</li>
+          <li><b>Technologie :</b> WordPress (thème personnalisé, plugins WooCommerce pour e-commerce médical)</li>
           <li><b>Modernisation UX/UI :</b> Refonte complète du design pour une navigation intuitive et professionnelle</li>
           <li><b>Responsive :</b> Affichage optimal sur mobile, tablette et desktop</li>
           <li><b>Contenus adaptés :</b> Mise en avant des services, catalogue produits, blog d'actualités médicales</li>
           <li><b>SEO :</b> Optimisation technique (balises, rapidité, structure, sitemap, sécurité HTTPS, balisage schema.org)</li>
           <li><b>Performance :</b> Chargement rapide, images optimisées, cache, CDN</li>
         </ul>
-        <a href="https://shop.teranganumerique.com/" target="_blank" class="site-link">
+        <a href="https://medicaldistribution.sn/" target="_blank" class="site-link">
           <i class="fas fa-external-link-alt"></i> Voir le site en ligne
         </a>
       </div>
@@ -785,8 +785,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="footer-section">
           <h4>Informations</h4>
           <ul>
-            <li><a href="#accueil"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+            <li><a href="https://digital-porokhane.com/"><i class="fas fa-chevron-right"></i> Accueil</a></li>
             <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="realisations.html"><i class="fas fa-chevron-right"></i> Réalisations</a></li>
             
             <li><a href="#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
             <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
@@ -908,6 +909,120 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+  </script>
+
+  <!-- Chatbot -->
+  <button class="chatbot-btn" id="chatbotBtn" aria-label="Ouvrir le chat" title="Discuter avec nous">
+    <i class="fas fa-comments"></i>
+  </button>
+
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <span>🤖 Porokhane Chatbot</span>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">&times;</button>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+      <div class="chatbot-message">Bonjour 👋 ! Je suis le chatbot Porokhane. Posez-moi vos questions ou choisissez une suggestion ci-dessous :</div>
+      <div class="chatbot-message" style="background: var(--bleu-clair); color: var(--bleu); font-size: 0.98rem;">
+        Vous pouvez aussi envoyer ici un message à notre équipe, nous vous répondrons rapidement !
+      </div>
+      <div class="chatbot-suggestions" id="chatbotSuggestions">
+        <button class="chatbot-suggestion">Quels services proposez-vous ?</button>
+        <button class="chatbot-suggestion">Comment Demandez un devis ?</button>
+        <button class="chatbot-suggestion">Quels sont vos délais de livraison ?</button>
+        <button class="chatbot-suggestion">Proposez-vous des formations ?</button>
+        <button class="chatbot-suggestion">Comment vous contacter ?</button>
+      </div>
+    </div>
+    <form class="chatbot-footer" id="chatbotForm" autocomplete="off">
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Écrivez votre question..." />
+      <button type="submit" class="chatbot-send" aria-label="Envoyer"><i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+  // Chatbot JavaScript (copié de index.html)
+  const chatbotFAQ = {
+    'services': "Nous proposons : formations (robotique, impression 3D, cybersécurité), marketing digital, accompagnement (automatisation, IA, bases de données), développement web mobile et plus encore !",
+    'devis': "Pour Demandez un devis, cliquez sur 'Demandez un devis' dans le menu ou rendez-vous sur la page devis. Nous vous répondrons rapidement !",
+    'délais': "Nos délais varient selon le projet, mais nous nous engageons à livrer dans les temps convenus, avec un suivi régulier.",
+    'formations': "Oui, nous proposons des formations en robotique, impression 3D, cybersécurité et plus. Consultez la page Formations pour plus d'infos !",
+    'contacter': "Vous pouvez nous contacter via la page Contact, par téléphone ou par email. Nous sommes à votre écoute !",
+    'salutation': "Bonjour et bienvenue chez Porokhane Digital Consulting ! 👋\n\nJe peux répondre à vos questions sur :\n• Nos services\n• Comment Demandez un devis\n• Nos délais de livraison\n• Nos formations\n• Comment nous contacter\n\nCliquez sur une suggestion ou posez votre question !"
+  };
+
+  const chatbotBtn = document.getElementById('chatbotBtn');
+  const chatbotWindow = document.getElementById('chatbotWindow');
+  const chatbotClose = document.getElementById('chatbotClose');
+  const chatbotBody = document.getElementById('chatbotBody');
+  const chatbotForm = document.getElementById('chatbotForm');
+  const chatbotInput = document.getElementById('chatbotInput');
+  const chatbotSuggestions = document.getElementById('chatbotSuggestions');
+
+  if (chatbotBtn) {
+    chatbotBtn.onclick = () => {
+      chatbotWindow.style.display = 'flex';
+      setTimeout(() => chatbotInput.focus(), 300);
+    };
+  }
+  
+  if (chatbotClose) {
+    chatbotClose.onclick = () => {
+      chatbotWindow.style.display = 'none';
+    };
+  }
+
+  if (chatbotSuggestions) {
+    chatbotSuggestions.onclick = function(e) {
+      if (e.target.classList.contains('chatbot-suggestion')) {
+        const question = e.target.textContent;
+        addUserMessage(question);
+        respondToUser(question);
+      }
+    };
+  }
+
+  if (chatbotForm) {
+    chatbotForm.onsubmit = function(e) {
+      e.preventDefault();
+      const question = chatbotInput.value.trim();
+      if (question) {
+        addUserMessage(question);
+        respondToUser(question);
+        chatbotInput.value = '';
+      }
+    };
+  }
+
+  function addUserMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message user';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function addBotMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function respondToUser(question) {
+    let response = "Je suis désolé, je n'ai pas compris votre question. Essayez une des suggestions ci-dessus ou contactez-nous directement.";
+    const q = question.toLowerCase();
+    if (q.includes('service')) response = chatbotFAQ['services'];
+    else if (q.includes('devis')) response = chatbotFAQ['devis'];
+    else if (q.includes('délai') || q.includes('delai')) response = chatbotFAQ['délais'];
+    else if (q.includes('formation')) response = chatbotFAQ['formations'];
+    else if (q.includes('contact')) response = chatbotFAQ['contacter'];
+    else if (q.includes('salut') || q.includes('bonjour') || q.includes('bonsoir') || q.includes('hello')) response = chatbotFAQ['salutation'];
+    setTimeout(() => addBotMessage(response), 600);
+  }
   </script>
 </body>
 </html>

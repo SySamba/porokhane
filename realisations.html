@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Réalisations | Porokhane Digital Consulting</title>
+  <meta name="description" content="Découvrez nos réalisations en marketing digital, création de sites web et développement d'applications au Sénégal.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation (copié de index.html) -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <div class="nav-logo">
+      <a href="https://digital-porokhane.com/">
+        <img src="logo.png" alt="Porokhane Digital Consulting Logo">
+      </a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="https://digital-porokhane.com/" class="nav-link">Accueil</a></li>
+      <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+      <li class="nav-item">
+        <a href="formations.html" class="nav-link">Formations <i class="fas fa-chevron-down"></i></a>
+        <ul class="submenu">
+          <li><a href="robotique.html" class="submenu-link">Robotique</a></li>
+          <li><a href="impression_3D.html" class="submenu-link">Impression 3D</a></li>
+          <li><a href="cybersecurite.html" class="submenu-link">Cybersécurité</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="marketing.html" class="nav-link">Marketing <i class="fas fa-chevron-down"></i></a>
+        <ul class="submenu">
+          <li><a href="audit_express.html" class="submenu-link">Audit Express</a></li>
+          <li><a href="site.html" class="submenu-link">Création/Réfonte de site</a></li>
+          <li><a href="strategie_digitale.html" class="submenu-link">Stratégie digitale</a></li>
+          <li><a href="seo.html" class="submenu-link">Référencement naturel</a></li>
+          <li><a href="reseaux_sociaux.html" class="submenu-link">Réseaux sociaux</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="accompagnement.html" class="nav-link">Accompagnement <i class="fas fa-chevron-down"></i></a>
+        <ul class="submenu">
+          <li><a href="automatisation.html" class="submenu-link">Automatisation</a></li>
+          <li><a href="base_donnee.html" class="submenu-link">Bases de données</a></li>
+          <li><a href="erp.html" class="submenu-link">ERP</a></li>
+          <li><a href="ia.html" class="submenu-link">Intelligence Artificielle</a></li>
+        </ul>
+      </li>
+      <li><a href="offre_cdd_marketing.html" class="nav-link">Réalisations</a></li>
+      <li>
+        <a href="devis.html" class="nav-devis">
+          Demandez un devis
+          <span class="devis-icon"><i class="fas fa-paper-plane"></i></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- Hero Section -->
+<section class="hero-banner">
+  <div class="container">
+    <h1>Nos Réalisations</h1>
+    <p>Découvrez nos projets concrets réalisés pour nos clients au Sénégal et en Afrique. De la création de sites web au développement d'applications métier.</p>
+  </div>
+</section>
+
+<!-- Réalisations Section -->
+<section class="section" style="padding: 80px 0; background: #f8fafc;">
+  <div class="container">
+    <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
+      <button class="filter-btn active" data-filter="all" style="padding: 0.8rem 1.5rem; border: 2px solid var(--vert); background: var(--vert); color: white; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Tous les projets</button>
+      <button class="filter-btn" data-filter="web" style="padding: 0.8rem 1.5rem; border: 2px solid var(--vert); background: white; color: var(--vert); border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Sites Web</button>
+      <button class="filter-btn" data-filter="app" style="padding: 0.8rem 1.5rem; border: 2px solid var(--vert); background: white; color: var(--vert); border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Applications</button>
+      <button class="filter-btn" data-filter="social" style="padding: 0.8rem 1.5rem; border: 2px solid var(--vert); background: white; color: var(--vert); border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Réseaux Sociaux</button>
+    </div>
+
+    <div class="realisations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem;">
+      
+      <!-- Projet 1: Elite Science -->
+      <div class="realisation-card project-card" data-category="web" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Elite Science - Plateforme éducative" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; top: 15px; right: 15px; background: var(--vert); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">WordPress</div>
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="color: var(--vert); margin-bottom: 0.8rem; font-size: 1.4rem;">Elite Science</h3>
+          <p style="color: var(--gris-texte); margin-bottom: 1rem; line-height: 1.6;">Plateforme éducative spécialisée avec système LMS complet, gestion de contenu pédagogique par niveau, optimisation de documents PDF et système d'abonnement premium.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">WordPress</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">LearnDash LMS</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">WooCommerce</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Elementor</span>
+          </div>
+          <a href="https://elite-science.com/" target="_blank" class="btn btn-secondary" style="margin-top: auto;"><i class="fas fa-external-link-alt"></i> Visiter le site</a>
+        </div>
+      </div>
+
+      <!-- Projet 2: Khidma Service Digital -->
+      <div class="realisation-card project-card" data-category="web" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(37,99,235,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Khidma Service Digital - Agence de communication" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; top: 15px; right: 15px; background: var(--bleu); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">WordPress</div>
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="color: var(--bleu); margin-bottom: 0.8rem; font-size: 1.4rem;">Khidma Service Digital</h3>
+          <p style="color: var(--gris-texte); margin-bottom: 1rem; line-height: 1.6;">Site web professionnel pour agence de communication avec galerie portfolio interactive, système de devis multi-étapes, optimisation SEO locale et performances exceptionnelles (PageSpeed 92).</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">WordPress</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Elementor Pro</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Yoast SEO</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">AJAX</span>
+          </div>
+          <a href="https://khidmaservices.com/" target="_blank" class="btn btn-secondary" style="margin-top: auto;"><i class="fas fa-external-link-alt"></i> Visiter le site</a>
+        </div>
+      </div>
+
+      <!-- Projet 3: Saveur Deco Events - Réseaux Sociaux -->
+      <div class="realisation-card project-card" data-category="social" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Saveur Deco Events - Gestion réseaux sociaux" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; top: 15px; right: 15px; background: #E1306C; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Social Media</div>
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="color: var(--vert); margin-bottom: 0.8rem; font-size: 1.4rem;">Saveur Deco Events</h3>
+          <p style="color: var(--gris-texte); margin-bottom: 1rem; line-height: 1.6;">Gestion complète des réseaux sociaux pour une entreprise d'événementiel : création de contenu visuel, stratégie d'engagement et animation de communauté sur Facebook, Instagram et TikTok.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Facebook</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Instagram</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">TikTok</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Content Creation</span>
+          </div>
+          <div style="display: flex; gap: 0.8rem; margin-top: auto;">
+            <a href="https://www.facebook.com/saveur.deco.events" target="_blank" class="btn btn-secondary" style="flex: 1; font-size: 0.9rem;"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/saveur_deco_events/" target="_blank" class="btn btn-secondary" style="flex: 1; font-size: 0.9rem;"><i class="fab fa-instagram"></i> Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 4: DigiDocs - GED -->
+      <div class="realisation-card project-card" data-category="app" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(37,99,235,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1568667256549-094345857637?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="DigiDocs - Gestion Électronique des Documents" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; top: 15px; right: 15px; background: #8e44ad; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Application Web</div>
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="color: var(--bleu); margin-bottom: 0.8rem; font-size: 1.4rem;">DigiDocs - GED</h3>
+          <p style="color: var(--gris-texte); margin-bottom: 1rem; line-height: 1.6;">Application de Gestion Électronique des Documents avec système d'archivage intelligent, upload/téléchargement sécurisé, recherche avancée et gestion des droits d'accès par utilisateur.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">React</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Node.js</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">PostgreSQL</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">TypeScript</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1M-8Odn7kmtZVjTJflwe2v2sp2xtqrltS/view?usp=drive_link" target="_blank" class="btn btn-secondary" style="margin-top: auto;"><i class="fas fa-play-circle"></i> Voir la démo vidéo</a>
+        </div>
+      </div>
+
+      <!-- Projet 5: Plateforme Santé - Gestion Files d'Attente -->
+      <div class="realisation-card project-card" data-category="app" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plateforme de gestion patients et files d'attente" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; top: 15px; right: 15px; background: var(--vert); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">HealthTech</div>
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="color: var(--vert); margin-bottom: 0.8rem; font-size: 1.4rem;">Plateforme Santé Numérique</h3>
+          <p style="color: var(--gris-texte); margin-bottom: 1rem; line-height: 1.6;">Solution complète de gestion numérique des patients et files d'attente pour centres de santé : enregistrement digital, gestion intelligente des priorités, dossier patient numérique et affichage temps réel.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">React</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">TypeScript</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Node.js</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">PostgreSQL</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1lIGqCk9_iYf_j0V55tsaMUhBXWBdmY3M/view" target="_blank" class="btn btn-secondary" style="margin-top: auto;"><i class="fas fa-play-circle"></i> Voir la démo vidéo</a>
+        </div>
+      </div>
+
+      <!-- Projet 6: Refonte Medical Distribution -->
+      <div class="realisation-card project-card" data-category="web" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden;">
+          <img src="ref.jpg" alt="Collaboration équipe médicale sénégalaise" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="color: var(--vert); margin-bottom: 0.7rem;">Refonte du site Medical Distribution</h3>
+          <p style="color: var(--gris-texte); flex: 1;">Modernisation complète du site web pour une expérience utilisateur optimale, responsive et adaptée au secteur médical.</p>
+          <a href="medical-distribution.html" class="btn btn-secondary" style="margin-top: 1.2rem;"><i class="fas fa-eye"></i> Voir le projet</a>
+        </div>
+      </div>
+
+      <!-- Projet 7: Marketing Digital Medical Distribution -->
+      <div class="realisation-card project-card" data-category="social" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden;">
+          <img src="MDD/MUCOSITE.png" alt="Collaboration marketing digital équipe sénégalaise" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="color: var(--bleu); margin-bottom: 0.7rem;">Accompagnement Marketing Digital de Medical Distribution</h3>
+          <p style="color: var(--gris-texte); flex: 1;">Rédaction, visuels et vidéos pour valoriser les produits et services de Medical Distribution sur le web et les réseaux sociaux.</p>
+          <a href="mdd.html" class="btn btn-secondary" style="margin-top: 1.2rem;"><i class="fas fa-eye"></i> Voir le contenu</a>
+        </div>
+      </div>
+
+      <!-- Projet 8: Marketing Digital MonTransfert -->
+      <div class="realisation-card project-card" data-category="social" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(37,99,235,0.08); overflow: hidden; display: flex; flex-direction: column;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden;">
+          <img src="pro-mo.png" alt="Témoignage client Porokhane">
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="color: var(--vert); margin-bottom: 0.7rem;">Accompagnement Marketing Digital de MonTransfert</h3>
+          <p style="color: var(--gris-texte); flex: 1;">Conception de supports digitaux, articles et vidéos pour renforcer la notoriété et l'engagement autour de MonTransfert.</p>
+          <a href="mo.html" class="btn btn-secondary" style="margin-top: 1.2rem;"><i class="fas fa-eye"></i> Voir le contenu</a>
+        </div>
+      </div>
+
+      <!-- Projet 9: Site Web Saveur Deco -->
+      <div class="realisation-card project-card" data-category="web" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden;">
+          <img src="saveurdeco.png" alt="Site web Saveur Deco">
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="color: var(--bleu); margin-bottom: 0.7rem;">Site Web Saveur Deco</h3>
+          <p style="color: var(--gris-texte); flex: 1;">Développement d'un site web moderne avec React et Node.js pour Saveur Deco, offrant une expérience utilisateur optimale et un design élégant.</p>
+          <a href="https://saveurdeco.fr/" target="_blank" class="btn btn-secondary" style="margin-top: 1.2rem;"><i class="fas fa-external-link-alt"></i> Voir le site</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer (copié de index.html) -->
+<footer class="footer">
+  <form class="newsletter" id="newsletterForm" action="https://formspree.io/f/myzrvlwo" method="POST">
+    <input type="email" name="email" placeholder="Votre email pour recevoir nos conseils et actualités" required>
+    <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
+  </form>
+  <br>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="nav-logo">
+          <a href="https://digital-porokhane.com/">
+            <img src="icone.png" alt="Porokhane Digital Consulting Logo">
+          </a>
+        </div>
+        <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/Porokhane.Digital.Consulting" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/porokhane-digital-consulting" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/porokhane_digital_consulting/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Nos Services</h4>
+        <ul>
+          <li><a href="formations.html"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
+          <li><a href="marketing.html"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+          <li><a href="accompagnement.html"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+          <li><a href="erp.html"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+          <li><a href="site.html"><i class="fas fa-chevron-right"></i> Développement Web et mobile</a></li>
+          <li><a href="securite.html"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="https://digital-porokhane.com/"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+          <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+          <li><a href="realisations.html"><i class="fas fa-chevron-right"></i> Réalisations</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+          <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+          <li><a href="index.html#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+221710589088"><i class="fas fa-phone"></i> +221 710589088</a></li>
+          <li><a href="tel:+338306157"><i class="fas fa-phone"></i> +33 830 61 57</a></li>
+          <li><a href="mailto:sambasy837@gmail.com"><i class="fas fa-envelope"></i> sambasy837@gmail.com</a></li>
+          <li><a href="https://maps.app.goo.gl/jCAGEpeoCBiSNQSr5" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Chatbot (copié de index.html) -->
+<style>
+  .chatbot-btn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background: linear-gradient(90deg, var(--vert), var(--bleu));
+    color: var(--blanc);
+    border: none;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    box-shadow: 0 4px 24px rgba(31,164,122,0.18);
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: background 0.3s, transform 0.2s;
+    animation: chatbot-bounce 1.5s infinite alternate;
+  }
+  .chatbot-btn:hover {
+    background: linear-gradient(90deg, var(--bleu), var(--vert));
+    transform: scale(1.08);
+  }
+  @keyframes chatbot-bounce {
+    0% { box-shadow: 0 4px 24px rgba(31,164,122,0.18); transform: scale(1); }
+    100% { box-shadow: 0 8px 32px rgba(37,99,235,0.18); transform: scale(1.08); }
+  }
+  .chatbot-btn .fa-comments {
+    font-size: 2.2rem;
+    animation: chatbot-icon-wave 2.5s infinite;
+  }
+  @keyframes chatbot-icon-wave {
+    0%, 100% { color: var(--blanc); transform: scale(1); }
+    50% { color: var(--vert); transform: scale(1.18) rotate(-8deg); }
+  }
+  .chatbot-window {
+    position: fixed;
+    bottom: 110px;
+    right: 32px;
+    width: 340px;
+    max-width: 95vw;
+    background: var(--blanc);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+    border: 1.5px solid var(--vert);
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    animation: fadeInUp 0.4s;
+  }
+  .chatbot-header {
+    background: linear-gradient(90deg, var(--vert), var(--bleu));
+    color: var(--blanc);
+    padding: 1rem 1.2rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .chatbot-close {
+    background: none;
+    border: none;
+    color: var(--blanc);
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: color 0.2s;
+  }
+  .chatbot-close:hover {
+    color: #e67e22;
+  }
+  .chatbot-body {
+    padding: 1.2rem;
+    background: var(--gris);
+    min-height: 180px;
+    max-height: 320px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .chatbot-message {
+    background: var(--blanc);
+    border-radius: 14px 14px 14px 4px;
+    padding: 0.8rem 1rem;
+    color: var(--gris-titre);
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(31,164,122,0.07);
+    align-self: flex-start;
+    max-width: 85%;
+  }
+  .chatbot-message.user {
+    background: var(--vert);
+    color: var(--blanc);
+    align-self: flex-end;
+    border-radius: 14px 14px 4px 14px;
+  }
+  .chatbot-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+   .newsletter { 
+      margin-top: 3rem; 
+      background: var(--blanc); 
+      border-radius: var(--rayon); 
+      padding: 1.5rem; 
+      box-shadow: var(--ombre); 
+      display: flex; 
+      gap: 0.5rem; 
+      align-items: center; 
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: 4px solid var(--vert);
+    }
+    
+    .newsletter input[type="email"] { 
+      flex: 1; 
+      padding: 1rem; 
+      border-radius: 8px; 
+      border: 1px solid var(--gris-fonce); 
+      font-size: 1rem; 
+      transition: all 0.3s;
+    }
+    
+    .newsletter input[type="email"]:focus {
+      border-color: var(--vert);
+      outline: none;
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    .newsletter button { 
+      padding: 1rem 2rem; 
+      border-radius: 8px; 
+      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      border: none; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .newsletter button:hover { 
+      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
+    }
+
+  .chatbot-suggestion {
+    background: var(--bleu-clair);
+    color: var(--bleu);
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .chatbot-suggestion:hover {
+    background: var(--bleu);
+    color: var(--blanc);
+  }
+  .chatbot-footer {
+    padding: 0.8rem 1.2rem;
+    background: var(--blanc);
+    border-top: 1px solid var(--gris-fonce);
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .chatbot-input {
+    flex: 1;
+    border: 1px solid var(--gris-fonce);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+  }
+  .chatbot-input:focus {
+    border-color: var(--vert);
+  }
+  .chatbot-send {
+    background: linear-gradient(90deg, var(--vert), var(--bleu));
+    color: var(--blanc);
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .chatbot-send:hover {
+    background: linear-gradient(90deg, var(--bleu), var(--vert));
+  }
+
+  
+</style>
+
+<button class="chatbot-btn" id="chatbotBtn" aria-label="Ouvrir le chat" title="Discuter avec nous">
+  <i class="fas fa-comments"></i>
+</button>
+
+<div class="chatbot-window" id="chatbotWindow">
+  <div class="chatbot-header">
+    <span>🤖 Porokhane Chatbot</span>
+    <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">&times;</button>
+  </div>
+  <div class="chatbot-body" id="chatbotBody">
+    <div class="chatbot-message">Bonjour 👋 ! Je suis le chatbot Porokhane. Posez-moi vos questions ou choisissez une suggestion ci-dessous :</div>
+    <div class="chatbot-message" style="background: var(--bleu-clair); color: var(--bleu); font-size: 0.98rem;">
+      Vous pouvez aussi envoyer ici un message à notre équipe, nous vous répondrons rapidement !
+    </div>
+    <div class="chatbot-suggestions" id="chatbotSuggestions">
+      <button class="chatbot-suggestion">Quels services proposez-vous ?</button>
+      <button class="chatbot-suggestion">Comment Demandez un devis ?</button>
+      <button class="chatbot-suggestion">Quels sont vos délais de livraison ?</button>
+      <button class="chatbot-suggestion">Proposez-vous des formations ?</button>
+      <button class="chatbot-suggestion">Comment vous contacter ?</button>
+    </div>
+  </div>
+  <form class="chatbot-footer" id="chatbotForm" autocomplete="off">
+    <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Écrivez votre question..." />
+    <button type="submit" class="chatbot-send" aria-label="Envoyer"><i class="fas fa-paper-plane"></i></button>
+  </form>
+</div>
+
+<script>
+// Filtrage des projets
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.getAttribute('data-filter');
+    
+    filterButtons.forEach(btn => {
+      btn.classList.remove('active');
+      btn.style.background = 'white';
+      btn.style.color = 'var(--vert)';
+    });
+    button.classList.add('active');
+    button.style.background = 'var(--vert)';
+    button.style.color = 'white';
+    
+    projectCards.forEach(card => {
+      if (filter === 'all' || card.getAttribute('data-category') === filter) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Chatbot (copié de index.html)
+const chatbotFAQ = {
+  'services': "Nous proposons : formations (robotique, impression 3D, cybersécurité), marketing digital, accompagnement (automatisation, IA, bases de données), développement web mobile et plus encore !",
+  'devis': "Pour Demandez un devis, cliquez sur 'Demandez un devis' dans le menu ou rendez-vous sur la page devis. Nous vous répondrons rapidement !",
+  'délais': "Nos délais varient selon le projet, mais nous nous engageons à livrer dans les temps convenus, avec un suivi régulier.",
+  'formations': "Oui, nous proposons des formations en robotique, impression 3D, cybersécurité et plus. Consultez la page Formations pour plus d'infos !",
+  'contacter': "Vous pouvez nous contacter via la page Contact, par téléphone ou par email. Nous sommes à votre écoute !",
+  'salutation': "Bonjour et bienvenue chez Porokhane Digital Consulting ! 👋\n\nJe peux répondre à vos questions sur :\n• Nos services\n• Comment Demandez un devis\n• Nos délais de livraison\n• Nos formations\n• Comment nous contacter\n\nCliquez sur une suggestion ou posez votre question !"
+};
+
+const chatbotBtn = document.getElementById('chatbotBtn');
+const chatbotWindow = document.getElementById('chatbotWindow');
+const chatbotClose = document.getElementById('chatbotClose');
+const chatbotBody = document.getElementById('chatbotBody');
+const chatbotForm = document.getElementById('chatbotForm');
+const chatbotInput = document.getElementById('chatbotInput');
+const chatbotSuggestions = document.getElementById('chatbotSuggestions');
+
+chatbotBtn.onclick = () => {
+  chatbotWindow.style.display = 'flex';
+  setTimeout(() => chatbotInput.focus(), 300);
+};
+chatbotClose.onclick = () => {
+  chatbotWindow.style.display = 'none';
+};
+
+chatbotSuggestions.onclick = function(e) {
+  if (e.target.classList.contains('chatbot-suggestion')) {
+    const question = e.target.textContent;
+    addUserMessage(question);
+    respondToUser(question);
+  }
+};
+
+chatbotForm.onsubmit = function(e) {
+  e.preventDefault();
+  const question = chatbotInput.value.trim();
+  if (question) {
+    addUserMessage(question);
+    respondToUser(question);
+    chatbotInput.value = '';
+  }
+};
+
+function addUserMessage(text) {
+  const msg = document.createElement('div');
+  msg.className = 'chatbot-message user';
+  msg.textContent = text;
+  chatbotBody.appendChild(msg);
+  chatbotBody.scrollTop = chatbotBody.scrollHeight;
+}
+
+function addBotMessage(text) {
+  const msg = document.createElement('div');
+  msg.className = 'chatbot-message';
+  msg.textContent = text;
+  chatbotBody.appendChild(msg);
+  chatbotBody.scrollTop = chatbotBody.scrollHeight;
+}
+
+function respondToUser(question) {
+  let response = "Je suis désolé, je n'ai pas compris votre question. Essayez une des suggestions ci-dessus ou contactez-nous directement.";
+  const q = question.toLowerCase();
+  if (q.includes('service')) response = chatbotFAQ['services'];
+  else if (q.includes('devis')) response = chatbotFAQ['devis'];
+  else if (q.includes('délai') || q.includes('delai')) response = chatbotFAQ['délais'];
+  else if (q.includes('formation')) response = chatbotFAQ['formations'];
+  else if (q.includes('contact')) response = chatbotFAQ['contacter'];
+  else if (q.includes('salut') || q.includes('bonjour') || q.includes('bonsoir') || q.includes('hello')) response = chatbotFAQ['salutation'];
+  setTimeout(() => addBotMessage(response), 600);
+}
+
+// Menu hamburger
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+const menuOverlay = document.getElementById('menuOverlay');
+
+hamburger.addEventListener('click', function() {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+  menuOverlay.classList.toggle('active');
+  
+  if (navMenu.classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+});
+
+menuOverlay.addEventListener('click', function() {
+  hamburger.classList.remove('active');
+  navMenu.classList.remove('active');
+  menuOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+});
+
+const navLinks = document.querySelectorAll('.nav-link, .submenu-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+});
+
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 100) {
+    navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+    navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+  } else {
+    navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+    navbar.style.boxShadow = 'none';
+  }
+});
+</script>
+</body>
+</html>
