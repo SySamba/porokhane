@@ -1,3 +1,4 @@
+
 # 🚀 Optimisations PageSpeed Mobile - digital-porokhane.com
 
 ## ✅ Optimisations Appliquées
@@ -38,18 +39,24 @@
 - Bonnes pratiques: 96/100
 - SEO: 100/100
 
-**Après optimisations (estimé):**
-- Performance: **75-85/100** ⬆️ (+12-22 points)
-- Accessibilité: **96-98/100** ⬆️ (+2-4 points)
+**Après optimisations (17 févr. 2026, 11:46):**
+- Performance: **83/100** ⬆️ (+20 points) 🎉
+- Accessibilité: 94/100
 - Bonnes pratiques: 96/100
 - SEO: 100/100
 
 ### Métriques Core Web Vitals Améliorées:
-- **FCP** (First Contentful Paint): 3.8s → ~2.5s ⬇️
-- **LCP** (Largest Contentful Paint): 4.9s → ~3.2s ⬇️
-- **TBT** (Total Blocking Time): 50ms → ~30ms ⬇️
-- **CLS** (Cumulative Layout Shift): 0.213 → ~0.05 ⬇️
-- **SI** (Speed Index): 3.8s → ~2.8s ⬇️
+- **FCP** (First Contentful Paint): 3.8s → **1.7s** ⬇️ (-55%) ✨
+- **LCP** (Largest Contentful Paint): 4.9s → **4.6s** ⬇️ (-6%)
+- **TBT** (Total Blocking Time): 50ms → **30ms** ⬇️ (-40%) ✅
+- **CLS** (Cumulative Layout Shift): 0.213 → **0.004** ⬇️ (-98%) 🎯
+- **SI** (Speed Index): 3.8s → **2.2s** ⬇️ (-42%) 🚀
+
+### Optimisations Supplémentaires Appliquées (Phase 2):
+- ✅ Preload de l'image LCP (accueil11.png) avec `fetchpriority="high"`
+- ✅ Retrait du `loading="lazy"` sur l'image hero (LCP)
+- ✅ Ajout de `width` et `height` sur toutes les images de services
+- ✅ Ajout de la balise `<main>` pour l'accessibilité (landmark principal)
 
 ## 🔧 Recommandations Supplémentaires
 
