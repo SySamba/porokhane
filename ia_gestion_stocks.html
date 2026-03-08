@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<script async>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}window.addEventListener('load',function(){loadScript(function(){beTracker.t({hash:"4839b43b65f279b77271391d6643be69"})})});</script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comment l'Intelligence Artificielle optimise la gestion des stocks des entreprises | Porokhane Digital</title>
+  <meta name="description" content="Découvrez comment l'IA révolutionne la gestion des stocks : prévision de la demande, automatisation, réduction des coûts et amélioration de la rentabilité.">
+  <link rel="icon" type="image/png" href="logo.png">
+  
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-11G8LFMCBG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-11G8LFMCBG');
+  </script>
+  
+  <link rel="canonical" href="https://digital-porokhane.com/ia_gestion_stocks.html">
+  
+  <meta name="keywords" content="intelligence artificielle gestion stocks, IA supply chain, optimisation stocks IA, gestion stocks entreprise, automatisation stocks, prévision demande IA">
+  
+  <meta property="og:title" content="Comment l'Intelligence Artificielle optimise la gestion des stocks des entreprises">
+  <meta property="og:description" content="L'IA révolutionne la gestion des stocks : prévision de la demande, automatisation et réduction des coûts pour les entreprises.">
+  <meta property="og:image" content="https://digital-porokhane.com/logo.png">
+  <meta property="og:url" content="https://digital-porokhane.com/ia_gestion_stocks.html">
+  <meta property="og:type" content="article">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comment l'Intelligence Artificielle optimise la gestion des stocks des entreprises">
+  <meta name="twitter:description" content="L'IA révolutionne la gestion des stocks : prévision de la demande, automatisation et réduction des coûts.">
+  <meta name="twitter:image" content="https://digital-porokhane.com/logo.png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --vert: #1fa47a;
+      --vert-clair: #d1fae5;
+      --bleu: #2563eb;
+      --bleu-clair: #dbeafe;
+      --blanc: #fff;
+      --noir: #0f172a;
+      --gris: #f8fafc;
+      --gris-fonce: #e2e8f0;
+      --gris-texte: #475569;
+      --gris-titre: #1e293b;
+      --ombre: 0 4px 24px rgba(0,0,0,0.08);
+      --rayon: 16px;
+      --rayon-grand: 24px;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--gris);
+      color: var(--gris-titre);
+      line-height: 1.7;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+    }
+    
+    .nav-logo a {
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+    
+    .nav-logo a:hover {
+      transform: scale(1.05);
+    }
+    
+    .nav-logo img {
+      height: 90px;
+      width: auto;
+      display: block;
+      margin-right: 0.5rem;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .nav-item {
+      position: relative;
+    }
+    
+    .nav-link {
+      color: var(--gris-titre);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s;
+      display: inline-block;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--vert);
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover {
+      color: var(--vert);
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-10px);
+      background: var(--blanc);
+      border-radius: var(--rayon);
+      box-shadow: var(--ombre);
+      min-width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 100;
+      border: 1px solid var(--gris-fonce);
+      padding: 0.5rem 0;
+    }
+    
+    .nav-item:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    .submenu-link {
+      display: block;
+      padding: 0.7rem 1.5rem;
+      color: var(--noir);
+      text-decoration: none;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+    
+    .submenu-link:hover {
+      background: var(--vert-clair);
+      color: var(--vert);
+      padding-left: 1.7rem;
+    }
+    
+    .nav-devis {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.7rem 1.5rem;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.4s;
+      box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    
+    .nav-devis:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+    }
+    
+    .devis-icon {
+      margin-left: 0.5rem;
+      transition: transform 0.3s;
+    }
+    
+    .nav-devis:hover .devis-icon {
+      transform: translateX(5px);
+    }
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+    
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--vert);
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .article-hero {
+      background: linear-gradient(135deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    
+    .article-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .article-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .article-content {
+      max-width: 900px;
+      margin: -60px auto 60px;
+      background: var(--blanc);
+      border-radius: var(--rayon-grand);
+      padding: 50px 60px;
+      box-shadow: var(--ombre);
+    }
+    
+    .article-content p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: var(--gris-texte);
+    }
+    
+    .article-content h2 {
+      color: var(--vert);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .article-content h3 {
+      color: var(--bleu);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .article-content ul {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+    
+    .article-content ul li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: var(--gris-texte);
+      line-height: 1.7;
+    }
+    
+    .article-content ul li strong {
+      color: var(--gris-titre);
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, var(--vert-clair), var(--bleu-clair));
+      border-left: 4px solid var(--vert);
+      padding: 2rem;
+      border-radius: var(--rayon);
+      margin: 2.5rem 0;
+    }
+    
+    .highlight-box h3 {
+      color: var(--vert);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .highlight-box p {
+      color: var(--gris-titre);
+      margin-bottom: 1rem;
+    }
+    
+    .highlight-box ul {
+      margin-top: 1rem;
+    }
+    
+    .cta-box {
+      background: linear-gradient(135deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      padding: 3rem;
+      border-radius: var(--rayon-grand);
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    .cta-box h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--blanc);
+    }
+    
+    .cta-box p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: rgba(255,255,255,0.95);
+    }
+    
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: var(--blanc);
+      color: var(--vert);
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    
+    .recent-articles {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    
+    .recent-articles h2 {
+      color: var(--vert);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .article-card {
+      background: var(--blanc);
+      border-radius: var(--rayon);
+      padding: 1.5rem;
+      box-shadow: var(--ombre);
+      transition: all 0.3s;
+      border-left: 4px solid var(--vert);
+    }
+    
+    .article-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(31, 164, 122, 0.15);
+    }
+    
+    .article-card h3 {
+      color: var(--bleu);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+    }
+    
+    .article-card p {
+      color: var(--gris-texte);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    
+    .article-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--vert);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .article-link:hover {
+      color: var(--bleu);
+      gap: 0.8rem;
+    }
+    
+    .footer {
+      background: linear-gradient(135deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      padding: 80px 0 30px;
+      position: relative;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .footer-section h3, .footer-section h4 {
+      color: var(--blanc);
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .footer-section h3::after, .footer-section h4::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+    }
+    
+    .footer-section p {
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-section ul li a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .footer-section ul li a:hover {
+      color: var(--blanc);
+      transform: translateX(5px);
+    }
+    
+    .footer-section ul li a i {
+      font-size: 0.8rem;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blanc);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+      background: var(--blanc);
+      color: var(--vert);
+      transform: translateY(-3px) scale(1.1);
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 2rem;
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .chatbot-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      border: none;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      box-shadow: 0 4px 24px rgba(31,164,122,0.18);
+      font-size: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 9999;
+      transition: background 0.3s, transform 0.2s;
+    }
+    
+    .chatbot-btn:hover {
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+      transform: scale(1.08);
+    }
+    
+    .chatbot-window {
+      position: fixed;
+      bottom: 110px;
+      right: 32px;
+      width: 340px;
+      max-width: 95vw;
+      background: var(--blanc);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+      border: 1.5px solid var(--vert);
+      z-index: 9999;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .chatbot-header {
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      padding: 1rem 1.2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .chatbot-close {
+      background: none;
+      border: none;
+      color: var(--blanc);
+      font-size: 1.3rem;
+      cursor: pointer;
+      margin-left: 1rem;
+      transition: color 0.2s;
+    }
+    
+    .chatbot-close:hover {
+      color: #e67e22;
+    }
+    
+    .chatbot-body {
+      padding: 1.2rem;
+      background: var(--gris);
+      min-height: 180px;
+      max-height: 320px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .chatbot-message {
+      background: var(--blanc);
+      border-radius: 14px 14px 14px 4px;
+      padding: 0.8rem 1rem;
+      color: var(--gris-titre);
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(31,164,122,0.07);
+      align-self: flex-start;
+      max-width: 85%;
+    }
+    
+    .chatbot-message.user {
+      background: var(--vert);
+      color: var(--blanc);
+      align-self: flex-end;
+      border-radius: 14px 14px 4px 14px;
+    }
+    
+    .chatbot-suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    
+    .chatbot-suggestion {
+      background: var(--bleu-clair);
+      color: var(--bleu);
+      border: none;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    
+    .chatbot-suggestion:hover {
+      background: var(--bleu);
+      color: var(--blanc);
+    }
+    
+    .chatbot-footer {
+      padding: 0.8rem 1.2rem;
+      background: var(--blanc);
+      border-top: 1px solid var(--gris-fonce);
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    .chatbot-input {
+      flex: 1;
+      border: 1px solid var(--gris-fonce);
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    
+    .chatbot-input:focus {
+      border-color: var(--vert);
+    }
+    
+    .chatbot-send {
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .chatbot-send:hover {
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+    }
+    
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex !important;
+        order: 2;
+        margin-left: auto;
+      }
+      
+      .nav-menu {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: var(--blanc) !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        padding: 80px 2rem 2rem 2rem !important;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1) !important;
+        transition: right 0.3s ease !important;
+        gap: 0 !important;
+        margin: 0 !important;
+        overflow-y: auto !important;
+        z-index: 1000 !important;
+        display: none !important;
+      }
+      
+      .nav-menu.active {
+        right: 0 !important;
+        display: flex !important;
+      }
+      
+      .nav-logo img {
+        height: 70px;
+      }
+      
+      .article-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .article-content {
+        padding: 30px 20px;
+        margin: -40px 15px 40px;
+      }
+      
+      .article-content h2 {
+        font-size: 1.6rem;
+      }
+      
+      .article-content h3 {
+        font-size: 1.3rem;
+      }
+      
+      .article-content p, .article-content ul li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo">
+        <a href="https://digital-porokhane.com/">
+          <img src="logo.png" alt="Porokhane Digital Consulting Logo">
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="https://digital-porokhane.com/" class="nav-link">Accueil</a></li>
+        <li><a href="blog.html" class="nav-link" style="color: var(--vert);">Actualités</a></li>
+        <li class="nav-item">
+          <a href="formations.html" class="nav-link">Formations <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="robotique.html" class="submenu-link">Robotique</a></li>
+            <li><a href="impression_3D.html" class="submenu-link">Impression 3D</a></li>
+            <li><a href="cybersecurite.html" class="submenu-link">Cybersécurité</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="marketing.html" class="nav-link">Marketing <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="audit_express.html" class="submenu-link">Audit Express</a></li>
+            <li><a href="site.html" class="submenu-link">Création/Réfonte de site</a></li>
+            <li><a href="strategie_digitale.html" class="submenu-link">Stratégie digitale</a></li>
+            <li><a href="seo.html" class="submenu-link">Référencement naturel</a></li>
+            <li><a href="reseaux_sociaux.html" class="submenu-link">Réseaux sociaux</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="accompagnement.html" class="nav-link">Accompagnement <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="automatisation.html" class="submenu-link">Automatisation</a></li>
+            <li><a href="base_donnee.html" class="submenu-link">Bases de données</a></li>
+            <li><a href="erp.html" class="submenu-link">ERP</a></li>
+            <li><a href="ia.html" class="submenu-link">Intelligence Artificielle</a></li>
+          </ul>
+        </li>
+        <li><a href="realisations.html" class="nav-link">Emplois</a></li>
+        <li>
+          <a href="devis.html" class="nav-devis">
+            Demandez un devis
+            <span class="devis-icon"><i class="fas fa-paper-plane"></i></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <h1>Comment l'Intelligence Artificielle optimise la gestion des stocks des entreprises</h1>
+      <div class="article-meta">
+        <span><i class="far fa-calendar-alt"></i> 8 mars 2026</span>
+        <span><i class="far fa-folder"></i> Intelligence Artificielle</span>
+        <span><i class="far fa-clock"></i> 6 min de lecture</span>
+      </div>
+    </div>
+  </section>
+
+  <article class="article-content">
+    <p>Dans un environnement économique de plus en plus compétitif, la gestion efficace des stocks est devenue un enjeu stratégique pour les entreprises. Trop de stock immobilise la trésorerie, tandis qu'un manque de stock peut entraîner des ruptures et une perte de clients.</p>
+    
+    <p>Aujourd'hui, l'intelligence artificielle (IA) offre de nouvelles solutions pour optimiser la gestion des stocks, améliorer la prise de décision et renforcer la performance des entreprises.</p>
+
+    <h2>L'IA au service d'une gestion des stocks plus intelligente</h2>
+    <p>L'optimisation des stocks par l'IA repose principalement sur l'analyse de données. Les algorithmes de machine learning peuvent analyser l'historique des ventes, les tendances de consommation, les saisons ou encore les promotions afin de prévoir la demande future avec précision.</p>
+    
+    <p>Grâce à ces modèles prédictifs, les entreprises peuvent anticiper leurs besoins en produits, ajuster leurs commandes et éviter les erreurs liées aux estimations manuelles.</p>
+
+    <h2>Prévoir la demande et éviter les ruptures de stock</h2>
+    <ul>
+      <li><strong>Réduire les ruptures de stock</strong> : L'IA analyse les données historiques pour anticiper les pics de demande et garantir la disponibilité des produits</li>
+      <li><strong>Éviter les excédents de produits</strong> : En prévoyant avec précision la demande, les entreprises évitent le surstockage coûteux</li>
+      <li><strong>Adapter les niveaux de stock aux périodes de forte demande</strong> : L'IA identifie les tendances saisonnières et ajuste automatiquement les commandes</li>
+      <li><strong>Améliorer la satisfaction des clients</strong> : Des stocks optimisés garantissent que les produits sont toujours disponibles quand les clients en ont besoin</li>
+    </ul>
+
+    <h2>Automatisation et gain de temps pour les équipes</h2>
+    <ul>
+      <li><strong>Surveiller les niveaux de stock en temps réel</strong> : Les systèmes IA suivent continuellement l'état des stocks et alertent en cas de seuil critique</li>
+      <li><strong>Générer des alertes en cas d'anomalie</strong> : Détection automatique des écarts entre les prévisions et la réalité</li>
+      <li><strong>Optimiser les réapprovisionnements</strong> : L'IA calcule automatiquement les quantités optimales à commander et le moment idéal pour le faire</li>
+      <li><strong>Suivre les flux logistiques</strong> : Traçabilité complète des produits de l'entrepôt jusqu'au client final</li>
+    </ul>
+
+    <h2>Réduction des coûts et amélioration de la rentabilité</h2>
+    <ul>
+      <li><strong>Réduction des coûts de stockage</strong> : Moins de stock immobilisé signifie moins de frais d'entreposage et de gestion</li>
+      <li><strong>Meilleure utilisation de l'espace</strong> : L'optimisation des stocks permet de libérer de l'espace pour d'autres activités</li>
+      <li><strong>Amélioration des marges</strong> : Moins de produits invendus et de démarques grâce à une meilleure rotation des stocks</li>
+      <li><strong>Augmentation du chiffre d'affaires</strong> : La disponibilité constante des produits évite les ventes manquées</li>
+    </ul>
+
+    <h2>Vers une supply chain plus intelligente</h2>
+    <p>L'intégration de l'intelligence artificielle dans la gestion des stocks s'inscrit dans une transformation plus globale de la chaîne d'approvisionnement. Grâce à l'analyse en temps réel des données et à l'automatisation des décisions, les entreprises peuvent optimiser leurs opérations logistiques et améliorer leur efficacité globale.</p>
+    
+    <p>Dans les années à venir, l'IA devrait jouer un rôle encore plus important dans la gestion des entreprises, notamment dans les domaines de la logistique, du commerce et du e-commerce.</p>
+
+    <div class="highlight-box">
+      <h3>Pourquoi choisir Porokhane Digital pour votre transformation IA ?</h3>
+      <p>Chez <strong>Porokhane Digital Consulting</strong>, nous accompagnons les entreprises sénégalaises et africaines dans leur transformation digitale grâce à l'intelligence artificielle. Notre expertise nous permet de :</p>
+      <ul>
+        <li><strong>Analyser vos besoins spécifiques</strong> : Audit complet de vos processus de gestion des stocks</li>
+        <li><strong>Déployer des solutions IA sur-mesure</strong> : Intégration d'algorithmes de prévision adaptés à votre secteur d'activité</li>
+        <li><strong>Former vos équipes</strong> : Accompagnement et formation pour une adoption réussie des outils IA</li>
+        <li><strong>Assurer un suivi continu</strong> : Maintenance et optimisation de vos systèmes pour des performances maximales</li>
+      </ul>
+    </div>
+
+    <h2>Conclusion</h2>
+    <p>L'optimisation des stocks par l'intelligence artificielle représente une opportunité majeure pour les entreprises qui souhaitent améliorer leur performance et leur compétitivité.</p>
+    
+    <p>En combinant analyse prédictive, automatisation et gestion intelligente des données, l'IA permet d'éviter les ruptures de stock, de réduire les coûts et d'améliorer l'expérience client.</p>
+
+    <div class="cta-box">
+      <h3>Prêt à optimiser votre gestion des stocks avec l'IA ?</h3>
+      <p>Contactez-nous dès aujourd'hui pour découvrir comment l'intelligence artificielle peut transformer votre entreprise.</p>
+      <a href="devis.html" class="cta-btn"><i class="fas fa-rocket"></i> Demandez votre devis gratuit</a>
+    </div>
+  </article>
+
+  <section class="recent-articles">
+    <h2>Articles récents</h2>
+    <div class="articles-grid">
+      <div class="article-card">
+        <h3>Comment digitaliser une école au Sénégal : Le guide complet de la plateforme LMS</h3>
+        <p>Découvrez les 5 étapes clés pour transformer votre école traditionnelle en institution connectée avec une plateforme LMS adaptée au contexte sénégalais.</p>
+        <a href="digitalisation_ecole_lms.html" class="article-link">
+          Lire l'article <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="article-card">
+        <h3>Pourquoi la transformation digitale est un levier indispensable pour les entreprises africaines</h3>
+        <p>Dans un monde de plus en plus connecté, la transformation digitale n'est plus une option, mais une nécessité pour les entreprises africaines et sénégalaises.</p>
+        <a href="transformation_digitale.html" class="article-link">
+          Lire l'article <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="article-card">
+        <h3>Algorithme Google SEO 2025 : 10 astuces pour être visible</h3>
+        <p>Découvrez les nouvelles règles Google pour 2025 et 10 astuces pour rendre votre site visible et performant.</p>
+        <a href="visible_seo.html" class="article-link">
+          Lire l'article <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="article-card">
+        <h3>Sécuriser son site WordPress</h3>
+        <p>Protégez votre site WordPress contre les piratages avec 10 conseils simples et efficaces, accessibles à tous.</p>
+        <a href="wordpress.html" class="article-link">
+          Lire l'article <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="nav-logo">
+            <a href="https://digital-porokhane.com/">
+              <img src="icone.png" alt="Porokhane Digital Consulting Logo">
+            </a>
+          </div>
+          <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/Porokhane.Digital.Consulting" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="tiktok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/company/porokhane-digital-consulting" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/porokhane_digital_consulting/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Nos Services</h4>
+          <ul>
+            <li><a href="formations.html"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
+            <li><a href="marketing.html"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+            <li><a href="accompagnement.html"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+            <li><a href="erp.html"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+            <li><a href="site.html"><i class="fas fa-chevron-right"></i> Développement Web et Mobile</a></li>
+            <li><a href="securite.html"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="https://digital-porokhane.com/"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+            <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+            <li><a href="index.html#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+            <li><a href="index.html#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+221710589088"><i class="fas fa-phone"></i> +221 710589088</a></li>
+            <li><a href="tel:+338306157"><i class="fas fa-phone"></i> +33 830 61 57</a></li>
+            <li><a href="mailto:sambasy837@gmail.com"><i class="fas fa-envelope"></i> sambasy837@gmail.com</a></li>
+            <li><a href="https://maps.app.goo.gl/jCAGEpeoCBiSNQSr5" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="chatbot-btn" id="chatbotBtn" aria-label="Ouvrir le chat" title="Discuter avec nous">
+    <i class="fas fa-comments"></i>
+  </button>
+
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <span>🤖 Porokhane Chatbot</span>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">&times;</button>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+      <div class="chatbot-message">Bonjour 👋 ! Je suis le chatbot Porokhane. Posez-moi vos questions ou choisissez une suggestion ci-dessous :</div>
+      <div class="chatbot-message" style="background: var(--bleu-clair); color: var(--bleu); font-size: 0.98rem;">
+        Vous pouvez aussi envoyer ici un message à notre équipe, nous vous répondrons rapidement !
+      </div>
+      <div class="chatbot-suggestions" id="chatbotSuggestions">
+        <button class="chatbot-suggestion">Quels services proposez-vous ?</button>
+        <button class="chatbot-suggestion">Comment Demandez un devis ?</button>
+        <button class="chatbot-suggestion">Quels sont vos délais de livraison ?</button>
+        <button class="chatbot-suggestion">Proposez-vous des formations ?</button>
+        <button class="chatbot-suggestion">Comment vous contacter ?</button>
+      </div>
+    </div>
+    <form class="chatbot-footer" id="chatbotForm" autocomplete="off">
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Écrivez votre question..." />
+      <button type="submit" class="chatbot-send" aria-label="Envoyer"><i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    document.addEventListener('click', function(event) {
+      const isClickInsideNav = navMenu.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+      
+      if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+    const chatbotFAQ = {
+      'services': "Nous proposons : formations (robotique, impression 3D, cybersécurité), marketing digital, accompagnement (automatisation, IA, bases de données), développement web mobile et plus encore !",
+      'devis': "Pour Demandez un devis, cliquez sur 'Demandez un devis' dans le menu ou rendez-vous sur la page devis. Nous vous répondrons rapidement !",
+      'délais': "Nos délais varient selon le projet, mais nous nous engageons à livrer dans les temps convenus, avec un suivi régulier.",
+      'formations': "Oui, nous proposons des formations en robotique, impression 3D, cybersécurité et plus. Consultez la page Formations pour plus d'infos !",
+      'contacter': "Vous pouvez nous contacter via la page Contact, par téléphone ou par email. Nous sommes à votre écoute !",
+      'salutation': "Bonjour et bienvenue chez Porokhane Digital Consulting ! 👋\n\nJe peux répondre à vos questions sur :\n• Nos services\n• Comment Demandez un devis\n• Nos délais de livraison\n• Nos formations\n• Comment nous contacter\n\nCliquez sur une suggestion ou posez votre question !"
+    };
+
+    const chatbotBtn = document.getElementById('chatbotBtn');
+    const chatbotWindow = document.getElementById('chatbotWindow');
+    const chatbotClose = document.getElementById('chatbotClose');
+    const chatbotBody = document.getElementById('chatbotBody');
+    const chatbotForm = document.getElementById('chatbotForm');
+    const chatbotInput = document.getElementById('chatbotInput');
+    const chatbotSuggestions = document.getElementById('chatbotSuggestions');
+
+    chatbotBtn.onclick = () => {
+      chatbotWindow.style.display = 'flex';
+      setTimeout(() => chatbotInput.focus(), 300);
+    };
+    
+    chatbotClose.onclick = () => {
+      chatbotWindow.style.display = 'none';
+    };
+
+    chatbotSuggestions.onclick = function(e) {
+      if (e.target.classList.contains('chatbot-suggestion')) {
+        const question = e.target.textContent;
+        addUserMessage(question);
+        respondToUser(question);
+      }
+    };
+
+    chatbotForm.onsubmit = function(e) {
+      e.preventDefault();
+      const question = chatbotInput.value.trim();
+      if (question) {
+        addUserMessage(question);
+        respondToUser(question);
+        chatbotInput.value = '';
+      }
+    };
+
+    function addUserMessage(text) {
+      const msg = document.createElement('div');
+      msg.className = 'chatbot-message user';
+      msg.textContent = text;
+      chatbotBody.appendChild(msg);
+      chatbotBody.scrollTop = chatbotBody.scrollHeight;
+    }
+
+    function addBotMessage(text) {
+      const msg = document.createElement('div');
+      msg.className = 'chatbot-message';
+      msg.textContent = text;
+      chatbotBody.appendChild(msg);
+      chatbotBody.scrollTop = chatbotBody.scrollHeight;
+    }
+
+    function respondToUser(question) {
+      let response = "Je suis désolé, je n'ai pas compris votre question. Essayez une des suggestions ci-dessus ou contactez-nous directement.";
+      const q = question.toLowerCase();
+      if (q.includes('service')) response = chatbotFAQ['services'];
+      else if (q.includes('devis')) response = chatbotFAQ['devis'];
+      else if (q.includes('délai') || q.includes('delai')) response = chatbotFAQ['délais'];
+      else if (q.includes('formation')) response = chatbotFAQ['formations'];
+      else if (q.includes('contact')) response = chatbotFAQ['contacter'];
+      else if (q.includes('salut') || q.includes('bonjour') || q.includes('bonsoir') || q.includes('hello')) response = chatbotFAQ['salutation'];
+      setTimeout(() => addBotMessage(response), 600);
+    }
+  </script>
+</body>
+</html>
