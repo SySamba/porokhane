@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <script async>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}window.addEventListener('load',function(){loadScript(function(){beTracker.t({hash:"4839b43b65f279b77271391d6643be69"})})});</script>
 
@@ -2821,6 +2821,84 @@
       letter-spacing: 0.5px;
     }
 
+    /* Popup Formation Bureautique */
+    .formation-popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+    .formation-popup-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .formation-popup {
+      position: relative;
+      max-width: 450px;
+      width: 88%;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 30px 90px rgba(0,0,0,0.5), 0 0 50px rgba(31,164,122,0.25);
+      transform: scale(0.85) translateY(30px);
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      background: #fff;
+    }
+    .formation-popup-overlay.active .formation-popup {
+      transform: scale(1) translateY(0);
+    }
+    .formation-popup-link {
+      display: block;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .formation-popup-link:hover {
+      transform: scale(1.02);
+    }
+    .formation-popup img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+    .formation-popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ef4444;
+      backdrop-filter: blur(8px);
+      border: 3px solid #fff;
+      color: #fff;
+      font-size: 1.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 10;
+      line-height: 1;
+    }
+    .formation-popup-close:hover {
+      background: #dc2626;
+      border-color: #fff;
+      transform: scale(1.15) rotate(90deg);
+      box-shadow: 0 4px 15px rgba(239,68,68,0.5);
+    }
+    @media (max-width: 600px) {
+      .formation-popup {
+        max-width: 96%;
+        border-radius: 14px;
+      }
+    }
 
     
   </style>
@@ -2975,6 +3053,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <!-- Overlay pour le menu mobile -->
   <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Popup Formation Bureautique -->
+  <div class="formation-popup-overlay" id="formationPopupOverlay">
+    <div class="formation-popup">
+      <button class="formation-popup-close" id="formationPopupClose" aria-label="Fermer">&times;</button>
+      <a href="formation_bureautique.html" class="formation-popup-link">
+        <img src="FORMATION_BUREAUTIQUE.png" alt="Formation Bureautique - Porokhane Digital Consulting">
+      </a>
+    </div>
+  </div>
   
   <!-- Section Offres Spéciales - Design TOP 
   <section class="offres-speciales">
@@ -3010,8 +3098,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="tel:+221710589088" class="contact-btn phone-btn">
                   <i class="fas fa-phone"></i> +221 71 058 90 88
                 </a>
-                <a href="mailto:sambasy837@gmail.com" class="contact-btn email-btn">
-                  <i class="fas fa-envelope"></i> sambasy837@gmail.com
+                <a href="mailto:hamidoudrame007@hotmail.fr" class="contact-btn email-btn">
+                  <i class="fas fa-envelope"></i> hamidoudrame007@hotmail.fr
                 </a>
                 <a href="https://wa.me/221710589088" class="contact-btn whatsapp-btn" target="_blank">
                   <i class="fab fa-whatsapp"></i> WhatsApp +221 71 058 90 88
@@ -3069,8 +3157,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="tel:+221710589088" class="contact-btn phone-btn">
                   <i class="fas fa-phone"></i> +221 71 058 90 88
                 </a>
-                <a href="mailto:sambasy837@gmail.com" class="contact-btn email-btn">
-                  <i class="fas fa-envelope"></i> sambasy837@gmail.com
+                <a href="mailto:hamidoudrame007@hotmail.fr" class="contact-btn email-btn">
+                  <i class="fas fa-envelope"></i> hamidoudrame007@hotmail.fr
                 </a>
                 <a href="https://wa.me/221710589088" class="contact-btn whatsapp-btn" target="_blank">
                   <i class="fab fa-whatsapp"></i> WhatsApp +221 71 058 90 88
@@ -3154,7 +3242,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="modal-ctas">
           <a class="btn-ghost" href="tel:+221710589088"><i class="fas fa-phone"></i> +221 71 058 90 88</a>
-          <a class="btn-ghost" href="mailto:sambasy837@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+          <a class="btn-ghost" href="mailto:hamidoudrame007@hotmail.fr"><i class="fas fa-envelope"></i> Email</a>
           <a class="btn-ghost whatsapp" href="https://wa.me/221710589088" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
         <div class="promo-deadline">Dernier délai: 20/09/2025 • Places limitées</div>
@@ -3176,7 +3264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="modal-ctas">
           <a class="btn-ghost" href="tel:+221710589088"><i class="fas fa-phone"></i> +221 71 058 90 88</a>
-          <a class="btn-ghost" href="mailto:sambasy837@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+          <a class="btn-ghost" href="mailto:hamidoudrame007@hotmail.fr"><i class="fas fa-envelope"></i> Email</a>
           <a class="btn-ghost whatsapp" href="https://wa.me/221710589088" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
         <div class="promo-deadline">Dernier délai: 20/09/2025 • Places limitées</div>
@@ -4604,6 +4692,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p style="color: white;font-weight: 30px;">Découvrez nos derniers articles et conseils pour réussir votre transformation digitale</p>
       </div>
       <div class="blog-grid">
+        <!-- Article - Digitalisation des Mairies -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="digitalisation_des_mairies .jpeg" alt="Digitalisation des mairies collectivités locales">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="far fa-calendar-alt"></i> 2 avril 2026 • <i class="far fa-folder"></i> Transformation Digitale</div>
+            <h3>La digitalisation des mairies : un levier stratégique pour moderniser les collectivités locales</h3>
+            <p>Découvrez comment la digitalisation permet aux mairies de gagner en performance, en transparence et en qualité de service pour les citoyens.</p>
+            <a href="digitalisation_des_mairies.html" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
+          </div>
+        </div>
+
         <!-- Article 1 - IA Gestion Stocks -->
         <div class="blog-card">
           <div class="blog-card-img">
@@ -4631,17 +4732,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <!-- Article 3 - Transformation Digitale -->
-        <div class="blog-card">
-          <div class="blog-card-img">
-            <img src="transformation-digital.jpg" alt="Transformation digitale des entreprises africaines">
-          </div>
-          <div class="blog-card-content">
-            <div class="blog-meta"><i class="far fa-calendar-alt"></i> 16 décembre 2026 • <i class="far fa-folder"></i> Transformation Digitale</div>
-            <h3>Pourquoi la transformation digitale est un levier indispensable pour les entreprises africaines aujourd'hui</h3>
-            <p>Dans un monde de plus en plus connecté, la transformation digitale n'est plus une option, mais une nécessité pour les entreprises africaines et sénégalaises.</p>
-            <a href="transformation_digitale.html" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
-          </div>
-        </div>
+       
       </div>
       <div style="text-align:center; margin-top:2rem;">
         <a href="blog.html" class="btn btn-primary">Voir plus d'articles</a>
@@ -5063,7 +5154,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <ul>
             <li><a href="tel:+221710589088 "><i class="fas fa-phone"></i> +221 710589088 </a></li>
             <li><a href="tel:+338306157"><i class="fas fa-phone"></i> +33 830 61 57 </a></li>
-            <li><a href="mailto:sambasy837@gmail.com"><i class="fas fa-envelope"></i> sambasy837@gmail.com</a></li>
+            <li><a href="mailto:hamidoudrame007@hotmail.fr"><i class="fas fa-envelope"></i> hamidoudrame007@hotmail.fr</a></li>
             <li><a href="https://maps.app.goo.gl/jCAGEpeoCBiSNQSr5" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
           </ul>
         </div>
@@ -5904,6 +5995,44 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     `;
     document.head.appendChild(badgeStyle);
+  </script>
+
+  <!-- Script Popup Formation Bureautique -->
+  <script>
+    (function() {
+      const popupOverlay = document.getElementById('formationPopupOverlay');
+      const popupClose = document.getElementById('formationPopupClose');
+      
+      if (!popupOverlay || !popupClose) return;
+
+      // Ouvrir automatiquement dès le chargement de la page
+      window.addEventListener('load', function() {
+        popupOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      // Fermer le popup
+      function closeFormationPopup() {
+        popupOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      popupClose.addEventListener('click', closeFormationPopup);
+
+      // Fermer en cliquant sur l'overlay
+      popupOverlay.addEventListener('click', function(e) {
+        if (e.target === popupOverlay) {
+          closeFormationPopup();
+        }
+      });
+
+      // Fermer avec Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+          closeFormationPopup();
+        }
+      });
+    })();
   </script>
 
   

@@ -5,8 +5,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comment l'Intelligence Artificielle optimise la gestion des stocks des entreprises | Porokhane Digital</title>
-  <meta name="description" content="Découvrez comment l'IA révolutionne la gestion des stocks : prévision de la demande, automatisation, réduction des coûts et amélioration de la rentabilité.">
+  <title>La digitalisation des mairies : un levier stratégique pour moderniser les collectivités locales | Porokhane Digital</title>
+  <meta name="description" content="Découvrez comment la digitalisation des mairies permet de moderniser les collectivités locales, améliorer les services publics et renforcer la transparence. Guide complet par Porokhane Digital Consulting.">
   <link rel="icon" type="image/png" href="logo.png">
   
   <!-- Google Tag Manager -->
@@ -18,20 +18,18 @@
     gtag('config', 'G-11G8LFMCBG');
   </script>
   
-  <link rel="canonical" href="https://digital-porokhane.com/ia_gestion_stocks.html">
+  <link rel="canonical" href="https://digital-porokhane.com/digitalisation_des_mairies.html">
   
-  <meta name="keywords" content="intelligence artificielle gestion stocks, IA supply chain, optimisation stocks IA, gestion stocks entreprise, automatisation stocks, prévision demande IA">
-  
-  <meta property="og:title" content="Comment l'Intelligence Artificielle optimise la gestion des stocks des entreprises">
-  <meta property="og:description" content="L'IA révolutionne la gestion des stocks : prévision de la demande, automatisation et réduction des coûts pour les entreprises.">
-  <meta property="og:image" content="https://digital-porokhane.com/logo.png">
-  <meta property="og:url" content="https://digital-porokhane.com/ia_gestion_stocks.html">
+  <meta property="og:title" content="La digitalisation des mairies : un levier stratégique pour moderniser les collectivités locales">
+  <meta property="og:description" content="Découvrez comment la digitalisation des mairies permet de moderniser les collectivités locales et améliorer les services publics.">
+  <meta property="og:image" content="https://digital-porokhane.com/digitalisation_des_mairies .jpeg">
+  <meta property="og:url" content="https://digital-porokhane.com/digitalisation_des_mairies.html">
   <meta property="og:type" content="article">
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Comment l'Intelligence Artificielle optimise la gestion des stocks des entreprises">
-  <meta name="twitter:description" content="L'IA révolutionne la gestion des stocks : prévision de la demande, automatisation et réduction des coûts.">
-  <meta name="twitter:image" content="https://digital-porokhane.com/logo.png">
+  <meta name="twitter:title" content="La digitalisation des mairies : un levier stratégique pour moderniser les collectivités locales">
+  <meta name="twitter:description" content="Découvrez comment la digitalisation des mairies permet de moderniser les collectivités locales.">
+  <meta name="twitter:image" content="https://digital-porokhane.com/digitalisation_des_mairies .jpeg">
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -72,6 +70,7 @@
       padding: 0 20px;
     }
     
+    /* Navigation */
     .navbar {
       background: rgba(255,255,255,0.95);
       backdrop-filter: blur(10px);
@@ -227,6 +226,7 @@
       transform: translateX(5px);
     }
     
+    /* Menu Hamburger */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -236,7 +236,7 @@
       border: none;
       z-index: 1001;
     }
-    
+
     .hamburger span {
       width: 25px;
       height: 3px;
@@ -245,39 +245,48 @@
       transition: 0.3s;
       border-radius: 2px;
     }
-    
+
     .hamburger.active span:nth-child(1) {
       transform: rotate(-45deg) translate(-5px, 6px);
     }
-    
+
     .hamburger.active span:nth-child(2) {
       opacity: 0;
     }
-    
+
     .hamburger.active span:nth-child(3) {
       transform: rotate(45deg) translate(-5px, -6px);
     }
     
+    /* Article Hero */
     .article-hero {
-      background: linear-gradient(135deg, var(--vert), var(--bleu));
+      background: linear-gradient(rgba(31,164,122,0.85), rgba(37,99,235,0.85)), url('digitalisation_des_mairies .jpeg') center/cover no-repeat;
       color: var(--blanc);
-      padding: 80px 0 60px;
+      min-height: 45vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 60px 20px;
     }
     
     .article-hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 800;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .article-meta {
       display: flex;
       justify-content: center;
       gap: 2rem;
-      font-size: 1rem;
-      color: rgba(255,255,255,0.9);
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+      opacity: 0.95;
     }
     
     .article-meta span {
@@ -286,135 +295,135 @@
       gap: 0.5rem;
     }
     
+    /* Article Content */
     .article-content {
-      max-width: 900px;
+      max-width: 850px;
       margin: -60px auto 60px;
       background: var(--blanc);
       border-radius: var(--rayon-grand);
-      padding: 50px 60px;
       box-shadow: var(--ombre);
+      padding: 50px 40px;
+      position: relative;
+      z-index: 2;
     }
     
     .article-content p {
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
       color: var(--gris-texte);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
     }
     
     .article-content h2 {
       color: var(--vert);
-      font-size: 2rem;
-      font-weight: 700;
-      margin-top: 2.5rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--vert-clair);
     }
     
     .article-content h3 {
       color: var(--bleu);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 700;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
+      margin: 2rem 0 0.8rem;
     }
     
-    .article-content ul {
-      margin: 1.5rem 0;
-      padding-left: 2rem;
+    .article-content ul, .article-content ol {
+      margin: 1rem 0 1.5rem 1.5rem;
     }
     
-    .article-content ul li {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
+    .article-content ul li, .article-content ol li {
       color: var(--gris-texte);
-      line-height: 1.7;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 0.6rem;
+      padding-left: 0.5rem;
     }
     
-    .article-content ul li strong {
-      color: var(--gris-titre);
+    .article-content ul li::marker {
+      color: var(--vert);
+    }
+    
+    .article-content ol li::marker {
+      color: var(--bleu);
+      font-weight: 700;
     }
     
     .highlight-box {
-      background: linear-gradient(135deg, var(--vert-clair), var(--bleu-clair));
+      background: linear-gradient(135deg, rgba(31,164,122,0.08), rgba(37,99,235,0.08));
       border-left: 4px solid var(--vert);
+      border-radius: 0 var(--rayon) var(--rayon) 0;
       padding: 2rem;
-      border-radius: var(--rayon);
-      margin: 2.5rem 0;
+      margin: 2rem 0;
     }
     
     .highlight-box h3 {
-      color: var(--vert);
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .highlight-box p {
-      color: var(--gris-titre);
-      margin-bottom: 1rem;
-    }
-    
-    .highlight-box ul {
-      margin-top: 1rem;
+      color: var(--vert) !important;
+      margin-top: 0 !important;
     }
     
     .cta-box {
       background: linear-gradient(135deg, var(--vert), var(--bleu));
       color: var(--blanc);
-      padding: 3rem;
       border-radius: var(--rayon-grand);
+      padding: 2.5rem;
       text-align: center;
-      margin-top: 3rem;
+      margin: 3rem 0 1rem;
     }
     
     .cta-box h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--blanc);
+      color: var(--blanc) !important;
+      font-size: 1.6rem;
+      margin-bottom: 1rem !important;
+      margin-top: 0 !important;
     }
     
     .cta-box p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: rgba(255,255,255,0.95);
+      color: rgba(255,255,255,0.9) !important;
+      margin-bottom: 1.5rem !important;
     }
     
     .cta-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
       background: var(--blanc);
       color: var(--vert);
-      padding: 1rem 2.5rem;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 700;
       font-size: 1.1rem;
       transition: all 0.3s;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
     
     .cta-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.2);
     }
     
+    /* Articles récents */
     .recent-articles {
-      max-width: 900px;
-      margin: 60px auto;
+      max-width: 1200px;
+      margin: 0 auto 60px;
       padding: 0 20px;
     }
     
     .recent-articles h2 {
+      text-align: center;
       color: var(--vert);
       font-size: 2rem;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 2rem;
-      text-align: center;
     }
     
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
+      gap: 1.5rem;
     }
     
     .article-card {
@@ -423,12 +432,11 @@
       padding: 1.5rem;
       box-shadow: var(--ombre);
       transition: all 0.3s;
-      border-left: 4px solid var(--vert);
     }
     
     .article-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(31, 164, 122, 0.15);
+      box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15);
     }
     
     .article-card h3 {
@@ -461,6 +469,7 @@
       gap: 0.8rem;
     }
     
+    /* Footer */
     .footer {
       background: linear-gradient(135deg, var(--vert), var(--bleu));
       color: var(--blanc);
@@ -473,8 +482,6 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 3rem;
       margin-bottom: 3rem;
-      position: relative;
-      z-index: 1;
     }
     
     .footer-section h3, .footer-section h4 {
@@ -525,10 +532,6 @@
       transform: translateX(5px);
     }
     
-    .footer-section ul li a i {
-      font-size: 0.8rem;
-    }
-    
     .social-links {
       display: flex;
       gap: 1rem;
@@ -560,10 +563,9 @@
       text-align: center;
       color: rgba(255,255,255,0.7);
       font-size: 0.9rem;
-      position: relative;
-      z-index: 1;
     }
     
+    /* Chatbot */
     .chatbot-btn {
       position: fixed;
       bottom: 32px;
@@ -582,13 +584,16 @@
       cursor: pointer;
       z-index: 9999;
       transition: background 0.3s, transform 0.2s;
+      animation: chatbot-bounce 1.5s infinite alternate;
     }
-    
     .chatbot-btn:hover {
       background: linear-gradient(90deg, var(--bleu), var(--vert));
       transform: scale(1.08);
     }
-    
+    @keyframes chatbot-bounce {
+      0% { box-shadow: 0 4px 24px rgba(31,164,122,0.18); transform: scale(1); }
+      100% { box-shadow: 0 8px 32px rgba(37,99,235,0.18); transform: scale(1.08); }
+    }
     .chatbot-window {
       position: fixed;
       bottom: 110px;
@@ -604,7 +609,6 @@
       flex-direction: column;
       overflow: hidden;
     }
-    
     .chatbot-header {
       background: linear-gradient(90deg, var(--vert), var(--bleu));
       color: var(--blanc);
@@ -615,21 +619,13 @@
       align-items: center;
       justify-content: space-between;
     }
-    
     .chatbot-close {
       background: none;
       border: none;
       color: var(--blanc);
       font-size: 1.3rem;
       cursor: pointer;
-      margin-left: 1rem;
-      transition: color 0.2s;
     }
-    
-    .chatbot-close:hover {
-      color: #e67e22;
-    }
-    
     .chatbot-body {
       padding: 1.2rem;
       background: var(--gris);
@@ -640,7 +636,6 @@
       flex-direction: column;
       gap: 1rem;
     }
-    
     .chatbot-message {
       background: var(--blanc);
       border-radius: 14px 14px 14px 4px;
@@ -651,21 +646,18 @@
       align-self: flex-start;
       max-width: 85%;
     }
-    
     .chatbot-message.user {
       background: var(--vert);
       color: var(--blanc);
       align-self: flex-end;
       border-radius: 14px 14px 4px 14px;
     }
-    
     .chatbot-suggestions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       margin-top: 0.5rem;
     }
-    
     .chatbot-suggestion {
       background: var(--bleu-clair);
       color: var(--bleu);
@@ -676,12 +668,10 @@
       cursor: pointer;
       transition: background 0.2s, color 0.2s;
     }
-    
     .chatbot-suggestion:hover {
       background: var(--bleu);
       color: var(--blanc);
     }
-    
     .chatbot-footer {
       padding: 0.8rem 1.2rem;
       background: var(--blanc);
@@ -689,7 +679,6 @@
       display: flex;
       gap: 0.5rem;
     }
-    
     .chatbot-input {
       flex: 1;
       border: 1px solid var(--gris-fonce);
@@ -697,13 +686,10 @@
       padding: 0.5rem 1rem;
       font-size: 1rem;
       outline: none;
-      transition: border 0.2s;
     }
-    
     .chatbot-input:focus {
       border-color: var(--vert);
     }
-    
     .chatbot-send {
       background: linear-gradient(90deg, var(--vert), var(--bleu));
       color: var(--blanc);
@@ -716,13 +702,12 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: background 0.2s;
     }
-    
     .chatbot-send:hover {
       background: linear-gradient(90deg, var(--bleu), var(--vert));
     }
     
+    /* Responsive */
     @media (max-width: 768px) {
       .hamburger {
         display: flex !important;
@@ -776,13 +761,43 @@
         font-size: 1.3rem;
       }
       
-      .article-content p, .article-content ul li {
+      .article-content p, .article-content ul li, .article-content ol li {
         font-size: 1rem;
+      }
+
+      .submenu {
+        position: static !important;
+        transform: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        background: var(--gris) !important;
+        border-radius: 8px !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-width: auto !important;
+        transition: all 0.3s ease !important;
+      }
+
+      .nav-item:hover .submenu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-height: 200px !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="container nav-container">
       <div class="nav-logo">
@@ -836,85 +851,100 @@
     </div>
   </nav>
 
+  <!-- Article Hero -->
   <section class="article-hero">
     <div class="container">
-      <h1>Comment l'Intelligence Artificielle optimise la gestion des stocks des entreprises</h1>
+      <h1>La digitalisation des mairies : un levier stratégique pour moderniser les collectivités locales</h1>
       <div class="article-meta">
-        <span><i class="far fa-calendar-alt"></i> 8 mars 2026</span>
-        <span><i class="far fa-folder"></i> Intelligence Artificielle</span>
-        <span><i class="far fa-clock"></i> 6 min de lecture</span>
+        <span><i class="far fa-calendar-alt"></i> 2 avril 2026</span>
+        <span><i class="far fa-folder"></i> Transformation Digitale</span>
+        <span><i class="far fa-clock"></i> 10 min de lecture</span>
       </div>
     </div>
   </section>
 
+  <!-- Article Content -->
   <article class="article-content">
-    <p>Dans un environnement économique de plus en plus compétitif, la gestion efficace des stocks est devenue un enjeu stratégique pour les entreprises. Trop de stock immobilise la trésorerie, tandis qu'un manque de stock peut entraîner des ruptures et une perte de clients.</p>
+    <h2>Introduction</h2>
+    <p>Face à l'évolution des attentes des citoyens et à la complexification des missions administratives, les mairies sont aujourd'hui confrontées à un enjeu majeur : moderniser leur fonctionnement. Les processus encore largement manuels, la dispersion des informations et les délais de traitement constituent autant de freins à une gestion efficace.</p>
     
-    <p>Aujourd'hui, l'intelligence artificielle (IA) offre de nouvelles solutions pour optimiser la gestion des stocks, améliorer la prise de décision et renforcer la performance des entreprises.</p>
+    <p>Dans ce contexte, la digitalisation s'impose comme une réponse structurante, permettant aux collectivités locales de gagner en performance, en transparence et en qualité de service.</p>
 
-    <h2>L'IA au service d'une gestion des stocks plus intelligente</h2>
-    <p>L'optimisation des stocks par l'IA repose principalement sur l'analyse de données. Les algorithmes de machine learning peuvent analyser l'historique des ventes, les tendances de consommation, les saisons ou encore les promotions afin de prévoir la demande future avec précision.</p>
-    
-    <p>Grâce à ces modèles prédictifs, les entreprises peuvent anticiper leurs besoins en produits, ajuster leurs commandes et éviter les erreurs liées aux estimations manuelles.</p>
-
-    <h2>Prévoir la demande et éviter les ruptures de stock</h2>
+    <h2>Pourquoi digitaliser une mairie ?</h2>
+    <p>La transformation digitale des mairies ne se limite pas à l'introduction d'outils informatiques. Elle représente un véritable changement de paradigme dans la gestion des services publics.</p>
+    <p>Elle permet notamment de :</p>
     <ul>
-      <li><strong>Réduire les ruptures de stock</strong> : L'IA analyse les données historiques pour anticiper les pics de demande et garantir la disponibilité des produits</li>
-      <li><strong>Éviter les excédents de produits</strong> : En prévoyant avec précision la demande, les entreprises évitent le surstockage coûteux</li>
-      <li><strong>Adapter les niveaux de stock aux périodes de forte demande</strong> : L'IA identifie les tendances saisonnières et ajuste automatiquement les commandes</li>
-      <li><strong>Améliorer la satisfaction des clients</strong> : Des stocks optimisés garantissent que les produits sont toujours disponibles quand les clients en ont besoin</li>
+      <li><strong>Améliorer l'accès aux services pour les citoyens</strong></li>
+      <li><strong>Optimiser la gestion interne</strong></li>
+      <li><strong>Renforcer la transparence</strong></li>
+      <li><strong>Faciliter la prise de décision</strong></li>
     </ul>
 
-    <h2>Automatisation et gain de temps pour les équipes</h2>
-    <ul>
-      <li><strong>Surveiller les niveaux de stock en temps réel</strong> : Les systèmes IA suivent continuellement l'état des stocks et alertent en cas de seuil critique</li>
-      <li><strong>Générer des alertes en cas d'anomalie</strong> : Détection automatique des écarts entre les prévisions et la réalité</li>
-      <li><strong>Optimiser les réapprovisionnements</strong> : L'IA calcule automatiquement les quantités optimales à commander et le moment idéal pour le faire</li>
-      <li><strong>Suivre les flux logistiques</strong> : Traçabilité complète des produits de l'entrepôt jusqu'au client final</li>
-    </ul>
+    <h2>Les piliers d'une mairie digitale performante</h2>
+    <p>Une digitalisation efficace repose sur quelques fondamentaux essentiels : la mise en place d'un système de gestion intégré permettant de centraliser les activités, l'utilisation d'une base de données unique pour fiabiliser l'information, le déploiement d'une plateforme digitale facilitant l'accès aux services pour les citoyens, ainsi qu'une attention particulière portée à la sécurité des données.</p>
+    <p>Ces éléments constituent le socle d'une administration moderne, plus efficace, mieux organisée et orientée vers les besoins des usagers.</p>
 
-    <h2>Réduction des coûts et amélioration de la rentabilité</h2>
-    <ul>
-      <li><strong>Réduction des coûts de stockage</strong> : Moins de stock immobilisé signifie moins de frais d'entreposage et de gestion</li>
-      <li><strong>Meilleure utilisation de l'espace</strong> : L'optimisation des stocks permet de libérer de l'espace pour d'autres activités</li>
-      <li><strong>Amélioration des marges</strong> : Moins de produits invendus et de démarques grâce à une meilleure rotation des stocks</li>
-      <li><strong>Augmentation du chiffre d'affaires</strong> : La disponibilité constante des produits évite les ventes manquées</li>
-    </ul>
+    <h2>Une approche progressive et maîtrisée</h2>
+    <p>La réussite d'un projet de digitalisation repose sur une méthodologie rigoureuse :</p>
+    <ol>
+      <li><strong>Analyse des besoins</strong> de la collectivité</li>
+      <li><strong>Conception d'une solution</strong> sur mesure</li>
+      <li><strong>Déploiement progressif</strong> des outils</li>
+      <li><strong>Formation des agents</strong> municipaux</li>
+      <li><strong>Suivi et amélioration</strong> continue</li>
+    </ol>
+    <p>Cette approche permet de garantir l'adhésion des équipes et l'efficacité des solutions mises en place.</p>
 
-    <h2>Vers une supply chain plus intelligente</h2>
-    <p>L'intégration de l'intelligence artificielle dans la gestion des stocks s'inscrit dans une transformation plus globale de la chaîne d'approvisionnement. Grâce à l'analyse en temps réel des données et à l'automatisation des décisions, les entreprises peuvent optimiser leurs opérations logistiques et améliorer leur efficacité globale.</p>
-    
-    <p>Dans les années à venir, l'IA devrait jouer un rôle encore plus important dans la gestion des entreprises, notamment dans les domaines de la logistique, du commerce et du e-commerce.</p>
+    <h2>Cas d'usage : vers une gestion communale optimisée</h2>
+    <p>Une mairie digitalisée peut, par exemple :</p>
+    <ul>
+      <li><strong>Gérer l'état civil de manière entièrement numérique</strong></li>
+      <li><strong>Suivre en temps réel l'avancement des projets locaux</strong></li>
+      <li><strong>Offrir aux citoyens une plateforme unique de services</strong></li>
+    </ul>
+    <p>Ces outils permettent de réduire significativement les délais, d'améliorer la qualité du service public et de renforcer la relation entre la mairie et les citoyens.</p>
 
     <div class="highlight-box">
-      <h3>Pourquoi choisir Porokhane Digital pour votre transformation IA ?</h3>
-      <p>Chez <strong>Porokhane Digital Consulting</strong>, nous accompagnons les entreprises sénégalaises et africaines dans leur transformation digitale grâce à l'intelligence artificielle. Notre expertise nous permet de :</p>
+      <h3>Pourquoi choisir Porokhane Digital Consulting ?</h3>
+      <p>Choisir Porokhane Digital Consulting, c'est opter pour un partenaire stratégique capable de comprendre les réalités des collectivités locales et de proposer des solutions concrètes, efficaces et durables.</p>
+      <p>Notre valeur ajoutée repose sur plusieurs éléments différenciants :</p>
       <ul>
-        <li><strong>Analyser vos besoins spécifiques</strong> : Audit complet de vos processus de gestion des stocks</li>
-        <li><strong>Déployer des solutions IA sur-mesure</strong> : Intégration d'algorithmes de prévision adaptés à votre secteur d'activité</li>
-        <li><strong>Former vos équipes</strong> : Accompagnement et formation pour une adoption réussie des outils IA</li>
-        <li><strong>Assurer un suivi continu</strong> : Maintenance et optimisation de vos systèmes pour des performances maximales</li>
+        <li><strong>Une expertise orientée terrain</strong> : nous concevons des solutions adaptées aux contraintes réelles des mairies, en tenant compte des ressources, des usages et du contexte local</li>
+        <li><strong>Des solutions sur mesure</strong> : chaque mairie est unique. Nos outils sont entièrement personnalisés pour répondre précisément à vos besoins opérationnels</li>
+        <li><strong>Une approche collaborative</strong> : nous travaillons en étroite collaboration avec vos équipes pour garantir l'appropriation des outils et la réussite du projet</li>
+        <li><strong>Un accompagnement complet</strong> : de l'analyse à la mise en œuvre, en passant par la formation et le suivi, nous assurons une prise en charge globale</li>
+        <li><strong>Un impact mesurable</strong> : nos solutions visent des résultats concrets : gain de temps, amélioration du service public, meilleure gestion des ressources</li>
       </ul>
+      <p>Au-delà de la technologie, nous vous accompagnons dans une véritable transformation organisationnelle, avec un objectif clair : faire de votre mairie une institution moderne, performante et accessible.</p>
     </div>
 
     <h2>Conclusion</h2>
-    <p>L'optimisation des stocks par l'intelligence artificielle représente une opportunité majeure pour les entreprises qui souhaitent améliorer leur performance et leur compétitivité.</p>
-    
-    <p>En combinant analyse prédictive, automatisation et gestion intelligente des données, l'IA permet d'éviter les ruptures de stock, de réduire les coûts et d'améliorer l'expérience client.</p>
+    <p>La digitalisation des mairies n'est plus une option, mais une nécessité pour accompagner le développement des territoires. Elle constitue un levier puissant pour améliorer l'efficacité administrative, renforcer la transparence et répondre aux attentes croissantes des citoyens.</p>
+    <p>Les collectivités qui s'engagent dès aujourd'hui dans cette transformation se positionnent comme des acteurs modernes, capables d'offrir des services publics innovants et accessibles.</p>
+    <p><strong>La mairie de demain ne sera pas seulement administrative : elle sera digitale, connectée et pilotée par la donnée.</strong></p>
 
     <div class="cta-box">
-      <h3>Prêt à optimiser votre gestion des stocks avec l'IA ?</h3>
-      <p>Contactez-nous dès aujourd'hui pour découvrir comment l'intelligence artificielle peut transformer votre entreprise.</p>
+      <h3>Prêt à digitaliser votre mairie ?</h3>
+      <p>Contactez-nous dès aujourd'hui pour un diagnostic personnalisé et découvrez comment nous pouvons transformer votre collectivité.</p>
       <a href="devis.html" class="cta-btn"><i class="fas fa-rocket"></i> Demandez votre devis gratuit</a>
     </div>
   </article>
 
+  <!-- Articles récents -->
   <section class="recent-articles">
     <h2>Articles récents</h2>
     <div class="articles-grid">
       <div class="article-card">
+        <h3>Comment l'Intelligence Artificielle optimise la gestion des stocks des entreprises</h3>
+        <p>Découvrez comment l'IA révolutionne la gestion des stocks : prévision de la demande, automatisation, réduction des coûts.</p>
+        <a href="ia_gestion_stocks.html" class="article-link">
+          Lire l'article <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="article-card">
         <h3>Comment digitaliser une école au Sénégal : Le guide complet de la plateforme LMS</h3>
-        <p>Découvrez les 5 étapes clés pour transformer votre école traditionnelle en institution connectée avec une plateforme LMS adaptée au contexte sénégalais.</p>
+        <p>Découvrez les 5 étapes clés pour transformer votre école traditionnelle en institution connectée.</p>
         <a href="digitalisation_ecole_lms.html" class="article-link">
           Lire l'article <i class="fas fa-arrow-right"></i>
         </a>
@@ -922,7 +952,7 @@
 
       <div class="article-card">
         <h3>Pourquoi la transformation digitale est un levier indispensable pour les entreprises africaines</h3>
-        <p>Dans un monde de plus en plus connecté, la transformation digitale n'est plus une option, mais une nécessité pour les entreprises africaines et sénégalaises.</p>
+        <p>Dans un monde de plus en plus connecté, la transformation digitale n'est plus une option, mais une nécessité.</p>
         <a href="transformation_digitale.html" class="article-link">
           Lire l'article <i class="fas fa-arrow-right"></i>
         </a>
@@ -935,17 +965,10 @@
           Lire l'article <i class="fas fa-arrow-right"></i>
         </a>
       </div>
-
-      <div class="article-card">
-        <h3>Sécuriser son site WordPress</h3>
-        <p>Protégez votre site WordPress contre les piratages avec 10 conseils simples et efficaces, accessibles à tous.</p>
-        <a href="wordpress.html" class="article-link">
-          Lire l'article <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -1002,6 +1025,7 @@
     </div>
   </footer>
 
+  <!-- Chatbot -->
   <button class="chatbot-btn" id="chatbotBtn" aria-label="Ouvrir le chat" title="Discuter avec nous">
     <i class="fas fa-comments"></i>
   </button>
