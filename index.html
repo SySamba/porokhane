@@ -2821,7 +2821,7 @@
       letter-spacing: 0.5px;
     }
 
-    /* Popup Formation Bureautique */
+    /* Popup appel à candidature — Formation Impression 3D */
     .formation-popup-overlay {
       position: fixed;
       inset: 0;
@@ -2841,8 +2841,8 @@
     }
     .formation-popup {
       position: relative;
-      max-width: 450px;
-      width: 88%;
+      max-width: 720px;
+      width: 92%;
       border-radius: 18px;
       overflow: hidden;
       box-shadow: 0 30px 90px rgba(0,0,0,0.5), 0 0 50px rgba(31,164,122,0.25);
@@ -2850,22 +2850,69 @@
       transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
       background: #fff;
     }
+    .formation-popup-header {
+      padding: 1.25rem 3.5rem 1rem 1.25rem;
+      background: linear-gradient(135deg, #1fa47a, #178f6a);
+      color: #fff;
+    }
+    .formation-popup-header h2 {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+    .formation-popup-header p {
+      margin: 0.35rem 0 0;
+      font-size: 0.9rem;
+      opacity: 0.92;
+    }
+    .formation-popup-pdf {
+      width: 100%;
+      height: min(62vh, 520px);
+      border: none;
+      display: block;
+      background: #f3f4f6;
+    }
+    .formation-popup-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding: 1rem 1.25rem 1.25rem;
+      background: #fff;
+      border-top: 1px solid #e5e7eb;
+    }
+    .formation-popup-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .formation-popup-actions a:hover {
+      transform: translateY(-1px);
+    }
+    .formation-popup-btn-primary {
+      background: #1fa47a;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(31, 164, 122, 0.35);
+    }
+    .formation-popup-btn-primary:hover {
+      background: #178f6a;
+    }
+    .formation-popup-btn-secondary {
+      background: #f3f4f6;
+      color: #1f2937;
+      border: 1px solid #e5e7eb;
+    }
+    .formation-popup-btn-secondary:hover {
+      background: #e5e7eb;
+    }
     .formation-popup-overlay.active .formation-popup {
       transform: scale(1) translateY(0);
-    }
-    .formation-popup-link {
-      display: block;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .formation-popup-link:hover {
-      transform: scale(1.02);
-    }
-    .formation-popup img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
     }
     .formation-popup-close {
       position: absolute;
@@ -2897,6 +2944,19 @@
       .formation-popup {
         max-width: 96%;
         border-radius: 14px;
+      }
+      .formation-popup-header h2 {
+        font-size: 1rem;
+      }
+      .formation-popup-pdf {
+        height: min(50vh, 380px);
+      }
+      .formation-popup-actions {
+        flex-direction: column;
+      }
+      .formation-popup-actions a {
+        justify-content: center;
+        width: 100%;
       }
     }
 
@@ -3054,13 +3114,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Overlay pour le menu mobile -->
   <div class="menu-overlay" id="menuOverlay"></div>
 
-  <!-- Popup Formation Bureautique -->
+  <!-- Popup appel à candidature — Formation Impression 3D -->
   <div class="formation-popup-overlay" id="formationPopupOverlay">
-    <div class="formation-popup">
+    <div class="formation-popup" role="dialog" aria-modal="true" aria-labelledby="formationPopupTitle">
       <button class="formation-popup-close" id="formationPopupClose" aria-label="Fermer">&times;</button>
-      <a href="formation_bureautique.html" class="formation-popup-link">
-        <img src="FORMATION-BUREAUTIQUE-PRO.png" alt="Formation Bureautique - Porokhane Digital Consulting">
-      </a>
+      <div class="formation-popup-header">
+        <h2 id="formationPopupTitle">Appel à candidature — Formation Impression 3D</h2>
+        <p>Consultez le document officiel et postulez dès maintenant.</p>
+      </div>
+      <iframe
+        class="formation-popup-pdf"
+        src="appel-candidature-formation-impression-3d.pdf"
+        title="Appel à candidature — Formation Impression 3D"
+      ></iframe>
+      <div class="formation-popup-actions">
+        <a
+          href="appel-candidature-formation-impression-3d.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="formation-popup-btn-primary"
+        >
+          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+          Ouvrir le PDF
+        </a>
+        <a
+          href="appel-candidature-formation-impression-3d.pdf"
+          download="appel-candidature-formation-impression-3d.pdf"
+          class="formation-popup-btn-secondary"
+        >
+          <i class="fas fa-download" aria-hidden="true"></i>
+          Télécharger
+        </a>
+      </div>
     </div>
   </div>
   
@@ -5997,7 +6082,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(badgeStyle);
   </script>
 
-  <!-- Script Popup Formation Bureautique -->
+  <!-- Script popup appel à candidature Formation Impression 3D -->
   <script>
     (function() {
       const popupOverlay = document.getElementById('formationPopupOverlay');
