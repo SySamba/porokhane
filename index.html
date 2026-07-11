@@ -4766,6 +4766,269 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <!-- Formations Marketing Digital (Promo) -->
+  <style>
+    .promo-formations {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .promo-formations::before {
+      content: "";
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(31,164,122,0.18), transparent 70%);
+      border-radius: 50%;
+    }
+    .promo-formations::after {
+      content: "";
+      position: absolute;
+      bottom: -140px;
+      left: -140px;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, rgba(37,99,235,0.15), transparent 70%);
+      border-radius: 50%;
+    }
+    .promo-formations .container { position: relative; z-index: 2; }
+    .promo-header { text-align: center; margin-bottom: 3rem; }
+    .promo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--vert);
+      color: #fff;
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      box-shadow: 0 6px 18px rgba(31,164,122,0.35);
+    }
+    .promo-header h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--gris-titre);
+      margin-bottom: 0.8rem;
+    }
+    .promo-header h2 span { color: var(--vert); }
+    .promo-header p {
+      color: var(--gris-texte);
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+    .promo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .promo-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #eef2f7;
+    }
+    .promo-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 24px 48px rgba(37,99,235,0.18);
+    }
+    .promo-card-media { position: relative; height: 210px; overflow: hidden; }
+    .promo-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .promo-card:hover .promo-card-media img { transform: scale(1.08); }
+    .promo-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(15,23,42,0.85);
+      color: #fff;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+    }
+    .promo-price-tag {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      background: var(--vert);
+      color: #fff;
+      padding: 0.45rem 1rem;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1rem;
+      box-shadow: 0 6px 16px rgba(31,164,122,0.4);
+    }
+    .promo-card-body { padding: 1.6rem; display: flex; flex-direction: column; flex-grow: 1; }
+    .promo-card-body h3 {
+      font-size: 1.35rem;
+      color: var(--gris-titre);
+      margin-bottom: 0.6rem;
+    }
+    .promo-hook {
+      font-weight: 600;
+      color: var(--bleu);
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+    .promo-features { list-style: none; margin: 0 0 1.2rem; padding: 0; }
+    .promo-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      color: var(--gris-texte);
+      margin-bottom: 0.55rem;
+      font-size: 0.95rem;
+    }
+    .promo-features li i { color: var(--vert); margin-top: 3px; }
+    .promo-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      padding: 1rem;
+      background: var(--gris);
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+    }
+    .promo-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--gris-titre);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .promo-meta span i { color: var(--bleu); width: 18px; text-align: center; }
+    .promo-actions { margin-top: auto; display: flex; flex-direction: column; gap: 0.6rem; }
+    .promo-phone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .promo-phone.whatsapp { background: #25d366; color: #fff; }
+    .promo-phone.whatsapp:hover { background: #1ebe5a; transform: translateY(-2px); }
+    .promo-phone.call { background: var(--bleu); color: #fff; }
+    .promo-phone.call:hover { background: #1d4ed8; transform: translateY(-2px); }
+    @media (max-width: 480px) {
+      .promo-formations { padding: 3.5rem 0; }
+    }
+  </style>
+  <section id="formations-marketing" class="promo-formations">
+    <div class="container">
+      <div class="promo-header">
+        <span class="promo-badge"><i class="fas fa-bolt"></i> Nouvelles formations</span>
+        <h2>Boostez votre business avec le <span>Marketing Digital</span></h2>
+        <p>3 formations pratiques et intensives pour attirer, convaincre et vendre plus. Inscriptions ouvertes du 2 au 15 juillet à Ngor Extension – Dakar.</p>
+      </div>
+
+      <div class="promo-grid">
+        <!-- Facebook Ads -->
+        <div class="promo-card">
+          <div class="promo-card-media">
+            <img src="facebook-ads.jpg" alt="Formation Facebook Ads Dakar" width="400" height="300" loading="lazy">
+            <span class="promo-tag"><i class="fab fa-facebook"></i> Facebook Ads</span>
+            <span class="promo-price-tag">30 000 FCFA</span>
+          </div>
+          <div class="promo-card-body">
+            <h3>Facebook Ads</h3>
+            <p class="promo-hook">Publier ne suffit plus… Il faut être vu par les bonnes personnes !</p>
+            <ul class="promo-features">
+              <li><i class="fas fa-check-circle"></i> Toucher votre clientèle idéale</li>
+              <li><i class="fas fa-check-circle"></i> Augmenter votre visibilité</li>
+              <li><i class="fas fa-check-circle"></i> Générer plus de prospects</li>
+              <li><i class="fas fa-check-circle"></i> Analyser les performances de vos campagnes</li>
+            </ul>
+            <div class="promo-meta">
+              <span><i class="far fa-calendar-alt"></i> Du 2 au 15 juillet • 15 jours</span>
+              <span><i class="fas fa-map-marker-alt"></i> Ngor Extension – Dakar</span>
+              <span><i class="fab fa-instagram"></i> Publicité Facebook & Instagram</span>
+            </div>
+            <div class="promo-actions">
+              <a href="https://wa.me/221710589088" class="promo-phone whatsapp"><i class="fab fa-whatsapp"></i> +221 71 058 90 88</a>
+              <a href="tel:+221338306157" class="promo-phone call"><i class="fas fa-phone"></i> +221 33 830 61 57</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp Business -->
+        <div class="promo-card">
+          <div class="promo-card-media">
+            <img src="whatsapp-business.jpg" alt="Formation WhatsApp Business Dakar" width="400" height="300" loading="lazy">
+            <span class="promo-tag"><i class="fab fa-whatsapp"></i> WhatsApp Business</span>
+            <span class="promo-price-tag">30 000 FCFA</span>
+          </div>
+          <div class="promo-card-body">
+            <h3>WhatsApp Business</h3>
+            <p class="promo-hook">Et si WhatsApp devenait votre meilleur commercial ?</p>
+            <ul class="promo-features">
+              <li><i class="fas fa-check-circle"></i> Créer votre catalogue produits</li>
+              <li><i class="fas fa-check-circle"></i> Automatiser vos réponses</li>
+              <li><i class="fas fa-check-circle"></i> Fidéliser vos clients</li>
+              <li><i class="fas fa-check-circle"></i> Vendre plus facilement</li>
+            </ul>
+            <div class="promo-meta">
+              <span><i class="far fa-calendar-alt"></i> Du 2 au 15 juillet</span>
+              <span><i class="fas fa-map-marker-alt"></i> Ngor Extension – Dakar</span>
+              <span><i class="fas fa-mobile-alt"></i> Votre téléphone, un outil de vente</span>
+            </div>
+            <div class="promo-actions">
+              <a href="https://wa.me/221710589088" class="promo-phone whatsapp"><i class="fab fa-whatsapp"></i> +221 71 058 90 88</a>
+              <a href="tel:+221338306157" class="promo-phone call"><i class="fas fa-phone"></i> +221 33 830 61 57</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Canva -->
+        <div class="promo-card">
+          <div class="promo-card-media">
+            <img src="canva.jpg" alt="Formation Canva design Dakar" width="400" height="300" loading="lazy">
+            <span class="promo-tag"><i class="fas fa-palette"></i> Canva</span>
+            <span class="promo-price-tag">30 000 FCFA</span>
+          </div>
+          <div class="promo-card-body">
+            <h3>Canva</h3>
+            <p class="promo-hook">Créez des visuels professionnels qui donnent envie d'acheter.</p>
+            <ul class="promo-features">
+              <li><i class="fas fa-check-circle"></i> Affiches</li>
+              <li><i class="fas fa-check-circle"></i> Flyers</li>
+              <li><i class="fas fa-check-circle"></i> Publications Facebook & Instagram</li>
+              <li><i class="fas fa-check-circle"></i> Présentations modernes</li>
+            </ul>
+            <div class="promo-meta">
+              <span><i class="far fa-calendar-alt"></i> Du 2 au 15 juillet • 15 jours</span>
+              <span><i class="fas fa-map-marker-alt"></i> Ngor Extension – Dakar</span>
+              <span><i class="fas fa-star"></i> Aucune expérience requise</span>
+            </div>
+            <div class="promo-actions">
+              <a href="https://wa.me/221710589088" class="promo-phone whatsapp"><i class="fab fa-whatsapp"></i> +221 71 058 90 88</a>
+              <a href="tel:+221338306157" class="promo-phone call"><i class="fas fa-phone"></i> +221 33 830 61 57</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   
