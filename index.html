@@ -2996,12 +2996,12 @@
       font-size: 0.9rem;
       opacity: 0.92;
     }
-    .formation-popup-pdf {
+    .formation-popup-video {
       width: 100%;
-      height: min(62vh, 520px);
-      border: none;
+      max-height: min(70vh, 620px);
       display: block;
-      background: #f3f4f6;
+      background: #000;
+      object-fit: contain;
     }
     .formation-popup-actions {
       display: flex;
@@ -3078,8 +3078,8 @@
       .formation-popup-header h2 {
         font-size: 1rem;
       }
-      .formation-popup-pdf {
-        height: min(50vh, 380px);
+      .formation-popup-video {
+        max-height: min(55vh, 440px);
       }
       .formation-popup-actions {
         flex-direction: column;
@@ -3244,36 +3244,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Overlay pour le menu mobile -->
   <div class="menu-overlay" id="menuOverlay"></div>
 
-  <!-- Popup appel à candidature — Formation Impression 3D -->
+  <!-- Popup vidéo — Formations Marketing Digital -->
   <div class="formation-popup-overlay" id="formationPopupOverlay">
     <div class="formation-popup" role="dialog" aria-modal="true" aria-labelledby="formationPopupTitle">
       <button class="formation-popup-close" id="formationPopupClose" aria-label="Fermer">&times;</button>
       <div class="formation-popup-header">
-        <h2 id="formationPopupTitle">Appel à candidature — Formation Impression 3D</h2>
-        <p>Consultez le document officiel et postulez dès maintenant.</p>
+        <h2 id="formationPopupTitle">Nos formations en Marketing Digital</h2>
+        <p>Facebook Ads, WhatsApp Business & Canva — Découvrez-les en vidéo.</p>
       </div>
-      <iframe
-        class="formation-popup-pdf"
-        src="appel-candidature-formation-impression-3d.pdf"
-        title="Appel à candidature — Formation Impression 3D"
-      ></iframe>
+      <video
+        class="formation-popup-video"
+        id="formationPopupVideo"
+        src="video-formation.mp4"
+        autoplay
+        loop
+        playsinline
+        controls
+        preload="auto"
+      ></video>
       <div class="formation-popup-actions">
         <a
-          href="appel-candidature-formation-impression-3d.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#formations-marketing"
           class="formation-popup-btn-primary"
+          id="formationPopupCta"
         >
-          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-          Ouvrir le PDF
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+          Voir les formations
         </a>
         <a
-          href="appel-candidature-formation-impression-3d.pdf"
-          download="appel-candidature-formation-impression-3d.pdf"
+          href="https://wa.me/221710589088"
+          target="_blank"
+          rel="noopener noreferrer"
           class="formation-popup-btn-secondary"
         >
-          <i class="fas fa-download" aria-hidden="true"></i>
-          Télécharger
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          Nous contacter
         </a>
       </div>
     </div>
@@ -6475,27 +6480,66 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(badgeStyle);
   </script>
 
-  <!-- Script popup appel à candidature Formation Impression 3D -->
+  <!-- Script popup vidéo Formations Marketing Digital -->
   <script>
     (function() {
       const popupOverlay = document.getElementById('formationPopupOverlay');
       const popupClose = document.getElementById('formationPopupClose');
+      const popupVideo = document.getElementById('formationPopupVideo');
+      const popupCta = document.getElementById('formationPopupCta');
       
       if (!popupOverlay || !popupClose) return;
+
+      // Activer le son dès le premier geste de l'utilisateur (contourne le blocage navigateur)
+      function enableSoundOnInteraction() {
+        if (!popupVideo) return;
+        popupVideo.muted = false;
+        popupVideo.volume = 1;
+        const p = popupVideo.play();
+        if (p && typeof p.catch === 'function') { p.catch(function(){}); }
+      }
+      function registerSoundUnlock() {
+        ['click', 'touchstart', 'keydown', 'scroll'].forEach(function(evt) {
+          document.addEventListener(evt, function handler() {
+            enableSoundOnInteraction();
+            document.removeEventListener(evt, handler);
+          }, { once: true });
+        });
+      }
 
       // Ouvrir automatiquement dès le chargement de la page
       window.addEventListener('load', function() {
         popupOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
+        if (popupVideo) {
+          // Tenter la lecture avec le son directement
+          popupVideo.muted = false;
+          popupVideo.volume = 1;
+          const p = popupVideo.play();
+          if (p && typeof p.then === 'function') {
+            p.catch(function() {
+              // Le navigateur bloque l'autoplay sonore : jouer en muet puis débloquer au 1er geste
+              popupVideo.muted = true;
+              popupVideo.play().catch(function(){});
+              registerSoundUnlock();
+            });
+          }
+        }
       });
 
       // Fermer le popup
       function closeFormationPopup() {
         popupOverlay.classList.remove('active');
         document.body.style.overflow = '';
+        if (popupVideo) { popupVideo.pause(); }
       }
 
       popupClose.addEventListener('click', closeFormationPopup);
+
+      // Fermer et défiler vers les formations au clic sur le CTA
+      if (popupCta) {
+        popupCta.addEventListener('click', closeFormationPopup);
+      }
 
       // Fermer en cliquant sur l'overlay
       popupOverlay.addEventListener('click', function(e) {
