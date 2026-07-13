@@ -6493,6 +6493,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Activer le son dès le premier geste de l'utilisateur (contourne le blocage navigateur)
       function enableSoundOnInteraction() {
         if (!popupVideo) return;
+        // Ne rien relancer si le popup est déjà fermé
+        if (!popupOverlay.classList.contains('active')) return;
         popupVideo.muted = false;
         popupVideo.volume = 1;
         const p = popupVideo.play();
@@ -6531,7 +6533,11 @@ document.addEventListener('DOMContentLoaded', function() {
       function closeFormationPopup() {
         popupOverlay.classList.remove('active');
         document.body.style.overflow = '';
-        if (popupVideo) { popupVideo.pause(); }
+        if (popupVideo) {
+          popupVideo.pause();
+          popupVideo.muted = true;
+          try { popupVideo.currentTime = 0; } catch (e) {}
+        }
       }
 
       popupClose.addEventListener('click', closeFormationPopup);
