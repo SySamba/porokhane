@@ -844,7 +844,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="mo_assets/Offrez-vous bien plus qu’un simple trajet (1).png" alt="Post Facebook 2">
       </div>
       <div class="galerie-item">
-        <img src="mo_assets/Offrez-vous un trajet alliant confort et élégance.png" alt="Post LinkedIn 1">
+        <img src="mo_assets/offrez-vous-trajet-elegance.png" alt="Post LinkedIn 1">
       </div>
       
      
@@ -974,7 +974,7 @@ export const scripts = `<script>
     const images = [
       "mo_assets/Agence de location.png",
       "mo_assets/Offrez-vous bien plus qu’un simple trajet (1).png",
-      "mo_assets/Offrez-vous un trajet alliant confort et élégance.png"
+      "mo_assets/offrez-vous-trajet-elegance.png"
       
       
     ];
