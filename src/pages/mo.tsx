@@ -838,10 +838,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>Galerie des publications</h2>
     <div class="galerie">
       <div class="galerie-item">
-        <img src="mo_assets/Agence de location.png" alt="Post Facebook 1">
+        <img src="mo_assets/agence-de-location.png" alt="Post Facebook 1">
       </div>
       <div class="galerie-item">
-        <img src="mo_assets/Offrez-vous bien plus qu’un simple trajet (1).png" alt="Post Facebook 2">
+        <img src="mo_assets/offrez-vous-trajet.png" alt="Post Facebook 2">
       </div>
       <div class="galerie-item">
         <img src="mo_assets/offrez-vous-trajet-elegance.png" alt="Post LinkedIn 1">
@@ -972,8 +972,8 @@ export const chatbot = `<button class="chatbot-btn" id="chatbotBtn" aria-label="
   </div>`;
 export const scripts = `<script>
     const images = [
-      "mo_assets/Agence de location.png",
-      "mo_assets/Offrez-vous bien plus qu’un simple trajet (1).png",
+      "mo_assets/agence-de-location.png",
+      "mo_assets/offrez-vous-trajet.png",
       "mo_assets/offrez-vous-trajet-elegance.png"
       
       
