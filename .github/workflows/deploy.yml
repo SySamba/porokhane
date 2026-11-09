@@ -42,16 +42,17 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq lftp sshpass
           export SSHPASS="$SSH_PASS"
-          DIR="${FTP_DIR#/}"
+          DIR="${FTP_DIR#/}"; [ -z "$DIR" ] && DIR="public_html"
           lftp -e "
             set sftp:connect-program 'sshpass -e ssh -a -x -p 65002 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null';
             open -u $SSH_USER, sftp://$SSH_HOST;
+            mkdir $DIR; cd $DIR;
             mirror -R --delete --ignore-time --parallel=8 --verbose \
               --exclude ^\\.well-known/ \
               --exclude ^\\.cpanel \
               --exclude ^cgi-bin \
               --exclude ^\\.htpasswds \
-              dist/ $DIR;
+              dist/ .;
             bye"
         env:
           SSH_HOST: ${{ secrets.FTP_HOST }}
