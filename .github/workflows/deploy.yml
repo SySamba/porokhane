@@ -46,7 +46,7 @@ jobs:
           lftp -e "
             set sftp:connect-program 'sshpass -e ssh -a -x -p 65002 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null';
             open -u $SSH_USER, sftp://$SSH_HOST;
-            mirror -R --delete --ignore-time --parallel=8 \
+            mirror -R --delete --ignore-time --parallel=8 --verbose \
               --exclude ^\\.well-known/ \
               --exclude ^\\.cpanel \
               --exclude ^cgi-bin \
