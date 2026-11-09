@@ -38,22 +38,33 @@ jobs:
           test ! -f dist/refined-vector-447411-b2-e3165d270c07.json
           test ! -f dist/scripts/email_config.json
 
-      - name: Upload SFTP (SSH Hostinger — peut supprimer/écraser tous les fichiers)
+      - name: Upload via SSH (rsync ou tar)
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq lftp sshpass
+          set -eo pipefail
+          sudo apt-get update -qq && sudo apt-get install -y -qq sshpass rsync
           export SSHPASS="$SSH_PASS"
+          SSH="sshpass -e ssh -p 65002 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SSH_USER@$SSH_HOST"
           DIR="${FTP_DIR#/}"; [ -z "$DIR" ] && DIR="public_html"
-          lftp -e "
-            set sftp:connect-program 'sshpass -e ssh -a -x -p 65002 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null';
-            open -u $SSH_USER, sftp://$SSH_HOST;
-            mkdir $DIR; cd $DIR;
-            mirror -R --delete --ignore-time --parallel=8 --verbose \
-              --exclude ^\\.well-known/ \
-              --exclude ^\\.cpanel \
-              --exclude ^cgi-bin \
-              --exclude ^\\.htpasswds \
-              dist/ .;
-            bye"
+          echo '--- Diagnostic : dossier de connexion ---'
+          $SSH "pwd && ls && test -d $DIR && echo DIR-OK"
+          if $SSH 'command -v rsync >/dev/null'; then
+            echo '--- Déploiement rsync (incrémental + delete) ---'
+            rsync -az --delete --itemize-changes \
+              -e "sshpass -e ssh -p 65002 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
+              --exclude '.well-known/' --exclude '.cpanel' --exclude 'cgi-bin' \
+              dist/ "$SSH_USER@$SSH_HOST:$DIR/"
+          else
+            echo '--- Pas de rsync : nettoyage + upload tar ---'
+            $SSH "cd $DIR && find . -mindepth 1 -maxdepth 1 ! -name '.well-known' -exec rm -rf {} +"
+            tar -czf - -C dist . | $SSH "cd $DIR && tar -xzf -"
+          fi
+          echo '--- Vérification distante ---'
+          $SSH "ls $DIR | head && test -f $DIR/index.html && echo DEPLOY-OK"
+        env:
+          SSH_HOST: ${{ secrets.FTP_HOST }}
+          SSH_USER: ${{ secrets.FTP_USER }}
+          SSH_PASS: ${{ secrets.SSH_PASS || secrets.FTP_PASS }}
+          FTP_DIR: ${{ secrets.FTP_DIR }}
         env:
           SSH_HOST: ${{ secrets.FTP_HOST }}
           SSH_USER: ${{ secrets.FTP_USER }}
