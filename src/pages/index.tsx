@@ -1,0 +1,6205 @@
+// Généré depuis index.html — ne plus modifier le .html racine, éditer ce fichier.
+import React from 'react';
+import { Document } from '../components';
+
+export const fileName = 'index.html';
+export const preamble = `﻿<!DOCTYPE html>
+<html lang="fr">
+<script async>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}window.addEventListener('load',function(){loadScript(function(){beTracker.t({hash:"4839b43b65f279b77271391d6643be69"})})});</script>
+
+
+
+`;
+export const headTag = `<head>`;
+export const head = `
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KBH8R72G');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agence de Marketing Digital Dakar | SEO, Sites Web, Ads</title>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="description" content="Marketing digital à Dakar : SEO, création de sites web, publicité Facebook & Google Ads et réseaux sociaux pour PME. Devis gratuit sous 24 h.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  
+  <!-- Preconnect pour ressources externes critiques -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://tracker.metricool.com">
+  
+  <!-- Preload ressources critiques -->
+  <link rel="preload" href="images/logo.png" as="image" type="image/png">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" as="style">
+
+  
+  <!-- Meta keywords -->
+  <meta name="keywords" content="AGENCE DE MARKETING DIGITAL DAKAR, agence marketing digital dakar, marketing digital sénégal, stratégie digitale dakar, création site web dakar, SEO dakar, webmarketing dakar, consultant digital dakar, formation Facebook Ads Dakar, formation publicité Facebook Instagram Sénégal, formation WhatsApp Business Dakar, formation Canva Dakar, formation création visuels Dakar, formations marketing digital Ngor Dakar">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Agence de marketing digital à Dakar | Porokhane Digital Consulting">
+  <meta property="og:description" content="Marketing digital à Dakar : SEO, création de sites web, publicité Facebook & Google Ads et réseaux sociaux pour PME. Devis gratuit sous 24 h.">
+  <meta property="og:image" content="https://digital-porokhane.com/images/logo.png">
+  <meta property="og:url" content="https://digital-porokhane.com/">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agence de marketing digital à Dakar | Porokhane Digital Consulting">
+  <meta name="twitter:description" content="Marketing digital à Dakar : SEO, création de sites web, publicité Facebook & Google Ads et réseaux sociaux pour PME. Devis gratuit sous 24 h.">
+  <meta name="twitter:image" content="https://digital-porokhane.com/images/logo.png">
+  
+  <link rel="canonical" href="https://digital-porokhane.com/">
+
+  <!-- Données structurées : Formations Marketing Digital -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Que fait une agence de marketing digital à Dakar ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Elle développe votre visibilité et vos ventes en ligne : référencement naturel SEO, création de sites web, publicité Facebook et Google Ads, gestion des réseaux sociaux et stratégie digitale. Porokhane Digital Consulting pilote l'ensemble depuis Ngor Extension, à Dakar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi investir dans le marketing digital à Dakar ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Au Sénégal, la majorité des clients cherchent désormais un prestataire sur Google, Facebook ou WhatsApp avant d'acheter. Le marketing digital vous permet de toucher précisément votre clientèle à Dakar et dans tout le pays, de mesurer chaque franc investi et de générer des demandes qualifiées en continu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Agence de marketing digital ou freelance : que choisir ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un freelance convient à une mission ponctuelle ; une agence réunit SEO, design, développement et publicité dans une même équipe et assure la continuité. Nous détaillons les critères dans notre comparatif freelance ou agence de marketing digital à Dakar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte une stratégie de marketing digital à Dakar ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le budget dépend de vos objectifs, des canaux retenus et du budget publicitaire. Nous partons toujours d'un diagnostic de votre situation pour proposer une offre adaptée aux PME comme aux grandes structures. Demandez votre devis gratuit : réponse sous 24 h."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Proposez-vous d'autres services que le marketing digital ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui : automatisation, ERP, intelligence artificielle, cybersécurité, formations professionnelles et impression 3D à Dakar. Consultez aussi notre blog pour nos conseils."
+      }
+    }
+  ]
+}
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+  <meta name="google-site-verification" content="IT3v7q_2vo0wuXA7SIe4jXER1ot-GCSMRiGwoS65Yg8" />
+  <style>
+    :root {
+      --vert: #1fa47a;
+      --vert-clair: #d1fae5;
+      --bleu: #2563eb;
+      --bleu-clair: #dbeafe;
+      --blanc: #fff;
+      --noir: #0f172a;
+      --gris: #f8fafc;
+      --gris-fonce: #e2e8f0;
+      --gris-texte: #475569;
+      --gris-titre: #1e293b;
+      --ombre: 0 4px 24px rgba(0,0,0,0.08);
+      --rayon: 16px;
+      --rayon-grand: 24px;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: var(--blanc); 
+      color: var(--gris-titre); 
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    .container { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 0 20px; 
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 10px;
+      }
+    }
+    
+    /* Navigation */
+    /* Navigation principale */
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--gris-fonce);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+    }
+    
+    .nav-logo img {
+      height: 90px;
+      width: auto;
+      display: block;
+      margin-right: 0.5rem;
+    }
+    
+    .nav-logo h2 {
+      color: var(--vert);
+      font-size: 1.5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .nav-link {
+      color: var(--noir);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s;
+      display: inline-block;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--vert);
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover {
+      color: var(--vert);
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Menu Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+    
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex !important;
+      }
+      
+      .nav-menu {
+        display: none !important;
+      }
+      
+      .nav-menu.active {
+        display: flex !important;
+      }
+    }
+    
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--vert);
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Bouton Devis */
+    .nav-devis {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.7rem 1.5rem;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.4s;
+      box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    
+    .nav-devis:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+    }
+    
+    .devis-icon {
+      margin-left: 0.5rem;
+      transition: transform 0.3s;
+    }
+    
+    .nav-devis:hover .devis-icon {
+      transform: translateX(5px);
+      animation: pulse 1s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: translateX(5px) scale(1); }
+      50% { transform: translateX(5px) scale(1.2); }
+      100% { transform: translateX(5px) scale(1); }
+    }
+    
+    /* Sous-menus pour desktop */
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: var(--blanc);
+      border-radius: var(--rayon);
+      box-shadow: var(--ombre);
+      min-width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 100;
+      border: 1px solid var(--gris-fonce);
+      padding: 0.5rem 0;
+    }
+    
+    .nav-item:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    /* Position relative pour les éléments nav-item */
+    .nav-item {
+      position: relative;
+    }
+    
+    /* Styles spécifiques pour desktop - plus spécifiques que mobile */
+    @media (min-width: 769px) {
+      .submenu {
+        position: absolute !important;
+        top: 100% !important;
+        left: 50% !important;
+        transform: translateX(-50%) translateY(10px) !important;
+        background: var(--blanc) !important;
+        border-radius: var(--rayon) !important;
+        box-shadow: var(--ombre) !important;
+        min-width: 220px !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: all 0.3s ease !important;
+        z-index: 100 !important;
+        border: 1px solid var(--gris-fonce) !important;
+        padding: 0.5rem 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        width: auto !important;
+        margin-top: 0 !important;
+      }
+      
+      .nav-item:hover .submenu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateX(-50%) translateY(0) !important;
+        max-height: none !important;
+        margin-top: 0 !important;
+        padding: 0.5rem 0 !important;
+      }
+    }
+    
+    .submenu-link {
+      display: block;
+      padding: 0.7rem 1.5rem;
+      color: var(--noir);
+      text-decoration: none;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+    
+    .submenu-link:hover {
+      background: var(--gris-clair);
+      color: var(--vert);
+      padding-left: 1.7rem;
+    }
+    
+    /* Styles spécifiques pour les liens des sous-menus sur desktop */
+    @media (min-width: 769px) {
+      .submenu-link {
+        display: block !important;
+        padding: 0.7rem 1.5rem !important;
+        color: var(--noir) !important;
+        text-decoration: none !important;
+        transition: all 0.2s !important;
+        font-weight: 500 !important;
+        border-bottom: none !important;
+        font-size: 1rem !important;
+      }
+      
+      .submenu-link:hover {
+        background: var(--gris-clair) !important;
+        color: var(--vert) !important;
+        padding-left: 1.7rem !important;
+      }
+      
+      .submenu-link:last-child {
+        border-bottom: none !important;
+      }
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .nav-menu {
+        gap: 1rem;
+      }
+      
+      .nav-link {
+        font-size: 0.9rem;
+      }
+      
+      .nav-devis {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      
+      .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--blanc);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem 2rem;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        gap: 0;
+        margin: 0;
+        overflow-y: auto;
+        z-index: 1000;
+      }
+      
+      .nav-menu.active {
+        display: flex;
+        right: 0;
+      }
+      
+      /* Empêcher le scroll du body quand le menu est ouvert */
+      body.menu-open {
+        overflow: hidden;
+      }
+      
+      /* Overlay pour fermer le menu en cliquant à l'extérieur */
+      .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+             .menu-overlay.active {
+         opacity: 1;
+         visibility: visible;
+      }
+      
+      .nav-menu li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-link {
+        display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gris-fonce);
+        font-size: 1.1rem;
+        width: 100%;
+      }
+      
+      .nav-link::after {
+        display: none;
+      }
+      
+      .nav-devis {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        justify-content: center;
+      }
+      
+      /* Sous-menus en mode mobile */
+      .submenu {
+        position: static !important;
+        transform: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        background: var(--gris) !important;
+        border-radius: 8px !important;
+        margin-top: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-width: auto !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      /* Affichage des sous-menus au survol/touch sur mobile */
+      .nav-item:hover .submenu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-height: 200px !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+      }
+      
+      .submenu-link {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-size: 1rem;
+      }
+      
+      .submenu-link:hover {
+        padding-left: 1rem;
+      }
+      
+      .submenu-link:last-child {
+        border-bottom: none;
+      }
+    }
+    /* Hero */
+    .hero { 
+      padding: 160px 0 80px; 
+      background: linear-gradient(rgba(31, 164, 122, 0.9), rgba(37, 99, 235, 0.9)), 
+                  url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: var(--blanc); 
+      min-height: 100vh; 
+      display: flex; 
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23f8fafc" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23f8fafc" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23f8fafc"/></svg>');
+      background-size: cover;
+      z-index: 1;
+    }
+    
+    .hero-container { 
+      display: flex; 
+      flex-wrap: wrap; 
+      align-items: center; 
+      gap: 3rem; 
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-content { 
+      flex: 1 1 350px; 
+    }
+    
+    .hero-title { 
+      font-size: 3.5rem; 
+      font-weight: 800; 
+      margin-bottom: 1.2rem; 
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .hero-subtitle { 
+      font-size: 1.4rem; 
+      margin-bottom: 2.2rem; 
+      color: rgba(255,255,255,0.9); 
+      font-weight: 300;
+      max-width: 600px;
+    }
+    
+    .hero-buttons { 
+      display: flex; 
+      gap: 1.2rem; 
+      flex-wrap: wrap; 
+      
+    }
+    
+    .btn { 
+      padding: 14px 32px; 
+      border-radius: 30px; 
+      text-decoration: none; 
+      font-weight: 700; 
+      font-size: 1.1rem; 
+      transition: all 0.3s; 
+      border: none; 
+      cursor: pointer; 
+      box-shadow: var(--ombre); 
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .btn-primary { 
+      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+    }
+    
+    .btn-primary:hover { 
+      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
+      color: var(--blanc); 
+      transform: translateY(-2px) scale(1.04); 
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    }
+    
+    .btn-secondary { 
+      background: transparent; 
+      color: var(--blanc); 
+      border: 2px solid var(--blanc); 
+    }
+    
+    .btn-secondary{ 
+      background: var(--blanc); 
+      color: var(--vert); 
+      border-color: var(--blanc); 
+    }
+    
+    .hero-img { 
+      flex: 1 1 350px; 
+      display: flex; 
+      justify-content: center; 
+      position: relative;
+    }
+    
+    .hero-img img { 
+      width: 100%; 
+      max-width: 600px;
+      border-radius: var(--rayon-grand); 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
+      border: 5px solid rgba(255,255,255,0.2);
+      animation: float 6s ease-in-out infinite;
+    }
+    /* Promos dans le hero */
+    .hero-promos {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(260px, 1fr));
+      gap: 18px;
+      margin: 22px 0 18px;
+    }
+    .promo-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      min-height: 220px;
+      box-shadow: var(--ombre);
+      background: #000;
+      isolation: isolate;
+    }
+    .promo-card .bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      filter: brightness(0.7);
+      z-index: 0;
+      transform: scale(1.02);
+    }
+    .promo-card .scrim {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.75) 100%);
+      z-index: 1;
+    }
+    .promo-content {
+      position: relative; z-index: 2; color: #fff;
+      display: grid; gap: 8px; padding: 16px;
+      text-align: left;
+    }
+    .promo-title { font-weight: 800; font-size: 1.05rem; line-height: 1.25; }
+    .promo-sub { font-weight: 600; font-size: 0.95rem; opacity: 0.95; }
+    .promo-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .badge { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); color: #fff; padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 0.85rem; }
+    .promo-ctas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .promo-ctas a { text-decoration: none; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 999px; background: rgba(255,255,255,0.9); color: #0f172a; font-weight: 800; }
+    .btn-ghost.whatsapp { background: #25D366; color: #fff; }
+    .promo-deadline { margin-top: 4px; font-size: 0.85rem; opacity: 0.95; font-weight: 700; }
+
+    @media (max-width: 900px) {
+      .hero-promos { grid-template-columns: 1fr; }
+    }
+
+    /* Modals (popups) - Design professionnel amélioré */
+    .modal { 
+      position: fixed; 
+      inset: 0; 
+      display: none; 
+      place-items: center; 
+      padding: 20px; 
+      z-index: 2000;
+      animation: fadeIn 0.3s ease-out;
+    }
+    
+    .modal.open { 
+      display: grid; 
+    }
+    
+    .modal::before { 
+      content: ""; 
+      position: absolute; 
+      inset: 0; 
+      background: rgba(15, 23, 42, 0.8); 
+      backdrop-filter: blur(8px); 
+      animation: fadeIn 0.3s ease-out;
+    }
+    
+    .modal-dialog { 
+      position: relative; 
+      z-index: 1; 
+      width: min(950px, 95vw); 
+      max-height: 90vh;
+      border-radius: 24px; 
+      overflow: hidden; 
+      box-shadow: 0 25px 80px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1); 
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%); 
+      color: #fff;
+      transform: scale(0.9);
+      animation: modalSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes modalSlideIn {
+      from { 
+        transform: scale(0.9) translateY(20px); 
+        opacity: 0; 
+      }
+      to { 
+        transform: scale(1) translateY(0); 
+        opacity: 1; 
+      }
+    }
+    
+    .modal-hero { 
+      position: relative; 
+      min-height: 280px; 
+      background-size: cover; 
+      background-position: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .modal-hero::after { 
+      content: ""; 
+      position: absolute; 
+      inset: 0; 
+      background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 70%, rgba(15,23,42,0.95) 100%); 
+    }
+    
+    .modal-body { 
+      position: relative; 
+      padding: 32px; 
+      display: grid; 
+      gap: 20px;
+      background: linear-gradient(145deg, rgba(30,41,59,0.9) 0%, rgba(15,23,42,0.9) 100%);
+    }
+    
+    .modal-title { 
+      font-size: 1.75rem; 
+      font-weight: 800; 
+      line-height: 1.2;
+      background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+    
+    .modal-sub { 
+      opacity: 0.9; 
+      font-weight: 500;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+    
+    .modal-badges { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 12px;
+      margin: 16px 0;
+    }
+    
+    .modal-badges .badge { 
+      background: linear-gradient(135deg, rgba(31,164,122,0.2) 0%, rgba(37,99,235,0.2) 100%); 
+      border: 1px solid rgba(31,164,122,0.4); 
+      color: #10b981;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 12px rgba(31,164,122,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .modal-badges .badge:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(31,164,122,0.2);
+    }
+    
+    .modal-ctas { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 12px; 
+      margin-top: 24px;
+    }
+    
+    .modal-ctas .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .modal-ctas .btn-ghost:hover {
+      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    
+    .modal-ctas .btn-ghost.whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      border-color: #25D366;
+      color: #fff;
+    }
+    
+    .modal-ctas .btn-ghost.whatsapp:hover {
+      background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+      box-shadow: 0 8px 25px rgba(37,211,102,0.3);
+    }
+    
+    .modal-close { 
+      position: absolute; 
+      top: 16px; 
+      right: 16px; 
+      background: rgba(255,255,255,0.95); 
+      color: #0f172a; 
+      border: none; 
+      border-radius: 50%; 
+      width: 44px; 
+      height: 44px; 
+      display: grid; 
+      place-items: center; 
+      cursor: pointer; 
+      font-size: 1.3rem; 
+      font-weight: bold;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+    
+    .modal-close:hover {
+      background: #ef4444;
+      color: white;
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(239,68,68,0.4);
+    }
+    
+    .promo-deadline {
+      margin-top: 16px;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, rgba(239,68,68,0.1) 0%, rgba(220,38,38,0.1) 100%);
+      border: 1px solid rgba(239,68,68,0.3);
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #fca5a5;
+      text-align: center;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    
+    /* Responsive pour les modals */
+    @media (max-width: 768px) {
+      .modal-dialog {
+        width: 95vw;
+        max-height: 85vh;
+        border-radius: 20px;
+      }
+      
+      .modal-hero {
+        min-height: 200px;
+      }
+      
+      .modal-body {
+        padding: 24px 20px;
+        gap: 16px;
+      }
+      
+      .modal-title {
+        font-size: 1.4rem;
+      }
+      
+      .modal-sub {
+        font-size: 1rem;
+      }
+      
+      .modal-ctas {
+        flex-direction: column;
+      }
+      
+      .modal-ctas .btn-ghost {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    /* SECTION OFFRES SPÉCIALES - DESIGN TOP */
+    .offres-speciales {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offres-speciales::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(31,164,122,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(37,99,235,0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .offres-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .offres-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .offres-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+      box-shadow: 0 4px 20px rgba(239,68,68,0.3);
+    }
+
+    .offres-title {
+      font-size: 3rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .offres-subtitle {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .offres-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .offre-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 24px;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .offre-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    }
+
+    .offre-premium {
+      border-top: 4px solid #1fa47a;
+    }
+
+    .offre-trending {
+      border-top: 4px solid #2563eb;
+    }
+
+    .offre-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 32px 0;
+      margin-bottom: 20px;
+    }
+
+    .offre-badge {
+      background: linear-gradient(135deg, #1fa47a, #059669);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .offre-trending .offre-badge {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    }
+
+    .offre-icon {
+      font-size: 2.5rem;
+      opacity: 0.8;
+    }
+
+    .offre-content {
+      padding: 0 32px 32px;
+    }
+
+    .offre-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 16px;
+    }
+
+    .offre-price {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .price-old {
+      font-size: 1rem;
+      color: #64748b;
+      text-decoration: line-through;
+    }
+
+    .price-new {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #1fa47a;
+      background: linear-gradient(135deg, #1fa47a, #059669);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .offre-description {
+      color: #64748b;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .offre-features {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .offre-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .offre-features i {
+      color: #1fa47a;
+      font-size: 1rem;
+      width: 16px;
+    }
+
+    .offre-cta {
+      text-align: center;
+    }
+
+    .btn-offre {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      margin-bottom: 16px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #128C7E, #25D366);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(37,211,102,0.4);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(37,99,235,0.4);
+    }
+
+    .offre-urgence {
+      font-size: 0.9rem;
+      color: #ef4444;
+      font-weight: 700;
+      animation: pulse 2s infinite;
+    }
+
+    .offre-deadline {
+      font-size: 0.9rem;
+      color: #dc2626;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    .offre-contact {
+      margin: 24px 0;
+      padding: 20px;
+      background: rgba(31,164,122,0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(31,164,122,0.2);
+    }
+
+    .offre-contact p {
+      margin-bottom: 16px;
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .phone-btn {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+    }
+
+    .phone-btn:hover {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+    }
+
+    .email-btn {
+      background: linear-gradient(135deg, #64748b, #475569);
+      color: white;
+    }
+
+    .email-btn:hover {
+      background: linear-gradient(135deg, #475569, #64748b);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(100,116,139,0.3);
+    }
+
+    .whatsapp-btn {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+    }
+
+    .whatsapp-btn:hover {
+      background: linear-gradient(135deg, #128C7E, #25D366);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+    }
+
+    .offre-period {
+      margin: 16px 0;
+      padding: 12px 16px;
+      background: rgba(37,99,235,0.1);
+      border-radius: 8px;
+      border-left: 4px solid #2563eb;
+    }
+
+    .offre-period p {
+      margin: 0;
+      color: #1e293b;
+    }
+
+    /* Styles pour les images des offres */
+    .offre-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 20px 20px 0 0;
+      position: relative;
+    }
+
+    .offre-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .offre-card:hover .offre-img {
+      transform: scale(1.05);
+    }
+
+    /* Styles pour le countdown */
+    .countdown-container {
+      margin-top: 20px;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(220,38,38,0.1));
+      border: 2px solid rgba(239,68,68,0.3);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .countdown-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #dc2626;
+      margin-bottom: 16px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .countdown-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      color: white;
+      padding: 12px 16px;
+      border-radius: 12px;
+      min-width: 70px;
+      box-shadow: 0 4px 15px rgba(239,68,68,0.3);
+      animation: pulse 2s infinite;
+    }
+
+    .countdown-number {
+      font-size: 1.8rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .countdown-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes countdownPulse {
+      0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(239,68,68,0.3);
+      }
+      50% { 
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(239,68,68,0.5);
+      }
+    }
+
+    .countdown-item.urgent {
+      animation: countdownPulse 1s infinite;
+    }
+
+    .offres-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 32px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .garantie {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .garantie i {
+      color: #1fa47a;
+      font-size: 1.2rem;
+    }
+
+    .contact-rapide {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+    }
+
+    .contact-rapide a {
+      color: #1fa47a;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+
+    .contact-rapide a:hover {
+      color: #059669;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .offres-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .offre-card {
+        margin: 0 auto;
+        max-width: 500px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .offres-speciales {
+        padding: 60px 0;
+      }
+      
+      .offres-container {
+        padding: 0 15px;
+      }
+      
+      .offres-title {
+        font-size: 2.2rem;
+      }
+      
+      .offres-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      
+      .offre-card {
+        max-width: 100%;
+      }
+      
+      .offre-header,
+      .offre-content {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      
+      .offres-footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .offres-title {
+        font-size: 1.8rem;
+      }
+      
+      .offre-header,
+      .offre-content {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      
+      .btn-offre {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
+    /* Sections communes */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+    
+    .section-header { 
+      text-align: center; 
+      margin-bottom: 3rem;
+    }
+    
+    .section-header h2 { 
+      font-size: 2.8rem; 
+      font-weight: 800; 
+      color: var(--vert); 
+      margin-bottom: 1rem; 
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      border-radius: 2px;
+    }
+    
+    .section-header p { 
+      font-size: 1.2rem; 
+      color: var(--gris-texte); 
+      max-width: 700px; 
+      margin: 0 auto; 
+    }
+    
+    /* Services */
+    .services-section { 
+      background: linear-gradient(rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), 
+                  url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    }
+    
+    .services-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      gap: 2.5rem; 
+    }
+    
+    .service-card { 
+      background: var(--blanc); 
+      border-radius: var(--rayon-grand); 
+      box-shadow: var(--ombre); 
+      padding: 2.5rem 1.8rem; 
+      text-align: center; 
+      border-top: 4px solid var(--vert);
+      position: relative; 
+      overflow: hidden; 
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 1;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--vert), var(--bleu));
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: -1;
+    }
+    
+    .service-card img { 
+      width: 80px; 
+      height: 80px; 
+      object-fit: cover; 
+      border-radius: 50%; 
+      margin-bottom: 1.2rem; 
+      border: 3px solid var(--vert-clair);
+      padding: 0.2rem;
+      background: var(--blanc);
+      transition: all 0.3s;
+    }
+    
+    .service-card h3 { 
+      color: var(--bleu); 
+      font-size: 1.4rem; 
+      margin-bottom: 0.7rem; 
+      transition: color 0.3s;
+    }
+    
+    .service-card p { 
+      color: var(--gris-texte); 
+      transition: color 0.3s;
+    }
+    
+    .service-card .btn { 
+      margin-top: 1.5rem; 
+      padding: 10px 24px; 
+      font-size: 1rem; 
+    }
+    
+    .service-card:hover { 
+      transform: translateY(-10px) scale(1.03); 
+      box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15);
+    }
+    
+    .service-card:hover::before {
+      opacity: 1;
+    }
+    
+    .service-card:hover h3, 
+    .service-card:hover p,
+    .service-card:hover .btn { 
+      color: var(--blanc); 
+    }
+    
+    .service-card:hover img {
+      border-color: var(--blanc);
+      transform: scale(1.1);
+    }
+    
+    /* Blog */
+    .blog-section { 
+      background: linear-gradient(rgba(31, 164, 122, 0.03), rgba(31, 164, 122, 0.03)), 
+                  url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    }
+    
+    .blog-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      gap: 2.5rem; 
+    }
+    
+    .blog-card { 
+      background: var(--blanc); 
+      border-radius: var(--rayon-grand); 
+      box-shadow: var(--ombre); 
+      padding: 0; 
+      overflow: hidden; 
+      display: flex; 
+      flex-direction: column; 
+      transition: all 0.3s;
+    }
+    
+    .blog-card-img {
+      height: 200px;
+      overflow: hidden;
+      position: relative; /* Pour le positionnement absolu de l'image */
+    }
+    
+    .blog-card img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      transition: transform 0.5s;
+    }
+    
+    .blog-card-content { 
+      padding: 1.8rem; 
+      flex: 1; 
+      display: flex; 
+      flex-direction: column; 
+    }
+    
+    .blog-card h3 { 
+      color: var(--vert); 
+      font-size: 1.3rem; 
+      margin-bottom: 0.7rem; 
+      transition: color 0.3s;
+    }
+    
+    .blog-card p { 
+      color: var(--gris-texte); 
+      flex: 1; 
+      margin-bottom: 1rem;
+    }
+    
+    .blog-meta { 
+      color: var(--bleu); 
+      font-size: 0.95rem; 
+      margin-bottom: 1rem; 
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    
+    .blog-meta i {
+      font-size: 0.9rem;
+    }
+    
+    .blog-card .btn { 
+      align-self: flex-start;
+      margin-top: auto;
+      padding: 8px 20px; 
+      font-size: 0.95rem; 
+    }
+    
+    .blog-card:hover { 
+      box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15);
+      transform: translateY(-5px);
+    }
+    
+    .blog-card:hover h3 { 
+      color: var(--bleu); 
+    }
+    
+    .blog-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: var(--blanc);
+      border-radius: var(--rayon);
+      box-shadow: var(--ombre);
+      min-width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 100;
+      border: 1px solid var(--gris-fonce);
+      padding: 0.5rem 0;
+    }
+    
+    .nav-item:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Classe pour afficher les sous-menus au clic */
+    .nav-item.active .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+
+    
+    .submenu-link {
+      display: block;
+      padding: 0.7rem 1.5rem;
+      color: var(--noir);
+      text-decoration: none;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+    
+    .submenu-link:hover {
+      background: var(--gris-clair);
+      color: var(--vert);
+      padding-left: 1.7rem;
+    }
+    
+    
+    /* Devis */
+    .devis-section { 
+      background: linear-gradient(rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), 
+                  url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    }
+    
+    .devis-form { 
+      background: var(--blanc); 
+      border-radius: var(--rayon-grand); 
+      padding: 2.5rem; 
+      box-shadow: var(--ombre); 
+      max-width: 600px; 
+      margin: 0 auto; 
+      border-top: 4px solid var(--vert);
+    }
+
+    /* Bouton Devis Spécial */
+    .nav-devis {
+      position: relative;
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
+      border: none;
+      cursor: pointer;
+    }
+    
+    .nav-devis::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    
+    .nav-devis:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    }
+    
+    .nav-devis:hover::before {
+      opacity: 1;
+    }
+    
+    /* Animation "Pulse" au survol */
+    .nav-devis:hover .devis-icon {
+      animation: pulse 1s infinite;
+    }
+    
+    /* Effet de vague */
+    .nav-devis::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+      transform: scale(0);
+      opacity: 0;
+      transition: transform 0.6s, opacity 0.4s;
+    }
+    
+    .nav-devis:hover::after {
+      transform: scale(2);
+      opacity: 1;
+    }
+    
+    /* Icône animée */
+    .devis-icon {
+      margin-left: 0.5rem;
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+    
+    .nav-devis:hover .devis-icon {
+      transform: translateX(3px);
+    }
+    
+    /* Animation */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-devis {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    .devis-form h3 { 
+      color: var(--bleu); 
+      margin-bottom: 1.5rem; 
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    
+    .devis-form input, 
+    .devis-form textarea, 
+    .devis-form select { 
+      width: 100%; 
+      padding: 1rem; 
+      border-radius: 10px; 
+      border: 1px solid var(--gris-fonce); 
+      background: var(--gris); 
+      color: var(--gris-titre); 
+      font-size: 1rem; 
+      margin-bottom: 1rem; 
+      transition: all 0.3s; 
+    }
+    
+    .devis-form input:focus, 
+    .devis-form textarea:focus, 
+    .devis-form select:focus { 
+      border-color: var(--vert); 
+      outline: none; 
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    /* Témoignages */
+    .temoignages-section { 
+      background: linear-gradient(rgba(31, 164, 122, 0.05), rgba(31, 164, 122, 0.05)), 
+                  url('images/temoignage.webp') no-repeat center center/cover;
+    }
+    
+    .carousel { 
+      position: relative; 
+      max-width: 800px; 
+      margin: 0 auto; 
+    }
+    
+    .carousel-track { 
+      display: flex; 
+      overflow: hidden; 
+    }
+    
+    .carousel-item { 
+      min-width: 100%; 
+      transition: transform 0.6s cubic-bezier(.4,0,.2,1); 
+      opacity: 0; 
+      pointer-events: none; 
+      position: absolute; 
+      left: 0; 
+      top: 0; 
+      width: 100%; 
+    }
+    
+    .carousel-item.active { 
+      opacity: 1; 
+      position: relative; 
+      pointer-events: auto; 
+    }
+    
+    .carousel-content { 
+      background: var(--blanc); 
+      border-radius: var(--rayon-grand); 
+      box-shadow: var(--ombre); 
+      padding: 3rem 2rem; 
+      text-align: center; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      position: relative;
+      border-top: 4px solid var(--vert);
+    }
+    
+    .carousel-content::before {
+      content: '\\201C';
+      font-family: Georgia, serif;
+      font-size: 5rem;
+      color: var(--vert-clair);
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      line-height: 1;
+    }
+    
+    .carousel-content::after {
+      content: '\\201D';
+      font-family: Georgia, serif;
+      font-size: 5rem;
+      color: var(--vert-clair);
+      position: absolute;
+      bottom: -30px;
+      right: 20px;
+      line-height: 1;
+    }
+    
+    .carousel-photo { 
+      width: 80px; 
+      height: 80px; 
+      border-radius: 50%; 
+      object-fit: cover; 
+      margin-bottom: 1.5rem; 
+      border: 3px solid var(--vert); 
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.2);
+    }
+    
+    .carousel-content p { 
+      color: var(--gris-texte); 
+      font-style: italic; 
+      margin-bottom: 1.5rem; 
+      font-size: 1.1rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .carousel-author { 
+      color: var(--bleu); 
+      font-weight: 700; 
+      font-size: 1.1rem;
+    }
+    
+    .carousel-position {
+      color: var(--gris-texte);
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+    
+    .carousel-controls { 
+      display: flex; 
+      justify-content: center; 
+      gap: 1rem; 
+      margin-top: 2rem; 
+    }
+    
+    .carousel-dot { 
+      width: 12px; 
+      height: 12px; 
+      border-radius: 50%; 
+      background: var(--gris-texte); 
+      opacity: 0.3; 
+      cursor: pointer; 
+      transition: all 0.3s; 
+    }
+    
+    .carousel-dot.active { 
+      background: var(--vert); 
+      opacity: 1; 
+      transform: scale(1.2);
+    }
+    
+    .carousel-arrow { 
+      background: var(--blanc); 
+      border: none; 
+      border-radius: 50%; 
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: var(--vert); 
+      font-size: 1.2rem; 
+      box-shadow: var(--ombre); 
+      cursor: pointer; 
+      transition: all 0.3s; 
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .carousel-arrow:hover { 
+      background: var(--vert); 
+      color: var(--blanc); 
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
+    }
+    
+    #prev {
+      left: -60px;
+    }
+    
+    #next {
+      right: -60px;
+    }
+    
+    /* FAQ */
+    .faq-section { 
+      background: linear-gradient(rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), 
+                  url('https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    }
+    
+    .faq-list { 
+      max-width: 800px; 
+      margin: 0 auto; 
+    }
+    
+    .faq-item { 
+      border-bottom: 1px solid var(--gris-fonce); 
+      margin-bottom: 1rem;
+    }
+    
+    .faq-question { 
+      cursor: pointer; 
+      padding: 1.5rem 0; 
+      font-weight: 700; 
+      color: var(--bleu); 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      transition: color 0.3s;
+    }
+    
+    .faq-question:hover {
+      color: var(--vert);
+    }
+    
+    .faq-answer { 
+      max-height: 0; 
+      overflow: hidden; 
+      transition: max-height 0.4s cubic-bezier(.4,0,.2,1); 
+      color: var(--gris-texte); 
+      line-height: 1.6;
+    }
+    
+    .faq-item.open .faq-answer { 
+      max-height: 300px; 
+      padding-bottom: 1.5rem; 
+    }
+    
+    .faq-toggle { 
+      font-size: 1.5rem; 
+      transition: transform 0.3s; 
+      color: var(--vert);
+    }
+    
+    .faq-item.open .faq-toggle { 
+      transform: rotate(45deg); 
+    }
+    
+    /* Contact & Newsletter */
+    .contact-section { 
+      background: linear-gradient(rgba(31, 164, 122, 0.05), rgba(31, 164, 122, 0.05)), 
+                  url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    }
+    
+    .contact-content { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 3rem; 
+      align-items: flex-start; 
+      justify-content: space-between; 
+    }
+    
+    .contact-info { 
+      flex: 1 1 300px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 2rem; 
+    }
+    
+    .contact-item { 
+      display: flex; 
+      align-items: center; 
+      gap: 1.5rem; 
+      background: var(--blanc);
+      padding: 1.5rem;
+      border-radius: var(--rayon);
+      box-shadow: var(--ombre);
+      transition: transform 0.3s;
+    }
+    
+    .contact-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .contact-icon { 
+      width: 60px; 
+      height: 60px; 
+      background: linear-gradient(135deg, var(--vert), var(--bleu)); 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: var(--blanc); 
+      font-size: 1.5rem; 
+      box-shadow: var(--ombre); 
+      flex-shrink: 0;
+    }
+    
+    .contact-item h3 { 
+      color: var(--bleu); 
+      font-size: 1.2rem; 
+      font-weight: 700; 
+      margin-bottom: 0.3rem; 
+    }
+    
+    .contact-item p { 
+      color: var(--gris-texte); 
+      font-size: 1rem; 
+    }
+    
+    .contact-form { 
+      flex: 1 1 350px; 
+      background: var(--blanc); 
+      border-radius: var(--rayon-grand); 
+      padding: 2.5rem; 
+      box-shadow: var(--ombre); 
+      display: flex; 
+      flex-direction: column; 
+      gap: 1.5rem; 
+      border-top: 4px solid var(--vert);
+    }
+    
+    .form-group input, 
+    .form-group textarea { 
+      width: 100%; 
+      padding: 1rem; 
+      border-radius: 10px; 
+      border: 1px solid var(--gris-fonce); 
+      background: var(--gris); 
+      color: var(--gris-titre); 
+      font-size: 1rem; 
+      transition: all 0.3s; 
+    }
+    
+    .form-group input:focus, 
+    .form-group textarea:focus { 
+      border-color: var(--vert); 
+      outline: none; 
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    
+    .newsletter { 
+      margin-top: 3rem; 
+      background: var(--blanc); 
+      border-radius: var(--rayon); 
+      padding: 1.5rem; 
+      box-shadow: var(--ombre); 
+      display: flex; 
+      gap: 0.5rem; 
+      align-items: center; 
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: 4px solid var(--vert);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .newsletter input[type="email"] { 
+      flex: 1; 
+      padding: 1rem; 
+      border-radius: 8px; 
+      border: 1px solid var(--gris-fonce); 
+      font-size: 1rem; 
+      transition: all 0.3s;
+    }
+    
+    .newsletter input[type="email"]:focus {
+      border-color: var(--vert);
+      outline: none;
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    .newsletter button { 
+      padding: 1rem 2rem; 
+      border-radius: 8px; 
+      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      border: none; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .newsletter button:hover { 
+      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
+    }
+    
+    /* Footer */
+    .footer { 
+      background: linear-gradient(135deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      padding: 80px 0 30px; 
+      position: relative;
+    }
+    
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231fa47a" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%231fa47a" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%231fa47a"/></svg>');
+      background-size: cover;
+      transform: rotate(180deg);
+    }
+    
+    .footer-content { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 3rem; 
+      margin-bottom: 3rem; 
+      position: relative;
+      z-index: 1;
+    }
+    
+    .footer-section h3, 
+    .footer-section h4 { 
+      color: var(--blanc); 
+      margin-bottom: 1.5rem; 
+      font-size: 1.3rem; 
+      font-weight: 700; 
+      position: relative;
+      display: inline-block;
+    }
+    
+    .footer-section h3::after,
+    .footer-section h4::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+    }
+    
+    .footer-section p { 
+      color: rgba(255,255,255,0.8); 
+      line-height: 1.6; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    .footer-section ul { 
+      list-style: none; 
+    }
+    
+    .footer-section ul li { 
+      margin-bottom: 0.8rem; 
+    }
+    
+    .footer-section ul li a { 
+      color: rgba(255,255,255,0.8); 
+      text-decoration: none; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .footer-section ul li a:hover { 
+      color: var(--blanc); 
+      transform: translateX(5px);
+    }
+    
+    .footer-section ul li a i {
+      font-size: 0.8rem;
+    }
+    
+    .social-links { 
+      display: flex; 
+      gap: 1rem; 
+      margin-top: 1.5rem; 
+    }
+    
+    .social-links a { 
+      width: 40px; 
+      height: 40px; 
+      background: rgba(255,255,255,0.15); 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: var(--blanc); 
+      text-decoration: none; 
+      transition: all 0.3s; 
+    }
+    
+    .social-links a:hover { 
+      background: var(--blanc); 
+      color: var(--vert); 
+      transform: translateY(-3px) scale(1.1); 
+    }
+    
+    .footer-bottom { 
+      border-top: 1px solid rgba(255,255,255,0.15); 
+      padding-top: 2rem; 
+      text-align: center; 
+      color: rgba(255,255,255,0.7); 
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Animations */
+    @keyframes float { 
+      0%, 100% { transform: translateY(0px); } 
+      50% { transform: translateY(-15px); } 
+    }
+    
+    /* Utilitaires */
+    .visually-hidden { 
+      position: absolute; 
+      width: 1px; 
+      height: 1px; 
+      padding: 0; 
+      margin: -1px; 
+      overflow: hidden; 
+      clip: rect(0,0,0,0); 
+      border: 0; 
+    }
+    
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-title {
+        font-size: 2.8rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2.2rem;
+      }
+      
+      #prev {
+        left: -20px;
+      }
+      
+      #next {
+        right: -20px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      section {
+        padding: 80px 0;
+      }
+      
+      .hero {
+        padding: 140px 0 60px;
+        text-align: center;
+      }
+      
+      .hero-container, 
+      .contact-content { 
+        flex-direction: column; 
+        gap: 2rem; 
+      }
+      
+      .hero-buttons {
+        justify-content: center;
+      }
+      
+      .hero-img img {
+        max-width: 450px;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+      
+      .section-header p {
+        font-size: 1.1rem;
+      }
+      
+      .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+      }
+      
+      #prev {
+        left: 10px;
+      }
+      
+      #next {
+        right: 10px;
+      }
+      
+      .newsletter {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 2rem 10px;
+      }
+      
+      .newsletter input[type="email"],
+      .newsletter button {
+        width: 100%;
+      }
+      
+      .newsletter button {
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+      
+      .nav-menu {
+        gap: 1.2rem;
+      }
+      
+      .nav-link {
+        font-size: 0.95rem;
+      }
+      
+      .service-card,
+      .blog-card {
+        padding: 1.8rem 1.2rem;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .newsletter {
+        margin: 2rem 5px;
+        padding: 1rem;
+      }
+      
+      .newsletter input[type="email"] {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+      }
+      
+      .newsletter button {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+      }
+    }
+    
+    /* Adaptation spécifique de la première section pour mobile */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 100px 10px 40px;
+        min-height: auto;
+        text-align: center;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      .hero-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .hero-content {
+        flex: 1 1 auto;
+        order: 1;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .hero-img {
+        flex: 1 1 auto;
+        order: 2;
+        padding: 0;
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      @media (max-width: 768px) {
+  .hero-img {
+    order: 1;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+}
+
+      
+      .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        padding: 0 5px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        font-weight: 800;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        padding: 0 5px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.4;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        font-weight: 400;
+        text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+      }
+      
+      .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        padding: 12px 16px;
+        font-size: 0.95rem;
+        white-space: normal;
+        text-align: center;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        font-weight: 600;
+        text-shadow: none;
+      }
+      
+      .hero-img img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero {
+        padding: 80px 8px 30px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      .hero-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.3;
+        padding: 0 2px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        font-weight: 800;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+        padding: 0 2px;
+        line-height: 1.3;
+      }
+      
+      .hero-buttons .btn {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+        max-width: 260px;
+      }
+      
+      .hero-img img {
+        border-radius: 8px;
+      }
+    }
+    
+    /* Très petits écrans */
+    @media (max-width: 360px) {
+      .hero {
+        padding: 70px 5px 25px;
+      }
+      
+      .hero-title {
+        font-size: 1.4rem;
+        line-height: 1.4;
+        padding: 0 1px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        font-weight: 800;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      }
+      
+      .hero-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+      
+      .hero-buttons .btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        max-width: 240px;
+      }
+    }
+
+    .parallax-wrapper {
+  min-height: 300px; /* ou auto si image fixée */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-out;
+}
+
+.parallax-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+    /* Section Réalisations */
+.realisations-section {
+  background: linear-gradient(rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), 
+              url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  padding: 100px 0;
+}
+
+.realisations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.realisation-card {
+  background: white;
+  border-radius: var(--rayon-grand);
+  overflow: hidden;
+  box-shadow: var(--ombre);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.realisation-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.realisation-img {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.realisation-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.realisation-card:hover .realisation-img img {
+  transform: scale(1.05);
+}
+
+.realisation-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 164, 122, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.realisation-card:hover .realisation-overlay {
+  opacity: 1;
+}
+
+.realisation-content {
+  text-align: center;
+  padding: 1.5rem;
+  color: white;
+}
+
+.realisation-content h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.realisation-content p {
+  margin-bottom: 1.5rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.realisation-info {
+  padding: 1.5rem;
+}
+
+.realisation-info h3 {
+  color: var(--bleu);
+  margin-bottom: 0.5rem;
+}
+
+.realisation-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--gris-texte);
+  font-size: 0.9rem;
+}
+
+.realisation-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.realisation-meta i {
+  font-size: 0.8rem;
+}
+
+.services-section, .hero, .services-section {
+  background-size: cover !important;
+  background-position: center !important;
+  width: 100% !important;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Correction prioritaire du bouton vert au survol dans les services */
+.service-card:hover .btn.btn-secondary {
+  background: var(--vert) !important;
+  color: var(--blanc) !important;
+  border: 2px solid var(--vert) !important;
+}
+
+.chatbot-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: linear-gradient(90deg, var(--vert), var(--bleu));
+  color: var(--blanc);
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  box-shadow: 0 4px 24px rgba(31,164,122,0.18);
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: background 0.3s, transform 0.2s;
+  animation: chatbot-bounce 1.5s infinite alternate;
+}
+.chatbot-btn:hover {
+  background: linear-gradient(90deg, var(--bleu), var(--vert));
+  transform: scale(1.08);
+}
+@keyframes chatbot-bounce {
+  0% { box-shadow: 0 4px 24px rgba(31,164,122,0.18); transform: scale(1); }
+  100% { box-shadow: 0 8px 32px rgba(37,99,235,0.18); transform: scale(1.08); }
+}
+.chatbot-btn .fa-comments {
+  font-size: 2.2rem;
+  animation: chatbot-icon-wave 2.5s infinite;
+}
+@keyframes chatbot-icon-wave {
+  0%, 100% { color: var(--blanc); transform: scale(1); }
+  50% { color: var(--vert); transform: scale(1.18) rotate(-8deg); }
+}
+
+  </style>
+  <style>
+    .temoignage-highlight {
+      color: #e67e22;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+    }
+
+
+  </style>
+  <!-- Données structurées Schema.org pour le SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Porokhane Digital Consulting",
+    "alternateName": "AGENCE DE MARKETING DIGITAL DAKAR",
+    "url": "https://digital-porokhane.com",
+    "logo": "https://digital-porokhane.com/images/logo.png",
+    "description": "AGENCE DE MARKETING DIGITAL DAKAR #1 au Sénégal. SEO, création de sites web, stratégie digitale et webmarketing professionnel.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ngor Extension villa 454",
+      "addressLocality": "Dakar",
+      "addressCountry": "SN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+221710589088",
+      "contactType": "customer service",
+      "availableLanguage": ["French", "English"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/Porokhane.Digital.Consulting",
+      "https://www.linkedin.com/company/porokhane-digital-consulting",
+      "https://www.instagram.com/porokhane_digital_consulting/"
+    ],
+    "serviceArea": {
+      "@type": "Place",
+      "name": "Dakar, Sénégal"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services Marketing Digital",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SEO et Référencement Naturel",
+            "description": "Optimisation SEO pour améliorer votre positionnement sur Google"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Création de Sites Web",
+            "description": "Développement de sites web responsive et optimisés"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Stratégie Marketing Digital",
+            "description": "Stratégies digitales sur-mesure pour votre entreprise"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+`;
+export const bodyTag = `<body>`;
+export const nav = `<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo">
+        <a href="https://digital-porokhane.com/">
+          <img src="images/logo.png" alt="AGENCE DE MARKETING DIGITAL DAKAR #1 au Sénégal - Porokhane Digital Consulting Logo" width="90" height="90">
+        </a>
+      </div>
+      
+      <!-- Menu Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-menu" id="nav-menu">
+        
+        <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        <!-- Formations -->
+        <li class="nav-item">
+          <a href="formations.html" class="nav-link">
+            Formations
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="robotique.html" class="submenu-link"> Robotique</a></li>
+            <li><a href="impression_3d_dakar.html#formation" class="submenu-link">Impression 3D</a></li>
+            <li><a href="cybersecurite.html" class="submenu-link">Cybersécurité</a></li>
+          </ul>
+        </li>
+        
+        <!-- Marketing -->
+        <li class="nav-item">
+          <a href="marketing.html" class="nav-link">
+            Marketing
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="audit_express.html" class="submenu-link"> Audit Express</a></li>
+            <li><a href="site.html" class="submenu-link">Création/Réfonte de site</a></li>
+            <li><a href="strategie_digitale.html" class="submenu-link">Stratégie digitale</a></li>
+            <li><a href="seo.html" class="submenu-link">Référencement naturel</a></li>
+            <li><a href="seo.html" class="submenu-link">Réseaux sociaux</a></li>
+          </ul>
+        </li>
+        
+        <!-- Accompagnement -->
+        <li class="nav-item">
+          <a href="accompagnement.html" class="nav-link">
+            Accompagnement
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="submenu">
+            
+            <li><a href="automatisation.html" class="submenu-link">Automatisation</a></li>
+            <li><a href="base_donnee.html" class="submenu-link">Bases de données</a></li>
+            <li><a href="erp.html" class="submenu-link">ERP</a></li>
+            <li><a href="ia.html" class="submenu-link">Intelligence Artificielle</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li>
+          <a href="devis.html" class="nav-devis">
+            Demandez un devis
+            <span class="devis-icon"><i class="fas fa-paper-plane"></i></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>`;
+export const content = `
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBH8R72G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- Navigation -->
+  
+  
+  <!-- Overlay pour le menu mobile -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Section Offres Spéciales - Design TOP 
+  <section class="offres-speciales">
+    <div class="offres-container">
+      <div class="offres-header">
+        <span class="offres-badge">🔥 OFFRES LIMITÉES</span>
+        <h2 class="offres-title">Profitez de nos offres exceptionnelles</h2>
+        <p class="offres-subtitle">Des solutions digitales premium à prix réduit pour booster votre business</p>
+      </div>
+      
+      <div class="offres-grid">
+        Offre 1: Site Vitrine 
+        <div class="offre-card offre-premium">
+          <div class="offre-image">
+            <img src="images/affiche1.webp" alt="Offre Site Vitrine" class="offre-img">
+          </div>
+          <div class="offre-header">
+            <div class="offre-badge">RÉSERVÉE AUX 10 PREMIERS</div>
+            <div class="offre-icon">🌐</div>
+          </div>
+          <div class="offre-content">
+            <h3 class="offre-title">Offre spéciale lancement !</h3>
+            <div class="offre-price">
+              <span class="price-new">90.000 FCFA SITE VITRINE</span>
+            </div>
+            <div class="offre-period">
+              <p><strong>📅 Offre valable du 1 au 25 Octobre</strong></p>
+            </div>
+            <p class="offre-description">Donnez vie à votre entreprise en ligne avec un site vitrine professionnel ! Faites rayonner votre activité, attirez de nouveaux clients et boostez votre visibilité en ligne grâce à notre expertise digitale.</p>
+            <div class="offre-contact">
+              <p><strong>Contactez-nous dès maintenant :</strong></p>
+              <div class="contact-buttons">
+                <a href="tel:+221710589088" class="contact-btn phone-btn">
+                  <i class="fas fa-phone"></i> +221 71 058 90 88
+                </a>
+                <a href="mailto:contact1@digital-porokhane.com" class="contact-btn email-btn">
+                  <i class="fas fa-envelope"></i> contact1@digital-porokhane.com
+                </a>
+                <a href="https://wa.me/221710589088" class="contact-btn whatsapp-btn" target="_blank">
+                  <i class="fab fa-whatsapp"></i> WhatsApp +221 71 058 90 88
+                </a>
+              </div>
+            </div>
+            <div class="offre-cta">
+              <div class="offre-urgence">⚠️ Ne ratez pas cette opportunité, les places sont limitées !</div>
+              <div class="countdown-container">
+                <div class="countdown-title">⏰ Temps restant :</div>
+                <div class="countdown" id="countdown1">
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="days1">0</span>
+                    <span class="countdown-label">Jours</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="hours1">0</span>
+                    <span class="countdown-label">Heures</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="minutes1">0</span>
+                    <span class="countdown-label">Minutes</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="seconds1">0</span>
+                    <span class="countdown-label">Secondes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        Offre 2: Réseaux Sociaux 
+        <div class="offre-card offre-trending">
+          <div class="offre-image">
+            <img src="images/affiche2.webp" alt="Offre Réseaux Sociaux" class="offre-img">
+          </div>
+          <div class="offre-header">
+            <div class="offre-badge">OFFRE SPÉCIALE RENTRÉE</div>
+            <div class="offre-icon">📱</div>
+          </div>
+          <div class="offre-content">
+            <h3 class="offre-title">Boostez votre présence en ligne dès la rentrée !</h3>
+            <div class="offre-price">
+              <span class="price-new">30.000 FCFA/mois</span>
+            </div>
+            <p class="offre-description">La rentrée est le moment idéal pour donner plus de visibilité à votre business. Avec notre OFFRE SPÉCIALE → création et publication de contenu automatique sur Facebook, Instagram, LinkedIn et TikTok.</p>
+            <div class="offre-period">
+              <p><strong>📅 Offre valable du 1 au 25 Octobre</strong></p>
+            </div>
+            <div class="offre-contact">
+              <p><strong>Contactez nous maintenant et profitez de l'offre !</strong></p>
+              <div class="contact-buttons">
+                <a href="tel:+221710589088" class="contact-btn phone-btn">
+                  <i class="fas fa-phone"></i> +221 71 058 90 88
+                </a>
+                <a href="mailto:contact1@digital-porokhane.com" class="contact-btn email-btn">
+                  <i class="fas fa-envelope"></i> contact1@digital-porokhane.com
+                </a>
+                <a href="https://wa.me/221710589088" class="contact-btn whatsapp-btn" target="_blank">
+                  <i class="fab fa-whatsapp"></i> WhatsApp +221 71 058 90 88
+                </a>
+              </div>
+            </div>
+            <div class="offre-cta">
+              <div class="offre-urgence">⚠️ Ne ratez pas cette opportunité, les places sont limitées !</div>
+              <div class="countdown-container">
+                <div class="countdown-title">⏰ Temps restant :</div>
+                <div class="countdown" id="countdown2">
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="days2">24</span>
+                    <span class="countdown-label">Jours</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="hours2">0</span>
+                    <span class="countdown-label">Heures</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="minutes2">0</span>
+                    <span class="countdown-label">Minutes</span>
+                  </div>
+                  <div class="countdown-item">
+                    <span class="countdown-number" id="seconds2">0</span>
+                    <span class="countdown-label">Secondes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="offres-footer">
+        <div class="garantie">
+          <i class="fas fa-shield-alt"></i>
+          <span>Garantie satisfaction 30 jours</span>
+        </div>
+        <div class="contact-rapide">
+          <span>Une question ?</span>
+          <a href="tel:+221710589088">+221 71 058 90 88</a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Contenu principal -->
+  <main role="main">
+  <!-- Hero -->
+  <section id="accueil" class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1>Agence de marketing digital à Dakar – votre partenaire pour un numérique inclusif au Sénégal</h1>
+        <p class="hero-subtitle">Spécialiste du marketing digital à Dakar, Porokhane Digital Consulting vous accompagne dans votre transformation digitale : référencement SEO, création de sites web, publicité en ligne et réseaux sociaux, avec des solutions sur mesure pour booster votre activité au Sénégal.</p>
+        <div class="hero-buttons">
+          
+          <a href="contact.html" class="btn btn-secondary"><i class="fas fa-phone"></i>Contactez-nous pour un diagnostic gratuit</a>
+         <!-- <a href="#realisations" class="btn btn-primary"><i class="fas fa-briefcase"></i> Nos réalisations</a> -->
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="accueil11.avif" alt="Transformation digitale" width="600" height="400" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- Popups promos 
+  <div class="modal" id="promo1">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="promo1-title">
+      <div class="modal-hero" style="background-image:url('affiche.jpg');"></div>
+      <button class="modal-close" data-close="promo1" aria-label="Fermer">×</button>
+      <div class="modal-body">
+        <div class="modal-title" id="promo1-title">Offre spéciale lancement ! – Site vitrine pro à 90.000 FCFA</div>
+        <div class="modal-sub">Donnez vie à votre entreprise en ligne: design pro, SEO de base, visibilité boostée. Réservée aux 10 premiers clients uniquement.</div>
+        <div class="modal-badges">
+          <span class="badge">Design pro</span>
+          <span class="badge">SEO de base</span>
+          <span class="badge">Support</span>
+          <span class="badge">Livraison rapide</span>
+        </div>
+        <div class="modal-ctas">
+          <a class="btn-ghost" href="tel:+221710589088"><i class="fas fa-phone"></i> +221 71 058 90 88</a>
+          <a class="btn-ghost" href="mailto:contact1@digital-porokhane.com"><i class="fas fa-envelope"></i> Email</a>
+          <a class="btn-ghost whatsapp" href="https://wa.me/221710589088" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+        <div class="promo-deadline">Dernier délai: 20/09/2025 • Places limitées</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="promo2">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="promo2-title">
+      <div class="modal-hero" style="background-image:url('images/supe.jpg');"></div>
+      <button class="modal-close" data-close="promo2" aria-label="Fermer">×</button>
+      <div class="modal-body">
+        <div class="modal-title" id="promo2-title">Offre spéciale réseaux sociaux – 30.000 FCFA / mois</div>
+        <div class="modal-sub">Création et publication automatique de contenu sur Facebook, Instagram, LinkedIn et TikTok. Offre valable du 2 au 15 septembre.</div>
+        <div class="modal-badges">
+          <span class="badge">Planification auto</span>
+          <span class="badge">Créations incluses</span>
+          <span class="badge">Analytique</span>
+        </div>
+        <div class="modal-ctas">
+          <a class="btn-ghost" href="tel:+221710589088"><i class="fas fa-phone"></i> +221 71 058 90 88</a>
+          <a class="btn-ghost" href="mailto:contact1@digital-porokhane.com"><i class="fas fa-envelope"></i> Email</a>
+          <a class="btn-ghost whatsapp" href="https://wa.me/221710589088" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+        <div class="promo-deadline">Dernier délai: 20/09/2025 • Places limitées</div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- Section À propos - Version optimisée -->
+<section id="apropos" class="services-section">
+  <!-- Animation éléments flottants -->
+  <div class="floating-elements">
+    <div class="floating-circle"></div>
+    <div class="floating-triangle"></div>
+  </div>
+
+  <div class="container">
+    <div class="hero-container">
+      <!-- Colonne image -->
+      <div class="hero-img">
+        <div class="parallax-wrapper">
+          <img src="images/equipe_porokhane.webp" alt="Équipe Porokhane Digital" width="600" height="400" loading="lazy">
+        </div>
+      </div>
+      
+      <!-- Colonne texte -->
+      <div class="hero-content">
+        <h2 class="hero-title1">
+          <span class="title-underline"></span>
+          Notre ADN Digital
+        </h2>
+        
+        <p class="hero-subtitle1">
+          En tant qu'AGENCE DE MARKETING DIGITAL DAKAR de référence, Porokhane Digital Consulting réinvente l'accompagnement technologique avec une approche humaine au Sénégal.
+        </p>
+        
+        <div class="content-blocks">
+          <!-- Item Mission -->
+          <div class="mission-block">
+            <h3>
+              
+              Notre Mission
+            </h3>
+            <p>
+              En tant qu'AGENCE DE MARKETING DIGITAL DAKAR leader, accélérer la transformation digitale des entreprises sénégalaises et africaines grâce à des solutions innovantes.
+            </p>
+          </div>
+          
+          <!-- Item Valeurs -->
+          <div class="values-block">
+            <h3>
+              
+              Nos Valeurs
+            </h3>
+            <ul>
+              <li><span>Innovation responsable</span></li>
+              <li><span>Fiabilité</span></li>
+              <li><span>Créer de la valeur pour tous</span></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="hero-buttons">
+          <a href="a-propos.html" class="btn btn-primary">
+            
+             En savoir plus
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popup Promo Modal -->
+<!-- 
+  POPUP PROMO DESIGN CONCEPT:
+  - Modal popup professionnel avec overlay blur
+  - Animations d'entrée spectaculaires (slide + fade + scale)
+  - Design ultra-moderne avec glassmorphism
+  - Auto-ouverture après 3 secondes sur la page d'accueil
+  - Effets visuels avancés (particules, gradients animés)
+  - Bouton WhatsApp intégré avec message prédéfini
+  - Fermeture intelligente avec sauvegarde de préférence
+-->
+
+
+      
+      
+
+<style>
+  /* 
+    POPUP PROMO STYLES - DESIGN ULTRA-PROFESSIONNEL
+    - Modal popup avec glassmorphism et blur effects
+    - Animations d'entrée spectaculaires et fluides
+    - Particules animées en arrière-plan
+    - Bouton WhatsApp premium avec effets shine
+    - Layout responsive ultra-moderne
+    - Palette de couleurs cohérente avec gradients avancés
+  */
+  
+  /* Overlay principal du popup */
+  .promo-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .promo-popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Particules animées */
+  .popup-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    background: rgba(31, 164, 122, 0.3);
+    border-radius: 50%;
+    animation: float-particles 8s infinite linear;
+  }
+
+  .particle-1 {
+    width: 4px;
+    height: 4px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .particle-2 {
+    width: 6px;
+    height: 6px;
+    top: 60%;
+    left: 80%;
+    animation-delay: 2s;
+  }
+
+  .particle-3 {
+    width: 3px;
+    height: 3px;
+    top: 80%;
+    left: 20%;
+    animation-delay: 4s;
+  }
+
+  .particle-4 {
+    width: 5px;
+    height: 5px;
+    top: 30%;
+    left: 70%;
+    animation-delay: 6s;
+  }
+
+  .particle-5 {
+    width: 4px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
+    animation-delay: 1s;
+  }
+
+  @keyframes float-particles {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Container principal du popup */
+  .promo-popup-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.7) translateY(50px);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .promo-popup-overlay.active .promo-popup-container {
+    transform: scale(1) translateY(0);
+  }
+
+  /* Bouton de fermeture */
+  .popup-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .popup-close-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .popup-close-btn i {
+    color: #666;
+    font-size: 16px;
+  }
+
+  /* Contenu principal */
+  .popup-content {
+    padding: 40px;
+  }
+
+  /* En-tête du popup */
+  .popup-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .popup-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: pulse-glow 2s infinite;
+  }
+
+  .badge-icon {
+    font-size: 16px;
+    animation: bounce-icon 2s infinite;
+  }
+
+  .badge-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shine 3s infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 107, 0.4); }
+    50% { box-shadow: 0 0 30px rgba(255, 107, 107, 0.6); }
+  }
+
+  @keyframes bounce-icon {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-4px); }
+    60% { transform: translateY(-2px); }
+  }
+
+  @keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  /* Titre principal */
+  .popup-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .title-accent {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.3em;
+    display: inline-block;
+    animation: glow-text 2s ease-in-out infinite alternate;
+  }
+
+  .title-main {
+    color: var(--gris-titre);
+    display: block;
+    margin-top: 5px;
+  }
+
+  @keyframes glow-text {
+    0% { filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); }
+    100% { filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8)); }
+  }
+
+  .popup-subtitle {
+    color: var(--gris-texte);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Corps du popup */
+  .popup-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+
+  /* Section image */
+  .popup-image-section {
+    position: relative;
+  }
+
+  .popup-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: all 0.5s ease;
+  }
+
+  .popup-image-wrapper:hover {
+    transform: perspective(1000px) rotateY(0deg) scale(1.02);
+  }
+
+  .popup-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .popup-image-wrapper:hover .popup-img {
+    transform: scale(1.05);
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(31, 164, 122, 0.1), rgba(37, 99, 235, 0.1));
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 15px;
+  }
+
+  .overlay-badge {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--vert);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Contenu principal */
+  .popup-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  /* Liste des avantages */
+  .popup-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(31, 164, 122, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid var(--vert);
+    transform: translateX(-20px);
+    opacity: 0;
+    animation: slide-in-benefits 0.6s ease forwards;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-item:hover {
+    background: rgba(31, 164, 122, 0.1);
+    transform: translateX(0);
+  }
+
+  @keyframes slide-in-benefits {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--vert), var(--bleu));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .benefit-item span {
+    font-weight: 600;
+    color: var(--gris-titre);
+  }
+
+  /* Countdown timer */
+  .popup-countdown {
+    background: linear-gradient(135deg, rgba(31, 164, 122, 0.1), rgba(37, 99, 235, 0.1));
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .countdown-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--gris-titre);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .countdown-title i {
+    color: var(--vert);
+  }
+
+  .countdown-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .timer-item {
+    background: white;
+    border-radius: 12px;
+    padding: 12px 8px;
+    min-width: 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .timer-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--vert);
+    line-height: 1;
+  }
+
+  .timer-label {
+    font-size: 11px;
+    color: var(--gris-texte);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .timer-separator {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--vert);
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+  }
+
+  /* Footer du popup */
+  .popup-footer {
+    text-align: center;
+  }
+
+  /* Bouton WhatsApp premium */
+  .popup-whatsapp-btn {
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    text-decoration: none;
+    border-radius: 60px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .popup-whatsapp-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+  }
+
+  .btn-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .popup-whatsapp-btn:hover .btn-shine {
+    left: 100%;
+  }
+
+  .btn-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 30px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-icon {
+    font-size: 2rem;
+    animation: bounce-whatsapp 2s infinite;
+  }
+
+  @keyframes bounce-whatsapp {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-6px); }
+    60% { transform: translateY(-3px); }
+  }
+
+  .btn-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .btn-main {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .btn-sub {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  .btn-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .popup-whatsapp-btn:hover .btn-arrow {
+    transform: translateX(5px);
+  }
+
+  /* Indicateurs de confiance */
+  .popup-trust-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--gris-texte);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .trust-item i {
+    color: #ffd700;
+    font-size: 16px;
+  }
+
+  /* Bouton de fermeture discret */
+  .popup-dismiss {
+    background: none;
+    border: none;
+    color: var(--gris-texte);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+
+  .popup-dismiss:hover {
+    color: var(--gris-titre);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .promo-popup-container {
+      width: 95%;
+      max-height: 95vh;
+    }
+
+    .popup-content {
+      padding: 30px 20px;
+    }
+
+    .popup-body {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .popup-title {
+      font-size: 2rem;
+    }
+
+    .countdown-timer {
+      gap: 8px;
+    }
+
+    .timer-item {
+      min-width: 50px;
+      padding: 10px 6px;
+    }
+
+    .timer-number {
+      font-size: 1.3rem;
+    }
+
+    .btn-content {
+      padding: 16px 25px;
+      gap: 12px;
+    }
+
+    .popup-trust-indicators {
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .popup-content {
+      padding: 25px 15px;
+    }
+
+    .popup-title {
+      font-size: 1.6rem;
+    }
+
+    .popup-img {
+      height: 200px;
+    }
+
+    .benefit-item {
+      padding: 12px;
+    }
+
+    .benefit-icon {
+      width: 35px;
+      height: 35px;
+      font-size: 14px;
+    }
+
+    .btn-content {
+      padding: 14px 20px;
+    }
+
+    .btn-main {
+      font-size: 1rem;
+    }
+  }
+
+  @keyframes pulse-badge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+  }
+
+  /* Contenu promo */
+  .promo-content {
+    flex: 1;
+    color: white;
+    max-width: 600px;
+  }
+
+  /* Tag nouveau */
+  .promo-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .promo-tag i {
+    color: #ffd700;
+    animation: sparkle 2s infinite;
+  }
+
+  @keyframes sparkle {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+  }
+
+  /* Titre promo */
+  .promo-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .promo-highlight {
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.2em;
+    display: inline-block;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    0% { filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); }
+    100% { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)); }
+  }
+
+  /* Description */
+  .promo-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    line-height: 1.6;
+  }
+
+  /* Liste des avantages */
+  .promo-benefits {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .promo-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+
+  .promo-benefits i {
+    color: #4ade80;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  /* Countdown */
+  .promo-countdown {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    justify-content: flex-start;
+  }
+
+  .countdown-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 12px;
+    min-width: 70px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .countdown-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffd700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .countdown-label {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Bouton WhatsApp */
+  .promo-whatsapp-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(45deg, #25d366, #128c7e);
+    color: white;
+    padding: 1.2rem 2rem;
+    border-radius: 60px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .promo-whatsapp-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .promo-whatsapp-btn:hover::before {
+    left: 100%;
+  }
+
+  .promo-whatsapp-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+    background: linear-gradient(45deg, #128c7e, #25d366);
+  }
+
+  .btn-icon {
+    font-size: 1.8rem;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+    60% { transform: translateY(-4px); }
+  }
+
+  .btn-content {
+    flex: 1;
+  }
+
+  .btn-text {
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .btn-subtext {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    font-weight: 500;
+  }
+
+  .btn-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .promo-whatsapp-btn:hover .btn-arrow {
+    transform: translateX(5px);
+  }
+
+  /* Indicateur de confiance */
+  .promo-trust {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .trust-icons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .trust-icons i {
+    color: #ffd700;
+    font-size: 1rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .promo-section {
+      padding: 60px 0;
+      min-height: auto;
+    }
+
+    .promo-container {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .promo-image-wrapper {
+      transform: none;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .promo-img {
+      height: 250px;
+    }
+
+    .promo-title {
+      font-size: 2.2rem;
+    }
+
+    .promo-countdown {
+      justify-content: center;
+    }
+
+    .countdown-item {
+      min-width: 60px;
+      padding: 0.8rem;
+    }
+
+    .countdown-number {
+      font-size: 1.5rem;
+    }
+
+    .promo-whatsapp-btn {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .promo-section {
+      padding: 40px 0;
+    }
+
+    .promo-container {
+      gap: 1.5rem;
+    }
+
+    .promo-title {
+      font-size: 1.8rem;
+    }
+
+    .promo-countdown {
+      gap: 0.5rem;
+    }
+
+    .countdown-item {
+      min-width: 50px;
+      padding: 0.6rem;
+    }
+
+    .countdown-number {
+      font-size: 1.2rem;
+    }
+
+    .promo-whatsapp-btn {
+      padding: 0.9rem 1.2rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  /* Amélioration section À propos sur index */
+  #apropos.services-section {
+    background: linear-gradient(rgba(248, 250, 252, 0.92), rgba(248, 250, 252, 0.92)),
+      url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=90') no-repeat center center/cover;
+    padding: 60px 0;
+    
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+  }
+  #apropos .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .hero-img, .hero-content {
+    flex: 1 1 350px;
+    min-width: 300px;
+    max-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  .hero-title1 {
+    color: var(--vert);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 1.5rem;
+    position: relative;
+    font-weight: 800;
+  }
+  .hero-subtitle1 {
+    color: var(--gris-texte);
+    margin-bottom: 2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 500;
+  }
+  .content-blocks {
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .mission-block, .values-block {
+    background: rgba(255,255,255,0.97);
+    padding: 1.5rem;
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto 1.5rem auto;
+    overflow: visible;
+  }
+  .mission-block {
+    border-left: 4px solid var(--vert);
+  }
+  .values-block {
+    border-left: 4px solid var(--bleu);
+  }
+  .mission-block h3, .values-block h3 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .mission-block h3 { color: var(--bleu); }
+  .values-block h3 { color: var(--vert); }
+  .mission-block i { color: var(--vert); }
+  .values-block i { color: var(--bleu); }
+  .mission-block p, .values-block ul {
+    color: var(--gris-texte);
+    line-height: 1.6;
+    font-size: 1.08rem;
+  }
+  .values-block ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .values-block li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .values-block li i {
+    color: var(--vert);
+    margin-top: 3px;
+  }
+  
+  /* Responsive pour la section À propos */
+  @media (max-width: 900px) {
+    .hero-container { 
+      flex-direction: column; 
+      gap: 1.5rem;
+    }
+    .hero-img, .hero-content { 
+      padding: 0; 
+      flex: 1 1 auto;
+      min-width: auto;
+    }
+    .hero-title1 {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      text-align: center;
+    }
+    .hero-subtitle1 {
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #apropos.services-section {
+      padding: 60px 0;
+    }
+    .hero-container {
+      gap: 1rem;
+    }
+    .hero-title1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .hero-subtitle1 {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .content-blocks {
+      gap: 1rem;
+    }
+    .mission-block, .values-block {
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .mission-block h3, .values-block h3 {
+      font-size: 1.1rem;
+    }
+    .mission-block p, .values-block ul {
+      font-size: 1rem;
+    }
+    .hero-buttons {
+      justify-content: center;
+    }
+    .hero-buttons .btn {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #apropos.services-section {
+      padding: 40px 0;
+    }
+    .hero-title1 {
+      font-size: 1.5rem;
+    }
+    .hero-subtitle1 {
+      font-size: 0.9rem;
+    }
+    .mission-block, .values-block {
+      padding: 1rem;
+    }
+    .mission-block h3, .values-block h3 {
+      font-size: 1rem;
+    }
+    .mission-block p, .values-block ul {
+      font-size: 0.9rem;
+    }
+    .hero-buttons .btn {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+    }
+    
+    /* Correction pour le texte en paragraphe sur mobile */
+    .mission-block p {
+      display: block;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+    
+    .mission-block p br {
+      display: block;
+      content: "";
+      margin-top: 0.5rem;
+    }
+  }
+
+  
+</style>
+
+
+  
+  <!-- Services -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nos Services</h2>
+        <p>Découvrez nos solutions digitales innovantes en tant qu'AGENCE DE MARKETING DIGITAL DAKAR leader pour propulser votre entreprise vers le succès au Sénégal</p>
+      </div>
+      <div class="services-grid">
+
+        <!-- Marketing Digital -->
+        <div class="service-card">
+          <img src="images/seo.png" alt="Marketing Digital" width="400" height="300" loading="lazy">
+          <h3>Marketing Digital</h3>
+          <p>Audit Express, Stratégie digitale, SEO et Réseaux sociaux.</p>
+          <a href="marketing.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails...</a>
+        </div>
+
+         <!-- Service supplémentaire 1 -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Développement Web" width="400" height="300" loading="lazy">
+          <h3>Développement Web et mobile</h3>
+          <p>Création de sites vitrines et e-commerce sur mesure pour votre activité.</p>
+          <a href="site.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails...</a>
+        </div>
+
+        <!-- Accompagnement -->
+        <div class="service-card">
+          <img src="images/acc.png" alt="Accompagnement" width="400" height="300" loading="lazy">
+          <h3>Accompagnement pour les PME</h3>
+          <p>Automatisation, Bases de données et Intelligence Artificielle pour votre entreprise.</p>
+          <a href="accompagnement.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails...</a>
+        </div>
+
+        <!-- ERP -->
+        <div class="service-card">
+          <img src="images/erp.jpg" alt="ERP" width="400" height="300" loading="lazy">
+          <h3>ERP (Gestion d'entreprise)</h3>
+          <p>Mise en place de solutions ERP sur-mesure pour piloter efficacement vos processus métiers : gestion commerciale, stock, RH, finance, etc.</p>
+          <a href="erp.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails...</a>
+        </div>
+
+        <!-- Formations Pédagogiques -->
+        <div class="service-card">
+          <img src="images/formation.jpg" alt="Formations Pédagogiques" width="400" height="300" loading="lazy">
+          <h3>Formations Pédagogiques</h3>
+          <p>Robotique, Impression 3D et Cybersécurité. Des formations adaptées à tous les niveaux.</p>
+          <a href="formations.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails...</a>
+        </div>
+  
+        
+  
+        <!-- Service supplémentaire 3 -->
+        <div class="service-card">
+          <img src="images/se.jpg" alt="Cybersécurité" width="400" height="300" loading="lazy">
+          <h3>Sécurité IT</h3>
+          <p>Protection de vos données et infrastructures numériques.</p>
+          <a href="securite.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails...</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formations Marketing Digital (Promo) -->
+  <style>
+    .promo-formations {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .promo-formations::before {
+      content: "";
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(31,164,122,0.18), transparent 70%);
+      border-radius: 50%;
+    }
+    .promo-formations::after {
+      content: "";
+      position: absolute;
+      bottom: -140px;
+      left: -140px;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, rgba(37,99,235,0.15), transparent 70%);
+      border-radius: 50%;
+    }
+    .promo-formations .container { position: relative; z-index: 2; }
+    .promo-header { text-align: center; margin-bottom: 3rem; }
+    .promo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--vert);
+      color: #fff;
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      box-shadow: 0 6px 18px rgba(31,164,122,0.35);
+    }
+    .promo-header h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--gris-titre);
+      margin-bottom: 0.8rem;
+    }
+    .promo-header h2 span { color: var(--vert); }
+    .promo-header p {
+      color: var(--gris-texte);
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+    .promo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .promo-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #eef2f7;
+    }
+    .promo-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 24px 48px rgba(37,99,235,0.18);
+    }
+    .promo-card-media { position: relative; height: 210px; overflow: hidden; }
+    .promo-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .promo-card:hover .promo-card-media img { transform: scale(1.08); }
+    .promo-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(15,23,42,0.85);
+      color: #fff;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+    }
+    .promo-price-tag {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      background: var(--vert);
+      color: #fff;
+      padding: 0.45rem 1rem;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1rem;
+      box-shadow: 0 6px 16px rgba(31,164,122,0.4);
+    }
+    .promo-card-body { padding: 1.6rem; display: flex; flex-direction: column; flex-grow: 1; }
+    .promo-card-body h3 {
+      font-size: 1.35rem;
+      color: var(--gris-titre);
+      margin-bottom: 0.6rem;
+    }
+    .promo-hook {
+      font-weight: 600;
+      color: var(--bleu);
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+    .promo-features { list-style: none; margin: 0 0 1.2rem; padding: 0; }
+    .promo-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      color: var(--gris-texte);
+      margin-bottom: 0.55rem;
+      font-size: 0.95rem;
+    }
+    .promo-features li i { color: var(--vert); margin-top: 3px; }
+    .promo-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      padding: 1rem;
+      background: var(--gris);
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+    }
+    .promo-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--gris-titre);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .promo-meta span i { color: var(--bleu); width: 18px; text-align: center; }
+    .promo-actions { margin-top: auto; display: flex; flex-direction: column; gap: 0.6rem; }
+    .promo-phone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .promo-phone.whatsapp { background: #25d366; color: #fff; }
+    .promo-phone.whatsapp:hover { background: #1ebe5a; transform: translateY(-2px); }
+    .promo-phone.call { background: var(--bleu); color: #fff; }
+    .promo-phone.call:hover { background: #1d4ed8; transform: translateY(-2px); }
+    @media (max-width: 480px) {
+      .promo-formations { padding: 3.5rem 0; }
+    }
+  </style>
+  <!-- ===== SECTION FORMATIONS MARKETING DESACTIVEE =====
+  <section id="formations-marketing" class="promo-formations">
+    <div class="container">
+      <div class="promo-header">
+        <span class="promo-badge"><i class="fas fa-bolt"></i> Nouvelles formations</span>
+        <h2>Boostez votre business avec le <span>Marketing Digital</span></h2>
+        <p>3 formations pratiques et intensives pour attirer, convaincre et vendre plus. Inscriptions ouvertes du 2 au 15 juillet à Ngor Extension – Dakar.</p>
+      </div>
+
+      <div class="promo-grid">
+        [ Facebook Ads ]
+        <div class="promo-card">
+          <div class="promo-card-media">
+            <img src="images/facebook-ads.jpg" alt="Formation Facebook Ads Dakar" width="400" height="300" loading="lazy">
+            <span class="promo-tag"><i class="fab fa-facebook"></i> Facebook Ads</span>
+            <span class="promo-price-tag">30 000 FCFA</span>
+          </div>
+          <div class="promo-card-body">
+            <h3>Formation Facebook Ads</h3>
+            <p class="promo-hook">Publier ne suffit plus… Il faut être vu par les bonnes personnes !</p>
+            <ul class="promo-features">
+              <li><i class="fas fa-check-circle"></i> Toucher votre clientèle idéale</li>
+              <li><i class="fas fa-check-circle"></i> Augmenter votre visibilité</li>
+              <li><i class="fas fa-check-circle"></i> Générer plus de prospects</li>
+              <li><i class="fas fa-check-circle"></i> Analyser les performances de vos campagnes</li>
+            </ul>
+            <div class="promo-meta">
+              <span><i class="far fa-calendar-alt"></i> Du 2 au 15 juillet • 15 jours</span>
+              <span><i class="fas fa-map-marker-alt"></i> Ngor Extension – Dakar</span>
+              <span><i class="fab fa-instagram"></i> Publicité Facebook & Instagram</span>
+            </div>
+            <div class="promo-actions">
+              <a href="https://wa.me/221710589088" class="promo-phone whatsapp"><i class="fab fa-whatsapp"></i> +221 71 058 90 88</a>
+              <a href="tel:+221338306157" class="promo-phone call"><i class="fas fa-phone"></i> +221 33 830 61 57</a>
+            </div>
+          </div>
+        </div>
+
+        [ WhatsApp Business ]
+        <div class="promo-card">
+          <div class="promo-card-media">
+            <img src="images/whatsapp-business.jpg" alt="Formation WhatsApp Business Dakar" width="400" height="300" loading="lazy">
+            <span class="promo-tag"><i class="fab fa-whatsapp"></i> WhatsApp Business</span>
+            <span class="promo-price-tag">30 000 FCFA</span>
+          </div>
+          <div class="promo-card-body">
+            <h3>Formation WhatsApp Business</h3>
+            <p class="promo-hook">Et si WhatsApp devenait votre meilleur commercial ?</p>
+            <ul class="promo-features">
+              <li><i class="fas fa-check-circle"></i> Créer votre catalogue produits</li>
+              <li><i class="fas fa-check-circle"></i> Automatiser vos réponses</li>
+              <li><i class="fas fa-check-circle"></i> Fidéliser vos clients</li>
+              <li><i class="fas fa-check-circle"></i> Vendre plus facilement</li>
+            </ul>
+            <div class="promo-meta">
+              <span><i class="far fa-calendar-alt"></i> Du 2 au 15 juillet</span>
+              <span><i class="fas fa-map-marker-alt"></i> Ngor Extension – Dakar</span>
+              <span><i class="fas fa-mobile-alt"></i> Votre téléphone, un outil de vente</span>
+            </div>
+            <div class="promo-actions">
+              <a href="https://wa.me/221710589088" class="promo-phone whatsapp"><i class="fab fa-whatsapp"></i> +221 71 058 90 88</a>
+              <a href="tel:+221338306157" class="promo-phone call"><i class="fas fa-phone"></i> +221 33 830 61 57</a>
+            </div>
+          </div>
+        </div>
+
+        [ Canva ]
+        <div class="promo-card">
+          <div class="promo-card-media">
+            <img src="images/canva.jpg" alt="Formation Canva design Dakar" width="400" height="300" loading="lazy">
+            <span class="promo-tag"><i class="fas fa-palette"></i> Canva</span>
+            <span class="promo-price-tag">30 000 FCFA</span>
+          </div>
+          <div class="promo-card-body">
+            <h3>Formation Canva</h3>
+            <p class="promo-hook">Créez des visuels professionnels qui donnent envie d'acheter.</p>
+            <ul class="promo-features">
+              <li><i class="fas fa-check-circle"></i> Affiches</li>
+              <li><i class="fas fa-check-circle"></i> Flyers</li>
+              <li><i class="fas fa-check-circle"></i> Publications Facebook & Instagram</li>
+              <li><i class="fas fa-check-circle"></i> Présentations modernes</li>
+            </ul>
+            <div class="promo-meta">
+              <span><i class="far fa-calendar-alt"></i> Du 2 au 15 juillet • 15 jours</span>
+              <span><i class="fas fa-map-marker-alt"></i> Ngor Extension – Dakar</span>
+              <span><i class="fas fa-star"></i> Aucune expérience requise</span>
+            </div>
+            <div class="promo-actions">
+              <a href="https://wa.me/221710589088" class="promo-phone whatsapp"><i class="fab fa-whatsapp"></i> +221 71 058 90 88</a>
+              <a href="tel:+221338306157" class="promo-phone call"><i class="fas fa-phone"></i> +221 33 830 61 57</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  ===== FIN SECTION DESACTIVEE ===== -->
+
+
+  
+  <!-- Blog -->  <!-- Blog -->
+  <section id="blog" class="blog-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Le blog des curieux du numérique</h2>
+        <p style="color: white;font-weight: 30px;">Découvrez nos derniers articles et conseils pour réussir votre transformation digitale</p>
+      </div>
+      <div class="blog-grid">
+        <!-- Article - Coût impression 3D au Sénégal -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="images/impression.jpg" alt="Coût impression 3D au Sénégal calcul devis prix" loading="lazy">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="far fa-calendar-alt"></i> 26 octobre 2026 • <i class="far fa-folder"></i> Impression 3D</div>
+            <h3>Comment calculer le coût d'une impression 3D au Sénégal ?</h3>
+            <p>Matière, temps machine, conception, finition : la méthode en 5 postes pour estimer un devis réaliste à Dakar.</p>
+            <a href="cout_impression_3d_senegal.html" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
+          </div>
+        </div>
+
+        <!-- Article - Checklist fichier 3D -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="images/impression.jpg" alt="Fichier 3D prêt à imprimer checklist STL maillage tolérances" loading="lazy">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="far fa-calendar-alt"></i> 26 octobre 2026 • <i class="far fa-folder"></i> Impression 3D</div>
+            <h3>Fichier 3D prêt à imprimer : la checklist avant fabrication</h3>
+            <p>Formats STL/3MF/OBJ, maillage, tolérances, orientation : tout vérifier avant d'envoyer votre fichier à l'atelier.</p>
+            <a href="fichier_3d_checklist.html" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
+          </div>
+        </div>
+
+        <!-- Article - Guide technique impression 3D -->
+        <div class="blog-card">
+          <div class="blog-card-img">
+            <img src="images/impression.jpg" alt="Guide technique impression 3D réglages calibration défauts" loading="lazy">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta"><i class="far fa-calendar-alt"></i> 29 septembre 2026 • <i class="far fa-folder"></i> Impression 3D</div>
+            <h3>Guide technique de l'impression 3D : réglages, calibration et résolution des défauts</h3>
+            <p>Températures, E-steps, PID, warping, stringing, humidité à Dakar : la méthode complète pour réussir vos pièces.</p>
+            <a href="guide_technique_impression_3d.html" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="blog.html" class="btn btn-primary">Voir plus d'articles</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  
+  
+  
+  <!-- Témoignages carrousel
+  <section id="temoignages" class="temoignages-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Ils nous ont fait confiance</h2>
+        <p class="temoignage-highlight" style="color: white;">Découvrez ce que nos clients disent de notre travail</p>
+      </div>
+      <div class="carousel" id="carousel">
+        <button class="carousel-arrow" id="prev" title="Témoignage précédent"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-track">
+          <div class="carousel-item active">
+            <div class="carousel-content">
+              <img src="images/porokhane.jpg" class="carousel-photo" alt="Abdoulaye Ndiaye">
+              <p>"Grâce à Porokhane Digital, nous avons digitalisé toute notre chaîne logistique. Leur solution sur-mesure a permis à Medical Distribution d'améliorer la traçabilité et la rapidité de nos livraisons. Un partenaire fiable et innovant !"</p>
+              <div class="carousel-author">Abdoulaye Ndiaye</div>
+              <div class="carousel-position">Directeur Général, Medical Distribution</div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-content">
+              <img src="images/porokhane1.jpg" class="carousel-photo" alt="Aminata Sarr">
+              <p>"MonTransfert a bénéficié d'une refonte complète de son application mobile grâce à l'équipe Porokhane. Résultat : +40% d'utilisateurs actifs et une expérience client nettement améliorée. Merci pour votre professionnalisme !"</p>
+              <div class="carousel-author">Aminata Sarr</div>
+              <div class="carousel-position">Responsable Produit, MonTransfert</div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-arrow" id="next" title="Témoignage suivant"><i class="fas fa-chevron-right"></i></button>
+        <div class="carousel-controls" id="carouselControls"></div>
+      </div>
+    </div>
+  </section>
+
+  -->
+
+
+  <!-- Ajoutez cette section après la section Blog et avant la section Devis -->
+<section id="realisations" class="realisations-section">
+  <div class="container">
+    <div class="section-header">
+        <h2> Nos Réalisations</h2>
+        <p>Découvrez quelques projets concrets réalisés par notre AGENCE DE MARKETING DIGITAL DAKAR pour nos clients, avec un design pensé pour l'utilisateur final.</p>
+      </div>
+    <div class="realisations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem;">
+      
+      <!-- Projet 1: Elite Science -->
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Elite Science - Plateforme éducative" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; top: 15px; right: 15px; background: var(--vert); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">WordPress</div>
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="color: var(--vert); margin-bottom: 0.8rem; font-size: 1.4rem;">Elite Science</h3>
+          <p style="color: var(--gris-texte); margin-bottom: 1rem; line-height: 1.6;">Plateforme éducative spécialisée avec système LMS complet, gestion de contenu pédagogique par niveau, optimisation de documents PDF et système d'abonnement premium.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">WordPress</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">LearnDash LMS</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">WooCommerce</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Elementor</span>
+          </div>
+          <a href="https://elite-science.com/" target="_blank" class="btn btn-secondary" style="margin-top: auto;"><i class="fas fa-external-link-alt"></i> Visiter le site</a>
+        </div>
+      </div>
+
+      <!-- Projet 2: Khidma Service Digital -->
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(37,99,235,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Khidma Service Digital - Agence de communication" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; top: 15px; right: 15px; background: var(--bleu); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">WordPress</div>
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="color: var(--bleu); margin-bottom: 0.8rem; font-size: 1.4rem;">Khidma Service Digital</h3>
+          <p style="color: var(--gris-texte); margin-bottom: 1rem; line-height: 1.6;">Site web professionnel pour agence de communication avec galerie portfolio interactive, système de devis multi-étapes, optimisation SEO locale et performances exceptionnelles (PageSpeed 92).</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">WordPress</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Elementor Pro</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Yoast SEO</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">AJAX</span>
+          </div>
+          <a href="https://khidmaservices.com/" target="_blank" class="btn btn-secondary" style="margin-top: auto;"><i class="fas fa-external-link-alt"></i> Visiter le site</a>
+        </div>
+      </div>
+
+      <!-- Projet 3: Saveur Deco Events - Réseaux Sociaux -->
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Saveur Deco Events - Gestion réseaux sociaux" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; top: 15px; right: 15px; background: #E1306C; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Social Media</div>
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="color: var(--vert); margin-bottom: 0.8rem; font-size: 1.4rem;">Saveur Deco Events</h3>
+          <p style="color: var(--gris-texte); margin-bottom: 1rem; line-height: 1.6;">Gestion complète des réseaux sociaux pour une entreprise d'événementiel : création de contenu visuel, stratégie d'engagement et animation de communauté sur Facebook, Instagram et TikTok.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Facebook</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Instagram</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">TikTok</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Content Creation</span>
+          </div>
+          <div style="display: flex; gap: 0.8rem; margin-top: auto;">
+            <a href="https://www.facebook.com/saveur.deco.events" target="_blank" class="btn btn-secondary" style="flex: 1; font-size: 0.9rem;"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/saveur_deco_events/" target="_blank" class="btn btn-secondary" style="flex: 1; font-size: 0.9rem;"><i class="fab fa-instagram"></i> Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 4: DigiDocs - GED -->
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(37,99,235,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1568667256549-094345857637?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="DigiDocs - Gestion Électronique des Documents" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; top: 15px; right: 15px; background: #8e44ad; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Application Web</div>
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="color: var(--bleu); margin-bottom: 0.8rem; font-size: 1.4rem;">DigiDocs - GED</h3>
+          <p style="color: var(--gris-texte); margin-bottom: 1rem; line-height: 1.6;">Application de Gestion Électronique des Documents avec système d'archivage intelligent, upload/téléchargement sécurisé, recherche avancée et gestion des droits d'accès par utilisateur.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">React</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Node.js</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">PostgreSQL</span>
+            <span style="background: #e8f1ff; color: var(--bleu); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">TypeScript</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1M-8Odn7kmtZVjTJflwe2v2sp2xtqrltS/view?usp=drive_link" target="_blank" class="btn btn-secondary" style="margin-top: auto;"><i class="fas fa-play-circle"></i> Voir la démo vidéo</a>
+        </div>
+      </div>
+
+      <!-- Projet 5: Plateforme Santé - Gestion Files d'Attente -->
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden; position: relative;">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plateforme de gestion patients et files d'attente" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; top: 15px; right: 15px; background: var(--vert); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">HealthTech</div>
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="color: var(--vert); margin-bottom: 0.8rem; font-size: 1.4rem;">Plateforme Santé Numérique</h3>
+          <p style="color: var(--gris-texte); margin-bottom: 1rem; line-height: 1.6;">Solution complète de gestion numérique des patients et files d'attente pour centres de santé : enregistrement digital, gestion intelligente des priorités, dossier patient numérique et affichage temps réel.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">React</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">TypeScript</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">Node.js</span>
+            <span style="background: #e8f5f1; color: var(--vert); padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">PostgreSQL</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1lIGqCk9_iYf_j0V55tsaMUhBXWBdmY3M/view" target="_blank" class="btn btn-secondary" style="margin-top: auto;"><i class="fas fa-play-circle"></i> Voir la démo vidéo</a>
+        </div>
+      </div>
+
+      <!-- Projet 6: Refonte Medical Distribution -->
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden;">
+          <img src="images/ref.webp" alt="Collaboration équipe médicale sénégalaise" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="color: var(--vert); margin-bottom: 0.7rem;">Refonte du site Medical Distribution</h3>
+          <p style="color: var(--gris-texte); flex: 1;">Modernisation complète du site web pour une expérience utilisateur optimale, responsive et adaptée au secteur médical.</p>
+          <a href="medical-distribution.html" class="btn btn-secondary" style="margin-top: 1.2rem;"><i class="fas fa-eye"></i> Voir le projet</a>
+        </div>
+      </div>
+
+      <!-- Projet 7: Marketing Digital Medical Distribution -->
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden;">
+          <img src="mdd_assets/MUCOSITE.png" alt="Collaboration marketing digital équipe sénégalaise" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="color: var(--bleu); margin-bottom: 0.7rem;">Accompagnement Marketing Digital de Medical Distribution</h3>
+          <p style="color: var(--gris-texte); flex: 1;">Rédaction, visuels et vidéos pour valoriser les produits et services de Medical Distribution sur le web et les réseaux sociaux.</p>
+          <a href="mdd.html" class="btn btn-secondary" style="margin-top: 1.2rem;"><i class="fas fa-eye"></i> Voir le contenu</a>
+        </div>
+      </div>
+
+      <!-- Projet 8: Marketing Digital MonTransfert -->
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(37,99,235,0.08); overflow: hidden; display: flex; flex-direction: column;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden;">
+          <img src="images/pro-mo.png" alt="Témoignage client Porokhane">
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="color: var(--vert); margin-bottom: 0.7rem;">Accompagnement Marketing Digital de MonTransfert</h3>
+          <p style="color: var(--gris-texte); flex: 1;">Conception de supports digitaux, articles et vidéos pour renforcer la notoriété et l'engagement autour de MonTransfert.</p>
+          <a href="mo.html" class="btn btn-secondary" style="margin-top: 1.2rem;"><i class="fas fa-eye"></i> Voir le contenu</a>
+        </div>
+      </div>
+
+      <!-- Projet 9: Site Web Saveur Deco -->
+      <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column;">
+        <div class="realisation-img" style="height: 240px; overflow: hidden;">
+          <img src="images/saveurdeco.webp" alt="Site web Saveur Deco">
+        </div>
+        <div class="realisation-info" style="padding: 2rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="color: var(--bleu); margin-bottom: 0.7rem;">Site Web Saveur Deco</h3>
+          <p style="color: var(--gris-texte); flex: 1;">Développement d'un site web moderne avec React et Node.js pour Saveur Deco, offrant une expérience utilisateur optimale et un design élégant.</p>
+          <a href="https://saveurdeco.fr/" target="_blank" class="btn btn-secondary" style="margin-top: 1.2rem;"><i class="fas fa-external-link-alt"></i> Voir le site</a>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="realisations.html" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+        <i class="fas fa-folder-open"></i> Voir toutes les réalisations
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section Certifications -->
+<section id="certifications" class="certifications-section" style="background: linear-gradient(rgba(248,250,252,0.97),rgba(248,250,252,0.97)); padding: 80px 0;">
+  <div class="container">
+    <div class="section-header">
+        <h2>Nos Certifications</h2>
+        <p>Des compétences reconnues par notre AGENCE DE MARKETING DIGITAL DAKAR pour garantir la qualité de vos projets digitaux au Sénégal</p>
+      </div>
+    <div class="certif-grid" style="display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center;">
+      <!-- SEO -->
+      <div class="certif-card" style="background: #fff; border-radius: 20px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); padding: 2.5rem 2rem; text-align: center; max-width: 340px; flex: 1 1 280px;">
+        <div style="font-size: 2.5rem; color: var(--bleu); margin-bottom: 1rem;"><i class="fas fa-search"></i></div>
+        <h3 style="color: var(--bleu); font-size: 1.3rem; margin-bottom: 1rem;">Certification SEO</h3>
+        <p style="color: var(--gris-texte);">Maîtrise des techniques de référencement naturel pour positionner durablement votre site sur Google.</p>
+      </div>
+      <!-- Marketing Digital -->
+      <div class="certif-card" style="background: #fff; border-radius: 20px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); padding: 2.5rem 2rem; text-align: center; max-width: 340px; flex: 1 1 280px;">
+        <div style="font-size: 2.5rem; color: var(--vert); margin-bottom: 1rem;"><i class="fas fa-bullhorn"></i></div>
+        <h3 style="color: var(--vert); font-size: 1.3rem; margin-bottom: 1rem;">Certification Marketing Digital</h3>
+        <p style="color: var(--gris-texte);">Stratégies avancées pour booster votre visibilité, générer des leads et fidéliser vos clients en ligne.</p>
+      </div>
+      <!-- IA -->
+      <div class="certif-card" style="background: #fff; border-radius: 20px; box-shadow: 0 4px 24px rgba(37,99,235,0.08); padding: 2.5rem 2rem; text-align: center; max-width: 340px; flex: 1 1 280px;">
+        <div style="font-size: 2.5rem; color: #8e44ad; margin-bottom: 1rem;"><i class="fas fa-robot"></i></div>
+        <h3 style="color: #8e44ad; font-size: 1.3rem; margin-bottom: 1rem;">Certification Intelligence Artificielle</h3>
+        <p style="color: var(--gris-texte);">Utilisation de l'IA pour automatiser, analyser et optimiser vos processus métiers et vos campagnes digitales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+  <!-- FAQ marketing digital Dakar -->
+  <section id="faq-marketing-digital" class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Marketing digital à Dakar : vos questions</h2>
+        <p>Ce qu'il faut savoir avant de choisir votre agence de marketing digital au Sénégal</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3 class="faq-question" style="font-size:1.05rem;margin:0;">Que fait une agence de marketing digital à Dakar ? <span class="faq-toggle">+</span></h3>
+          <div class="faq-answer">
+            <p>Elle développe votre visibilité et vos ventes en ligne : <a href="seo.html">référencement naturel SEO</a>, <a href="site.html">création de sites web</a>, publicité Facebook et Google Ads, gestion des <a href="reseaux_sociaux.html">réseaux sociaux</a> et <a href="strategie_digitale.html">stratégie digitale</a>. Porokhane Digital Consulting pilote l'ensemble depuis Ngor Extension, à Dakar.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question" style="font-size:1.05rem;margin:0;">Pourquoi investir dans le marketing digital à Dakar ? <span class="faq-toggle">+</span></h3>
+          <div class="faq-answer">
+            <p>Au Sénégal, la majorité des clients cherchent désormais un prestataire sur Google, Facebook ou WhatsApp avant d'acheter. Le marketing digital vous permet de toucher précisément votre clientèle à Dakar et dans tout le pays, de mesurer chaque franc investi et de générer des demandes qualifiées en continu.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question" style="font-size:1.05rem;margin:0;">Agence de marketing digital ou freelance : que choisir ? <span class="faq-toggle">+</span></h3>
+          <div class="faq-answer">
+            <p>Un freelance convient à une mission ponctuelle ; une agence réunit SEO, design, développement et publicité dans une même équipe et assure la continuité. Nous détaillons les critères dans notre comparatif <a href="agent_ou_agence_marketing_digital_dakar.html">freelance ou agence de marketing digital à Dakar</a>.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question" style="font-size:1.05rem;margin:0;">Combien coûte une stratégie de marketing digital à Dakar ? <span class="faq-toggle">+</span></h3>
+          <div class="faq-answer">
+            <p>Le budget dépend de vos objectifs, des canaux retenus et du budget publicitaire. Nous partons toujours d'un diagnostic de votre situation pour proposer une offre adaptée aux PME comme aux grandes structures. <a href="devis.html">Demandez votre devis gratuit</a> : réponse sous 24 h.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question" style="font-size:1.05rem;margin:0;">Proposez-vous d'autres services que le marketing digital ? <span class="faq-toggle">+</span></h3>
+          <div class="faq-answer">
+            <p>Oui : automatisation, ERP, intelligence artificielle, cybersécurité, formations professionnelles et <a href="impression_3d_dakar.html">impression 3D à Dakar</a>. Consultez aussi notre <a href="blog.html">blog</a> pour nos conseils.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ -->
+  <!--<section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Foire Aux Questions</h2>
+        <p>Trouvez rapidement des réponses à vos questions</p>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <div class="faq-question">Quels sont vos délais de livraison moyens ? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">
+            <p>Nos délais varient selon la complexité du projet :</p>
+            <ul>
+              <li>Sites vitrine : 2 à 4 semaines</li>
+              <li>Sites e-commerce : 4 à 8 semaines</li>
+              <li>Applications mobiles : 6 à 12 semaines</li>
+              <li>Stratégies marketing : 2 à 3 semaines après audit</li>
+            </ul>
+            <p>Nous nous engageons à respecter les délais convenus et à vous tenir informé de l'avancement du projet.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Proposez-vous un accompagnement après la livraison ? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">
+            <p>Oui, nous proposons plusieurs options d'accompagnement post-livraison :</p>
+            <ul>
+              <li>Support technique pendant 1 mois inclus avec chaque projet</li>
+              <li>Formation de vos équipes à l'utilisation des solutions</li>
+              <li>Contrats de maintenance et d'évolution sur mesure</li>
+              <li>Audits réguliers pour optimiser vos performances</li>
+            </ul>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Comment obtenir un devis gratuit ? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">
+            <p>Vous pouvez obtenir un devis gratuit de plusieurs manières :</p>
+            <ol>
+              <li>Remplissez notre <a href="#devis">formulaire de demande de devis</a> en ligne</li>
+              <li>Envoyez-nous un email à contact@porokhane-digital.com</li>
+              <li>Appelez-nous au +221 XX XXX XX XX pour discuter de votre projet</li>
+            </ol>
+            <p>Nous étudierons votre demande et vous enverrons une proposition détaillée sous 48 heures.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Travaillez-vous avec des clients internationaux ? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">
+            <p>Absolument ! Nous accompagnons des clients partout dans le monde :</p>
+            <ul>
+              <li>Afrique de l'Ouest (Sénégal, Côte d'Ivoire, Mali, etc.)</li>
+              <li>Europe (France, Belgique, Suisse, etc.)</li>
+              <li>Amérique du Nord (Canada, États-Unis)</li>
+            </ul>
+            <p>Nos équipes sont parfaitement bilingues (français/anglais) et s'adaptent à vos fuseaux horaires. Nous utilisons des outils collaboratifs modernes pour faciliter la communication à distance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   -->
+  
+  <!-- Contact & Newsletter 
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contactez Notre Équipe</h2>
+        <p>Prêt à transformer votre entreprise ? Parlons de votre projet</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h3>Email</h3>
+              <p>contact@porokhane-digital.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h3>Téléphone</h3>
+              <p>+221 XX XXX XX XX</p>
+              <p>Lun-Ven : 8h-18h</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h3>Adresse</h3>
+              <p>Rue des Entrepreneurs, Porokhane</p>
+              <p>Sénégal</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h3>Horaires</h3>
+              <p>Lundi - Vendredi : 8h - 18h</p>
+              <p>Samedi : 9h - 13h</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Votre nom complet" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Votre adresse email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Sujet de votre message" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Comment pouvons-nous vous aider ?" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
+        </form>
+      </div>
+     
+    </div>
+  </section> -->
+  </main>
+  
+  <!-- Footer -->
+  
+  
+  
+    
+
+  <!-- Chatbot Flottant -->
+  <style>
+    .chatbot-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      border: none;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      box-shadow: 0 4px 24px rgba(31,164,122,0.18);
+      font-size: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 9999;
+      transition: background 0.3s, transform 0.2s;
+      animation: chatbot-bounce 1.5s infinite alternate;
+    }
+    .chatbot-btn:hover {
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+      transform: scale(1.08);
+    }
+    @keyframes chatbot-bounce {
+      0% { box-shadow: 0 4px 24px rgba(31,164,122,0.18); transform: scale(1); }
+      100% { box-shadow: 0 8px 32px rgba(37,99,235,0.18); transform: scale(1.08); }
+    }
+    .chatbot-btn .fa-comments {
+      font-size: 2.2rem;
+      animation: chatbot-icon-wave 2.5s infinite;
+    }
+    @keyframes chatbot-icon-wave {
+      0%, 100% { color: var(--blanc); transform: scale(1); }
+      50% { color: var(--vert); transform: scale(1.18) rotate(-8deg); }
+    }
+    .chatbot-window {
+      position: fixed;
+      bottom: 110px;
+      right: 32px;
+      width: 340px;
+      max-width: 95vw;
+      background: var(--blanc);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+      border: 1.5px solid var(--vert);
+      z-index: 9999;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      animation: fadeInUp 0.4s;
+    }
+    .chatbot-header {
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      padding: 1rem 1.2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .chatbot-close {
+      background: none;
+      border: none;
+      color: var(--blanc);
+      font-size: 1.3rem;
+      cursor: pointer;
+      margin-left: 1rem;
+      transition: color 0.2s;
+    }
+    .chatbot-close:hover {
+      color: #e67e22;
+    }
+    .chatbot-body {
+      padding: 1.2rem;
+      background: var(--gris);
+      min-height: 180px;
+      max-height: 320px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .chatbot-message {
+      background: var(--blanc);
+      border-radius: 14px 14px 14px 4px;
+      padding: 0.8rem 1rem;
+      color: var(--gris-titre);
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(31,164,122,0.07);
+      align-self: flex-start;
+      max-width: 85%;
+    }
+    .chatbot-message.user {
+      background: var(--vert);
+      color: var(--blanc);
+      align-self: flex-end;
+      border-radius: 14px 14px 4px 14px;
+    }
+    .chatbot-suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .chatbot-suggestion {
+      background: var(--bleu-clair);
+      color: var(--bleu);
+      border: none;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .chatbot-suggestion:hover {
+      background: var(--bleu);
+      color: var(--blanc);
+    }
+    .chatbot-footer {
+      padding: 0.8rem 1.2rem;
+      background: var(--blanc);
+      border-top: 1px solid var(--gris-fonce);
+      display: flex;
+      gap: 0.5rem;
+    }
+    .chatbot-input {
+      flex: 1;
+      border: 1px solid var(--gris-fonce);
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .chatbot-input:focus {
+      border-color: var(--vert);
+    }
+    .chatbot-send {
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .chatbot-send:hover {
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+    }
+
+
+
+    @keyframes newsletterFloat {
+      0% {
+        transform: translateX(-15px) scale(1);
+        box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+      }
+      25% {
+        transform: translateX(-5px) scale(1.02);
+        box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+      }
+      50% {
+        transform: translateX(15px) scale(1.05);
+        box-shadow: 0 10px 35px rgba(31, 164, 122, 0.3);
+      }
+      75% {
+        transform: translateX(5px) scale(1.02);
+        box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+      }
+      100% {
+        transform: translateX(-15px) scale(1);
+        box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+      }
+    }
+
+    @keyframes newsletterPulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+      }
+      50% {
+        transform: scale(1.03);
+        box-shadow: 0 8px 30px rgba(31, 164, 122, 0.25);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+      }
+    }
+
+.newsletter { 
+  margin-top: 3rem; 
+  background: var(--blanc); 
+  border-radius: var(--rayon); 
+  padding: 1.5rem; 
+  box-shadow: var(--ombre); 
+  display: flex; 
+  gap: 0.5rem; 
+  align-items: center; 
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 4px solid var(--vert);
+  animation: newsletterFloat 3s ease-in-out infinite, newsletterPulse 2s ease-in-out infinite;
+  animation-delay: 0s, 1.5s;
+    }
+  </style>
+
+  <!-- Bouton flottant -->
+  
+
+  
+
+  <!-- Ajout avatar au chatbot -->
+  <style>
+    .chatbot-message.bot {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+    .chatbot-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(31,164,122,0.07);
+      border: 2px solid var(--vert);
+      flex-shrink: 0;
+    }
+  </style>
+  
+
+  <!-- Script pour le menu hamburger -->
+  
+
+  <!-- Script pour les popups/modals et countdown -->
+  
+
+
+
+  
+
+`;
+export const footer = `<footer class="footer">
+    <form class="newsletter" id="newsletterForm" action="https://formspree.io/f/xgaajrrn" method="POST">
+        <input type="email" name="email" placeholder="Votre email pour recevoir nos conseils et actualités" required>
+        <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
+      </form>
+    </br>
+    <div class="container">
+      
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="nav-logo">
+        <a href="https://digital-porokhane.com/">
+          <img src="images/icone.webp" alt="Porokhane Digital Consulting  Logo">
+        </a>
+      </div>
+          <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/Porokhane.Digital.Consulting" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/porokhane-digital-consulting" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/porokhane_digital_consulting/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Nos Services</h4>
+          <ul>
+            <li><a href="formations.html"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
+            <li><a href="marketing.html"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+            <li><a href="accompagnement.html"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+            <li><a href="erp.html"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+            <li><a href="site.html"><i class="fas fa-chevron-right"></i> Développement Web et mobile</a></li>
+            <li><a href="securite.html"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="#accueil"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+            <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="realisations.html"><i class="fas fa-chevron-right"></i> Réalisations</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+            <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+            <li><a href="#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+221710589088 "><i class="fas fa-phone"></i> +221 710589088 </a></li>
+            <li><a href="tel:+338306157"><i class="fas fa-phone"></i> +33 830 61 57 </a></li>
+            <li><a href="mailto:contact1@digital-porokhane.com"><i class="fas fa-envelope"></i> contact1@digital-porokhane.com</a></li>
+            <li><a href="https://maps.app.goo.gl/jCAGEpeoCBiSNQSr5" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>`;
+export const chatbot = `<button class="chatbot-btn" id="chatbotBtn" aria-label="Ouvrir le chat" title="Discuter avec nous">
+    <i class="fas fa-comments"></i>
+  </button>
+
+  <!-- Fenêtre du chatbot -->
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <span>🤖 Porokhane Chatbot</span>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">&times;</button>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+      <div class="chatbot-message">Bonjour 👋 ! Je suis le chatbot Porokhane. Posez-moi vos questions ou choisissez une suggestion ci-dessous :</div>
+      <div class="chatbot-message" style="background: var(--bleu-clair); color: var(--bleu); font-size: 0.98rem;">
+        Vous pouvez aussi envoyer ici un message à notre équipe, nous vous répondrons rapidement !
+      </div>
+      <div class="chatbot-suggestions" id="chatbotSuggestions">
+        <button class="chatbot-suggestion">Quels services proposez-vous ?</button>
+        <button class="chatbot-suggestion">Comment Demandez un devis ?</button>
+        <button class="chatbot-suggestion">Quels sont vos délais de livraison ?</button>
+        <button class="chatbot-suggestion">Proposez-vous des formations ?</button>
+        <button class="chatbot-suggestion">Comment vous contacter ?</button>
+      </div>
+    </div>
+    <form class="chatbot-footer" id="chatbotForm" autocomplete="off">
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Écrivez votre question..." />
+      <button type="submit" class="chatbot-send" aria-label="Envoyer"><i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>`;
+export const scripts = `<script>
+  // Effet parallax
+  document.addEventListener('DOMContentLoaded', function() {
+    const parallaxInit = function() {
+      if (window.innerWidth > 768) {
+        const parallax = document.querySelector('.parallax-wrapper');
+        
+        document.addEventListener('mousemove', function(e) {
+          const x = (window.innerWidth - e.pageX) / 100;
+          const y = (window.innerHeight - e.pageY) / 100;
+          if (parallax) {
+            parallax.style.transform = \`rotateY(\${x/5}deg) rotateX(\${y/5}deg)\`;
+          }
+        });
+      }
+    };
+
+    // Animation bouton
+    const btn = document.querySelector('.btn-primary');
+    if (btn) {
+      btn.addEventListener('mouseenter', function() {
+        this.querySelector('i').style.transform = 'rotate(10deg)';
+      });
+      btn.addEventListener('mouseleave', function() {
+        this.querySelector('i').style.transform = 'rotate(0)';
+      });
+    }
+
+    // Initialisation
+    parallaxInit();
+    
+    // Réinitialisation au redimensionnement
+    window.addEventListener('resize', parallaxInit);
+  });
+
+</script>
+<script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    }
+    
+    // Témoignages carrousel
+    const carousel = document.getElementById('carousel');
+    if (carousel) {
+      const items = carousel.querySelectorAll('.carousel-item');
+      const controls = document.getElementById('carouselControls');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      let current = 0;
+      
+      function showSlide(idx) {
+        items.forEach((item, i) => {
+          item.classList.toggle('active', i === idx);
+        });
+        
+        if (controls) {
+          Array.from(controls.children).forEach((dot, i) => {
+            dot.classList.toggle('active', i === idx);
+          });
+        }
+        
+        current = idx;
+      }
+      
+      // Create dots
+      if (controls) {
+        for (let i = 0; i < items.length; i++) {
+          const dot = document.createElement('span');
+          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          dot.addEventListener('click', () => showSlide(i));
+          controls.appendChild(dot);
+        }
+      }
+      
+      if (prev) prev.addEventListener('click', () => showSlide((current - 1 + items.length) % items.length));
+      if (next) next.addEventListener('click', () => showSlide((current + 1) % items.length));
+      
+      // Auto slide
+      let slideInterval = setInterval(() => {
+        showSlide((current + 1) % items.length);
+      }, 8000);
+      
+      // Pause on hover
+      carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
+      carousel.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(() => {
+          showSlide((current + 1) % items.length);
+        }, 8000);
+      });
+    }
+    
+    // FAQ accordéon
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', function() {
+        const item = this.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Close all items
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+        });
+        
+        // Open clicked item if it was closed
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+    
+    // Form submissions (guarded)
+    const devisForm = document.getElementById('devisForm');
+    if (devisForm) {
+      devisForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Merci ! Votre demande de devis a bien été envoyée. Nous vous répondrons dans les plus brefs délais.');
+        this.reset();
+      });
+    }
+    
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Merci pour votre message ! Notre équipe vous contactera très rapidement.');
+        this.reset();
+      });
+    }
+    
+    // Le formulaire newsletter est géré par Formspree
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+
+    // Gestion des sous-menus au survol (desktop seulement)
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        if (window.innerWidth > 768) {
+          // Laisser le CSS gérer l'affichage au survol
+        }
+      });
+      
+      item.addEventListener('mouseleave', () => {
+        if (window.innerWidth > 768) {
+          // Laisser le CSS gérer le masquage
+        }
+      });
+    });
+  </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Gestion responsive de la section À propos
+    function handleAproposResponsive() {
+      const isMobile = window.innerWidth <= 768;
+      const isSmallMobile = window.innerWidth <= 480;
+      
+      document.querySelectorAll('.mission-block, .values-block').forEach(function(block) {
+        block.style.width = '100%';
+        block.style.maxWidth = '100%';
+        block.style.boxSizing = 'border-box';
+        block.style.margin = '0 auto 1.5rem auto';
+        
+        // Ajustements pour mobile
+        if (isMobile) {
+          block.style.padding = '1.2rem';
+          block.style.marginBottom = '1rem';
+        }
+        if (isSmallMobile) {
+          block.style.padding = '1rem';
+        }
+      });
+      
+      document.querySelectorAll('.content-blocks, .hero-content').forEach(function(parent) {
+        parent.style.overflowX = 'hidden';
+        parent.style.width = '100%';
+        parent.style.maxWidth = '100%';
+        
+        // Centrage du contenu sur mobile
+        if (isMobile) {
+          parent.style.textAlign = 'center';
+        }
+      });
+      
+      // Ajustement des boutons sur mobile
+      const buttons = document.querySelectorAll('#apropos .hero-buttons .btn');
+      buttons.forEach(function(btn) {
+        if (isMobile) {
+          btn.style.width = '100%';
+          btn.style.maxWidth = '280px';
+          btn.style.justifyContent = 'center';
+        }
+      });
+    }
+    
+    // Exécution initiale
+    handleAproposResponsive();
+    
+    // Réexécution lors du redimensionnement
+    window.addEventListener('resize', handleAproposResponsive);
+  });
+  </script>
+<script>
+  // Réponses automatiques (FAQ)
+  const chatbotFAQ = {
+    'services': "Nous proposons : formations (robotique, impression 3D, cybersécurité), marketing digital, accompagnement (automatisation, IA, bases de données), développement web mobile et plus encore !",
+    'devis': "Pour Demandez un devis, cliquez sur 'Demandez un devis' dans le menu ou rendez-vous sur la page devis. Nous vous répondrons rapidement !",
+    'délais': "Nos délais varient selon le projet, mais nous nous engageons à livrer dans les temps convenus, avec un suivi régulier.",
+    'formations': "Oui, nous proposons des formations en robotique, impression 3D, cybersécurité et plus. Consultez la page Formations pour plus d'infos !",
+    'contacter': "Vous pouvez nous contacter via la page Contact, par téléphone ou par email. Nous sommes à votre écoute !",
+    'salutation': "Bonjour et bienvenue chez Porokhane Digital Consulting ! 👋\\n\\nJe peux répondre à vos questions sur :\\n• Nos services\\n• Comment Demandez un devis\\n• Nos délais de livraison\\n• Nos formations\\n• Comment nous contacter\\n\\nCliquez sur une suggestion ou posez votre question !"
+  };
+
+  const chatbotBtn = document.getElementById('chatbotBtn');
+  const chatbotWindow = document.getElementById('chatbotWindow');
+  const chatbotClose = document.getElementById('chatbotClose');
+  const chatbotBody = document.getElementById('chatbotBody');
+  const chatbotForm = document.getElementById('chatbotForm');
+  const chatbotInput = document.getElementById('chatbotInput');
+  const chatbotSuggestions = document.getElementById('chatbotSuggestions');
+
+  chatbotBtn.onclick = () => {
+    chatbotWindow.style.display = 'flex';
+    setTimeout(() => chatbotInput.focus(), 300);
+  };
+  chatbotClose.onclick = () => {
+    chatbotWindow.style.display = 'none';
+  };
+
+  // Suggestions cliquables
+  chatbotSuggestions.onclick = function(e) {
+    if (e.target.classList.contains('chatbot-suggestion')) {
+      const question = e.target.textContent;
+      addUserMessage(question);
+      respondToUser(question);
+    }
+  };
+
+  // Envoi du formulaire
+  chatbotForm.onsubmit = function(e) {
+    e.preventDefault();
+    const question = chatbotInput.value.trim();
+    if (question) {
+      addUserMessage(question);
+      respondToUser(question);
+      chatbotInput.value = '';
+    }
+  };
+
+  function addUserMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message user';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function addBotMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function respondToUser(question) {
+    let response = "Je suis désolé, je n'ai pas compris votre question. Essayez une des suggestions ci-dessus ou contactez-nous directement.";
+    const q = question.toLowerCase();
+    if (q.includes('service')) response = chatbotFAQ['services'];
+    else if (q.includes('devis')) response = chatbotFAQ['devis'];
+    else if (q.includes('délai') || q.includes('delai')) response = chatbotFAQ['délais'];
+    else if (q.includes('formation')) response = chatbotFAQ['formations'];
+    else if (q.includes('contact')) response = chatbotFAQ['contacter'];
+    else if (q.includes('salut') || q.includes('bonjour') || q.includes('bonsoir') || q.includes('hello')) response = chatbotFAQ['salutation'];
+    setTimeout(() => addBotMessage(response), 600);
+  }
+  </script>
+<script>
+  // Ajout d'un avatar au message du bot
+  const botAvatarUrl = 'https://randomuser.me/api/portraits/men/77.jpg'; // Remplacer par une photo sénégalaise si besoin
+  function addBotMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message bot';
+    msg.innerHTML = \`<img src="\${botAvatarUrl}" class="chatbot-avatar" alt="Conseiller Porokhane"/>\` + \`<span>\${text}</span>\`;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+  </script>
+<script>
+    // Script pour le menu hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+      
+      // Empêcher le scroll du body quand le menu est ouvert
+      if (navMenu.classList.contains('active')) {
+        document.body.classList.add('menu-open');
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // Fermer le menu en cliquant sur l'overlay
+    menuOverlay.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.classList.remove('menu-open');
+      document.body.style.overflow = '';
+    });
+    
+    // Fermer le menu quand on clique sur un lien (mobile)
+    const navLinks = document.querySelectorAll('.nav-link, .submenu-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+          menuOverlay.classList.remove('active');
+          document.body.classList.remove('menu-open');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+    
+    // Navigation sticky avec effet de scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 100) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+      } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = 'none';
+      }
+    });
+    
+    // Fermer le menu au redimensionnement de l'écran
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
+      }
+    });
+
+
+    // Animation du newsletter avec pulsation
+document.addEventListener('DOMContentLoaded', function() {
+  const newsletter = document.querySelector('.newsletter');
+  
+  if (newsletter) {
+    // Pause au survol avec effet de pulsation
+    newsletter.addEventListener('mouseenter', function() {
+      this.style.animationPlayState = 'paused';
+      this.style.transform = 'scale(1.05)';
+      this.style.boxShadow = '0 12px 40px rgba(31, 164, 122, 0.3)';
+      this.style.transition = 'all 0.3s ease';
+    });
+    
+    // Reprise de l'animation
+    newsletter.addEventListener('mouseleave', function() {
+      this.style.animationPlayState = 'running';
+      this.style.transform = '';
+      this.style.boxShadow = '';
+      this.style.transition = '';
+    });
+    
+    // Effet de clic avec pulsation
+    newsletter.addEventListener('click', function() {
+      this.style.transform = 'scale(0.98)';
+      this.style.boxShadow = '0 2px 15px rgba(31, 164, 122, 0.2)';
+      setTimeout(() => {
+        this.style.transform = '';
+        this.style.boxShadow = '';
+      }, 150);
+    });
+    
+    // Le formulaire newsletter est géré par Formspree
+  }
+  
+
+    });
+  </script>
+<script>
+    // Fonction pour ouvrir une popup
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden'; // Empêcher le scroll du body
+        
+        // Animation d'entrée
+        const modalDialog = modal.querySelector('.modal-dialog');
+        if (modalDialog) {
+          modalDialog.style.animation = 'modalSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards';
+        }
+      }
+    }
+
+    // Fonction pour le countdown
+    function startCountdown() {
+      // Date limite : 25 octobre 2025 à 23:59:59
+      const targetDate = new Date('2025-10-25T23:59:59').getTime();
+      
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
+        
+        if (timeLeft > 0) {
+          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+          
+          // Mettre à jour les deux countdowns
+          ['1', '2'].forEach(id => {
+            const daysEl = document.getElementById(\`days\${id}\`);
+            const hoursEl = document.getElementById(\`hours\${id}\`);
+            const minutesEl = document.getElementById(\`minutes\${id}\`);
+            const secondsEl = document.getElementById(\`seconds\${id}\`);
+            
+            if (daysEl) daysEl.textContent = days.toString().padStart(2, '0');
+            if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+            if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+            if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+            
+            // Ajouter classe urgent si moins de 24h
+            const countdownItems = document.querySelectorAll(\`#countdown\${id} .countdown-item\`);
+            if (timeLeft < 24 * 60 * 60 * 1000) {
+              countdownItems.forEach(item => item.classList.add('urgent'));
+            }
+          });
+        } else {
+          // Temps écoulé
+          ['1', '2'].forEach(id => {
+            const countdown = document.getElementById(\`countdown\${id}\`);
+            if (countdown) {
+              countdown.innerHTML = '<div style="color: #ef4444; font-weight: 900; font-size: 1.2rem;">OFFRE EXPIRÉE</div>';
+            }
+          });
+        }
+      }
+      
+      // Mettre à jour immédiatement puis toutes les secondes
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+    
+    // Fonction pour fermer une popup
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        const modalDialog = modal.querySelector('.modal-dialog');
+        
+        // Animation de sortie
+        if (modalDialog) {
+          modalDialog.style.animation = 'modalSlideOut 0.3s ease-in forwards';
+        }
+        
+        // Fermer après l'animation
+        setTimeout(() => {
+          modal.classList.remove('open');
+          document.body.style.overflow = ''; // Restaurer le scroll du body
+        }, 300);
+      }
+    }
+    
+    // Animation de sortie
+    const style = document.createElement('style');
+    style.textContent = \`
+      @keyframes modalSlideOut {
+        from { 
+          transform: scale(1) translateY(0); 
+          opacity: 1; 
+        }
+        to { 
+          transform: scale(0.9) translateY(-20px); 
+          opacity: 0; 
+        }
+      }
+    \`;
+    document.head.appendChild(style);
+    
+    // Initialisation au chargement de la page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Démarrer le countdown
+      startCountdown();
+      
+      // Gestion des clics sur les liens de fermeture
+      document.querySelectorAll('[data-close-modal]').forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const modalId = this.getAttribute('data-close-modal');
+          closeModal(modalId);
+        });
+      });
+
+      // Fermer les modals en cliquant sur le fond
+      document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeModal(this.id);
+          }
+        });
+      });
+
+      // Fermer les modals avec la touche Échap
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.modal.open').forEach(modal => {
+            closeModal(modal.id);
+          });
+        }
+      });
+
+      // Gestion de l'accessibilité au clavier pour les cartes promo
+      document.querySelectorAll('.promo-card').forEach(card => {
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+            if (onclick) {
+              eval(onclick);
+            }
+          }
+        });
+        
+        // Effet hover amélioré
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-5px) scale(1.02)';
+          this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+      
+      // Animation des badges dans les popups
+      document.querySelectorAll('.modal-badges .badge').forEach((badge, index) => {
+        badge.style.animationDelay = \`\${index * 0.1}s\`;
+        badge.style.animation = 'fadeInUp 0.5s ease-out forwards';
+      });
+    });
+    
+    // Animation fadeInUp pour les badges
+    const badgeStyle = document.createElement('style');
+    badgeStyle.textContent = \`
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .modal-badges .badge {
+        opacity: 0;
+      }
+    \`;
+    document.head.appendChild(badgeStyle);
+  </script>
+<script src="tracking.js" defer></script>`;
+
+export default function Page() {
+  return <Document headTag={headTag} head={head} bodyTag={bodyTag} nav={nav}
+    content={content} footer={footer} chatbot={chatbot} scripts={scripts} />;
+}

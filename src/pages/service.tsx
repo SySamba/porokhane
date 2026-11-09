@@ -1,0 +1,1167 @@
+// Généré depuis service.html — ne plus modifier le .html racine, éditer ce fichier.
+import React from 'react';
+import { Document } from '../components';
+
+export const fileName = 'service.html';
+export const preamble = `﻿<!DOCTYPE html>
+<html lang="fr">
+  <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"4839b43b65f279b77271391d6643be69"})});</script>
+`;
+export const headTag = `<head>`;
+export const head = `
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KBH8R72G');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Services digitaux à Dakar | Porokhane Digital</title>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="description" content="Nos services digitaux à Dakar : développement web, SEO, marketing digital, formations et accompagnement des PME.">
+  <meta name="keywords" content="services digitaux Dakar, agence communication digitale, développement web Sénégal, SEO Dakar, marketing digital Sénégal, formations digitales Dakar">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://digital-porokhane.com/service.html">
+  <meta property="og:title" content="Nos Services - AGENCE DE COMMUNICATION DIGITALE DAKAR">
+  <meta property="og:description" content="Services de communication digitale complets à Dakar. Agence spécialisée en développement web, SEO, marketing digital, formations et solutions digitales au Sénégal.">
+  <meta property="og:image" content="https://digital-porokhane.com/images/logo_porokhane_digital.jpg">
+  <meta property="og:locale" content="fr_SN">
+  <meta property="og:site_name" content="Porokhane Digital Consulting">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://digital-porokhane.com/service.html">
+  <meta property="twitter:title" content="Nos Services - AGENCE DE COMMUNICATION DIGITALE DAKAR">
+  <meta property="twitter:description" content="Services de communication digitale complets à Dakar. Agence spécialisée en développement web, SEO, marketing digital, formations et solutions digitales au Sénégal.">
+  <meta property="twitter:image" content="https://digital-porokhane.com/images/logo_porokhane_digital.jpg">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="canonical" href="https://digital-porokhane.com/service.html">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Porokhane Digital Consulting",
+      "description": "Agence de communication digitale à Dakar spécialisée en développement web, SEO, marketing digital, formations et solutions digitales",
+      "url": "https://digital-porokhane.com",
+      "telephone": "+221 77 XXX XX XX",
+      "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Dakar",
+          "addressLocality": "Dakar",
+          "addressCountry": "SN"
+      },
+      "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 14.6928,
+          "longitude": -17.4467
+      },
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "sameAs": [
+          "https://www.facebook.com/Porokhane.Digital.Consulting",
+          "https://www.linkedin.com/company/porokhane-digital-consulting",
+          "https://www.instagram.com/porokhane_digital_consulting"
+      ],
+      "serviceArea": {
+          "@type": "Place",
+          "name": "Dakar, Sénégal"
+      },
+      "priceRange": "$$",
+      "image": "https://digital-porokhane.com/images/logo_porokhane_digital.jpg"
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --vert: #1fa47a;
+      --vert-clair: #d1fae5;
+      --bleu: #2563eb;
+      --bleu-clair: #dbeafe;
+      --blanc: #fff;
+      --noir: #0f172a;
+      --gris: #f8fafc;
+      --gris-fonce: #e2e8f0;
+      --gris-texte: #64748b;
+      --gris-titre: #1e293b;
+      --ombre: 0 4px 24px rgba(0,0,0,0.08);
+      --rayon: 16px;
+      --rayon-grand: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--blanc); 
+      color: var(--gris-titre);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px; 
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Navigation */
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--gris-fonce);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo h2 {
+      color: var(--vert);
+      font-size: 1.5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .nav-link {
+      color: var(--noir);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s;
+      display: inline-block;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--vert);
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover {
+      color: var(--vert);
+    }
+    
+    .nav-link:hover::after {
+      width: 100%; 
+    }
+    
+    /* Menu Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+    
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--vert);
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .nav-devis {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.7rem 1.5rem;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.4s;
+      box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    
+    .nav-devis:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+    }
+    
+    .devis-icon {
+      margin-left: 0.5rem;
+      transition: transform 0.3s;
+    }
+    
+    .nav-devis:hover .devis-icon {
+      transform: translateX(5px);
+      animation: pulse 1s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: translateX(5px) scale(1); }
+      50% { transform: translateX(5px) scale(1.2); }
+      100% { transform: translateX(5px) scale(1); }
+    }
+    
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: var(--blanc);
+      border-radius: var(--rayon);
+      box-shadow: var(--ombre);
+      min-width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 100;
+      border: 1px solid var(--gris-fonce);
+      padding: 0.5rem 0;
+    }
+    
+    .nav-item:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    .submenu-link {
+      display: block;
+      padding: 0.7rem 1.5rem;
+      color: var(--noir);
+      text-decoration: none;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+    
+    .submenu-link:hover {
+      background: var(--gris-clair);
+      color: var(--vert);
+      padding-left: 1.7rem;
+    }
+    
+    @media (max-width: 992px) {
+      .nav-menu { gap: 1rem; }
+      .nav-link { font-size: 0.9rem; }
+      .nav-devis { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+    }
+    
+    @media (max-width: 768px) { 
+      .nav-container { 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .nav-menu { 
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--blanc);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem 2rem;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        gap: 0;
+        margin: 0;
+        overflow-y: auto;
+        z-index: 1000;
+      }
+      .nav-menu.active {
+        right: 0;
+      }
+      .nav-menu li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-link {
+        display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gris-fonce);
+        font-size: 1.1rem;
+        width: 100%;
+      }
+      .nav-link::after {
+        display: none;
+      }
+      .nav-devis { 
+        margin: 1rem 0 0 0; 
+        width: 100%;
+        justify-content: center;
+      }
+      /* Sous-menus en mode mobile */
+      .submenu {
+        position: static !important;
+        transform: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        background: var(--gris-bg) !important;
+        border-radius: 8px !important;
+        margin-top: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-width: auto !important;
+        transition: all 0.3s ease !important;
+      }
+      /* Affichage des sous-menus au survol/touch sur mobile */
+      .nav-item:hover .submenu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-height: 200px !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+      }
+      .submenu-link {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-size: 1rem;
+      }
+      .submenu-link:hover {
+        padding-left: 1rem;
+      }
+      .submenu-link:last-child {
+        border-bottom: none;
+      }
+    }
+    
+    /* Services Section */
+    .services-section {
+      padding: 80px 0;
+      background: var(--gris);
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: var(--vert);
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+    
+    .section-header p {
+      font-size: 1.2rem;
+      color: var(--gris-texte);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: var(--blanc);
+      border-radius: var(--rayon-grand);
+      overflow: hidden;
+      box-shadow: var(--ombre);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid var(--gris-fonce);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+    
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .service-card-content {
+      padding: 2rem;
+    }
+
+    .service-card h3 {
+      color: var(--vert);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    
+    .service-card p {
+      color: var(--gris-texte);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center; 
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem; 
+    }
+    
+    .btn-secondary {
+      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
+    }
+    
+    .btn-secondary:hover {
+      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    }
+    
+    /* Footer */
+    .footer { 
+      background: linear-gradient(135deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      padding: 80px 0 30px; 
+      position: relative;
+    }
+    
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231fa47a" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%231fa47a" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%231fa47a"/></svg>');
+      background-size: cover;
+      transform: rotate(180deg);
+    }
+    
+    .footer-content { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 3rem; 
+      margin-bottom: 3rem; 
+      position: relative;
+      z-index: 1;
+    }
+    
+    .footer-section h3, .footer-section h4 {
+      color: var(--blanc); 
+      margin-bottom: 1.5rem; 
+      font-size: 1.3rem; 
+      font-weight: 700; 
+      position: relative;
+      display: inline-block;
+    }
+    
+    .footer-section h3::after, .footer-section h4::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+    }
+    
+    .footer-section p { 
+      color: rgba(255,255,255,0.8); 
+      line-height: 1.6; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    .footer-section ul { 
+      list-style: none; 
+    }
+    
+    .footer-section ul li { 
+      margin-bottom: 0.8rem; 
+    }
+    
+    .footer-section ul li a { 
+      color: rgba(255,255,255,0.8); 
+      text-decoration: none; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .footer-section ul li a:hover { 
+      color: var(--blanc); 
+      transform: translateX(5px);
+    }
+    
+    .footer-section ul li a i {
+      font-size: 0.8rem;
+    }
+    
+    .social-links { 
+      display: flex; 
+      gap: 1rem; 
+      margin-top: 1.5rem; 
+    }
+    
+    .social-links a { 
+      width: 40px; 
+      height: 40px; 
+      background: rgba(255,255,255,0.15); 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: var(--blanc); 
+      text-decoration: none; 
+      transition: all 0.3s; 
+    }
+    
+    .social-links a:hover { 
+      background: var(--blanc); 
+      color: var(--vert); 
+      transform: translateY(-3px) scale(1.1); 
+    }
+    
+    .footer-bottom { 
+      border-top: 1px solid rgba(255,255,255,0.15); 
+      padding-top: 2rem; 
+      text-align: center; 
+      color: rgba(255,255,255,0.7); 
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .newsletter {
+      margin-top: 3rem;
+      background: var(--blanc);
+      border-radius: var(--rayon);
+      padding: 1.5rem;
+      box-shadow: var(--ombre);
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: 4px solid var(--vert);
+    }
+    
+    .newsletter input[type="email"] {
+      flex: 1;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--gris-fonce);
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+    
+    .newsletter input[type="email"]:focus {
+      border-color: var(--vert);
+      outline: none;
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    .newsletter button {
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .newsletter button:hover {
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+      background: var(--blanc);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem 2rem;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        gap: 0;
+        margin: 0;
+        overflow-y: auto;
+      }
+      
+      .nav-menu.active {
+        right: 0;
+      }
+      
+      .nav-menu li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-link {
+      display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gris-fonce);
+        font-size: 1.1rem;
+        width: 100%;
+      }
+      
+      .nav-link::after {
+        display: none;
+      }
+      
+      .nav-devis {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .submenu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        background: var(--gris);
+        border-radius: 8px;
+        margin-top: 0.5rem;
+        box-shadow: none;
+        border: none;
+        padding: 0.5rem 0;
+        width: 100%;
+      }
+      
+      .submenu-link {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+      }
+      
+      .submenu-link:last-child {
+        border-bottom: none;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+      .service-card-content {
+        padding: 1.5rem;
+      }
+    }
+
+    @keyframes newsletterFloat {
+  0% {
+    transform: translateX(-30px);
+    box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+  }
+  25% {
+    transform: translateX(-10px);
+    box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+  }
+  50% {
+    transform: translateX(30px);
+    box-shadow: 0 10px 35px rgba(31, 164, 122, 0.3);
+  }
+  75% {
+    transform: translateX(10px);
+    box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+  }
+  100% {
+    transform: translateX(-30px);
+    box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+  }
+}
+
+.newsletter { 
+  margin-top: 3rem; 
+  background: var(--blanc); 
+  border-radius: var(--rayon); 
+  padding: 1.5rem; 
+  box-shadow: var(--ombre); 
+  display: flex; 
+  gap: 0.5rem; 
+  align-items: center; 
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 4px solid var(--vert);
+  animation: newsletterFloat 2s ease-in-out infinite;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo a:hover {
+  transform: scale(1.05);
+}
+
+.nav-logo img {
+  height: 90px;
+  width: auto;
+  display: block;
+  margin-right: 0.5rem;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+  .nav-logo img {
+    height: 70px;
+  }
+}
+
+/* Newsletter Responsive - Version Mobile uniquement */
+@media (max-width: 768px) {
+  .newsletter {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 2rem 10px;
+  }
+  
+  .newsletter input[type="email"],
+  .newsletter button {
+    width: 100%;
+  }
+  
+  .newsletter button {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter {
+    margin: 2rem 5px;
+    padding: 1rem;
+  }
+  
+  .newsletter input[type="email"] {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  
+  .newsletter button {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+  </style>
+`;
+export const bodyTag = `<body>`;
+export const nav = `<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <div class="nav-logo">
+          <a href="https://digital-porokhane.com/">
+            <img src="images/logo.png" alt="Porokhane Digital Consulting Logo">
+          </a>
+        </div>
+        
+      <!-- Menu Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="https://digital-porokhane.com/" class="nav-link">Accueil</a></li>
+        <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        <li class="nav-item">
+          <a href="formations.html" class="nav-link">Formations <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="robotique.html" class="submenu-link">Robotique</a></li>
+            <li><a href="impression_3d_dakar.html#formation" class="submenu-link"><i class="fas fa-print"></i> Impression 3D</a></li>
+            <li><a href="cybersecurite.html" class="submenu-link">Cybersécurité</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="marketing.html" class="nav-link">Marketing <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="audit_express.html" class="submenu-link">Audit Express</a></li>
+            <li><a href="site.html" class="submenu-link">Création/Réfonte de site</a></li>
+            <li><a href="strategie_digitale.html" class="submenu-link"> Stratégie digitale</a></li>
+            <li><a href="seo.html" class="submenu-link">Référencement naturel</a></li>
+            <li><a href="reseaux_sociaux.html" class="submenu-link">Réseaux sociaux</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="accompagnement.html" class="nav-link">Accompagnement <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="automatisation.html" class="submenu-link">Automatisation</a></li>
+            <li><a href="base_donnee.html" class="submenu-link">Bases de données</a></li>
+            <li><a href="erp.html" class="submenu-link">ERP</a></li>
+            <li><a href="ia.html" class="submenu-link">Intelligence Artificielle</a></li>
+          </ul>
+        </li>
+       
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li>
+          <a href="devis.html" class="nav-devis">
+            Demandez un devis
+            <span class="devis-icon"><i class="fas fa-paper-plane"></i></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>`;
+export const content = `
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBH8R72G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+  
+  
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h1>Nos Services - AGENCE DE COMMUNICATION DIGITALE DAKAR</h1>
+        <p>Des solutions digitales complètes et personnalisées pour propulser votre entreprise</p>
+    </div>
+      <div class="services-grid">
+        <!-- Formations Pédagogiques -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Formations Pédagogiques">
+          <div class="service-card-content">
+            <h3>Formations Pédagogiques</h3>
+            <p>Robotique, Impression 3D et Cybersécurité. Des formations adaptées à tous les niveaux.</p>
+            <a href="formations.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails</a>
+            </div>
+          </div>
+          
+        <!-- Marketing Digital -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Marketing Digital">
+          <div class="service-card-content">
+            <h3>Marketing Digital</h3>
+            <p>Audit Express, Création/Réfonte de site, Stratégie digitale, SEO et Réseaux sociaux.</p>
+            <a href="marketing.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails</a>
+            </div>
+          </div>
+          
+        <!-- Accompagnement -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Accompagnement">
+          <div class="service-card-content">
+            <h3>Accompagnement pour les PME</h3>
+            <p>Automatisation, Bases de données, ERP et Intelligence Artificielle pour votre entreprise.</p>
+            <a href="accompagnement.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails</a>
+            </div>
+          </div>
+          
+        <!-- ERP -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="ERP">
+          <div class="service-card-content">
+            <h3>ERP (Gestion d'entreprise)</h3>
+            <p>Mise en place de solutions ERP sur-mesure pour piloter efficacement vos processus métiers : gestion commerciale, stock, RH, finance, etc.</p>
+            <a href="erp.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails</a>
+          </div>
+        </div>
+
+        <!-- Développement Web -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Développement Web">
+          <div class="service-card-content">
+            <h3>Développement Web</h3>
+            <p>Création de sites vitrines et e-commerce sur mesure pour votre activité.</p>
+            <a href="site.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails</a>
+            </div>
+            </div>
+
+        <!-- Sécurité IT -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cybersécurité">
+          <div class="service-card-content">
+            <h3>Sécurité IT</h3>
+            <p>Protection de vos données et infrastructures numériques.</p>
+            <a href="securite.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Détails</a>
+        </div>
+        </div>
+    </div>
+  </div>
+  </section>
+
+ <!-- Footer -->
+ 
+
+  <!-- Script pour le menu hamburger -->
+  
+
+`;
+export const footer = `<footer class="footer">
+  <form class="newsletter" id="newsletterForm">
+      <input type="email" name="newsletterEmail" placeholder="Votre email pour recevoir nos conseils et actualités" required>
+      <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
+    </form>
+  </br>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+         <div class="nav-logo">
+        <a href="https://digital-porokhane.com/">
+          <img src="images/icone.webp" alt="Porokhane Digital Consulting  Logo">
+        </a>
+      </div>
+        <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/Porokhane.Digital.Consulting" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="tiktok"><i class="fab fa-tiktok"></i></a>>
+          <a href="https://www.linkedin.com/company/porokhane-digital-consulting" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/porokhane_digital_consulting/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Nos Services</h4>
+        <ul>
+            <li><a href="formations.html"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
+            <li><a href="marketing.html"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+            <li><a href="accompagnement.html"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+            <li><a href="erp.html"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+            <li><a href="site.html"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
+            <li><a href="securite.html"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="https://digital-porokhane.com/"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+            <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+          <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+            <li><a href="#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+221710589088"><i class="fas fa-phone"></i> +221 710589088</a></li>
+            <li><a href="tel:+338306157"><i class="fas fa-phone"></i> +33 830 61 57</a></li>
+            <li><a href="mailto:contact1@digital-porokhane.com"><i class="fas fa-envelope"></i> contact1@digital-porokhane.com</a></li>
+            <li><a href="https://maps.app.goo.gl/jCAGEpeoCBiSNQSr5" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>`;
+export const chatbot = ``;
+export const scripts = `<script>
+    // Menu Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      
+      // Empêcher le scroll du body quand le menu est ouvert
+      if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // Fermer le menu quand on clique sur un lien
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+    
+    // Fermer le menu quand on clique en dehors
+    document.addEventListener('click', function(event) {
+      const isClickInsideNav = navMenu.contains(event.target);
+      const isClickOnHamburger = hamburger.contains(event.target);
+      
+      if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+    
+    // Fermer le menu au redimensionnement de l'écran
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+    // Animation du newsletter
+document.addEventListener('DOMContentLoaded', function() {
+  const newsletter = document.querySelector('.newsletter');
+  
+  if (newsletter) {
+    // L'animation CSS est déjà appliquée, mais on peut ajouter des interactions
+    newsletter.addEventListener('mouseenter', function() {
+      this.style.animationPlayState = 'paused';
+    });
+    
+    newsletter.addEventListener('mouseleave', function() {
+      this.style.animationPlayState = 'running';
+    });
+    
+    // Gestion du formulaire newsletter
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
+        this.reset();
+      });
+    }
+  }
+});
+
+// Animation du logo au clic
+document.addEventListener('DOMContentLoaded', function() {
+  const logoLink = document.querySelector('.nav-logo a');
+  
+  if (logoLink) {
+    logoLink.addEventListener('click', function(e) {
+      // Animation de clic
+      this.style.transform = 'scale(0.95)';
+      
+      setTimeout(() => {
+        this.style.transform = 'scale(1)';
+      }, 150);
+      
+      // Si on est déjà sur la page d'accueil, empêcher la navigation
+      if (window.location.pathname.includes('https://digital-porokhane.com/') || window.location.pathname === '/') {
+        e.preventDefault();
+        // Scroll vers le haut de la page
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    });
+    
+    // Animation au survol
+    logoLink.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.05)';
+    });
+    
+    logoLink.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+    });
+  }
+});
+  </script>
+<script src="tracking.js" defer></script>`;
+
+export default function Page() {
+  return <Document headTag={headTag} head={head} bodyTag={bodyTag} nav={nav}
+    content={content} footer={footer} chatbot={chatbot} scripts={scripts} />;
+}

@@ -2,12 +2,12 @@
 RewriteEngine On
 RewriteBase /
 
-# Redirections 301 vers les pages réelles
-# /ia -> /ia.html
-RewriteRule ^ia/?$ ia.html [L,R=301]
+# Ancienne page formation impression 3D -> page Impression 3D Dakar (consolidation SEO)
+RewriteRule ^impression_3D(\.html)?/?$ https://digital-porokhane.com/impression_3d_dakar/#formation [NE,L,R=301]
 
-# /emplois -> /offre_cdd_marketing.html
-RewriteRule ^emplois/?$ offre_cdd_marketing.html [L,R=301]
+# URLs propres : /x.html -> /x/ (les stubs .html redirigent aussi côté page)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)\.html$ /$1/ [L,R=301]
 
 # Optionnel: si vous souhaitez servir automatiquement fichier.html quand on visite /fichier
 # (décommentez ces 2 lignes si vous êtes sûr que cela ne perturbe pas vos assets)

@@ -310,7 +310,7 @@ Avec cette stratégie, Porokhane Digital Consulting peut atteindre :
 
 ## 📞 CONTACT PROJET
 
-**📧 Email :** contact@digital-porokhane.com  
+**📧 Email :** contact1@digital-porokhane.com  
 **📱 WhatsApp :** +221 70 XXX XX XX  
 **🌐 Site :** https://digital-porokhane.com  
 

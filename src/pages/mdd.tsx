@@ -1,0 +1,1202 @@
+// Généré depuis mdd.html — ne plus modifier le .html racine, éditer ce fichier.
+import React from 'react';
+import { Document } from '../components';
+
+export const fileName = 'mdd.html';
+export const preamble = `﻿<!DOCTYPE html>
+<html lang="fr">
+  <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"4839b43b65f279b77271391d6643be69"})});</script>
+`;
+export const headTag = `<head>`;
+export const head = `
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KBH8R72G');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet SEO & Réseaux Sociaux | Porokhane Digital</title>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="description" content="Projet SEO et gestion des réseaux sociaux à Dakar : découvrez notre approche pour améliorer la visibilité en ligne de nos clients.">
+  <meta name="keywords" content="AGENCE DE COMMUNICATION DIGITALE DAKAR, SEO Dakar, réseaux sociaux Sénégal, optimisation SEO, gestion réseaux sociaux, visibilité en ligne Dakar, stratégie digitale Sénégal, agence digitale Dakar">
+  <link rel="canonical" href="https://digital-porokhane.com/mdd.html">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Projet SEO & Réseaux Sociaux - AGENCE DE COMMUNICATION DIGITALE DAKAR | Porokhane Digital">
+  <meta property="og:description" content="Découvrez notre projet d'optimisation SEO et de gestion des réseaux sociaux à Dakar pour améliorer la visibilité en ligne. AGENCE DE COMMUNICATION DIGITALE DAKAR spécialisée en stratégies digitales innovantes au Sénégal.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://digital-porokhane.com/mdd.html">
+  <meta property="og:image" content="https://digital-porokhane.com/images/logo_porokhane_digital.jpg">
+  <meta property="og:site_name" content="Porokhane Digital Consulting">
+  <meta property="og:locale" content="fr_SN">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projet SEO & Réseaux Sociaux - AGENCE DE COMMUNICATION DIGITALE DAKAR | Porokhane Digital">
+  <meta name="twitter:description" content="Découvrez notre projet d'optimisation SEO et de gestion des réseaux sociaux à Dakar pour améliorer la visibilité en ligne. AGENCE DE COMMUNICATION DIGITALE DAKAR spécialisée en stratégies digitales innovantes au Sénégal.">
+  <meta name="twitter:image" content="https://digital-porokhane.com/images/logo_porokhane_digital.jpg">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Porokhane Digital Consulting",
+    "description": "AGENCE DE COMMUNICATION DIGITALE DAKAR - Projet SEO et gestion des réseaux sociaux pour améliorer la visibilité en ligne au Sénégal",
+    "url": "https://digital-porokhane.com",
+    "telephone": "+221 77 XXX XX XX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Dakar",
+      "addressLocality": "Dakar",
+      "addressCountry": "SN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 14.6928,
+      "longitude": -17.4467
+    },
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "sameAs": [
+      "https://www.facebook.com/Porokhane.Digital.Consulting",
+      "https://www.linkedin.com/company/porokhane-digital-consulting"
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    :root {
+      --bleu: #2563eb;
+      --bleu-fonce: #1e40af;
+      --vert: #10b981;
+      --vert-fonce: #059669;
+      --gris: #f8fafc;
+      --gris-fonce: #e2e8f0;
+      --blanc: #ffffff;
+      --noir: #1e293b;
+      --ombre: 0 4px 24px rgba(0, 0, 0, 0.08);
+      --rayon: 12px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--blanc);
+      color: var(--noir);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .projet-hero {
+      background: linear-gradient(135deg, var(--bleu), var(--bleu-fonce));
+      color: var(--blanc);
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .projet-hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
+      opacity: 0.5;
+    }
+
+    .projet-hero .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .projet-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .projet-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* Project Details Section */
+    .projet-detail-section {
+      max-width: 1100px;
+      margin: -60px auto 60px;
+      background: var(--blanc);
+      border-radius: var(--rayon);
+      box-shadow: var(--ombre);
+      padding: 3rem;
+      position: relative;
+      z-index: 2;
+      border: 1px solid var(--gris-fonce);
+    }
+
+    .projet-detail-section h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--bleu);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      text-align: center;
+    }
+
+    .projet-detail-section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--vert);
+    }
+
+    .projet-detail-section ul {
+      list-style: none;
+      margin: 2rem 0;
+    }
+
+    .projet-detail-section li {
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .projet-detail-section li::before {
+      content: "\\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--vert);
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+
+    .projet-detail-section b {
+      color: var(--bleu);
+      font-weight: 600;
+    }
+
+    /* CTA Section */
+    .cta-devis {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+
+    .cta-devis h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--vert);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .nav-devis {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(to right, var(--vert), var(--bleu));
+      color: white;
+      padding: 0.9rem 1.8rem;
+      border-radius: var(--rayon);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+    }
+
+    .nav-devis:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Gallery Section */
+    .galerie-section {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      padding: 0 1rem;
+    }
+
+    .galerie-section h2 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      color: var(--bleu);
+      margin-bottom: 3rem;
+      font-size: 2rem;
+      position: relative;
+    }
+
+    .galerie-section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--vert);
+    }
+
+    .galerie {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .galerie-item {
+      position: relative;
+      border-radius: var(--rayon);
+      overflow: hidden;
+      box-shadow: var(--ombre);
+      aspect-ratio: 1;
+      transition: var(--transition);
+    }
+
+    .galerie-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .galerie-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .galerie-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .projet-hero h1 {
+        font-size: 2.4rem;
+      }
+      
+      .projet-detail-section {
+        padding: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .projet-hero {
+        padding: 80px 20px;
+      }
+      
+      .projet-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .projet-hero p {
+        font-size: 1.1rem;
+      }
+      
+      .projet-detail-section {
+        margin: -40px auto 40px;
+        padding: 2rem;
+      }
+      
+      .projet-detail-section h2,
+      .galerie-section h2 {
+        font-size: 1.7rem;
+      }
+      
+
+    }
+
+    @media (max-width: 480px) {
+      .projet-hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .projet-detail-section {
+        padding: 1.5rem;
+      }
+      
+      .projet-detail-section li {
+        font-size: 1rem;
+      }
+      
+      .galerie {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .lightbox-content {
+    position: relative;
+    text-align: center;
+    max-width: 90%;
+    max-height: 80%;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  }
+
+  .lightbox-controls {
+    margin: 15px 0;
+  }
+
+  .lightbox-controls button {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: 0.2s;
+  }
+
+  .lightbox-controls button:hover {
+    color: var(--vert);
+  }
+
+  .lightbox-thumbnails {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    justify-content: center;
+  }
+
+  .lightbox-thumbnails img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .lightbox-thumbnails img.active {
+    border-color: var(--vert);
+  }
+
+  .close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .lightbox-controls button {
+      font-size: 24px;
+      margin: 0 10px;
+    }
+
+    .lightbox-thumbnails img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .navbar { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 1rem 0; border-bottom: 1px solid var(--gris-fonce); position: sticky; top: 0; z-index: 1000; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo h2 { color: var(--vert); font-size: 1.5rem; margin: 0; display: flex; align-items: center; gap: 0.5rem; }
+    .nav-menu { display: flex; list-style: none; margin: 0; padding: 0; align-items: center; gap: 1.5rem; }
+    .nav-link { color: var(--noir); text-decoration: none; font-weight: 600; font-size: 1rem; padding: 0.5rem 0; position: relative; transition: color 0.3s; display: inline-block; }
+    .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--vert); transition: width 0.3s; }
+    .nav-link:hover { color: var(--vert); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-devis { position: relative; display: inline-flex; align-items: center; padding: 0.7rem 1.5rem; background: linear-gradient(90deg, var(--vert), var(--bleu)); color: white; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; overflow: hidden; z-index: 1; transition: all 0.4s; box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3); border: none; cursor: pointer; white-space: nowrap; }
+    .nav-devis:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4); background: linear-gradient(90deg, var(--bleu), var(--vert)); }
+    .devis-icon { margin-left: 0.5rem; transition: transform 0.3s; }
+    .nav-devis:hover .devis-icon { transform: translateX(5px); animation: pulse 1s infinite; }
+    @keyframes pulse { 0% { transform: translateX(5px) scale(1); } 50% { transform: translateX(5px) scale(1.2); } 100% { transform: translateX(5px) scale(1); } }
+    
+    /* Menu Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+    
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--vert);
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    @media (max-width: 992px) { .nav-menu { gap: 1rem; } .nav-link { font-size: 0.9rem; } .nav-devis { padding: 0.6rem 1.2rem; font-size: 0.9rem; } }
+    @media (max-width: 768px) { 
+      .nav-container { 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .nav-menu { 
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--blanc);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem 2rem;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        gap: 0;
+        margin: 0;
+        overflow-y: auto;
+        z-index: 1000;
+      }
+      .nav-menu.active {
+        right: 0;
+      }
+      .nav-menu li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-link {
+        display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gris-fonce);
+        font-size: 1.1rem;
+        width: 100%;
+      }
+      .nav-link::after {
+        display: none;
+      }
+      .nav-devis { 
+        margin: 1rem 0 0 0; 
+        width: 100%;
+        justify-content: center;
+      }
+      /* Sous-menus en mode mobile */
+      .submenu {
+        position: static !important;
+        transform: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        background: var(--gris) !important;
+        border-radius: 8px !important;
+        margin-top: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-width: auto !important;
+        transition: all 0.3s ease !important;
+      }
+      /* Affichage des sous-menus au survol/touch sur mobile */
+      .nav-item:hover .submenu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-height: 200px !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+      }
+      .submenu-link {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-size: 1rem;
+      }
+      .submenu-link:hover {
+        padding-left: 1rem;
+      }
+      .submenu-link:last-child {
+        border-bottom: none;
+      }
+    }
+    .submenu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); background: var(--blanc); border-radius: var(--rayon); box-shadow: var(--ombre); min-width: 220px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 100; border: 1px solid var(--gris-fonce); padding: 0.5rem 0; }
+    .nav-item:hover .submenu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .submenu-link { display: block; padding: 0.7rem 1.5rem; color: var(--noir); text-decoration: none; transition: all 0.2s; font-weight: 500; }
+    .submenu-link:hover { background: var(--gris-clair); color: var(--vert); padding-left: 1.7rem; }
+    .footer { background: linear-gradient(135deg, var(--vert), var(--bleu)); color: var(--blanc); padding: 80px 0 30px; position: relative; }
+    .footer::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100px; background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231fa47a" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%231fa47a" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%231fa47a"/></svg>'); background-size: cover; transform: rotate(180deg); }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem; position: relative; z-index: 1; }
+    .footer-section h3, .footer-section h4 { color: var(--blanc); margin-bottom: 1.5rem; font-size: 1.3rem; font-weight: 700; position: relative; display: inline-block; }
+    .footer-section h3::after, .footer-section h4::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 50px; height: 3px; background: rgba(255,255,255,0.3); border-radius: 2px; }
+    .footer-section p { color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 1.5rem; }
+    .footer-section ul { list-style: none; }
+    .footer-section ul li { margin-bottom: 0.8rem; }
+    .footer-section ul li a { color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; }
+    .footer-section ul li a:hover { color: var(--blanc); transform: translateX(5px); }
+    .footer-section ul li a i { font-size: 0.8rem; }
+    .social-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
+    .social-links a { width: 40px; height: 40px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--blanc); text-decoration: none; transition: all 0.3s; }
+    .social-links a:hover { background: var(--blanc); color: var(--vert); transform: translateY(-3px) scale(1.1); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.7); font-size: 0.9rem; position: relative; z-index: 1; }
+    .newsletter { margin-top: 3rem; background: var(--blanc); border-radius: var(--rayon); padding: 1.5rem; box-shadow: var(--ombre); display: flex; gap: 0.5rem; align-items: center; max-width: 600px; margin-left: auto; margin-right: auto; border-top: 4px solid var(--vert); }
+    .newsletter input[type="email"] { flex: 1; padding: 1rem; border-radius: 8px; border: 1px solid var(--gris-fonce); font-size: 1rem; transition: all 0.3s; }
+    .newsletter input[type="email"]:focus { border-color: var(--vert); outline: none; box-shadow: 0 0 0 3px var(--vert-clair); }
+    .newsletter button { padding: 1rem 2rem; border-radius: 8px; background: linear-gradient(90deg, var(--vert), var(--bleu)); color: var(--blanc); border: none; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; }
+    .newsletter button:hover { background: linear-gradient(90deg, var(--bleu), var(--vert)); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3); }
+    .chatbot-btn { position: fixed; bottom: 32px; right: 32px; background: linear-gradient(90deg, var(--vert), var(--bleu)); color: var(--blanc); border: none; border-radius: 50%; width: 64px; height: 64px; box-shadow: 0 4px 24px rgba(31,164,122,0.18); font-size: 2.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; transition: background 0.3s, transform 0.2s; animation: chatbot-bounce 1.5s infinite alternate; }
+    .chatbot-btn:hover { background: linear-gradient(90deg, var(--bleu), var(--vert)); transform: scale(1.08); }
+    @keyframes chatbot-bounce { 0% { box-shadow: 0 4px 24px rgba(31,164,122,0.18); transform: scale(1); } 100% { box-shadow: 0 8px 32px rgba(37,99,235,0.18); transform: scale(1.08); } }
+    .chatbot-btn .fa-comments { font-size: 2.2rem; animation: chatbot-icon-wave 2.5s infinite; }
+    @keyframes chatbot-icon-wave { 0%, 100% { color: var(--blanc); transform: scale(1); } 50% { color: var(--vert); transform: scale(1.18) rotate(-8deg); } }
+    .chatbot-window { position: fixed; bottom: 110px; right: 32px; width: 340px; max-width: 95vw; background: var(--blanc); border-radius: 20px; box-shadow: 0 8px 32px rgba(37,99,235,0.18); border: 1.5px solid var(--vert); z-index: 9999; display: none; flex-direction: column; overflow: hidden; animation: fadeInUp 0.4s; }
+    .chatbot-header { background: linear-gradient(90deg, var(--vert), var(--bleu)); color: var(--blanc); padding: 1rem 1.2rem; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; justify-content: space-between; }
+    .chatbot-close { background: none; border: none; color: var(--blanc); font-size: 1.3rem; cursor: pointer; margin-left: 1rem; transition: color 0.2s; }
+    .chatbot-close:hover { color: #e67e22; }
+    .chatbot-body { padding: 1.2rem; background: var(--gris); min-height: 180px; max-height: 320px; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; }
+    .chatbot-message { background: var(--blanc); border-radius: 14px 14px 14px 4px; padding: 0.8rem 1rem; color: var(--gris-titre); font-size: 1rem; box-shadow: 0 2px 8px rgba(31,164,122,0.07); align-self: flex-start; max-width: 85%; }
+    .chatbot-message.user { background: var(--vert); color: var(--blanc); align-self: flex-end; border-radius: 14px 14px 4px 14px; }
+    .chatbot-suggestions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+    .chatbot-suggestion { background: var(--bleu-clair); color: var(--bleu); border: none; border-radius: 20px; padding: 0.4rem 1rem; font-size: 0.95rem; cursor: pointer; transition: background 0.2s, color 0.2s; }
+    .chatbot-suggestion:hover { background: var(--bleu); color: var(--blanc); }
+    .chatbot-footer { padding: 0.8rem 1.2rem; background: var(--blanc); border-top: 1px solid var(--gris-fonce); display: flex; gap: 0.5rem; }
+    .chatbot-input { flex: 1; border: 1px solid var(--gris-fonce); border-radius: 20px; padding: 0.5rem 1rem; font-size: 1rem; outline: none; transition: border 0.2s; }
+    .chatbot-input:focus { border-color: var(--vert); }
+    .chatbot-send { background: linear-gradient(90deg, var(--vert), var(--bleu)); color: var(--blanc); border: none; border-radius: 50%; width: 38px; height: 38px; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
+    .chatbot-send:hover { background: linear-gradient(90deg, var(--bleu), var(--vert)); }
+    .chatbot-message.bot { display: flex; align-items: flex-start; gap: 0.7rem; }
+    .chatbot-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 8px rgba(31,164,122,0.07); border: 2px solid var(--vert); flex-shrink: 0; }
+    .temoignage-highlight { color: #e67e22; font-weight: 700; font-size: 1.15rem; letter-spacing: 0.5px; }
+
+    @keyframes newsletterFloat {
+  0% {
+    transform: translateX(-30px);
+    box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+  }
+  25% {
+    transform: translateX(-10px);
+    box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+  }
+  50% {
+    transform: translateX(30px);
+    box-shadow: 0 10px 35px rgba(31, 164, 122, 0.3);
+  }
+  75% {
+    transform: translateX(10px);
+    box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+  }
+  100% {
+    transform: translateX(-30px);
+    box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+  }
+}
+
+.newsletter { 
+  margin-top: 3rem; 
+  background: var(--blanc); 
+  border-radius: var(--rayon); 
+  padding: 1.5rem; 
+  box-shadow: var(--ombre); 
+  display: flex; 
+  gap: 0.5rem; 
+  align-items: center; 
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 4px solid var(--vert);
+  animation: newsletterFloat 2s ease-in-out infinite;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo a:hover {
+  transform: scale(1.05);
+}
+
+.nav-logo img {
+  height: 90px;
+  width: auto;
+  display: block;
+  margin-right: 0.5rem;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+  .nav-logo img {
+    height: 70px;
+  }
+}
+
+/* Newsletter Responsive - Version Mobile uniquement */
+@media (max-width: 768px) {
+  .newsletter {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 2rem 10px;
+  }
+  
+  .newsletter input[type="email"],
+  .newsletter button {
+    width: 100%;
+  }
+  
+  .newsletter button {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter {
+    margin: 2rem 5px;
+    padding: 1rem;
+  }
+  
+  .newsletter input[type="email"] {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  
+  .newsletter button {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+  </style>
+`;
+export const bodyTag = `<body>`;
+export const nav = `<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Porokhane Digital Consulting Logo">
+        </a>
+      </div>
+        
+      <!-- Menu Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        <li class="nav-item">
+          <a href="formations.html" class="nav-link">Formations <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="robotique.html" class="submenu-link">Robotique</a></li>
+            <li><a href="impression_3d_dakar.html#formation" class="submenu-link">Impression 3D</a></li>
+            <li><a href="cybersecurite.html" class="submenu-link">Cybersécurité</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="marketing.html" class="nav-link">Marketing <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="audit_express.html" class="submenu-link">Audit Express</a></li>
+            <li><a href="site.html" class="submenu-link">Création/Réfonte de site</a></li>
+            <li><a href="strategie_digitale.html" class="submenu-link">Stratégie digitale</a></li>
+            <li><a href="seo.html" class="submenu-link">Référencement naturel</a></li>
+            <li><a href="reseaux_sociaux.html" class="submenu-link">Réseaux sociaux</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="accompagnement.html" class="nav-link">Accompagnement <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="automatisation.html" class="submenu-link">Automatisation</a></li>
+            <li><a href="base_donnee.html" class="submenu-link">Bases de données</a></li>
+            <li><a href="erp.html" class="submenu-link">ERP</a></li>
+            <li><a href="ia.html" class="submenu-link">Intelligence Artificielle</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li>
+          <a href="devis.html" class="nav-devis">
+            Demandez un devis
+            <span class="devis-icon"><i class="fas fa-paper-plane"></i></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>`;
+export const content = `
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBH8R72G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+     <!-- Navigation -->
+
+
+  <section class="projet-hero">
+    <div class="container">
+      <h1>Optimisation SEO & Gestion des Réseaux Sociaux</h1>
+      <p>Stratégie digitale complète incluant le SEO, la création de contenu, et l'animation professionnelle sur Facebook et LinkedIn.</p>
+    </div>
+  </section>
+
+  <section class="projet-detail-section">
+    <h2>Détails du projet</h2>
+    <ul>
+      <li><b>SEO :</b> Recherche de mots-clés, optimisation des balises, backlinks, vitesse du site</li>
+      <li><b>Contenu :</b> Rédaction d'articles de blog et pages optimisées</li>
+      <li><b>Facebook :</b> Création de visuels, planification & modération des publications</li>
+      <li><b>LinkedIn :</b> Développement de l'image pro, contenu ciblé, publications hebdomadaires</li>
+      <li><b>Résultats :</b> Meilleure visibilité Google et interactions sociales accrues</li>
+    </ul>
+    
+  </section>
+  <!-- Lightbox (popup image viewer) -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-controls">
+        <button onclick="changeImage(-1)">&#10094;</button>
+        <button onclick="changeImage(1)">&#10095;</button>
+      </div>
+      <div class="lightbox-thumbnails" id="lightbox-thumbs"></div>
+    </div>
+  </div>
+
+  <section class="galerie-section">
+    <h2>Galerie des publications</h2>
+    <div class="galerie">
+      <div class="galerie-item">
+        <img src="mdd_assets/Decouvrez_nos_instruments_innovants.png" alt="Post Facebook 1">
+      </div>
+      <div class="galerie-item">
+        <img src="mdd_assets/MUCOSITE.png" alt="Post Facebook 2">
+      </div>
+      <div class="galerie-item">
+        <img src="mdd_assets/Roulante.png" alt="Post LinkedIn 1">
+      </div>
+    </div>
+  </section>
+
+<!-- Réseaux sociaux Medical Distribution -->
+<section class="social-mdd" style="text-align:center; margin: 2.5rem 0 3.5rem 0;">
+  <h2 style="color:var(--bleu); font-size:1.4rem; margin-bottom:1.2rem;">Retrouvez-nous sur les réseaux sociaux</h2>
+  <div style="display:flex; justify-content:center; gap:2rem;">
+    <a href="https://www.linkedin.com/company/medical-cabinet" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.7rem; background:#0077b5; color:#fff; padding:0.8rem 1.6rem; border-radius:30px; font-weight:600; font-size:1.1rem; text-decoration:none; transition:background 0.2s;"><i class="fab fa-linkedin-in" style="font-size:1.3rem;"></i> LinkedIn</a>
+    <a href="https://www.facebook.com/medicaldistributions/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.7rem; background:#1877f3; color:#fff; padding:0.8rem 1.6rem; border-radius:30px; font-weight:600; font-size:1.1rem; text-decoration:none; transition:background 0.2s;"><i class="fab fa-facebook-f" style="font-size:1.3rem;"></i> Facebook</a>
+  </div>
+</section>
+
+  <div class="cta-devis">
+    <h3>Besoin d'une stratégie digitale complète ?</h3>
+    <a href="devis.html" class="nav-devis">
+      <i class="fas fa-paper-plane"></i> Demandez un devis
+    </a>
+  </div>
+
+  </br>
+   
+
+  
+
+  <!-- Chatbot -->
+  
+
+  
+
+  
+
+`;
+export const footer = `<footer class="footer">
+    <form class="newsletter" id="newsletterForm">
+        <input type="email" name="newsletterEmail" placeholder="Votre email pour recevoir nos conseils et actualités" required>
+        <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
+      </form>
+    </br>
+    <div class="container">
+      
+      <div class="footer-content">
+        <div class="footer-section">
+           <div class="nav-logo">
+        <a href="https://digital-porokhane.com/">
+          <img src="images/icone.webp" alt="Porokhane Digital Consulting  Logo">
+        </a>
+      </div>
+          <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/Porokhane.Digital.Consulting" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="tiktok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/company/porokhane-digital-consulting" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/porokhane_digital_consulting/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Nos Services</h4>
+          <ul>
+            <li><a href="formations.html"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
+            <li><a href="marketing.html"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+            <li><a href="accompagnement.html"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+            <li><a href="erp.html"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+            <li><a href="site.html"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
+            <li><a href="securite.html"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="https://digital-porokhane.com/"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+            <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="realisations.html"><i class="fas fa-chevron-right"></i> Réalisations</a></li>
+            
+            <li><a href="#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+            <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+            <li><a href="#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+221710589088"><i class="fas fa-phone"></i> +221 710589088</a></li>
+            <li><a href="tel:+338306157"><i class="fas fa-phone"></i> +33 830 61 57</a></li>
+            <li><a href="mailto:contact1@digital-porokhane.com"><i class="fas fa-envelope"></i> contact1@digital-porokhane.com</a></li>
+            <li><a href="https://maps.app.goo.gl/jCAGEpeoCBiSNQSr5" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>`;
+export const chatbot = `<button class="chatbot-btn" id="chatbotBtn" aria-label="Ouvrir le chat" title="Discuter avec nous">
+    <i class="fas fa-comments"></i>
+  </button>
+
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <span>🤖 Porokhane Chatbot</span>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">&times;</button>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+      <div class="chatbot-message">Bonjour 👋 ! Je suis le chatbot Porokhane. Posez-moi vos questions ou choisissez une suggestion ci-dessous :</div>
+      <div class="chatbot-message" style="background: var(--bleu-clair); color: var(--bleu); font-size: 0.98rem;">
+        Vous pouvez aussi envoyer ici un message à notre équipe, nous vous répondrons rapidement !
+      </div>
+      <div class="chatbot-suggestions" id="chatbotSuggestions">
+        <button class="chatbot-suggestion">Quels services proposez-vous ?</button>
+        <button class="chatbot-suggestion">Comment Demandez un devis ?</button>
+        <button class="chatbot-suggestion">Quels sont vos délais de livraison ?</button>
+        <button class="chatbot-suggestion">Proposez-vous des formations ?</button>
+        <button class="chatbot-suggestion">Comment vous contacter ?</button>
+      </div>
+    </div>
+    <form class="chatbot-footer" id="chatbotForm" autocomplete="off">
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Écrivez votre question..." />
+      <button type="submit" class="chatbot-send" aria-label="Envoyer"><i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>`;
+export const scripts = `<script>
+    // Navigation mobile
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Empêcher le scroll du body quand le menu est ouvert
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Fermer le menu mobile quand on clique sur un lien
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    }));
+
+    // Navigation sticky avec effet de scroll
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 100) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        } else {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.boxShadow = 'none';
+        }
+    });
+
+    const images = [
+      "mdd_assets/Decouvrez_nos_instruments_innovants.png",
+      "mdd_assets/MUCOSITE.png",
+      "mdd_assets/Roulante.png"
+      
+    ];
+  
+    let currentIndex = 0;
+  
+    document.querySelectorAll('.galerie-item img').forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentIndex = index;
+        showLightbox(index);
+      });
+    });
+  
+    function showLightbox(index) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const thumbsContainer = document.getElementById('lightbox-thumbs');
+  
+      lightbox.style.display = 'flex';
+      lightboxImg.src = images[index];
+  
+      // Generate thumbnails
+      thumbsContainer.innerHTML = '';
+      images.forEach((src, i) => {
+        const thumb = document.createElement('img');
+        thumb.src = src;
+        if (i === index) thumb.classList.add('active');
+        thumb.addEventListener('click', () => {
+          currentIndex = i;
+          showLightbox(i);
+        });
+        thumbsContainer.appendChild(thumb);
+      });
+    }
+  
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  
+    function changeImage(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      showLightbox(currentIndex);
+    }
+  
+    // Fermer avec Echap
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") changeImage(1);
+      if (e.key === "ArrowLeft") changeImage(-1);
+    });
+
+
+    // Animation du newsletter
+document.addEventListener('DOMContentLoaded', function() {
+  const newsletter = document.querySelector('.newsletter');
+  
+  if (newsletter) {
+    // L'animation CSS est déjà appliquée, mais on peut ajouter des interactions
+    newsletter.addEventListener('mouseenter', function() {
+      this.style.animationPlayState = 'paused';
+    });
+    
+    newsletter.addEventListener('mouseleave', function() {
+      this.style.animationPlayState = 'running';
+    });
+    
+    // Gestion du formulaire newsletter
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Merci pour votre inscription à notre newsletter ! Vous recevrez bientôt nos conseils et actualités.');
+        this.reset();
+      });
+    }
+  }
+});
+
+// Animation du logo au clic
+document.addEventListener('DOMContentLoaded', function() {
+  const logoLink = document.querySelector('.nav-logo a');
+  
+  if (logoLink) {
+    logoLink.addEventListener('click', function(e) {
+      // Animation de clic
+      this.style.transform = 'scale(0.95)';
+      
+      setTimeout(() => {
+        this.style.transform = 'scale(1)';
+      }, 150);
+      
+      // Si on est déjà sur la page d'accueil, empêcher la navigation
+      if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
+        e.preventDefault();
+        // Scroll vers le haut de la page
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    });
+    
+    // Animation au survol
+    logoLink.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.05)';
+    });
+    
+    logoLink.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+    });
+  }
+    });
+  </script>
+<script src="script.js"></script>
+<script>
+  // Chatbot JavaScript (copié de index.html)
+  const chatbotFAQ = {
+    'services': "Nous proposons : formations (robotique, impression 3D, cybersécurité), marketing digital, accompagnement (automatisation, IA, bases de données), développement web mobile et plus encore !",
+    'devis': "Pour Demandez un devis, cliquez sur 'Demandez un devis' dans le menu ou rendez-vous sur la page devis. Nous vous répondrons rapidement !",
+    'délais': "Nos délais varient selon le projet, mais nous nous engageons à livrer dans les temps convenus, avec un suivi régulier.",
+    'formations': "Oui, nous proposons des formations en robotique, impression 3D, cybersécurité et plus. Consultez la page Formations pour plus d'infos !",
+    'contacter': "Vous pouvez nous contacter via la page Contact, par téléphone ou par email. Nous sommes à votre écoute !",
+    'salutation': "Bonjour et bienvenue chez Porokhane Digital Consulting ! 👋\\n\\nJe peux répondre à vos questions sur :\\n• Nos services\\n• Comment Demandez un devis\\n• Nos délais de livraison\\n• Nos formations\\n• Comment nous contacter\\n\\nCliquez sur une suggestion ou posez votre question !"
+  };
+
+  const chatbotBtn = document.getElementById('chatbotBtn');
+  const chatbotWindow = document.getElementById('chatbotWindow');
+  const chatbotClose = document.getElementById('chatbotClose');
+  const chatbotBody = document.getElementById('chatbotBody');
+  const chatbotForm = document.getElementById('chatbotForm');
+  const chatbotInput = document.getElementById('chatbotInput');
+  const chatbotSuggestions = document.getElementById('chatbotSuggestions');
+
+  if (chatbotBtn) {
+    chatbotBtn.onclick = () => {
+      chatbotWindow.style.display = 'flex';
+      setTimeout(() => chatbotInput.focus(), 300);
+    };
+  }
+  
+  if (chatbotClose) {
+    chatbotClose.onclick = () => {
+      chatbotWindow.style.display = 'none';
+    };
+  }
+
+  if (chatbotSuggestions) {
+    chatbotSuggestions.onclick = function(e) {
+      if (e.target.classList.contains('chatbot-suggestion')) {
+        const question = e.target.textContent;
+        addUserMessage(question);
+        respondToUser(question);
+      }
+    };
+  }
+
+  if (chatbotForm) {
+    chatbotForm.onsubmit = function(e) {
+      e.preventDefault();
+      const question = chatbotInput.value.trim();
+      if (question) {
+        addUserMessage(question);
+        respondToUser(question);
+        chatbotInput.value = '';
+      }
+    };
+  }
+
+  function addUserMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message user';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function addBotMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function respondToUser(question) {
+    let response = "Je suis désolé, je n'ai pas compris votre question. Essayez une des suggestions ci-dessus ou contactez-nous directement.";
+    const q = question.toLowerCase();
+    if (q.includes('service')) response = chatbotFAQ['services'];
+    else if (q.includes('devis')) response = chatbotFAQ['devis'];
+    else if (q.includes('délai') || q.includes('delai')) response = chatbotFAQ['délais'];
+    else if (q.includes('formation')) response = chatbotFAQ['formations'];
+    else if (q.includes('contact')) response = chatbotFAQ['contacter'];
+    else if (q.includes('salut') || q.includes('bonjour') || q.includes('bonsoir') || q.includes('hello')) response = chatbotFAQ['salutation'];
+    setTimeout(() => addBotMessage(response), 600);
+  }
+  </script>
+<script src="tracking.js" defer></script>`;
+
+export default function Page() {
+  return <Document headTag={headTag} head={head} bodyTag={bodyTag} nav={nav}
+    content={content} footer={footer} chatbot={chatbot} scripts={scripts} />;
+}

@@ -1,0 +1,59 @@
+# Déploiement automatique du site sur l'hébergeur via FTP.
+# À chaque push sur main : build React -> dist/ -> envoi des fichiers modifiés
+# seulement (lftp mirror --only-newer). Fini de tout supprimer/re-uploader.
+#
+# Secrets à créer dans GitHub : Settings -> Secrets and variables -> Actions
+#   FTP_HOST  (ex. ftp.digital-porokhane.com ou le serveur de l'hébergeur)
+#   FTP_USER  (utilisateur FTP/cPanel)
+#   FTP_PASS  (mot de passe)
+#   FTP_DIR   (dossier racine du site, ex. /public_html ou /)
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Build React -> dist/
+        run: |
+          npm ci
+          npm run build
+
+      - name: Vérification sécurité — aucun secret dans dist/
+        run: |
+          if find dist -name '*.json' -path './dist/*' -prune -o -name 'refined-vector*' -print -o -name 'email_config*' -print | grep .; then
+            echo 'ERREUR: secret détecté dans dist/ — déploiement bloqué'; exit 1
+          fi
+          test ! -f dist/refined-vector-447411-b2-e3165d270c07.json
+          test ! -f dist/scripts/email_config.json
+
+      - name: Upload FTP (fichiers modifiés uniquement)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" -e "
+            set ftp:ssl-allow true;
+            set ssl:verify-certificate no;
+            mirror -R --only-newer --parallel=8 \
+              --delete \
+              --exclude ^\.well-known/ \
+              --exclude ^\.cpanel \
+              --exclude ^cgi-bin \
+              --exclude ^\.htpasswds \
+              dist/ $FTP_DIR;
+            bye"
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+          FTP_DIR: ${{ secrets.FTP_DIR }}

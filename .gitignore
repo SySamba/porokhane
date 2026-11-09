@@ -1,0 +1,13 @@
+node_modules/
+build-tmp/
+.DS_Store
+
+# clés API
+refined-vector-*.json
+*.serviceaccount*.json
+scripts/email_config.json
+
+# build + rapports internes
+dist/
+dist.zip
+rapports/

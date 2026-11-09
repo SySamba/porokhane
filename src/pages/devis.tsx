@@ -1,0 +1,2459 @@
+// Généré depuis devis.html — ne plus modifier le .html racine, éditer ce fichier.
+import React from 'react';
+import { Document } from '../components';
+
+export const fileName = 'devis.html';
+export const preamble = `﻿<!DOCTYPE html>
+<html lang="fr">
+  <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"4839b43b65f279b77271391d6643be69"})});</script>
+`;
+export const headTag = `<head>`;
+export const head = `
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KBH8R72G');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devis gratuit — Agence digitale Dakar | Porokhane</title>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="description" content="AGENCE DE COMMUNICATION DIGITALE DAKAR : Demandez votre devis gratuit et personnalisé. Solutions digitales complètes pour votre entreprise à Dakar.">
+  <meta name="keywords" content="AGENCE DE COMMUNICATION DIGITALE DAKAR, devis gratuit, solutions digitales, marketing digital Dakar, développement web Dakar, communication digitale Sénégal, agence digitale Dakar">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="canonical" href="https://digital-porokhane.com/devis.html">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="AGENCE DE COMMUNICATION DIGITALE DAKAR - Demande de Devis Gratuit | Porokhane Digital Consulting">
+  <meta property="og:description" content="AGENCE DE COMMUNICATION DIGITALE DAKAR : Demandez votre devis gratuit et personnalisé. Solutions digitales complètes pour votre entreprise à Dakar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://digital-porokhane.com/devis.html">
+  <meta property="og:image" content="https://digital-porokhane.com/images/logo_porokhane_digital.jpg">
+  <meta property="og:site_name" content="Porokhane Digital Consulting">
+  <meta property="og:locale" content="fr_FR">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AGENCE DE COMMUNICATION DIGITALE DAKAR - Demande de Devis Gratuit | Porokhane Digital Consulting">
+  <meta name="twitter:description" content="AGENCE DE COMMUNICATION DIGITALE DAKAR : Demandez votre devis gratuit et personnalisé. Solutions digitales complètes pour votre entreprise à Dakar.">
+  <meta name="twitter:image" content="https://digital-porokhane.com/images/logo_porokhane_digital.jpg">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Porokhane Digital Consulting",
+    "description": "AGENCE DE COMMUNICATION DIGITALE DAKAR : Solutions digitales complètes pour votre entreprise à Dakar.",
+    "url": "https://digital-porokhane.com",
+    "telephone": "+221710589088",
+    "email": "contact1@digital-porokhane.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ngor Extension villa 454",
+      "addressLocality": "Dakar",
+      "addressCountry": "SN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "14.7167",
+      "longitude": "-17.4677"
+    },
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "sameAs": [
+      "https://www.facebook.com/Porokhane.Digital.Consulting",
+      "https://www.linkedin.com/company/porokhane-digital-consulting",
+      "https://www.instagram.com/porokhane_digital_consulting/"
+    ]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --vert: #1fa47a;
+      --vert-clair: #d1fae5;
+      --bleu: #2563eb;
+      --bleu-clair: #dbeafe;
+      --blanc: #fff;
+      --noir: #0f172a;
+      --gris: #f8fafc;
+      --gris-fonce: #e2e8f0;
+      --gris-texte: #64748b;
+      --gris-titre: #1e293b;
+      --ombre: 0 4px 24px rgba(0,0,0,0.08);
+      --rayon: 16px;
+      --rayon-grand: 24px;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: var(--blanc); 
+      color: var(--gris-titre); 
+      line-height: 1.6;
+    }
+    
+    .container { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 0 20px; 
+    }
+    
+    /* Navigation */
+    /* Navigation principale */
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--gris-fonce);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo h2 {
+      color: var(--vert);
+      font-size: 1.5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .nav-link {
+      color: var(--noir);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s;
+      display: inline-block;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--vert);
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover {
+      color: var(--vert);
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Bouton Devis */
+    .nav-devis {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.7rem 1.5rem;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.4s;
+      box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    
+    .nav-devis:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+    }
+    
+    .devis-icon {
+      margin-left: 0.5rem;
+      transition: transform 0.3s;
+    }
+    
+    .nav-devis:hover .devis-icon {
+      transform: translateX(5px);
+      animation: pulse 1s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: translateX(5px) scale(1); }
+      50% { transform: translateX(5px) scale(1.2); }
+      100% { transform: translateX(5px) scale(1); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .nav-menu {
+        gap: 1rem;
+      }
+      
+      .nav-link {
+        font-size: 0.9rem;
+      }
+      
+      .nav-devis {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 768px) { 
+      .nav-container { 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between;
+      } 
+      .nav-menu { 
+        display: none;
+      } 
+      .nav-devis { 
+        display: none;
+      } 
+    }
+
+    /* Menu Hamburger - Version simplifiée et robuste */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      z-index: 1001;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--vert);
+      margin: 2px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+      display: block;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Styles mobiles pour le menu hamburger */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex !important;
+        order: 2;
+        margin-left: auto;
+        visibility: visible !important;
+        opacity: 1 !important;
+        background: rgba(255,255,255,0.9) !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+        border: 2px solid var(--vert) !important;
+      }
+      
+      .nav-menu {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: var(--blanc) !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        padding: 80px 2rem 2rem 2rem !important;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1) !important;
+        transition: right 0.3s ease !important;
+        gap: 0 !important;
+        margin: 0 !important;
+        overflow-y: auto !important;
+        z-index: 1000 !important;
+        display: none !important;
+        list-style: none !important;
+      }
+      
+      .nav-menu.active {
+        right: 0 !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      
+      .nav-menu li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-link {
+        display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gris-fonce);
+        font-size: 1.1rem;
+        width: 100%;
+      }
+      
+      .nav-link::after {
+        display: none;
+      }
+      
+      .nav-devis {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        justify-content: center;
+        display: block !important;
+      }
+      
+      /* Sous-menus en mode mobile */
+      .submenu {
+        position: static !important;
+        transform: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        background: var(--gris) !important;
+        border-radius: 8px !important;
+        margin-top: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-width: auto !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      /* Affichage des sous-menus au survol/touch sur mobile */
+      .nav-item:hover .submenu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-height: 200px !important;
+        margin-top: 0.5rem !important;
+        padding: 0.5rem 0 !important;
+      }
+      
+      .submenu-link {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-size: 1rem;
+      }
+      
+      .submenu-link:hover {
+        padding-left: 1rem;
+      }
+      
+      .submenu-link:last-child {
+        border-bottom: none;
+      }
+    }
+    /* Hero */
+    .hero { 
+      padding: 160px 0 80px; 
+      background: linear-gradient(rgba(31, 164, 122, 0.9), rgba(37, 99, 235, 0.9)), 
+                  url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: var(--blanc); 
+      min-height: 100vh; 
+      display: flex; 
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23f8fafc" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23f8fafc" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23f8fafc"/></svg>');
+      background-size: cover;
+      z-index: 1;
+    }
+    
+    .hero-container { 
+      display: flex; 
+      flex-wrap: wrap; 
+      align-items: center; 
+      gap: 3rem; 
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-content { 
+      flex: 1 1 350px; 
+    }
+    
+    .hero-title { 
+      font-size: 3.5rem; 
+      font-weight: 800; 
+      margin-bottom: 1.2rem; 
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .hero-subtitle { 
+      font-size: 1.4rem; 
+      margin-bottom: 2.2rem; 
+      color: rgba(255,255,255,0.9); 
+      font-weight: 300;
+      max-width: 600px;
+    }
+    
+    .hero-buttons { 
+      display: flex; 
+      gap: 1.2rem; 
+      flex-wrap: wrap; 
+      
+    }
+    
+    .btn { 
+      padding: 14px 32px; 
+      border-radius: 30px; 
+      text-decoration: none; 
+      font-weight: 700; 
+      font-size: 1.1rem; 
+      transition: all 0.3s; 
+      border: none; 
+      cursor: pointer; 
+      box-shadow: var(--ombre); 
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .btn-primary { 
+      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+    }
+    
+    .btn-primary:hover { 
+      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
+      color: var(--blanc); 
+      transform: translateY(-2px) scale(1.04); 
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    }
+    
+    .btn-secondary { 
+      background: transparent; 
+      color: var(--blanc); 
+      border: 2px solid var(--blanc); 
+    }
+    
+    .btn-secondary{ 
+      background: var(--blanc); 
+      color: var(--vert); 
+      border-color: var(--blanc); 
+    }
+    
+    .hero-img { 
+      flex: 1 1 350px; 
+      display: flex; 
+      justify-content: center; 
+      position: relative;
+    }
+    
+    .hero-img img { 
+      width: 100%; 
+      max-width: 450px;
+      border-radius: var(--rayon-grand); 
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
+      border: 5px solid rgba(255,255,255,0.2);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    /* Sections communes */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+    
+    .section-header { 
+      text-align: center; 
+      margin-bottom: 3rem;
+    }
+    
+    .section-header h2 { 
+      font-size: 2.8rem; 
+      font-weight: 800; 
+      color: var(--vert); 
+      margin-bottom: 1rem; 
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      border-radius: 2px;
+    }
+    
+    .section-header p { 
+      font-size: 1.2rem; 
+      color: var(--gris-texte); 
+      max-width: 700px; 
+      margin: 0 auto; 
+    }
+    
+    /* Services */
+    .services-section { 
+      background: linear-gradient(rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), 
+                  url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    }
+    
+    .services-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      gap: 2.5rem; 
+    }
+    
+    .service-card { 
+      background: var(--blanc); 
+      border-radius: var(--rayon-grand); 
+      box-shadow: var(--ombre); 
+      padding: 2.5rem 1.8rem; 
+      text-align: center; 
+      border-top: 4px solid var(--vert);
+      position: relative; 
+      overflow: hidden; 
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 1;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--vert), var(--bleu));
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: -1;
+    }
+    
+    .service-card img { 
+      width: 80px; 
+      height: 80px; 
+      object-fit: cover; 
+      border-radius: 50%; 
+      margin-bottom: 1.2rem; 
+      border: 3px solid var(--vert-clair);
+      padding: 0.2rem;
+      background: var(--blanc);
+      transition: all 0.3s;
+    }
+    
+    .service-card h3 { 
+      color: var(--bleu); 
+      font-size: 1.4rem; 
+      margin-bottom: 0.7rem; 
+      transition: color 0.3s;
+    }
+    
+    .service-card p { 
+      color: var(--gris-texte); 
+      transition: color 0.3s;
+    }
+    
+    .service-card .btn { 
+      margin-top: 1.5rem; 
+      padding: 10px 24px; 
+      font-size: 1rem; 
+    }
+    
+    .service-card:hover { 
+      transform: translateY(-10px) scale(1.03); 
+      box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15);
+    }
+    
+    .service-card:hover::before {
+      opacity: 1;
+    }
+    
+    .service-card:hover h3, 
+    .service-card:hover p,
+    .service-card:hover .btn { 
+      color: var(--blanc); 
+    }
+    
+    .service-card:hover img {
+      border-color: var(--blanc);
+      transform: scale(1.1);
+    }
+    
+    /* Blog */
+    .blog-section { 
+      background: linear-gradient(rgba(31, 164, 122, 0.03), rgba(31, 164, 122, 0.03)), 
+                  url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    }
+    
+    .blog-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      gap: 2.5rem; 
+    }
+    
+    .blog-card { 
+      background: var(--blanc); 
+      border-radius: var(--rayon-grand); 
+      box-shadow: var(--ombre); 
+      padding: 0; 
+      overflow: hidden; 
+      display: flex; 
+      flex-direction: column; 
+      transition: all 0.3s;
+    }
+    
+    .blog-card-img {
+      height: 200px;
+      overflow: hidden;
+      position: relative; /* Pour le positionnement absolu de l'image */
+    }
+    
+    .blog-card img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      transition: transform 0.5s;
+    }
+    
+    .blog-card-content { 
+      padding: 1.8rem; 
+      flex: 1; 
+      display: flex; 
+      flex-direction: column; 
+    }
+    
+    .blog-card h3 { 
+      color: var(--vert); 
+      font-size: 1.3rem; 
+      margin-bottom: 0.7rem; 
+      transition: color 0.3s;
+    }
+    
+    .blog-card p { 
+      color: var(--gris-texte); 
+      flex: 1; 
+      margin-bottom: 1rem;
+    }
+    
+    .blog-meta { 
+      color: var(--bleu); 
+      font-size: 0.95rem; 
+      margin-bottom: 1rem; 
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    
+    .blog-meta i {
+      font-size: 0.9rem;
+    }
+    
+    .blog-card .btn { 
+      align-self: flex-start;
+      margin-top: auto;
+      padding: 8px 20px; 
+      font-size: 0.95rem; 
+    }
+    
+    .blog-card:hover { 
+      box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15);
+      transform: translateY(-5px);
+    }
+    
+    .blog-card:hover h3 { 
+      color: var(--bleu); 
+    }
+    
+    .blog-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: var(--blanc);
+      border-radius: var(--rayon);
+      box-shadow: var(--ombre);
+      min-width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 100;
+      border: 1px solid var(--gris-fonce);
+      padding: 0.5rem 0;
+    }
+    
+    .nav-item:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    .submenu-link {
+      display: block;
+      padding: 0.7rem 1.5rem;
+      color: var(--noir);
+      text-decoration: none;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+    
+    .submenu-link:hover {
+      background: var(--gris-clair);
+      color: var(--vert);
+      padding-left: 1.7rem;
+    }
+    
+    
+    /* Devis */
+    .devis-section { 
+      background: linear-gradient(rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), 
+                  url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    }
+    
+    .devis-form { 
+      background: var(--blanc); 
+      border-radius: var(--rayon-grand); 
+      padding: 2.5rem; 
+      box-shadow: var(--ombre); 
+      max-width: 600px; 
+      margin: 0 auto; 
+      border-top: 4px solid var(--vert);
+    }
+
+    /* Bouton Devis Spécial */
+    .nav-devis {
+      position: relative;
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 4px 15px rgba(31, 164, 122, 0.3);
+      border: none;
+      cursor: pointer;
+    }
+    
+    .nav-devis::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    
+    .nav-devis:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    }
+    
+    .nav-devis:hover::before {
+      opacity: 1;
+    }
+    
+    /* Animation "Pulse" au survol */
+    .nav-devis:hover .devis-icon {
+      animation: pulse 1s infinite;
+    }
+    
+    /* Effet de vague */
+    .nav-devis::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+      transform: scale(0);
+      opacity: 0;
+      transition: transform 0.6s, opacity 0.4s;
+    }
+    
+    .nav-devis:hover::after {
+      transform: scale(2);
+      opacity: 1;
+    }
+    
+    /* Icône animée */
+    .devis-icon {
+      margin-left: 0.5rem;
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+    
+    .nav-devis:hover .devis-icon {
+      transform: translateX(3px);
+    }
+    
+    /* Animation */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-devis {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    .devis-form h3 { 
+      color: var(--bleu); 
+      margin-bottom: 1.5rem; 
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    
+    .devis-form input, 
+    .devis-form textarea, 
+    .devis-form select { 
+      width: 100%; 
+      padding: 1rem; 
+      border-radius: 10px; 
+      border: 1px solid var(--gris-fonce); 
+      background: var(--gris); 
+      color: var(--gris-titre); 
+      font-size: 1rem; 
+      margin-bottom: 1rem; 
+      transition: all 0.3s; 
+    }
+    
+    .devis-form input:focus, 
+    .devis-form textarea:focus, 
+    .devis-form select:focus { 
+      border-color: var(--vert); 
+      outline: none; 
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    /* Témoignages */
+    .temoignages-section { 
+      background: linear-gradient(rgba(31, 164, 122, 0.05), rgba(31, 164, 122, 0.05)), 
+                  url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    }
+    
+    .carousel { 
+      position: relative; 
+      max-width: 800px; 
+      margin: 0 auto; 
+    }
+    
+    .carousel-track { 
+      display: flex; 
+      overflow: hidden; 
+    }
+    
+    .carousel-item { 
+      min-width: 100%; 
+      transition: transform 0.6s cubic-bezier(.4,0,.2,1); 
+      opacity: 0; 
+      pointer-events: none; 
+      position: absolute; 
+      left: 0; 
+      top: 0; 
+      width: 100%; 
+    }
+    
+    .carousel-item.active { 
+      opacity: 1; 
+      position: relative; 
+      pointer-events: auto; 
+    }
+    
+    .carousel-content { 
+      background: var(--blanc); 
+      border-radius: var(--rayon-grand); 
+      box-shadow: var(--ombre); 
+      padding: 3rem 2rem; 
+      text-align: center; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      position: relative;
+      border-top: 4px solid var(--vert);
+    }
+    
+    .carousel-content::before {
+      content: '\\201C';
+      font-family: Georgia, serif;
+      font-size: 5rem;
+      color: var(--vert-clair);
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      line-height: 1;
+    }
+    
+    .carousel-content::after {
+      content: '\\201D';
+      font-family: Georgia, serif;
+      font-size: 5rem;
+      color: var(--vert-clair);
+      position: absolute;
+      bottom: -30px;
+      right: 20px;
+      line-height: 1;
+    }
+    
+    .carousel-photo { 
+      width: 80px; 
+      height: 80px; 
+      border-radius: 50%; 
+      object-fit: cover; 
+      margin-bottom: 1.5rem; 
+      border: 3px solid var(--vert); 
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.2);
+    }
+    
+    .carousel-content p { 
+      color: var(--gris-texte); 
+      font-style: italic; 
+      margin-bottom: 1.5rem; 
+      font-size: 1.1rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .carousel-author { 
+      color: var(--bleu); 
+      font-weight: 700; 
+      font-size: 1.1rem;
+    }
+    
+    .carousel-position {
+      color: var(--gris-texte);
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+    
+    .carousel-controls { 
+      display: flex; 
+      justify-content: center; 
+      gap: 1rem; 
+      margin-top: 2rem; 
+    }
+    
+    .carousel-dot { 
+      width: 12px; 
+      height: 12px; 
+      border-radius: 50%; 
+      background: var(--gris-texte); 
+      opacity: 0.3; 
+      cursor: pointer; 
+      transition: all 0.3s; 
+    }
+    
+    .carousel-dot.active { 
+      background: var(--vert); 
+      opacity: 1; 
+      transform: scale(1.2);
+    }
+    
+    .carousel-arrow { 
+      background: var(--blanc); 
+      border: none; 
+      border-radius: 50%; 
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: var(--vert); 
+      font-size: 1.2rem; 
+      box-shadow: var(--ombre); 
+      cursor: pointer; 
+      transition: all 0.3s; 
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .carousel-arrow:hover { 
+      background: var(--vert); 
+      color: var(--blanc); 
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
+    }
+    
+    #prev {
+      left: -60px;
+    }
+    
+    #next {
+      right: -60px;
+    }
+    
+    /* FAQ */
+    .faq-section { 
+      background: linear-gradient(rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), 
+                  url('https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    }
+    
+    .faq-list { 
+      max-width: 800px; 
+      margin: 0 auto; 
+    }
+    
+    .faq-item { 
+      border-bottom: 1px solid var(--gris-fonce); 
+      margin-bottom: 1rem;
+    }
+    
+    .faq-question { 
+      cursor: pointer; 
+      padding: 1.5rem 0; 
+      font-weight: 700; 
+      color: var(--bleu); 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      transition: color 0.3s;
+    }
+    
+    .faq-question:hover {
+      color: var(--vert);
+    }
+    
+    .faq-answer { 
+      max-height: 0; 
+      overflow: hidden; 
+      transition: max-height 0.4s cubic-bezier(.4,0,.2,1); 
+      color: var(--gris-texte); 
+      line-height: 1.6;
+    }
+    
+    .faq-item.open .faq-answer { 
+      max-height: 300px; 
+      padding-bottom: 1.5rem; 
+    }
+    
+    .faq-toggle { 
+      font-size: 1.5rem; 
+      transition: transform 0.3s; 
+      color: var(--vert);
+    }
+    
+    .faq-item.open .faq-toggle { 
+      transform: rotate(45deg); 
+    }
+    
+    /* Contact & Newsletter */
+    .contact-section { 
+      background: linear-gradient(rgba(31, 164, 122, 0.05), rgba(31, 164, 122, 0.05)), 
+                  url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    }
+    
+    .contact-content { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 3rem; 
+      align-items: flex-start; 
+      justify-content: space-between; 
+    }
+    
+    .contact-info { 
+      flex: 1 1 300px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 2rem; 
+    }
+    
+    .contact-item { 
+      display: flex; 
+      align-items: center; 
+      gap: 1.5rem; 
+      background: var(--blanc);
+      padding: 1.5rem;
+      border-radius: var(--rayon);
+      box-shadow: var(--ombre);
+      transition: transform 0.3s;
+    }
+    
+    .contact-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .contact-icon { 
+      width: 60px; 
+      height: 60px; 
+      background: linear-gradient(135deg, var(--vert), var(--bleu)); 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: var(--blanc); 
+      font-size: 1.5rem; 
+      box-shadow: var(--ombre); 
+      flex-shrink: 0;
+    }
+    
+    .contact-item h3 { 
+      color: var(--bleu); 
+      font-size: 1.2rem; 
+      font-weight: 700; 
+      margin-bottom: 0.3rem; 
+    }
+    
+    .contact-item p { 
+      color: var(--gris-texte); 
+      font-size: 1rem; 
+    }
+    
+    .contact-form { 
+      flex: 1 1 350px; 
+      background: var(--blanc); 
+      border-radius: var(--rayon-grand); 
+      padding: 2.5rem; 
+      box-shadow: var(--ombre); 
+      display: flex; 
+      flex-direction: column; 
+      gap: 1.5rem; 
+      border-top: 4px solid var(--vert);
+    }
+    
+    .form-group input, 
+    .form-group textarea { 
+      width: 100%; 
+      padding: 1rem; 
+      border-radius: 10px; 
+      border: 1px solid var(--gris-fonce); 
+      background: var(--gris); 
+      color: var(--gris-titre); 
+      font-size: 1rem; 
+      transition: all 0.3s; 
+    }
+    
+    .form-group input:focus, 
+    .form-group textarea:focus { 
+      border-color: var(--vert); 
+      outline: none; 
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    .newsletter { 
+      margin-top: 3rem; 
+      background: var(--blanc); 
+      border-radius: var(--rayon); 
+      padding: 1.5rem; 
+      box-shadow: var(--ombre); 
+      display: flex; 
+      gap: 0.5rem; 
+      align-items: center; 
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: 4px solid var(--vert);
+    }
+    
+    .newsletter input[type="email"] { 
+      flex: 1; 
+      padding: 1rem; 
+      border-radius: 8px; 
+      border: 1px solid var(--gris-fonce); 
+      font-size: 1rem; 
+      transition: all 0.3s;
+    }
+    
+    .newsletter input[type="email"]:focus {
+      border-color: var(--vert);
+      outline: none;
+      box-shadow: 0 0 0 3px var(--vert-clair);
+    }
+    
+    .newsletter button { 
+      padding: 1rem 2rem; 
+      border-radius: 8px; 
+      background: linear-gradient(90deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      border: none; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .newsletter button:hover { 
+      background: linear-gradient(90deg, var(--bleu), var(--vert)); 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(31, 164, 122, 0.3);
+    }
+    
+    /* Footer */
+    .footer { 
+      background: linear-gradient(135deg, var(--vert), var(--bleu)); 
+      color: var(--blanc); 
+      padding: 80px 0 30px; 
+      position: relative;
+    }
+    
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231fa47a" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%231fa47a" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%231fa47a"/></svg>');
+      background-size: cover;
+      transform: rotate(180deg);
+    }
+    
+    .footer-content { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 3rem; 
+      margin-bottom: 3rem; 
+      position: relative;
+      z-index: 1;
+    }
+    
+    .footer-section h3, 
+    .footer-section h4 { 
+      color: var(--blanc); 
+      margin-bottom: 1.5rem; 
+      font-size: 1.3rem; 
+      font-weight: 700; 
+      position: relative;
+      display: inline-block;
+    }
+    
+    .footer-section h3::after,
+    .footer-section h4::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+    }
+    
+    .footer-section p { 
+      color: rgba(255,255,255,0.8); 
+      line-height: 1.6; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    .footer-section ul { 
+      list-style: none; 
+    }
+    
+    .footer-section ul li { 
+      margin-bottom: 0.8rem; 
+    }
+    
+    .footer-section ul li a { 
+      color: rgba(255,255,255,0.8); 
+      text-decoration: none; 
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .footer-section ul li a:hover { 
+      color: var(--blanc); 
+      transform: translateX(5px);
+    }
+    
+    .footer-section ul li a i {
+      font-size: 0.8rem;
+    }
+    
+    .social-links { 
+      display: flex; 
+      gap: 1rem; 
+      margin-top: 1.5rem; 
+    }
+    
+    .social-links a { 
+      width: 40px; 
+      height: 40px; 
+      background: rgba(255,255,255,0.15); 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: var(--blanc); 
+      text-decoration: none; 
+      transition: all 0.3s; 
+    }
+    
+    .social-links a:hover { 
+      background: var(--blanc); 
+      color: var(--vert); 
+      transform: translateY(-3px) scale(1.1); 
+    }
+    
+    .footer-bottom { 
+      border-top: 1px solid rgba(255,255,255,0.15); 
+      padding-top: 2rem; 
+      text-align: center; 
+      color: rgba(255,255,255,0.7); 
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Animations */
+    @keyframes float { 
+      0%, 100% { transform: translateY(0px); } 
+      50% { transform: translateY(-15px); } 
+    }
+    
+    /* Utilitaires */
+    .visually-hidden { 
+      position: absolute; 
+      width: 1px; 
+      height: 1px; 
+      padding: 0; 
+      margin: -1px; 
+      overflow: hidden; 
+      clip: rect(0,0,0,0); 
+      border: 0; 
+    }
+    
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-title {
+        font-size: 2.8rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2.2rem;
+      }
+      
+      #prev {
+        left: -20px;
+      }
+      
+      #next {
+        right: -20px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      section {
+        padding: 80px 0;
+      }
+      
+      .hero {
+        padding: 140px 0 60px;
+        text-align: center;
+      }
+      
+      .hero-container, 
+      .contact-content { 
+        flex-direction: column; 
+        gap: 2rem; 
+      }
+      
+      .hero-buttons {
+        justify-content: center;
+      }
+      
+      .hero-img img {
+        max-width: 350px;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+      
+      .section-header p {
+        font-size: 1.1rem;
+      }
+      
+      .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+      }
+      
+      #prev {
+        left: 10px;
+      }
+      
+      #next {
+        right: 10px;
+      }
+      
+      .newsletter {
+        flex-direction: column;
+      }
+      
+      .newsletter input[type="email"],
+      .newsletter button {
+        width: 100%;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+      
+      .nav-menu {
+        gap: 1.2rem;
+      }
+      
+      .nav-link {
+        font-size: 0.95rem;
+      }
+      
+      .service-card,
+      .blog-card {
+        padding: 1.8rem 1.2rem;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+
+
+    /* Section Réalisations */
+.realisations-section {
+  background: linear-gradient(rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.95)), 
+              url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  padding: 100px 0;
+}
+
+.realisations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.realisation-card {
+  background: white;
+  border-radius: var(--rayon-grand);
+  overflow: hidden;
+  box-shadow: var(--ombre);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.realisation-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.realisation-img {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.realisation-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.realisation-card:hover .realisation-img img {
+  transform: scale(1.05);
+}
+
+.realisation-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 164, 122, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.realisation-card:hover .realisation-overlay {
+  opacity: 1;
+}
+
+.realisation-content {
+  text-align: center;
+  padding: 1.5rem;
+  color: white;
+}
+
+.realisation-content h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.realisation-content p {
+  margin-bottom: 1.5rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.realisation-info {
+  padding: 1.5rem;
+}
+
+.realisation-info h3 {
+  color: var(--bleu);
+  margin-bottom: 0.5rem;
+}
+
+.realisation-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--gris-texte);
+  font-size: 0.9rem;
+}
+
+.realisation-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.realisation-meta i {
+  font-size: 0.8rem;
+}
+
+@keyframes newsletterFloat {
+  0% {
+    transform: translateX(-30px);
+    box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+  }
+  25% {
+    transform: translateX(-10px);
+    box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+  }
+  50% {
+    transform: translateX(30px);
+    box-shadow: 0 10px 35px rgba(31, 164, 122, 0.3);
+  }
+  75% {
+    transform: translateX(10px);
+    box-shadow: 0 6px 25px rgba(31, 164, 122, 0.2);
+  }
+  100% {
+    transform: translateX(-30px);
+    box-shadow: 0 4px 20px rgba(31, 164, 122, 0.15);
+  }
+}
+
+.newsletter { 
+  margin-top: 3rem; 
+  background: var(--blanc); 
+  border-radius: var(--rayon); 
+  padding: 1.5rem; 
+  box-shadow: var(--ombre); 
+  display: flex; 
+  gap: 0.5rem; 
+  align-items: center; 
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 4px solid var(--vert);
+  animation: newsletterFloat 2s ease-in-out infinite;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo a:hover {
+  transform: scale(1.05);
+}
+
+.nav-logo img {
+  height: 90px;
+  width: auto;
+  display: block;
+  margin-right: 0.5rem;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+  .nav-logo img {
+    height: 70px;
+  }
+}
+
+
+    .chatbot-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      border: none;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      box-shadow: 0 4px 24px rgba(31,164,122,0.18);
+      font-size: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 9999;
+      transition: background 0.3s, transform 0.2s;
+      animation: chatbot-bounce 1.5s infinite alternate;
+    }
+    .chatbot-btn:hover {
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+      transform: scale(1.08);
+    }
+    @keyframes chatbot-bounce {
+      0% { box-shadow: 0 4px 24px rgba(31,164,122,0.18); transform: scale(1); }
+      100% { box-shadow: 0 8px 32px rgba(37,99,235,0.18); transform: scale(1.08); }
+    }
+    .chatbot-btn .fa-comments {
+      font-size: 2.2rem;
+      animation: chatbot-icon-wave 2.5s infinite;
+    }
+    @keyframes chatbot-icon-wave {
+      0%, 100% { color: var(--blanc); transform: scale(1); }
+      50% { color: var(--vert); transform: scale(1.18) rotate(-8deg); }
+    }
+    .chatbot-window {
+      position: fixed;
+      bottom: 110px;
+      right: 32px;
+      width: 340px;
+      max-width: 95vw;
+      background: var(--blanc);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+      border: 1.5px solid var(--vert);
+      z-index: 9999;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      animation: fadeInUp 0.4s;
+    }
+    .chatbot-header {
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      padding: 1rem 1.2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .chatbot-close {
+      background: none;
+      border: none;
+      color: var(--blanc);
+      font-size: 1.3rem;
+      cursor: pointer;
+      margin-left: 1rem;
+      transition: color 0.2s;
+    }
+    .chatbot-close:hover {
+      color: #e67e22;
+    }
+    .chatbot-body {
+      padding: 1.2rem;
+      background: var(--gris);
+      min-height: 180px;
+      max-height: 320px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .chatbot-message {
+      background: var(--blanc);
+      border-radius: 14px 14px 14px 4px;
+      padding: 0.8rem 1rem;
+      color: var(--gris-titre);
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(31,164,122,0.07);
+      align-self: flex-start;
+      max-width: 85%;
+    }
+    .chatbot-message.user {
+      background: var(--vert);
+      color: var(--blanc);
+      align-self: flex-end;
+      border-radius: 14px 14px 4px 14px;
+    }
+    .chatbot-suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .chatbot-suggestion {
+      background: var(--bleu-clair);
+      color: var(--bleu);
+      border: none;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .chatbot-suggestion:hover {
+      background: var(--bleu);
+      color: var(--blanc);
+    }
+    .chatbot-footer {
+      padding: 0.8rem 1.2rem;
+      background: var(--blanc);
+      border-top: 1px solid var(--gris-fonce);
+      display: flex;
+      gap: 0.5rem;
+    }
+    .chatbot-input {
+      flex: 1;
+      border: 1px solid var(--gris-fonce);
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .chatbot-input:focus {
+      border-color: var(--vert);
+    }
+    .chatbot-send {
+      background: linear-gradient(90deg, var(--vert), var(--bleu));
+      color: var(--blanc);
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .chatbot-send:hover {
+      background: linear-gradient(90deg, var(--bleu), var(--vert));
+    }
+
+    .chatbot-message.bot {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+    .chatbot-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(31,164,122,0.07);
+      border: 2px solid var(--vert);
+      flex-shrink: 0;
+    }
+  </style>
+`;
+export const bodyTag = `<body>`;
+export const nav = `<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo">
+        <a href="https://digital-porokhane.com/">
+          <img src="images/logo.png" alt="Porokhane Digital Consulting Logo">
+        </a>
+      </div>
+      <!-- Menu Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="https://digital-porokhane.com/" class="nav-link">Accueil</a></li>
+        <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+        <!-- Formations -->
+        <li class="nav-item">
+          <a href="formations.html" class="nav-link">
+            Formations
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="robotique.html" class="submenu-link">Robotique</a></li>
+            <li><a href="impression_3d_dakar.html#formation" class="submenu-link">Impression 3D</a></li>
+            <li><a href="cybersecurite.html" class="submenu-link">Cybersécurité</a></li>
+          </ul>
+        </li>
+        
+        <!-- Marketing -->
+        <li class="nav-item">
+          <a href="marketing.html" class="nav-link">
+            Marketing
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="audit_express.html" class="submenu-link"> Audit Express</a></li>
+            <li><a href="site.html" class="submenu-link">Création/Réfonte de site</a></li>
+            <li><a href="strategie_digitale.html" class="submenu-link">Stratégie digitale</a></li>
+            <li><a href="seo.html" class="submenu-link">Référencement naturel</a></li>
+            <li><a href="reseaux_sociaux.html" class="submenu-link">Réseaux sociaux</a></li>
+          </ul>
+        </li>
+        
+        <!-- Accompagnement -->
+        <li class="nav-item">
+          <a href="accompagnement.html" class="nav-link">
+            Accompagnement
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="audit_express.html" class="submenu-link">Automatisation</a></li>
+            <li><a href="base_donnee.html" class="submenu-link">Bases de données</a></li>
+            <li><a href="erp.html" class="submenu-link">ERP</a></li>
+            <li><a href="ia.html" class="submenu-link">Intelligence Artificielle</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li>
+          <a href="#devis" class="nav-devis">
+            Demandez un devis
+            <span class="devis-icon"><i class="fas fa-paper-plane"></i></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>`;
+export const content = `
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBH8R72G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- Navigation -->
+  
+  <!-- Demande de devis -->
+  <section id="devis" class="devis-section">
+    <div class="container">
+      <div class="section-header">
+        <h1>AGENCE DE COMMUNICATION DIGITALE DAKAR - Demandez votre devis gratuit</h1>
+        <p>Obtenez une estimation personnalisée pour votre projet digital</p>
+      </div>
+      <form class="devis-form" id="devisForm" action="https://formspree.io/f/xeaabvgr" method="POST">
+        <h3><i class="fas fa-file-signature"></i> Formulaire de devis</h3>
+        <div style="margin-bottom:1rem;">
+          <label style="font-weight:600;display:block;margin-bottom:0.5rem;">Vous êtes :</label>
+          <select name="type_structure" required style="width:100%;padding:1rem;border-radius:10px;border:1px solid var(--gris-fonce);background:var(--gris);color:var(--gris-titre);font-size:1rem;">
+            <option value="">-- Sélectionnez --</option>
+            <option value="entreprise">Entreprise</option>
+            <option value="etablissement">Établissement</option>
+            <option value="autres">Autres</option>
+          </select>
+        </div>
+        <input type="text" name="nom" placeholder="Votre nom complet" required>
+        <input type="email" name="email" placeholder="Votre adresse email" required>
+        <input type="tel" name="telephone" placeholder="Votre numéro de téléphone">
+        <label for="service-select" class="visually-hidden">Service concerné</label>
+        <select name="service" id="service-select" required>
+          <option value="">-- Sélectionnez un service --</option>
+          <option>Formations Pédagogiques</option>
+          <option>Marketing Digital</option>
+          <option>Accompagnement PME</option>
+          <option>ERP (Gestion d'entreprise)</option>
+          <option>Développement Web</option>
+          <option>Sécurité IT</option>
+        </select>
+        <textarea name="besoin" rows="5" placeholder="Décrivez en détail votre projet ou besoin" required></textarea>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Envoyer la demande</button>
+      </form>
+    </div>
+  </section>
+  
+  
+
+  
+  
+  
+  <!-- Contact & Newsletter 
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contactez Notre Équipe</h2>
+        <p>Prêt à transformer votre entreprise ? Parlons de votre projet</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h3>Email</h3>
+              <p>contact@porokhane-digital.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h3>Téléphone</h3>
+              <p>+221 XX XXX XX XX</p>
+              <p>Lun-Ven : 8h-18h</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h3>Adresse</h3>
+              <p>Rue des Entrepreneurs, Porokhane</p>
+              <p>Sénégal</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h3>Horaires</h3>
+              <p>Lundi - Vendredi : 8h - 18h</p>
+              <p>Samedi : 9h - 13h</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Votre nom complet" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Votre adresse email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Sujet de votre message" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Comment pouvons-nous vous aider ?" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
+        </form>
+      </div>
+     
+    </div>
+  </section> -->
+  
+  <!-- Footer -->
+  
+  <!-- Bouton flottant -->
+  
+  
+
+<!-- Formspree gère maintenant l'envoi des formulaires -->
+
+
+`;
+export const footer = `<footer class="footer">
+    <form class="newsletter" id="newsletterForm" action="https://formspree.io/f/xgaajrrn" method="POST">
+        <input type="email" name="email" placeholder="Votre email pour recevoir nos conseils et actualités" required>
+        <button type="submit"><i class="fas fa-envelope"></i> S'inscrire</button>
+      </form>
+    <br>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+           <div class="nav-logo">
+        <a href="https://digital-porokhane.com/">
+          <img src="images/icone.webp" alt="Porokhane Digital Consulting  Logo">
+        </a>
+      </div>
+          <p>Votre partenaire de confiance pour la transformation digitale. Nous créons des solutions innovantes qui propulsent votre entreprise vers le succès.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/Porokhane.Digital.Consulting" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="tiktok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/company/porokhane-digital-consulting" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/porokhane_digital_consulting/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Nos Services</h4>
+          <ul>
+            <li><a href="formations.html"><i class="fas fa-chevron-right"></i> Formations Pédagogiques</a></li>
+            <li><a href="marketing.html"><i class="fas fa-chevron-right"></i> Marketing Digital</a></li>
+            <li><a href="accompagnement.html"><i class="fas fa-chevron-right"></i> Accompagnement PME</a></li>
+            <li><a href="erp.html"><i class="fas fa-chevron-right"></i> ERP (Gestion d'entreprise)</a></li>
+            <li><a href="site.html"><i class="fas fa-chevron-right"></i> Développement Web</a></li>
+            <li><a href="securite.html"><i class="fas fa-chevron-right"></i> Sécurité IT</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="https://digital-porokhane.com/"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+            <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Actualités</a></li>
+            <li><a href="index.html#temoignages"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            <li><a href="devis.html"><i class="fas fa-chevron-right"></i> Devis</a></li>
+            <li><a href="index.html#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+221710589088"><i class="fas fa-phone"></i> +221 710589088</a></li>
+            <li><a href="tel:+338306157"><i class="fas fa-phone"></i> +33 830 61 57 </a></li>
+            <li><a href="mailto:contact1@digital-porokhane.com"><i class="fas fa-envelope"></i> contact1@digital-porokhane.com</a></li>
+            <li><a href="https://maps.app.goo.gl/jCAGEpeoCBiSNQSr5" target="_blank"><i class="fas fa-map-marker-alt"></i> Dakar, Ngor Extension villa 454</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Porokhane Digital Consulting. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>`;
+export const chatbot = `<button class="chatbot-btn" id="chatbotBtn" aria-label="Ouvrir le chat" title="Discuter avec nous">
+    <i class="fas fa-comments"></i>
+  </button>
+
+  <!-- Fenêtre du chatbot -->
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <span>🤖 Porokhane Chatbot</span>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">&times;</button>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+      <div class="chatbot-message">Bonjour 👋 ! Je suis le chatbot Porokhane. Posez-moi vos questions ou choisissez une suggestion ci-dessous :</div>
+      <div class="chatbot-message" style="background: var(--bleu-clair); color: var(--bleu); font-size: 0.98rem;">
+        Vous pouvez aussi envoyer ici un message à notre équipe, nous vous répondrons rapidement !
+      </div>
+      <div class="chatbot-suggestions" id="chatbotSuggestions">
+        <button class="chatbot-suggestion">Quels services proposez-vous ?</button>
+        <button class="chatbot-suggestion">Comment Demandez un devis ?</button>
+        <button class="chatbot-suggestion">Quels sont vos délais de livraison ?</button>
+        <button class="chatbot-suggestion">Proposez-vous des formations ?</button>
+        <button class="chatbot-suggestion">Comment vous contacter ?</button>
+      </div>
+    </div>
+    <form class="chatbot-footer" id="chatbotForm" autocomplete="off">
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Écrivez votre question..." />
+      <button type="submit" class="chatbot-send" aria-label="Envoyer"><i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>`;
+export const scripts = `<script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    
+    // Témoignages carrousel
+    const carousel = document.getElementById('carousel');
+    if (carousel) {
+      const items = carousel.querySelectorAll('.carousel-item');
+      const controls = document.getElementById('carouselControls');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      let current = 0;
+      
+      if (items.length > 0 && controls && prev && next) {
+        function showSlide(idx) {
+          items.forEach((item, i) => {
+            item.classList.toggle('active', i === idx);
+          });
+          
+          Array.from(controls.children).forEach((dot, i) => {
+            dot.classList.toggle('active', i === idx);
+          });
+          
+          current = idx;
+        }
+        
+        // Create dots
+        for (let i = 0; i < items.length; i++) {
+          const dot = document.createElement('span');
+          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          dot.addEventListener('click', () => showSlide(i));
+          controls.appendChild(dot);
+        }
+        
+        prev.addEventListener('click', () => showSlide((current - 1 + items.length) % items.length));
+        next.addEventListener('click', () => showSlide((current + 1) % items.length));
+        
+        // Auto slide
+        let slideInterval = setInterval(() => {
+          showSlide((current + 1) % items.length);
+        }, 8000);
+        
+        // Pause on hover
+        carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        carousel.addEventListener('mouseleave', () => {
+          slideInterval = setInterval(() => {
+            showSlide((current + 1) % items.length);
+          }, 8000);
+        });
+      }
+    }
+    
+    // FAQ accordéon
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    if (faqQuestions.length > 0) {
+      faqQuestions.forEach(q => {
+        q.addEventListener('click', function() {
+          const item = this.parentElement;
+          const isOpen = item.classList.contains('open');
+          
+          // Close all items
+          document.querySelectorAll('.faq-item').forEach(i => {
+            i.classList.remove('open');
+          });
+          
+          // Open clicked item if it was closed
+          if (!isOpen) {
+            item.classList.add('open');
+          }
+        });
+      });
+    }
+    
+    // Les formulaires sont maintenant gérés par Formspree
+    
+    // Les formulaires contact et newsletter sont gérés par Formspree
+    
+    // Smooth scrolling for anchor links
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    if (anchorLinks.length > 0) {
+      anchorLinks.forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
+
+
+    // Assurer que les sous-menus restent ouverts quand on les survole
+    const navItems = document.querySelectorAll('.nav-item');
+    if (navItems.length > 0) {
+      navItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          const submenu = item.querySelector('.submenu');
+          if (submenu) {
+            submenu.style.setProperty('display', 'block', 'important');
+          }
+        });
+        
+        item.addEventListener('mouseleave', () => {
+          const submenu = item.querySelector('.submenu');
+          if (submenu) {
+            submenu.style.setProperty('display', 'none', 'important');
+          }
+        });
+      });
+    }
+
+        // Script pour le menu hamburger - Version simplifiée
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM loaded, initializing hamburger menu...');
+      
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      console.log('Hamburger element:', hamburger);
+      console.log('Nav menu element:', navMenu);
+
+      if (hamburger && navMenu) {
+        console.log('Both elements found, adding event listeners...');
+        
+        // Gestionnaire principal du bouton hamburger
+        hamburger.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          console.log('Hamburger clicked!');
+          
+          // Toggle des classes
+          hamburger.classList.toggle('active');
+          navMenu.classList.toggle('active');
+          
+          console.log('Menu active:', navMenu.classList.contains('active'));
+          console.log('Hamburger active:', hamburger.classList.contains('active'));
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            console.log('Link clicked, menu closed');
+          });
+        });
+
+        // Fermer le menu quand on clique en dehors
+        document.addEventListener('click', function(event) {
+          const isClickInsideNav = navMenu.contains(event.target);
+          const isClickOnHamburger = hamburger.contains(event.target);
+          
+          if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            console.log('Clicked outside, menu closed');
+          }
+        });
+
+        // Fermer le menu au redimensionnement de l'écran
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 768) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            console.log('Screen resized, menu closed');
+          }
+        });
+        
+        console.log('All event listeners added successfully');
+      } else {
+        console.error('Hamburger or nav menu element not found!');
+      }
+    });
+
+
+    // Animation du newsletter
+document.addEventListener('DOMContentLoaded', function() {
+  const newsletter = document.querySelector('.newsletter');
+  
+  if (newsletter) {
+    // L'animation CSS est déjà appliquée, mais on peut ajouter des interactions
+    newsletter.addEventListener('mouseenter', function() {
+      this.style.animationPlayState = 'paused';
+    });
+    
+    newsletter.addEventListener('mouseleave', function() {
+      this.style.animationPlayState = 'running';
+    });
+    
+    // Le formulaire newsletter est géré par Formspree
+  }
+});
+
+// Animation du logo au clic
+document.addEventListener('DOMContentLoaded', function() {
+  const logoLink = document.querySelector('.nav-logo a');
+  
+  if (logoLink) {
+    logoLink.addEventListener('click', function(e) {
+      // Animation de clic
+      this.style.transform = 'scale(0.95)';
+      
+      setTimeout(() => {
+        this.style.transform = 'scale(1)';
+      }, 150);
+      
+      // Si on est déjà sur la page d'accueil, empêcher la navigation
+      if (window.location.pathname.includes('https://digital-porokhane.com/') || window.location.pathname === '/') {
+        e.preventDefault();
+        // Scroll vers le haut de la page
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    });
+    
+    // Animation au survol
+    logoLink.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.05)';
+    });
+    
+    logoLink.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+    });
+  }
+});
+
+// Réponses automatiques (FAQ)
+  const chatbotFAQ = {
+    'services': "Nous proposons : formations (robotique, impression 3D, cybersécurité), marketing digital, accompagnement (automatisation, IA, bases de données), développement web mobile et plus encore !",
+    'devis': "Pour Demandez un devis, cliquez sur 'Demandez un devis' dans le menu ou rendez-vous sur la page devis. Nous vous répondrons rapidement !",
+    'délais': "Nos délais varient selon le projet, mais nous nous engageons à livrer dans les temps convenus, avec un suivi régulier.",
+    'formations': "Oui, nous proposons des formations en robotique, impression 3D, cybersécurité et plus. Consultez la page Formations pour plus d'infos !",
+    'contacter': "Vous pouvez nous contacter via la page Contact, par téléphone ou par email. Nous sommes à votre écoute !",
+    'salutation': "Bonjour et bienvenue chez Porokhane Digital Consulting ! 👋\\n\\nJe peux répondre à vos questions sur :\\n• Nos services\\n• Comment Demandez un devis\\n• Nos délais de livraison\\n• Nos formations\\n• Comment nous contacter\\n\\nCliquez sur une suggestion ou posez votre question !"
+  };
+
+  const chatbotBtn = document.getElementById('chatbotBtn');
+  const chatbotWindow = document.getElementById('chatbotWindow');
+  const chatbotClose = document.getElementById('chatbotClose');
+  const chatbotBody = document.getElementById('chatbotBody');
+  const chatbotForm = document.getElementById('chatbotForm');
+  const chatbotInput = document.getElementById('chatbotInput');
+  const chatbotSuggestions = document.getElementById('chatbotSuggestions');
+
+  chatbotBtn.onclick = () => {
+    chatbotWindow.style.display = 'flex';
+    setTimeout(() => chatbotInput.focus(), 300);
+  };
+  chatbotClose.onclick = () => {
+    chatbotWindow.style.display = 'none';
+  };
+
+  // Suggestions cliquables
+  chatbotSuggestions.onclick = function(e) {
+    if (e.target.classList.contains('chatbot-suggestion')) {
+      const question = e.target.textContent;
+      addUserMessage(question);
+      respondToUser(question);
+    }
+  };
+
+  // Envoi du formulaire
+  chatbotForm.onsubmit = function(e) {
+    e.preventDefault();
+    const question = chatbotInput.value.trim();
+    if (question) {
+      addUserMessage(question);
+      respondToUser(question);
+      chatbotInput.value = '';
+    }
+  };
+
+  function addUserMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message user';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function addBotMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot-message';
+    msg.textContent = text;
+    chatbotBody.appendChild(msg);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  }
+
+  function respondToUser(question) {
+    let response = "Je suis désolé, je n'ai pas compris votre question. Essayez une des suggestions ci-dessus ou contactez-nous directement.";
+    const q = question.toLowerCase();
+    if (q.includes('service')) response = chatbotFAQ['services'];
+    else if (q.includes('devis')) response = chatbotFAQ['devis'];
+    else if (q.includes('délai') || q.includes('delai')) response = chatbotFAQ['délais'];
+    else if (q.includes('formation')) response = chatbotFAQ['formations'];
+    else if (q.includes('contact')) response = chatbotFAQ['contacter'];
+    else if (q.includes('salut') || q.includes('bonjour') || q.includes('bonsoir') || q.includes('hello')) response = chatbotFAQ['salutation'];
+    setTimeout(() => addBotMessage(response), 600);
+  }
+  </script>
+<script src="tracking.js" defer></script>`;
+
+export default function Page() {
+  return <Document headTag={headTag} head={head} bodyTag={bodyTag} nav={nav}
+    content={content} footer={footer} chatbot={chatbot} scripts={scripts} />;
+}
