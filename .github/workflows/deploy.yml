@@ -44,7 +44,7 @@ jobs:
           lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" -e "
             set ftp:ssl-allow true;
             set ssl:verify-certificate no;
-            mirror -R --only-newer --parallel=8 \
+            mirror -R --ignore-time --parallel=8 \
               --delete \
               --exclude ^\.well-known/ \
               --exclude ^\.cpanel \
