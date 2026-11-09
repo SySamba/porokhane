@@ -38,22 +38,23 @@ jobs:
           test ! -f dist/refined-vector-447411-b2-e3165d270c07.json
           test ! -f dist/scripts/email_config.json
 
-      - name: Upload FTP (fichiers modifiés uniquement)
+      - name: Upload SFTP (SSH Hostinger — peut supprimer/écraser tous les fichiers)
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
-          lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" -e "
-            set ftp:ssl-allow true;
-            set ssl:verify-certificate no;
-            mirror -R --ignore-time --parallel=8 \
-              --delete \
-              --exclude ^\.well-known/ \
-              --exclude ^\.cpanel \
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp sshpass
+          export SSHPASS="$SSH_PASS"
+          DIR="${FTP_DIR#/}"
+          lftp -e "
+            set sftp:connect-program 'sshpass -e ssh -a -x -p 65002 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null';
+            open -u $SSH_USER, sftp://$SSH_HOST;
+            mirror -R --delete --ignore-time --parallel=8 \
+              --exclude ^\\.well-known/ \
+              --exclude ^\\.cpanel \
               --exclude ^cgi-bin \
-              --exclude ^\.htpasswds \
-              dist/ $FTP_DIR;
+              --exclude ^\\.htpasswds \
+              dist/ $DIR;
             bye"
         env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USER: ${{ secrets.FTP_USER }}
-          FTP_PASS: ${{ secrets.FTP_PASS }}
+          SSH_HOST: ${{ secrets.FTP_HOST }}
+          SSH_USER: ${{ secrets.FTP_USER }}
+          SSH_PASS: ${{ secrets.SSH_PASS || secrets.FTP_PASS }}
           FTP_DIR: ${{ secrets.FTP_DIR }}
