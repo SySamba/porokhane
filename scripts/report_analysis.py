@@ -341,10 +341,11 @@ def analyse(g, a, month_label):
     if an['ga4']:
         if an['paid_share'] >= 0.30:
             lvl = 'ÉLEVÉ' if an['paid_share'] >= 0.45 else 'MODÉRÉ'
-            risks.append((lvl, 'Dépendance au trafic payant',
-                          f"{fmt_pct(an['paid_share'], 0)} des sessions viennent de Google Ads — "
-                          "le trafic s'arrête si le budget s'arrête.",
-                          'Croître le SEO pour ramener le payant sous 30 % du trafic.'))
+            risks.append((lvl, 'Trafic balisé « payant » à identifier',
+                          f"{fmt_pct(an['paid_share'], 0)} des sessions sont taguées google/cpc dans GA4 — "
+                          'sans campagne Ads connue, la source doit être vérifiée '
+                          '(service Google Ads de l’hébergeur, campagne externe, mauvaise attribution).',
+                          'GA4 → Acquisition → dimension « Campagne » pour voir le nom de la campagne, puis la stopper ou la confirmer.'))
         eng = an['ga4']['eng']
         if eng < 0.4:
             risks.append(('ÉLEVÉ' if eng < 0.25 else 'MODÉRÉ', 'Engagement faible',
