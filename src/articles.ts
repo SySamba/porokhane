@@ -33,6 +33,14 @@ function parseFront(src: string): { meta: Record<string, string>; body: string }
   return { meta, body: m[2] };
 }
 
+export function slugify(s: string): string {
+  return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80) || 'article';
+}
+
+const firstLine = (body: string): string =>
+  body.split(/\r?\n/).map(l => l.trim()).find(l => l.length > 3)?.replace(/^#+\s*/, '') || '';
+
 // Markdown minimal -> HTML (titres, paragraphes, listes, liens, images, gras).
 function inline(t: string): string {
   return t
@@ -58,6 +66,8 @@ export function mdToHtml(md: string): string {
     else if (line === '---') { close(); out.push('<hr>'); }
     else if (line.startsWith('> ')) { close(); out.push('<blockquote>' + inline(line.slice(2)) + '</blockquote>'); }
     else if (/^[-*] /.test(line)) { (list ??= []).push(inline(line.slice(2))); }
+    // Ligne courte sans ponctuation finale -> titre de section (texte brut collé)
+    else if (line.length < 70 && !line.match(/[.!?,;:'’«»…]$/)) { close(); out.push('<h2>' + inline(line) + '</h2>'); }
     else { close(); out.push('<p>' + inline(line) + '</p>'); }
   }
   close();
@@ -67,20 +77,28 @@ export function mdToHtml(md: string): string {
 export function loadArticles(): Article[] {
   if (!fs.existsSync(ARTICLES_DIR)) return [];
   const arts: Article[] = [];
-  for (const f of fs.readdirSync(ARTICLES_DIR).filter(x => x.endsWith('.md') && !x.startsWith('_')).sort()) {
+  // .md, .txt ou fichier sans extension -> accepté (sauf _brouillons)
+  for (const f of fs.readdirSync(ARTICLES_DIR).filter(x =>
+    !x.startsWith('_') && (x.endsWith('.md') || x.endsWith('.txt') || !x.includes('.'))).sort()) {
     const { meta, body } = parseFront(fs.readFileSync(path.join(ARTICLES_DIR, f), 'utf8'));
-    const slug = f.replace(/\.md$/, '').replace(/[^a-z0-9-]/gi, '-').toLowerCase();
-    const html = mdToHtml(body);
+    const base = f.replace(/\.\w+$/, '');
+    const titre = meta.titre || firstLine(body) || base;
+    // Le nom de fichier fait l'URL ; s'il est générique (test, article…),
+    // on dérive l'URL du titre automatiquement.
+    const GENERIC = /^(test|article|nouveau|untitled|sans[-_]?titre|\d+)$/i;
+    const slug = GENERIC.test(base) ? slugify(titre) : slugify(base);
+    const html = mdToHtml(body.replace(firstLine(body), ''));
     const words = body.split(/\s+/).length;
     const excerpt = meta.description ||
       body.replace(/[#*>`-]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 155) + '…';
+    const imgMatch = body.match(/!\[[^\]]*\]\(([^)\s]+)\)/);
     arts.push({
       slug,
-      titre: meta.titre || slug,
+      titre,
       description: meta.description || excerpt,
-      date: meta.date || '',
-      dateFr: dateFr(meta.date || ''),
-      image: meta.image || 'images/logo_porokhane_digital.jpg',
+      date: meta.date || new Date().toISOString().slice(0, 10),
+      dateFr: dateFr(meta.date || new Date().toISOString().slice(0, 10)),
+      image: meta.image || (imgMatch ? imgMatch[1] : 'images/logo_porokhane_digital.jpg'),
       categorie: meta.categorie || 'Blog',
       html, excerpt,
       minutes: Math.max(1, Math.round(words / 200)),
