@@ -54,3 +54,9 @@ en incluant le fichier caché `.htaccess`. Vider ensuite le cache CDN.
 - Les scripts inline sont extraits et replacés en fin de `<body>` lors du rendu.
 - `test.html` et la redirection `impression_3D.html` restent des pages générées/verbatims.
 - GTM `GTM-KBH8R72G` et `tracking.js` sont présents dans toutes les pages générées.
+
+## Publier un article (sans coder)
+
+Déposer `articles/<slug>.md` (frontmatter : titre, description, date, image, categorie + contenu markdown).
+Voir `articles/_MODELE.md`. Les fichiers `_*.md` sont des brouillons ignorés.
+Le build génère la page, l'ajoute au blog, à l'accueil et au sitemap — puis commit+push déploie.

@@ -13,12 +13,14 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
+import { loadArticles, cardHtml } from './articles';
+import { renderArticle } from './article-page';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'dist');
 const PAGES_DIR = path.join(ROOT, 'src', 'pages');
 const IGNORE = new Set([
-  'node_modules', 'dist', 'src', '.git', 'build-tmp', 'scripts', 'rapports',
+  'node_modules', 'dist', 'src', '.git', 'build-tmp', 'scripts', 'rapports', 'articles',
   'package.json', 'package-lock.json', 'tsconfig.json', '.DS_Store', 'dist.zip',
 ]);
 // Extensions jamais utiles côté web (docs internes, clés, logs).
@@ -121,11 +123,48 @@ for (const f of fs.readdirSync(PAGES_DIR).filter((x: string) => x.endsWith('.tsx
   ok++;
 }
 
-// Sitemap : URLs propres /x/ au lieu de /x.html
+// --- Articles markdown (articles/*.md -> /<slug>/) ---------------------------
+const articles = loadArticles();
+let cardsInject = '';
+for (const a of articles) {
+  let out = rewrite(renderArticle(a));
+  if (!out.includes('polish.css')) {
+    out = out.replace(/<\/head>/i, '  <link rel="stylesheet" href="/polish.css">\n</head>');
+  }
+  fs.mkdirSync(path.join(OUT, a.slug), { recursive: true });
+  fs.writeFileSync(path.join(OUT, a.slug, 'index.html'), out);
+  fs.writeFileSync(path.join(OUT, `${a.slug}.html`), stub(a.slug));
+  cardsInject += cardHtml(a);
+  ok++;
+}
+
+// Injection des cartes articles dans le blog et l'accueil (haut de la grille).
+if (cardsInject) {
+  for (const rel of ['blog/index.html', 'index.html']) {
+    const f = path.join(OUT, rel);
+    if (!fs.existsSync(f)) continue;
+    let html = fs.readFileSync(f, 'utf8');
+    const fresh = articles
+      .filter(a => !html.includes(`href="${a.slug}.html"`) && !html.includes(`href="/${a.slug}/"`))
+      .map(cardHtml).join('');
+    if (fresh) {
+      html = html.replace('<div class="blog-grid">', '<div class="blog-grid">\n' + fresh);
+      fs.writeFileSync(f, html);
+    }
+  }
+}
+
+// Sitemap : URLs propres /x/ au lieu de /x.html + articles.
 const smPath = path.join(OUT, 'sitemap.xml');
 if (fs.existsSync(smPath)) {
-  const sm = fs.readFileSync(smPath, 'utf8').replace(/\.html<\/loc>/g, '/</loc>');
+  let sm = fs.readFileSync(smPath, 'utf8').replace(/\.html<\/loc>/g, '/</loc>');
+  for (const a of articles) {
+    if (!sm.includes(`/${a.slug}/`)) {
+      sm = sm.replace('</urlset>',
+        `  <url><loc>https://digital-porokhane.com/${a.slug}/</loc><lastmod>${a.date || '2026-11-19'}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n</urlset>`);
+    }
+  }
   fs.writeFileSync(smPath, sm);
 }
 
-console.log(`React → HTML : ${ok} pages générées dans dist/ (URLs propres /nom/)`);
+console.log(`React → HTML : ${ok} pages générées dans dist/ (URLs propres /nom/)${articles.length ? ` + ${articles.length} article(s) md` : ''}`);
