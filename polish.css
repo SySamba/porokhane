@@ -1,0 +1,40 @@
+/* ============================================
+   polish.css — retouche visuelle globale du site
+   Règles sûres : n'écrase jamais les styles
+   inline ; s'ajoute après les styles des pages.
+   ============================================ */
+
+/* Confort de lecture et de toucher */
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { -webkit-tap-highlight-color: transparent; }
+
+/* Sécurité responsive : aucune image ne déborde jamais */
+img, video { max-width: 100%; height: auto; }
+
+/* Anti zoom automatique iOS sur les champs de formulaire */
+input, textarea, select { font-size: 16px; }
+
+/* Sélection de texte aux couleurs de la marque */
+::selection { background: rgba(31, 164, 122, 0.25); }
+
+/* Focus clavier visible (accessibilité / professionnalisme) */
+:focus-visible { outline: 3px solid rgba(37, 99, 235, 0.45); outline-offset: 2px; border-radius: 4px; }
+
+/* Retour tactile sur les éléments cliquables */
+a, button, [role="button"] { touch-action: manipulation; }
+.nav-devis:active, .btn:active, button:active { transform: scale(0.97); }
+
+/* Mobile : cibles tactiles et respiration */
+@media (max-width: 768px) {
+  section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  h1 { line-height: 1.25; }
+  h2 { line-height: 1.3; }
+  p { text-align: left; }
+}
+
+/* Barre de défilement discrète (desktop) */
+@media (min-width: 769px) {
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #f1f5f9; }
+  ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1fa47a, #2563eb); border-radius: 8px; }
+}

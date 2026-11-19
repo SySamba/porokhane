@@ -103,6 +103,10 @@ for (const f of fs.readdirSync(PAGES_DIR).filter((x: string) => x.endsWith('.tsx
     out = (mod.preamble ?? '') + renderToStaticMarkup(React.createElement(Page)) + '\n</html>\n';
   }
   out = rewrite(out);
+  // Feuille de retouche visuelle globale (voir polish.css à la racine).
+  if (!out.includes('polish.css')) {
+    out = out.replace(/<\/head>/i, '  <link rel="stylesheet" href="/polish.css">\n</head>');
+  }
 
   if (base === 'index') {
     fs.writeFileSync(path.join(OUT, 'index.html'), out);
