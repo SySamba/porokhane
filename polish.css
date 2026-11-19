@@ -1,10 +1,10 @@
 /* ============================================
    polish.css — retouche visuelle globale du site
-   Règles sûres : n'écrase jamais les styles
-   inline ; s'ajoute après les styles des pages.
+   Chargée après les styles des pages : affine
+   le rendu sans casser le design existant.
    ============================================ */
 
-/* Confort de lecture et de toucher */
+/* ---------- Confort de lecture / toucher ---------- */
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body { -webkit-tap-highlight-color: transparent; }
 
@@ -23,6 +23,39 @@ input, textarea, select { font-size: 16px; }
 /* Retour tactile sur les éléments cliquables */
 a, button, [role="button"] { touch-action: manipulation; }
 .nav-devis:active, .btn:active, button:active { transform: scale(0.97); }
+
+/* ---------- 1. Hero plus impactant ---------- */
+.hero-title { font-size: clamp(2.3rem, 6vw, 3.5rem); letter-spacing: -0.02em; }
+.hero-subtitle { font-size: clamp(1.05rem, 2.6vw, 1.4rem); line-height: 1.55; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-content { animation: fadeUp 0.8s ease both; }
+  .hero-img { animation: fadeUp 0.8s 0.25s ease both; }
+}
+.hero-img img { transition: transform 0.5s ease; }
+.hero-img img:hover { transform: translateY(-6px) scale(1.02); }
+
+/* ---------- 2. Cartes premium ---------- */
+.service-card, .realisation-card, .promo-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.service-card:hover, .realisation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+}
+.service-card h3, .service-card h4 { transition: color 0.3s ease; }
+.service-card:hover h3, .service-card:hover h4 { color: var(--vert); }
+
+/* ---------- 3. Typographie ---------- */
+.section-header h2 { font-size: clamp(2rem, 5vw, 2.8rem); letter-spacing: -0.02em; }
+.btn { letter-spacing: 0.01em; }
+
+/* ---------- 4. Espacements / rythme ---------- */
+.section-header { margin-bottom: clamp(2rem, 4vw, 3rem); }
 
 /* Mobile : cibles tactiles et respiration */
 @media (max-width: 768px) {
