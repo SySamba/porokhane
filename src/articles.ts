@@ -92,15 +92,16 @@ export function loadArticles(): Article[] {
 
 // Carte aperçu (même markup que blog.tsx / index.tsx — classes partagées).
 export function cardHtml(a: Article): string {
+  const img = a.image.startsWith('/') || a.image.startsWith('http') ? a.image : `/${a.image}`;
   return `        <div class="blog-card">
           <div class="blog-card-img">
-            <img src="${a.image}" alt="${a.titre.replace(/"/g, '&quot;')}">
+            <img src="${img}" alt="${a.titre.replace(/"/g, '&quot;')}" loading="lazy">
           </div>
           <div class="blog-card-content">
             <div class="blog-meta"><i class="far fa-calendar-alt"></i> ${a.dateFr} • <i class="far fa-folder"></i> ${a.categorie}</div>
             <h3>${a.titre}</h3>
             <p>${a.excerpt}</p>
-            <a href="${a.slug}.html" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
+            <a href="/${a.slug}/" class="btn btn-secondary"><i class="fas fa-book-open"></i> Lire l'article</a>
           </div>
         </div>\n`;
 }

@@ -149,8 +149,23 @@ if (cardsInject) {
       .map(cardHtml).join('');
     if (fresh) {
       html = html.replace('<div class="blog-grid">', '<div class="blog-grid">\n' + fresh);
-      fs.writeFileSync(f, html);
     }
+    // Accueil : ne garder que les 3 articles les plus récents dans la grille.
+    if (rel === 'index.html') {
+      const gi = html.indexOf('<div class="blog-grid">');
+      const ge = html.indexOf('</section>', gi);
+      if (gi >= 0 && ge > gi) {
+        const seg = html.slice(gi, ge);
+        const cardRe = /<div class="blog-card">[\s\S]*?<\/a>\s*<\/div>\s*<\/div>/g;
+        const cards = [...seg.matchAll(cardRe)];
+        if (cards.length > 3) {
+          const kept = cards.slice(0, 3).map(c => c[0]).join('\n');
+          const lastEnd = (cards[cards.length - 1].index ?? 0) + cards[cards.length - 1][0].length;
+          html = html.slice(0, gi) + '<div class="blog-grid">\n' + kept + '\n' + html.slice(gi + lastEnd);
+        }
+      }
+    }
+    fs.writeFileSync(f, html);
   }
 }
 
