@@ -1045,7 +1045,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     .offres-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
       gap: 40px;
       margin-bottom: 60px;
     }
@@ -1537,7 +1537,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     .services-grid { 
       display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); 
       gap: 2.5rem; 
     }
     
@@ -1625,7 +1625,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     .blog-grid { 
       display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); 
       gap: 2.5rem; 
     }
     
@@ -2720,7 +2720,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 .realisations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: 2rem;
 }
 
@@ -4586,7 +4586,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     .promo-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
       gap: 2rem;
     }
     .promo-card {
@@ -4899,7 +4899,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2> Nos Réalisations</h2>
         <p>Découvrez quelques projets concrets réalisés par notre AGENCE DE MARKETING DIGITAL DAKAR pour nos clients, avec un design pensé pour l'utilisateur final.</p>
       </div>
-    <div class="realisations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem;">
+    <div class="realisations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr)); gap: 2.5rem;">
       
       <!-- Projet 1: Elite Science -->
       <div class="realisation-card" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">

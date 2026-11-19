@@ -208,7 +208,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .blog-hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto; color: #e6fff6; }
     /* Blog Grid */
     .blog-section { background: var(--gris); padding: 80px 0; }
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 2.5rem; }
     .blog-card { background: var(--blanc); border-radius: var(--rayon-grand); box-shadow: var(--ombre); overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 0.3s, transform 0.3s; }
     .blog-card:hover { box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15); transform: translateY(-8px) scale(1.03); }
     .blog-card-img { height: 200px; overflow: hidden; }

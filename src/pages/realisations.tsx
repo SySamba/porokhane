@@ -144,7 +144,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="filter-btn" data-filter="social" style="padding: 0.8rem 1.5rem; border: 2px solid var(--vert); background: white; color: var(--vert); border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Réseaux Sociaux</button>
     </div>
 
-    <div class="realisations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem;">
+    <div class="realisations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr)); gap: 2.5rem;">
       
       <!-- Projet 1: Elite Science -->
       <div class="realisation-card project-card" data-category="web" style="background: #fff; border-radius: 24px; box-shadow: 0 4px 24px rgba(31,164,122,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;">
