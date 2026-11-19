@@ -23,14 +23,27 @@ function dateFr(iso: string): string {
 }
 
 function parseFront(src: string): { meta: Record<string, string>; body: string } {
-  const m = src.match(/^\s*---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
-  if (!m) return { meta: {}, body: src };
   const meta: Record<string, string> = {};
-  for (const line of m[1].split(/\r?\n/)) {
-    const i = line.indexOf(':');
-    if (i > 0) meta[line.slice(0, i).trim().toLowerCase()] = line.slice(i + 1).trim().replace(/^["']|["']$/g, '');
+  const parse = (block: string) => {
+    for (const line of block.split(/\r?\n/)) {
+      const i = line.indexOf(':');
+      if (i > 0) meta[line.slice(0, i).trim().toLowerCase()] = line.slice(i + 1).trim().replace(/^["']|["']$/g, '');
+    }
+  };
+  const m = src.match(/^\s*---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+  if (m) { parse(m[1]); return { meta, body: m[2] }; }
+  // Tolérance : lignes "cle: valeur" en tête de fichier SANS délimiteurs ---
+  const head = src.split(/\r?\n\r?\n/, 1)[0];
+  const loose: string[] = [];
+  for (const line of head.split(/\r?\n/)) {
+    if (/^(titre|title|description|date|image|categorie|slug)\s*:/i.test(line)) loose.push(line);
   }
-  return { meta, body: m[2] };
+  if (loose.length) {
+    parse(loose.join('\n'));
+    const rest = src.slice(head.length).replace(/^\r?\n/, '');
+    return { meta, body: rest };
+  }
+  return { meta, body: src };
 }
 
 export function slugify(s: string): string {
