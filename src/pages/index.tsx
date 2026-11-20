@@ -5099,7 +5099,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: center; justify-content: center;">
         <div style="flex: 0 1 320px; text-align: center; position: relative;">
-          <a href="formation-impression-3d-bargny/" title="Lire le retour sur la formation" style="display: inline-block; position: relative;">
+          <a href="javascript:void(0)" onclick="galShow(0)" title="Voir l'attestation en grand" style="display: inline-block; position: relative; cursor: zoom-in;">
             <span style="position: absolute; top: -16px; right: -16px; z-index: 2; background: linear-gradient(90deg, #1fa47a, #34d399); color: #fff; font-size: 0.8rem; font-weight: 700; padding: 0.5rem 1rem; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.35);"><i class="fas fa-check-circle"></i> Officielle</span>
             <img src="/images/attestation-formation-bargny.jpg" alt="Attestation de bonne exécution délivrée à Porokhane Digital Consulting par l'École d'application du Génie, Centre de formation en déminage de Bargny" loading="lazy" style="width: 100%; max-width: 300px; border-radius: 6px; box-shadow: 0 24px 60px rgba(0,0,0,0.45); border: 8px solid #fff; transform: rotate(-2.5deg); transition: transform 0.4s ease;" onmouseover="this.style.transform='rotate(0deg) scale(1.03)'" onmouseout="this.style.transform='rotate(-2.5deg)'">
           </a>
@@ -5113,16 +5113,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(6px); border-radius: 14px; padding: 0.9rem 1.4rem; text-align: center; flex: 1 1 100px;"><div style="font-size: 1.7rem; font-weight: 800; color: #6ee7b7;">6</div><div style="font-size: 0.8rem; color: rgba(255,255,255,0.75);">personnels formés</div></div>
             <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(6px); border-radius: 14px; padding: 0.9rem 1.4rem; text-align: center; flex: 1 1 100px;"><div style="font-size: 1.7rem; font-weight: 800; color: #6ee7b7;">2</div><div style="font-size: 0.8rem; color: rgba(255,255,255,0.75);">instructeurs</div></div>
           </div>
-          <div style="display: flex; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 2rem;">
-            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-2.jpg" alt="Séance pratique de modélisation 3D au CFD de Bargny" loading="lazy" style="width: 150px; height: 110px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'"></a>
-            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-5.jpg" alt="Participants manipulant des pièces imprimées en 3D" loading="lazy" style="width: 150px; height: 110px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'"></a>
-            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-7.jpg" alt="Échanges entre instructeurs et personnels du Centre" loading="lazy" style="width: 150px; height: 110px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'"></a>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; margin-bottom: 2rem; max-width: 500px;">
+            <img src="/images/formation-3d-bargny-1.jpg" alt="Formation impression 3D au CFD de Bargny" loading="lazy" onclick="galShow(1)" style="width: 100%; height: 100px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); cursor: zoom-in; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px) scale(1.03)'" onmouseout="this.style.transform='translateY(0)'">
+            <img src="/images/formation-3d-bargny-2.jpg" alt="Séance pratique de modélisation 3D" loading="lazy" onclick="galShow(2)" style="width: 100%; height: 100px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); cursor: zoom-in; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px) scale(1.03)'" onmouseout="this.style.transform='translateY(0)'">
+            <img src="/images/formation-3d-bargny-3.jpg" alt="Travail en salle de formation" loading="lazy" onclick="galShow(3)" style="width: 100%; height: 100px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); cursor: zoom-in; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px) scale(1.03)'" onmouseout="this.style.transform='translateY(0)'">
+            <img src="/images/formation-3d-bargny-4.jpg" alt="Modélisation sous Fusion 360" loading="lazy" onclick="galShow(4)" style="width: 100%; height: 100px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); cursor: zoom-in; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px) scale(1.03)'" onmouseout="this.style.transform='translateY(0)'">
+            <img src="/images/formation-3d-bargny-5.jpg" alt="Pièces imprimées en 3D" loading="lazy" onclick="galShow(5)" style="width: 100%; height: 100px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); cursor: zoom-in; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px) scale(1.03)'" onmouseout="this.style.transform='translateY(0)'">
+            <img src="/images/formation-3d-bargny-6.jpg" alt="Impression 3D en cours au CFD" loading="lazy" onclick="galShow(6)" style="width: 100%; height: 100px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); cursor: zoom-in; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px) scale(1.03)'" onmouseout="this.style.transform='translateY(0)'">
           </div>
           <a href="formation-impression-3d-bargny/" class="btn" style="display: inline-block; background: #fff; color: #0b2a4a; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">Découvrir cette formation <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Galerie plein écran : attestation + 9 photos de formation -->
+  <style>
+    .gal-lightbox { display: none; position: fixed; z-index: 9999; inset: 0; background: rgba(4,12,24,0.94); align-items: center; justify-content: center; flex-direction: column; backdrop-filter: blur(4px); }
+    .gal-lightbox img.gal-main { max-width: 92vw; max-height: 68vh; border-radius: 10px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+    .gal-close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 42px; font-weight: bold; cursor: pointer; z-index: 2; }
+    .gal-btn { font-size: 34px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; width: 54px; height: 54px; color: #fff; cursor: pointer; margin: 14px 18px 0; transition: 0.2s; }
+    .gal-btn:hover { background: var(--vert); border-color: var(--vert); }
+    .gal-thumbs { display: flex; gap: 8px; overflow-x: auto; padding: 14px 10px 4px; max-width: 92vw; }
+    .gal-thumbs img { width: 58px; height: 58px; object-fit: cover; border-radius: 6px; border: 2px solid transparent; cursor: pointer; opacity: 0.6; flex-shrink: 0; }
+    .gal-thumbs img.active { border-color: #34d399; opacity: 1; }
+    .gal-count { color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 10px; }
+    @media (max-width: 768px) { .gal-btn { width: 44px; height: 44px; font-size: 26px; } .gal-thumbs img { width: 46px; height: 46px; } }
+  </style>
+  <div id="gal-lightbox" class="gal-lightbox" onclick="if(event.target===this)galClose()">
+    <span class="gal-close" onclick="galClose()">&times;</span>
+    <img id="gal-img" class="gal-main" src="" alt="Photo de la formation impression 3D à Bargny">
+    <div>
+      <button class="gal-btn" onclick="galNav(-1)" aria-label="Image précédente">&#10094;</button>
+      <button class="gal-btn" onclick="galNav(1)" aria-label="Image suivante">&#10095;</button>
+    </div>
+    <div class="gal-count" id="gal-count"></div>
+    <div class="gal-thumbs" id="gal-thumbs"></div>
+  </div>
+  <script>
+    const galImages = [
+      '/images/attestation-formation-bargny.jpg',
+      '/images/formation-3d-bargny-1.jpg','/images/formation-3d-bargny-2.jpg','/images/formation-3d-bargny-3.jpg',
+      '/images/formation-3d-bargny-4.jpg','/images/formation-3d-bargny-5.jpg','/images/formation-3d-bargny-6.jpg',
+      '/images/formation-3d-bargny-7.jpg','/images/formation-3d-bargny-8.jpg','/images/formation-3d-bargny-9.jpg'
+    ];
+    let galIndex = 0;
+    function galShow(i) {
+      galIndex = i;
+      const lb = document.getElementById('gal-lightbox');
+      lb.style.display = 'flex';
+      document.getElementById('gal-img').src = galImages[i];
+      document.getElementById('gal-count').textContent = (i+1) + ' / ' + galImages.length;
+      const thumbs = document.getElementById('gal-thumbs');
+      thumbs.innerHTML = '';
+      galImages.forEach((src, k) => {
+        const t = document.createElement('img');
+        t.src = src; t.alt = 'Vignette ' + (k+1);
+        if (k === i) t.classList.add('active');
+        t.onclick = () => galShow(k);
+        thumbs.appendChild(t);
+      });
+      document.body.style.overflow = 'hidden';
+    }
+    function galClose() {
+      document.getElementById('gal-lightbox').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    function galNav(d) {
+      galIndex = (galIndex + d + galImages.length) % galImages.length;
+      galShow(galIndex);
+    }
+    document.addEventListener('keydown', e => {
+      if (document.getElementById('gal-lightbox').style.display !== 'flex') return;
+      if (e.key === 'Escape') galClose();
+      if (e.key === 'ArrowRight') galNav(1);
+      if (e.key === 'ArrowLeft') galNav(-1);
+    });
+    let galTouchX = null;
+    document.getElementById('gal-lightbox').addEventListener('touchstart', e => { galTouchX = e.touches[0].clientX; }, {passive:true});
+    document.getElementById('gal-lightbox').addEventListener('touchend', e => {
+      if (galTouchX === null) return;
+      const dx = e.changedTouches[0].clientX - galTouchX;
+      if (Math.abs(dx) > 40) galNav(dx < 0 ? 1 : -1);
+      galTouchX = null;
+    }, {passive:true});
+  </script>
 
   <!-- FAQ marketing digital Dakar -->
   <section id="faq-marketing-digital" class="faq-section">
