@@ -5087,7 +5087,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-  
+  <!-- Référence institutionnelle : attestation École du Génie de Bargny -->
+  <section id="reference-institution" style="padding: 80px 0; background: #fff;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Ils nous font confiance</h2>
+        <p>Une formation en impression 3D certifiée par une attestation de bonne exécution de l'École d'application du Génie</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; justify-content: center;">
+        <div style="flex: 0 1 300px; text-align: center;">
+          <a href="formation-impression-3d-bargny/" title="Lire le retour sur la formation">
+            <img src="/images/attestation-formation-bargny.jpg" alt="Attestation de bonne exécution délivrée à Porokhane Digital Consulting par l'École d'application du Génie, Centre de formation en déminage de Bargny" loading="lazy" style="width: 100%; max-width: 280px; border-radius: 12px; box-shadow: 0 10px 34px rgba(0,0,0,0.14); border: 1px solid #eee; transition: transform 0.3s ease;">
+          </a>
+          <p style="font-size: 0.9rem; color: var(--gris-texte); margin-top: 1rem;">Attestation de bonne exécution — Centre de formation en déminage, Bargny</p>
+        </div>
+        <div style="flex: 1 1 460px; min-width: min(460px, 100%);">
+          <h3 style="color: var(--bleu); font-size: 1.5rem; margin-bottom: 1rem;">40 heures de formation à l'École d'application du Génie</h3>
+          <p style="color: var(--gris-texte); line-height: 1.8; margin-bottom: 1.5rem;">Du 31 août au 8 septembre, nos deux instructeurs ont formé six personnels du Centre de formation en déminage (CFD) de Bargny : modélisation sous Fusion 360, conception pour la fabrication additive, préparation et exploitation des imprimantes 3D. La prestation a été jugée « particulièrement satisfaisante » par le Centre.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.8rem;">
+            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-2.jpg" alt="Séance pratique de modélisation 3D au CFD de Bargny" loading="lazy" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);"></a>
+            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-5.jpg" alt="Participants manipulant des pièces imprimées en 3D" loading="lazy" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);"></a>
+            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-7.jpg" alt="Échanges entre instructeurs et personnels du Centre" loading="lazy" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);"></a>
+          </div>
+          <a href="formation-impression-3d-bargny/" class="btn" style="display: inline-block;">Découvrir cette formation <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- FAQ marketing digital Dakar -->
   <section id="faq-marketing-digital" class="faq-section">
