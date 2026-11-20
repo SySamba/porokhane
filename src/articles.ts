@@ -34,14 +34,14 @@ function parseFront(src: string): { meta: Record<string, string>; body: string }
   if (m) { parse(m[1]); return { meta, body: m[2] }; }
   // Tolérance : lignes "cle: valeur" en tête de fichier SANS délimiteurs ---
   const head = src.split(/\r?\n\r?\n/, 1)[0];
-  const loose: string[] = [];
-  for (const line of head.split(/\r?\n/)) {
-    if (/^(titre|title|description|date|image|categorie|slug)\s*:/i.test(line)) loose.push(line);
-  }
+  const KEY = /^(titre|title|description|date|image|categorie|slug)\s*:/i;
+  const loose = head.split(/\r?\n/).filter(l => KEY.test(l));
   if (loose.length) {
     parse(loose.join('\n'));
+    // Ne retirer que les lignes de méta, garder le reste du bloc dans le corps.
+    const restHead = head.split(/\r?\n/).filter(l => !KEY.test(l));
     const rest = src.slice(head.length).replace(/^\r?\n/, '');
-    return { meta, body: rest };
+    return { meta, body: [...restHead, rest].filter(Boolean).join('\n') };
   }
   return { meta, body: src };
 }
