@@ -5088,28 +5088,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
   <!-- Référence institutionnelle : attestation École du Génie de Bargny -->
-  <section id="reference-institution" style="padding: 80px 0; background: #fff;">
-    <div class="container">
-      <div class="section-header">
-        <h2>Ils nous font confiance</h2>
-        <p>Une formation en impression 3D certifiée par une attestation de bonne exécution de l'École d'application du Génie</p>
+  <section id="reference-institution" style="position: relative; padding: 100px 0; background: linear-gradient(135deg, #0b2a4a 0%, #123f6b 45%, #0f5132 100%); overflow: hidden;">
+    <div style="position: absolute; top: -140px; right: -140px; width: 480px; height: 480px; background: radial-gradient(circle, rgba(31,164,122,0.35), transparent 65%); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -160px; left: -120px; width: 420px; height: 420px; background: radial-gradient(circle, rgba(37,99,235,0.3), transparent 65%); border-radius: 50%;"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="section-header" style="margin-bottom: 3.5rem;">
+        <span style="display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: #a7f3d0; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.45rem 1.2rem; border-radius: 999px; margin-bottom: 1.2rem;"><i class="fas fa-award"></i>&nbsp; Référence institutionnelle</span>
+        <h2 style="color: #fff;">Ils nous font confiance</h2>
+        <p style="color: rgba(255,255,255,0.82);">L'École d'application du Génie de l'Armée sénégalaise a certifié notre formation en impression 3D par une attestation de bonne exécution</p>
       </div>
-      <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; justify-content: center;">
-        <div style="flex: 0 1 300px; text-align: center;">
-          <a href="formation-impression-3d-bargny/" title="Lire le retour sur la formation">
-            <img src="/images/attestation-formation-bargny.jpg" alt="Attestation de bonne exécution délivrée à Porokhane Digital Consulting par l'École d'application du Génie, Centre de formation en déminage de Bargny" loading="lazy" style="width: 100%; max-width: 280px; border-radius: 12px; box-shadow: 0 10px 34px rgba(0,0,0,0.14); border: 1px solid #eee; transition: transform 0.3s ease;">
+      <div style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: center; justify-content: center;">
+        <div style="flex: 0 1 320px; text-align: center; position: relative;">
+          <a href="formation-impression-3d-bargny/" title="Lire le retour sur la formation" style="display: inline-block; position: relative;">
+            <span style="position: absolute; top: -16px; right: -16px; z-index: 2; background: linear-gradient(90deg, #1fa47a, #34d399); color: #fff; font-size: 0.8rem; font-weight: 700; padding: 0.5rem 1rem; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,0.35);"><i class="fas fa-check-circle"></i> Officielle</span>
+            <img src="/images/attestation-formation-bargny.jpg" alt="Attestation de bonne exécution délivrée à Porokhane Digital Consulting par l'École d'application du Génie, Centre de formation en déminage de Bargny" loading="lazy" style="width: 100%; max-width: 300px; border-radius: 6px; box-shadow: 0 24px 60px rgba(0,0,0,0.45); border: 8px solid #fff; transform: rotate(-2.5deg); transition: transform 0.4s ease;" onmouseover="this.style.transform='rotate(0deg) scale(1.03)'" onmouseout="this.style.transform='rotate(-2.5deg)'">
           </a>
-          <p style="font-size: 0.9rem; color: var(--gris-texte); margin-top: 1rem;">Attestation de bonne exécution — Centre de formation en déminage, Bargny</p>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-top: 1.4rem;"><i class="fas fa-file-contract"></i> Attestation de bonne exécution — CFD de Bargny, octobre 2026</p>
         </div>
-        <div style="flex: 1 1 460px; min-width: min(460px, 100%);">
-          <h3 style="color: var(--bleu); font-size: 1.5rem; margin-bottom: 1rem;">40 heures de formation à l'École d'application du Génie</h3>
-          <p style="color: var(--gris-texte); line-height: 1.8; margin-bottom: 1.5rem;">Du 31 août au 8 septembre, nos deux instructeurs ont formé six personnels du Centre de formation en déminage (CFD) de Bargny : modélisation sous Fusion 360, conception pour la fabrication additive, préparation et exploitation des imprimantes 3D. La prestation a été jugée « particulièrement satisfaisante » par le Centre.</p>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.8rem;">
-            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-2.jpg" alt="Séance pratique de modélisation 3D au CFD de Bargny" loading="lazy" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);"></a>
-            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-5.jpg" alt="Participants manipulant des pièces imprimées en 3D" loading="lazy" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);"></a>
-            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-7.jpg" alt="Échanges entre instructeurs et personnels du Centre" loading="lazy" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);"></a>
+        <div style="flex: 1 1 480px; min-width: min(480px, 100%); color: #fff;">
+          <h3 style="color: #fff; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.2rem; letter-spacing: -0.02em;">40 heures de formation certifiée à l'École d'application du Génie</h3>
+          <p style="color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 1.8rem;">Du 31 août au 8 septembre, nos instructeurs ont formé les personnels du Centre de formation en déminage (CFD) de Bargny : modélisation sous Fusion 360, conception pour la fabrication additive et exploitation des imprimantes 3D. Résultats jugés « particulièrement satisfaisants » par le Centre.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+            <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(6px); border-radius: 14px; padding: 0.9rem 1.4rem; text-align: center; flex: 1 1 100px;"><div style="font-size: 1.7rem; font-weight: 800; color: #6ee7b7;">40h</div><div style="font-size: 0.8rem; color: rgba(255,255,255,0.75);">de formation</div></div>
+            <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(6px); border-radius: 14px; padding: 0.9rem 1.4rem; text-align: center; flex: 1 1 100px;"><div style="font-size: 1.7rem; font-weight: 800; color: #6ee7b7;">6</div><div style="font-size: 0.8rem; color: rgba(255,255,255,0.75);">personnels formés</div></div>
+            <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(6px); border-radius: 14px; padding: 0.9rem 1.4rem; text-align: center; flex: 1 1 100px;"><div style="font-size: 1.7rem; font-weight: 800; color: #6ee7b7;">2</div><div style="font-size: 0.8rem; color: rgba(255,255,255,0.75);">instructeurs</div></div>
           </div>
-          <a href="formation-impression-3d-bargny/" class="btn" style="display: inline-block;">Découvrir cette formation <i class="fas fa-arrow-right"></i></a>
+          <div style="display: flex; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 2rem;">
+            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-2.jpg" alt="Séance pratique de modélisation 3D au CFD de Bargny" loading="lazy" style="width: 150px; height: 110px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'"></a>
+            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-5.jpg" alt="Participants manipulant des pièces imprimées en 3D" loading="lazy" style="width: 150px; height: 110px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'"></a>
+            <a href="formation-impression-3d-bargny/"><img src="/images/formation-3d-bargny-7.jpg" alt="Échanges entre instructeurs et personnels du Centre" loading="lazy" style="width: 150px; height: 110px; object-fit: cover; border-radius: 12px; border: 2px solid rgba(255,255,255,0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'"></a>
+          </div>
+          <a href="formation-impression-3d-bargny/" class="btn" style="display: inline-block; background: #fff; color: #0b2a4a; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">Découvrir cette formation <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
