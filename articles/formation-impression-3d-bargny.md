@@ -25,6 +25,20 @@ Les résultats obtenus ont été jugés particulièrement satisfaisants par le C
 
 ![Séance pratique en salle](images/formation-3d-bargny-3.jpg)
 
+## En images : la formation à Bargny
+
+![Séance pratique de modélisation](images/formation-3d-bargny-4.jpg)
+
+![Travail sur les pièces imprimées](images/formation-3d-bargny-5.jpg)
+
+![Impression en cours au CFD](images/formation-3d-bargny-6.jpg)
+
+![Échanges avec les participants](images/formation-3d-bargny-7.jpg)
+
+![Atelier pratique](images/formation-3d-bargny-8.jpg)
+
+![Les participants de l'École du Génie](images/formation-3d-bargny-9.jpg)
+
 ## Vous aussi, formez vos équipes
 
 Cette mission s'inscrit dans notre offre de **formations en impression 3D** destinée aux entreprises, écoles techniques et institutions du Sénégal. Que vous soyez une mairie, une école, un atelier ou une entreprise industrielle, nous concevons des programmes adaptés à votre niveau et à vos objectifs : initiation, modélisation avancée, ou installation complète d'un parc d'impression.

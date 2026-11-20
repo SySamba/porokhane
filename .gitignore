@@ -11,3 +11,7 @@ scripts/email_config.json
 dist/
 dist.zip
 rapports/
+
+# Document privé (noms/signatures) - ne jamais publier
+/Attestation de bonne*.pdf
+/3D/
